@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LocalizedDataSet>
+  <!-- Global package localizable strings -->
+  <String>
+    <!-- Product named used for uninstall string -->
+    <Key>ProductName</Key>
+    <Value>Citrix Workspace 1912</Value>
+  </String>
+  <String>
+    <Key>ApplicationTitle</Key>
+    <Value>Citrix Workspace</Value>
+  </String>
+
+  <!-- Individual packages -->
+  <Group>
+    <Key>XenAppSuite</Key>
+    <DisplayName>XenApp Plug-in Suite</DisplayName>
+    <Description>XenApp Plug-in を使用するすべての製品で共用するコンポーネントです。</Description>
+  </Group>
+  <Component>
+    <Key>ReceiverInside</Key>
+    <DisplayName>Citrix Workspace Inside</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component>
+  <Component>
+    <Key>ReceiverUpdater</Key>
+    <DisplayName>Citrix Workspace</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component>
+  <Component>
+    <Key>ICA_Client</Key>
+    <DisplayName>XenApp Web Plug-in</DisplayName>
+    <Description>XenApp 用のコンポーネントです。</Description>
+    </Component>
+  <Component>
+    <Key>USB</Key>
+    <DisplayName>USB</DisplayName>
+    <Description>XenApp 用のコンポーネントです。</Description>
+  </Component>
+  <Component>
+    <Key>DesktopViewer</Key>
+    <DisplayName>Citrix Workspace (DV)</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component>
+  <Component>
+    <Key>Vd3d</Key>
+    <DisplayName>HDX Aero</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component>
+  <Component>
+    <Key>AM</Key>
+    <DisplayName>Authentication Manager</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component>
+  <Component>
+    <Key>SSON</Key>
+    <DisplayName>Single Sign On</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component>
+  <Component>
+    <Key>SELFSERVICE</Key>
+    <DisplayName>Self-service Plug-in</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component>
+  <Component>
+    <Key>WebHelper</Key>
+    <DisplayName>WebHelper</DisplayName>
+    <Description>These installations are specific to XenApp or XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>BrowserEngine</Key>
+    <DisplayName>BrowserEngine</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component> 
+  <Component>
+    <Key>WorkspaceHub</Key>
+    <DisplayName>WorkspaceHub</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component> 
+  <Component>
+    <Key>AppProtection</Key>
+    <DisplayName>AppProtection</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component> 
+    <Component>
+    <Key>AppProtectionAdvanced</Key>
+    <DisplayName>AppProtectionAdvanced</DisplayName>
+    <Description>XenApp または XenDesktop 用のコンポーネントです。</Description>
+  </Component> 
+  
+  <!-- License Agreement Dialog -->
+  <Eula>
+    <Key>Main</Key>
+    <FileName>eula_pointer.rtf</FileName>
+    <ScrollRequired>続行するにはライセンス契約書の末尾までスクロールする必要があります。</ScrollRequired>
+  </Eula>
+
+  <!-- Uninstall Strings -->
+  <String>
+    <Key>UninstallPrompt</Key>
+    <Value>このソフトウェアをアンインストールしますか?</Value>
+  </String>
+  <String>
+    <Key>Publisher</Key>
+    <Value>Citrix Systems, Inc.</Value>
+  </String>
+  <String>
+    <Key>Contact</Key>
+    <Value>Citrix Systems, Inc.</Value>
+  </String>
+  <String>
+    <Key>Telephone</Key>
+    <Value>1-800-424-8749</Value>
+  </String>
+  <String>
+    <Key>UrlInfoAbout</Key>
+    <Value>www.citrix.com</Value>
+  </String>
+  <String>
+    <Key>NoModify</Key>
+    <Value>Yes</Value>
+  </String>
+  <String>
+    <Key>NoRepair</Key>
+    <Value>Yes</Value>
+  </String>
+
+
+
+  <!-- Additional strings -->
+  <String>
+    <Key>SSON-Pkg</Key>
+    <Value>Citrix PNA のインストール</Value>
+  </String>
+  <String>
+    <Key>UsageText</Key>
+    <Value>
+      <![CDATA[サポートされるパラメーター:
+/help               - このヘルプを表示します
+/uninstall          - インストール済みのプログラムを削除します
+/silent             - インストール済みのプログラムを削除します
+/noreboot           - すべての再起動を抑制し、再起動ダイアログ ボックスを非表示にします
+/preview            - コンピューターを変更せずに、変更のプレビューを表示します
+/extract &lt;folder&gt;   - 自己展開パッケージを既存のフォルダーに展開します
+/includeSSON        - ドメイン パススルー ログオンのため Single Sign-on コンポーネントをインストールします
+/EnableCEIP			- Citrix Customer Experience Improvement Program (CEIP) を有効 (true) または無効 (false) にします
+/AutoUpdateCheck    - 自動更新を有効にする (自動)、手動更新を有効にする (手動)、AutoUpdate を禁止する (無効)
+/AutoUpdateStream   - 自動更新ストリームを長期サービスリリース (LTSR) にするか、短期サービスリリース (最新) にするかを指定します
+/DeferUpdateCount   - 自動更新を保留する回数を指定します
+
+MSI プロパティ値がサポートされます。複数指定する場合は次のようにスペースで区切ります。
+   PROPERTY="Value" PROPERTY2="Value2"
+
+すべてデフォルト設定のままサイレント インストールを実行するコマンド ラインの例:
+   CitrixWorkspaceApp.exe /silent
+
+複数のオプションを指定するコマンド ラインの例:
+   CitrixWorkspaceapp.exe /silent ADDLOCAL="ReceiverInside,ICA_Client,USB,DesktopViewer,Vd3d,WebHelper,BrowserEngine" INSTALLDIR="C:\myfolder" ENABLE_DYNAMIC_CLIENT_NAME="No" CLIENT_NAME="my_overrided_name" DEFAULT_NDSCONTEXT="Context1,Context2" 
+
+ドメイン パススルーを有効にするコマンド ラインの例:
+   CitrixWorkspaceapp.exe /silent  /includeSSON ADDLOCAL="ReceiverInside,ICA_Client,SSON,USB,DesktopViewer,Vd3d,WebHelper,BrowserEngine" INSTALLDIR="C:\myfolder" ENABLE_DYNAMIC_CLIENT_NAME="No" CLIENT_NAME="my_overrided_name" DEFAULT_NDSCONTEXT="Context1,Context2" 
+   
+Single Sign-On サーバーをインストールしてログオン資格情報を無効にするコマンドラインの例:
+   CitrixWorkspaceApp.exe /includesson LOGON_CREDENTIAL_CAPTURE_ENABLE=No [デフォルトは Yes]
+   
+Citrix Workspace を NonSelfServiceMode でインストールするコマンドラインの例:
+   CitrixWorkspaceApp.exe SELFSERVICEMODE=false [デフォルトは true]
+
+サポートされていないバージョンから最新バージョンへのアップグレードをサポートするコマンドライン例
+	CitrixWorkspaceApp.exe /RCU
+
+CEIP を無効にするコマンドラインの例:
+   CitrixWorkspaceApp.exe /EnableCEIP=false	[デフォルトは true]
+手動更新を有効にするコマンドライン例:
+    CitrixWorkspaceApp.exe /AutoUpdateCheck=manual [デフォルトは auto]
+手動更新を無効にするコマンドライン例:
+    CitrixWorkspaceApp.exe /AutoUpdateCheck=disabled
+長期サービス リリースを選択するコマンドライン例:
+    CitrixWorkspaceApp.exe /AutoUpdateStream=LTSR
+自動更新を2回保留する場合のコマンドラインの例:
+    CitrixWorkspaceApp.exe /DeferUpdateCount=2
+[このウィンドウを閉じるには Enter キーを押します。]
+]]>
+    </Value>
+  </String>
+</LocalizedDataSet>

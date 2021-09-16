@@ -1,0 +1,2080 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName/>
+  <description/>
+  <resources>
+    <stringTable>
+	
+	  <string id="Category_Citrix">Компоненты Citrix</string>
+      <string id="Category_Citrix_Explanation">С помощью этой групповой политики можно управлять клиентами Citrix.</string>
+	  <string id="ClientDevices">Удаленное взаимодействие с клиентскими устройствами</string>
+	  <string id="Explain_ClientDevices">Эти политики регулируют то, как сервер получает доступ к ресурсам клиентского компьютера.  Приложение Citrix Workspace, настроенное соответствующим образом, разрешает удаленным приложениям использовать диски, принтеры и т. д., как если бы эти приложения были запущены на клиентском компьютере.</string>
+	
+	  <string id="unknown_0">Включить функцию подписания ICA-файлов</string>
+      <string id="unknown_16">Разрешать запуск, только если есть подпись (более безопасно)</string>
+      <string id="unknown_17">Отображать запрос для пользователя, если выполняется запуск и нет подписи (менее безопасно)</string>
+      <string id="Explain_IcaFileSigning">С помощью этой политики можно включить и настроить подписание ICA-файлов.</string>
+	
+	
+      <string id="GenericUSB">Удаленное взаимодействие с универсальными USB-устройствами</string>
+      <string id="DeviceRules">Правила USB-устройств</string>
+      <string id="DeviceRules_Explain">Используется для указания того, какие USB-устройства разрешены, а какие запрещены.
+
+Все правила можно вводить без учета регистра. Формат правила такой: {Allow: | Deny:}, а затем — любое количество квалификаторов &lt;тег&gt;=&lt;значение&gt;. Если правил несколько, их нужно разделять точками с запятой. Комментарии начинаются с символа # и заканчиваются точкой с запятой.
+
+Например, &quot;Allow: VID=1234 PID=5678 # комментарий; Deny: Class=03&quot;.
+
+Поддерживаемые теги: VID, PID, REL, CLASS, SUBCLASS, PROT.</string>
+	<string id="RemoveOnLock">Удалить при блокировке</string>
+	<string id="RemoveOnLock_Explain">Указывает устройства или классы для удаления, когда компьютер клиента заблокирован. 
+Синтаксис:
+для устройств регистр не учитывается, форма записи: 
+VID=XXX PID=XX;VID=YYY PID=YY
+для классов регистр учитывается, форма записи: 
+class=XXX subclass=XX prot=X
+Пример:
+class=03 subclass=01 prot=01;VID=173E PID=0046
+Поведение по умолчанию:
+Мышь и клавиатуры HID (class=03 subclass=01 prot=01;class=03 subclass=01 prot=02;class=03 subclass=00 prot=01;class=03 subclass=00 prot=02) удаляются и автоматически перенаправляются во время блокировки и разблокировки клиента.
+	</string>
+	  <string id="SplitDevices">SplitDevices</string>
+	  <string id="SplitDevices_Explain">Разделите интерфейсы составного устройства как отдельные устройства.</string>
+      <string id="DeviceRules_Tip1">Список правил USB-устройств, разделенный точками с запятой.</string>
+      <string id="DeviceRules_Value">Правила USB-устройств</string>
+      <string id="RemoveOnLock_Value">Удалить при блокировке</string>
+	  <string id="SplitDevices_Value">SplitDevices</string>
+      <string id="ExistingDevices_Policy">Существующие USB-устройства</string>
+      <string id="EnableUSBForceRedirection">EnableUSBForceRedirection</string>
+      <string id="EnableUSBForceRedirection_Explain">Позволяет автоматически перенаправить устройства, которые используются на стороне клиента. </string>
+      <string id="EnableUSBForceRedirection_Value">EnableUSBForceRedirection_Value</string>
+      <string id="ExistingDevices_Explain">Укажите, что должно произойти с доступными USB-устройствами при запуске сеанса. Этот параметр переопределяет настройки пользователя.</string>
+      <string id="ExistingDevices_Value">При запуске рабочего стола</string>
+      <string id="ExistingDevices_Always">Подключить все доступные USB-устройства</string>
+      <string id="ExistingDevices_Ask">Отобразить сообщение и дать возможность пользователю выбрать</string>
+      <string id="ExistingDevices_Ignore">Ничего не делать</string>
+      <string id="NewDevices_Policy">Новые USB-устройства</string>
+      <string id="NewDevices_Explain">Укажите, что должно произойти при вставке USB-устройства во время сеанса. Этот параметр переопределяет настройки пользователя.</string>
+      <string id="NewDevices_Value">При вставке USB-устройства</string>
+      <string id="NewDevices_Always">Подключить USB-устройство</string>
+      <string id="NewDevices_Ask">Отобразить сообщение и дать возможность пользователю выбрать</string>
+      <string id="NewDevices_Ignore">Ничего не делать</string>
+      <string id="HideSimpleDevices_Policy">Список USB-устройств в модуле Desktop Viewer</string>
+      <string id="HideSimpleDevices_Explain">Укажите, должны ли в списке USB-устройств отображаться устройства, которые можно подключить с помощью альтернативных технологий HDX.
+
+Подключить с помощью альтернативных технологий HDX можно обычные USB-накопители, веб-камеры, сканеры, принтеры и звуковые устройства.
+
+Этот параметр переопределяет настройки пользователя.</string>
+      <string id="HideSimpleDevices_Value">Скрыть USB-устройства, которые можно подключить с помощью других технологий HDX</string>
+      <string id="RedirectUnknownDevices">Перенаправление неизвестных USB-устройств</string>
+      <string id="RedirectUnknownDevices_Explain">Разрешить или отклонить перенаправление неизвестных USB-устройств. 
+USB-устройства, для которых на конечной точке не установлены драйверы, в диспетчере устройств Windows будут отображаться как неизвестные.
+      </string>
+      <string id="RedirectUnknownDevices_Value">Перенаправление неизвестных USB-устройств</string>
+	  
+
+	
+      <string id="unknown_2">Отключено</string>
+      <string id="unknown_4">Обнаружить версию</string>
+      <string id="unknown_6">SOCKS 4</string>
+      <string id="unknown_8">SOCKS 5</string>
+      <string id="unknown_18">Обнаружить версию</string>
+      <string id="unknown_20">TLS1.0 | TLS1.1 | TLS1.2</string>
+      <string id="unknown_24">Обнаружить версию</string>
+      <string id="unknown_26">Государственный</string>
+      <string id="unknown_28">Коммерческий</string>
+      <string id="unknown_30">По умолчанию</string>
+      <string id="unknown_32">Отключено</string>
+      <string id="unknown_34">Проверять только локальные списки отзыва сертификатов</string>
+      <string id="unknown_36">Извлекать списки отзыва сертификатов из сети</string>
+      <string id="unknown_38">Требовать списки отзыва сертификатов для подключения</string>
+      <string id="unknown_40">Не настроено</string>
+      <string id="unknown_42">Отобразить средство выбора сертификатов</string>
+      <string id="unknown_44">Отключено</string>
+      <string id="unknown_46">Использовать указанный сертификат</string>
+      <string id="unknown_48">Если возможно, выбирать автоматически</string>
+      <string id="unknown_112">Высок.</string>
+      <string id="unknown_114">Средн.</string>
+      <string id="unknown_116">Низк.</string>
+      <string id="unknown_122">16-разрядный цвет</string>
+      <string id="unknown_124">32-разрядный цвет</string>
+      <string id="unknown_140"/>
+      <string id="unknown_142">50 %</string>
+	  <string id="yes">Да</string>
+	  <string id="no">Нет, использовать основное разрешение</string>
+      <string id="unknown_144">75 %</string>
+      <string id="unknown_146">Другие</string>
+      <string id="unknown_158">Доступ к локальному рабочему столу</string>
+      <string id="unknown_160">Доступ к удаленному сеансу</string>
+      <string id="unknown_162">Доступ к удаленному сеансу только в полноэкранном режиме</string>
+      <string id="unknown_164">&lt;Отключено&gt;</string>
+      <string id="unknown_166">ALT</string>
+      <string id="unknown_168">CTRL</string>
+      <string id="unknown_170">SHIFT</string>
+      <string id="unknown_172">&lt;Отключено&gt;</string>
+      <string id="unknown_174">F1</string>
+      <string id="unknown_176">F10</string>
+      <string id="unknown_178">F11</string>
+      <string id="unknown_180">F12</string>
+      <string id="unknown_182">F2</string>
+      <string id="unknown_184">F3</string>
+      <string id="unknown_186">F4</string>
+      <string id="unknown_188">F5</string>
+      <string id="unknown_190">F6</string>
+      <string id="unknown_192">F7</string>
+      <string id="unknown_194">F8</string>
+      <string id="unknown_196">F9</string>
+      <string id="unknown_198">минус</string>
+      <string id="unknown_200">плюс</string>
+      <string id="unknown_202">звездочка</string>
+      <string id="unknown_204">TAB</string>
+      <string id="unknown_206">&lt;Отключено&gt;</string>
+      <string id="unknown_208">ALT</string>
+      <string id="unknown_210">CTRL</string>
+      <string id="unknown_212">SHIFT</string>
+      <string id="unknown_214">&lt;Отключено&gt;</string>
+      <string id="unknown_216">F1</string>
+      <string id="unknown_218">F10</string>
+      <string id="unknown_220">F11</string>
+      <string id="unknown_222">F12</string>
+      <string id="unknown_224">F2</string>
+      <string id="unknown_226">F3</string>
+      <string id="unknown_228">F4</string>
+      <string id="unknown_230">F5</string>
+      <string id="unknown_232">F6</string>
+      <string id="unknown_234">F7</string>
+      <string id="unknown_236">F8</string>
+      <string id="unknown_238">F9</string>
+      <string id="unknown_240">минус</string>
+      <string id="unknown_242">плюс</string>
+      <string id="unknown_244">звездочка</string>
+      <string id="unknown_246">TAB</string>
+      <string id="unknown_248">&lt;Отключено&gt;</string>
+      <string id="unknown_250">ALT</string>
+      <string id="unknown_252">CTRL</string>
+      <string id="unknown_254">SHIFT</string>
+      <string id="unknown_256">&lt;Отключено&gt;</string>
+      <string id="unknown_258">F1</string>
+      <string id="unknown_260">F10</string>
+      <string id="unknown_262">F11</string>
+      <string id="unknown_264">F12</string>
+      <string id="unknown_266">F2</string>
+      <string id="unknown_268">F3</string>
+      <string id="unknown_270">F4</string>
+      <string id="unknown_272">F5</string>
+      <string id="unknown_274">F6</string>
+      <string id="unknown_276">F7</string>
+      <string id="unknown_278">F8</string>
+      <string id="unknown_280">F9</string>
+      <string id="unknown_282">минус</string>
+      <string id="unknown_284">плюс</string>
+      <string id="unknown_286">звездочка</string>
+      <string id="unknown_288">TAB</string>
+      <string id="unknown_290">&lt;Отключено&gt;</string>
+      <string id="unknown_292">ALT</string>
+      <string id="unknown_294">CTRL</string>
+      <string id="unknown_296">SHIFT</string>
+      <string id="unknown_298">&lt;Отключено&gt;</string>
+      <string id="unknown_300">F1</string>
+      <string id="unknown_302">F10</string>
+      <string id="unknown_304">F11</string>
+      <string id="unknown_306">F12</string>
+      <string id="unknown_308">F2</string>
+      <string id="unknown_310">F3</string>
+      <string id="unknown_312">F4</string>
+      <string id="unknown_314">F5</string>
+      <string id="unknown_316">F6</string>
+      <string id="unknown_318">F7</string>
+      <string id="unknown_320">F8</string>
+      <string id="unknown_322">F9</string>
+      <string id="unknown_324">минус</string>
+      <string id="unknown_326">плюс</string>
+      <string id="unknown_328">звездочка</string>
+      <string id="unknown_330">TAB</string>
+      <string id="unknown_332">&lt;Отключено&gt;</string>
+      <string id="unknown_334">ALT</string>
+      <string id="unknown_336">CTRL</string>
+      <string id="unknown_338">SHIFT</string>
+      <string id="unknown_340">&lt;Отключено&gt;</string>
+      <string id="unknown_342">F1</string>
+      <string id="unknown_344">F10</string>
+      <string id="unknown_346">F11</string>
+      <string id="unknown_348">F12</string>
+      <string id="unknown_350">F2</string>
+      <string id="unknown_352">F3</string>
+      <string id="unknown_354">F4</string>
+      <string id="unknown_356">F5</string>
+      <string id="unknown_358">F6</string>
+      <string id="unknown_360">F7</string>
+      <string id="unknown_362">F8</string>
+      <string id="unknown_364">F9</string>
+      <string id="unknown_366">минус</string>
+      <string id="unknown_368">плюс</string>
+      <string id="unknown_370">звездочка</string>
+      <string id="unknown_372">TAB</string>
+      <string id="unknown_374">&lt;Отключено&gt;</string>
+      <string id="unknown_376">ALT</string>
+      <string id="unknown_378">CTRL</string>
+      <string id="unknown_380">SHIFT</string>
+      <string id="unknown_382">&lt;Отключено&gt;</string>
+      <string id="unknown_384">F1</string>
+      <string id="unknown_386">F10</string>
+      <string id="unknown_388">F11</string>
+      <string id="unknown_390">F12</string>
+      <string id="unknown_392">F2</string>
+      <string id="unknown_394">F3</string>
+      <string id="unknown_396">F4</string>
+      <string id="unknown_398">F5</string>
+      <string id="unknown_400">F6</string>
+      <string id="unknown_402">F7</string>
+      <string id="unknown_404">F8</string>
+      <string id="unknown_406">F9</string>
+      <string id="unknown_408">минус</string>
+      <string id="unknown_410">плюс</string>
+      <string id="unknown_412">звездочка</string>
+      <string id="unknown_414">TAB</string>
+      <string id="unknown_416">&lt;Отключено&gt;</string>
+      <string id="unknown_418">ALT</string>
+      <string id="unknown_420">CTRL</string>
+      <string id="unknown_422">SHIFT</string>
+      <string id="unknown_424">&lt;Отключено&gt;</string>
+      <string id="unknown_426">F1</string>
+      <string id="unknown_428">F10</string>
+      <string id="unknown_430">F11</string>
+      <string id="unknown_432">F12</string>
+      <string id="unknown_434">F2</string>
+      <string id="unknown_436">F3</string>
+      <string id="unknown_438">F4</string>
+      <string id="unknown_440">F5</string>
+      <string id="unknown_442">F6</string>
+      <string id="unknown_444">F7</string>
+      <string id="unknown_446">F8</string>
+      <string id="unknown_448">F9</string>
+      <string id="unknown_450">минус</string>
+      <string id="unknown_452">плюс</string>
+      <string id="unknown_454">звездочка</string>
+      <string id="unknown_456">TAB</string>
+      <string id="unknown_458">&lt;Отключено&gt;</string>
+      <string id="unknown_460">ALT</string>
+      <string id="unknown_462">CTRL</string>
+      <string id="unknown_464">SHIFT</string>
+      <string id="unknown_466">&lt;Отключено&gt;</string>
+      <string id="unknown_468">F1</string>
+      <string id="unknown_470">F10</string>
+      <string id="unknown_472">F11</string>
+      <string id="unknown_474">F12</string>
+      <string id="unknown_476">F2</string>
+      <string id="unknown_478">F3</string>
+      <string id="unknown_480">F4</string>
+      <string id="unknown_482">F5</string>
+      <string id="unknown_484">F6</string>
+      <string id="unknown_486">F7</string>
+      <string id="unknown_488">F8</string>
+      <string id="unknown_490">F9</string>
+      <string id="unknown_492">минус</string>
+      <string id="unknown_494">плюс</string>
+      <string id="unknown_496">звездочка</string>
+      <string id="unknown_498">TAB</string>
+      <string id="unknown_500">&lt;Отключено&gt;</string>
+      <string id="unknown_502">ALT</string>
+      <string id="unknown_504">CTRL</string>
+      <string id="unknown_506">SHIFT</string>
+      <string id="unknown_508">&lt;Отключено&gt;</string>
+      <string id="unknown_510">F1</string>
+      <string id="unknown_512">F10</string>
+      <string id="unknown_514">F11</string>
+      <string id="unknown_516">F12</string>
+      <string id="unknown_518">F2</string>
+      <string id="unknown_520">F3</string>
+      <string id="unknown_522">F4</string>
+      <string id="unknown_524">F5</string>
+      <string id="unknown_526">F6</string>
+      <string id="unknown_528">F7</string>
+      <string id="unknown_530">F8</string>
+      <string id="unknown_532">F9</string>
+      <string id="unknown_534">минус</string>
+      <string id="unknown_536">плюс</string>
+      <string id="unknown_538">звездочка</string>
+      <string id="unknown_540">TAB</string>
+      <string id="unknown_542">&lt;Отключено&gt;</string>
+      <string id="unknown_544">ALT</string>
+      <string id="unknown_546">CTRL</string>
+      <string id="unknown_548">SHIFT</string>
+      <string id="unknown_550">&lt;Отключено&gt;</string>
+      <string id="unknown_552">F1</string>
+      <string id="unknown_554">F10</string>
+      <string id="unknown_556">F11</string>
+      <string id="unknown_558">F12</string>
+      <string id="unknown_560">F2</string>
+      <string id="unknown_562">F3</string>
+      <string id="unknown_564">F4</string>
+      <string id="unknown_566">F5</string>
+      <string id="unknown_568">F6</string>
+      <string id="unknown_570">F7</string>
+      <string id="unknown_572">F8</string>
+      <string id="unknown_574">F9</string>
+      <string id="unknown_576">минус</string>
+      <string id="unknown_578">плюс</string>
+      <string id="unknown_580">звездочка</string>
+      <string id="unknown_582">TAB</string>
+      <string id="unknown_608">Отключено</string>
+      <string id="unknown_610">Обнаружить версию</string>
+      <string id="unknown_612">SOCKS 4</string>
+      <string id="unknown_614">SOCKS 5</string>
+      <string id="unknown_624">Обнаружить версию</string>
+      <string id="unknown_626">TLS1.0 | TLS1.1 | TLS1.2</string>
+      <string id="unknown_630">Обнаружить версию</string>
+      <string id="unknown_632">Государственный</string>
+      <string id="unknown_634">Коммерческий</string>
+      <string id="unknown_636">По умолчанию</string>
+      <string id="unknown_638">NoCheck</string>
+      <string id="unknown_640">Проверять без доступа к сети</string>
+      <string id="unknown_642">Проверять с полным доступом</string>
+      <string id="unknown_644">Проверять с полным доступом и требовать список отзыва сертификатов</string>
+      <string id="unknown_646">Не настроено</string>
+      <string id="unknown_648">Отобразить средство выбора сертификатов</string>
+      <string id="unknown_650">Отключено</string>
+      <string id="unknown_652">Использовать указанный сертификат</string>
+      <string id="unknown_654">Если возможно, выбирать автоматически</string>
+	  <string id="unknown_656">Отключено</string>
+      <string id="unknown_658">Запустить</string>
+      <string id="unknown_660">Обновить</string>
+      <string id="unknown_662">Запуск, обновление</string>
+      <string id="unknown_664">Открыть</string>
+      <string id="unknown_666">Запуск, открытие</string>
+      <string id="unknown_668">Обновление, открытие</string>
+      <string id="unknown_670">Обновление, открытие, запуск</string>
+      <string id="unknown_672">WinLogon</string>
+      <string id="unknown_674">WinLogon, запуск</string>
+      <string id="unknown_676">WinLogon, обновление</string>
+      <string id="unknown_678">WinLogon, обновление, запуск</string>
+      <string id="unknown_680">WinLogon, открытие</string>
+      <string id="unknown_682">WinLogon, открытие, запуск</string>
+      <string id="unknown_684">WinLogon, открытие, обновление</string>
+      <string id="unknown_686">Все параметры</string>
+	  <string id="unknown_688">&lt;Отключено&gt;</string>
+      <string id="unknown_690">ALT</string>
+      <string id="unknown_692">CTRL</string>
+      <string id="unknown_694">SHIFT</string>
+      <string id="unknown_696">&lt;Отключено&gt;</string>
+      <string id="unknown_698">F1</string>
+      <string id="unknown_700">F10</string>
+      <string id="unknown_702">F11</string>
+      <string id="unknown_704">F12</string>
+      <string id="unknown_706">F2</string>
+      <string id="unknown_708">F3</string>
+      <string id="unknown_710">F4</string>
+      <string id="unknown_712">F5</string>
+      <string id="unknown_714">F6</string>
+      <string id="unknown_716">F7</string>
+      <string id="unknown_718">F8</string>
+      <string id="unknown_720">F9</string>
+      <string id="unknown_722">минус</string>
+      <string id="unknown_724">плюс</string>
+      <string id="unknown_726">звездочка</string>
+      <string id="unknown_728">TAB</string>
+      <string id="unknown_715">Высок.</string>
+      <string id="unknown_717">Средн.</string>
+      <string id="unknown_719">Низк.</string>
+      <string id="unknown_725">16-разрядный цвет</string>
+      <string id="unknown_727">32-разрядный цвет</string>
+      <string id="unknown_743"/>
+      <string id="unknown_745">50 %</string>
+      <string id="unknown_747">75 %</string>
+      <string id="unknown_749">Другие</string>
+      <string id="unknown_761">Доступ к локальному рабочему столу</string>
+      <string id="unknown_763">Доступ к удаленному сеансу</string>
+      <string id="unknown_765">Доступ к удаленному сеансу только в полноэкранном режиме</string>
+      <string id="unknown_767">&lt;Отключено&gt;</string>
+      <string id="unknown_769">SHIFT</string>
+      <string id="unknown_771">CTRL</string>
+      <string id="unknown_773">ALT</string>
+      <string id="unknown_775">&lt;Отключено&gt;</string>
+      <string id="unknown_777">TAB</string>
+      <string id="unknown_779">звездочка</string>
+      <string id="unknown_781">плюс</string>
+      <string id="unknown_783">минус</string>
+      <string id="unknown_785">F1</string>
+      <string id="unknown_787">F2</string>
+      <string id="unknown_789">F3</string>
+      <string id="unknown_791">F4</string>
+      <string id="unknown_793">F5</string>
+      <string id="unknown_795">F6</string>
+      <string id="unknown_797">F7</string>
+      <string id="unknown_799">F8</string>
+      <string id="unknown_801">F9</string>
+      <string id="unknown_803">F10</string>
+      <string id="unknown_805">F11</string>
+      <string id="unknown_807">F12</string>
+      <string id="unknown_809">&lt;Отключено&gt;</string>
+      <string id="unknown_811">SHIFT</string>
+      <string id="unknown_813">CTRL</string>
+      <string id="unknown_815">ALT</string>
+      <string id="unknown_817">&lt;Отключено&gt;</string>
+      <string id="unknown_819">TAB</string>
+      <string id="unknown_821">звездочка</string>
+      <string id="unknown_823">плюс</string>
+      <string id="unknown_825">минус</string>
+      <string id="unknown_827">F1</string>
+      <string id="unknown_829">F2</string>
+      <string id="unknown_831">F3</string>
+      <string id="unknown_833">F4</string>
+      <string id="unknown_835">F5</string>
+      <string id="unknown_837">F6</string>
+      <string id="unknown_839">F7</string>
+      <string id="unknown_841">F8</string>
+      <string id="unknown_843">F9</string>
+      <string id="unknown_845">F10</string>
+      <string id="unknown_847">F11</string>
+      <string id="unknown_849">F12</string>
+      <string id="unknown_851">&lt;Отключено&gt;</string>
+      <string id="unknown_853">SHIFT</string>
+      <string id="unknown_855">CTRL</string>
+      <string id="unknown_857">ALT</string>
+      <string id="unknown_859">&lt;Отключено&gt;</string>
+      <string id="unknown_861">TAB</string>
+      <string id="unknown_863">звездочка</string>
+      <string id="unknown_865">плюс</string>
+      <string id="unknown_867">минус</string>
+      <string id="unknown_869">F1</string>
+      <string id="unknown_871">F2</string>
+      <string id="unknown_873">F3</string>
+      <string id="unknown_875">F4</string>
+      <string id="unknown_877">F5</string>
+      <string id="unknown_879">F6</string>
+      <string id="unknown_881">F7</string>
+      <string id="unknown_883">F8</string>
+      <string id="unknown_885">F9</string>
+      <string id="unknown_887">F10</string>
+      <string id="unknown_889">F11</string>
+      <string id="unknown_891">F12</string>
+      <string id="unknown_893">&lt;Отключено&gt;</string>
+      <string id="unknown_895">SHIFT</string>
+      <string id="unknown_897">CTRL</string>
+      <string id="unknown_899">ALT</string>
+      <string id="unknown_901">&lt;Отключено&gt;</string>
+      <string id="unknown_903">TAB</string>
+      <string id="unknown_905">звездочка</string>
+      <string id="unknown_907">плюс</string>
+      <string id="unknown_909">минус</string>
+      <string id="unknown_911">F1</string>
+      <string id="unknown_913">F2</string>
+      <string id="unknown_915">F3</string>
+      <string id="unknown_917">F4</string>
+      <string id="unknown_919">F5</string>
+      <string id="unknown_921">F6</string>
+      <string id="unknown_923">F7</string>
+      <string id="unknown_925">F8</string>
+      <string id="unknown_927">F9</string>
+      <string id="unknown_929">F10</string>
+      <string id="unknown_931">F11</string>
+      <string id="unknown_933">F12</string>
+      <string id="unknown_935">&lt;Отключено&gt;</string>
+      <string id="unknown_937">SHIFT</string>
+      <string id="unknown_939">CTRL</string>
+      <string id="unknown_941">ALT</string>
+      <string id="unknown_943">&lt;Отключено&gt;</string>
+      <string id="unknown_945">TAB</string>
+      <string id="unknown_947">звездочка</string>
+      <string id="unknown_949">плюс</string>
+      <string id="unknown_951">минус</string>
+      <string id="unknown_953">F1</string>
+      <string id="unknown_955">F2</string>
+      <string id="unknown_957">F3</string>
+      <string id="unknown_959">F4</string>
+      <string id="unknown_961">F5</string>
+      <string id="unknown_963">F6</string>
+      <string id="unknown_965">F7</string>
+      <string id="unknown_967">F8</string>
+      <string id="unknown_969">F9</string>
+      <string id="unknown_971">F10</string>
+      <string id="unknown_973">F11</string>
+      <string id="unknown_975">F12</string>
+      <string id="unknown_977">&lt;Отключено&gt;</string>
+      <string id="unknown_979">SHIFT</string>
+      <string id="unknown_981">CTRL</string>
+      <string id="unknown_983">ALT</string>
+      <string id="unknown_985">&lt;Отключено&gt;</string>
+      <string id="unknown_987">TAB</string>
+      <string id="unknown_989">звездочка</string>
+      <string id="unknown_991">плюс</string>
+      <string id="unknown_993">минус</string>
+      <string id="unknown_995">F1</string>
+      <string id="unknown_997">F2</string>
+      <string id="unknown_999">F3</string>
+      <string id="unknown_1001">F4</string>
+      <string id="unknown_1003">F5</string>
+      <string id="unknown_1005">F6</string>
+      <string id="unknown_1007">F7</string>
+      <string id="unknown_1009">F8</string>
+      <string id="unknown_1011">F9</string>
+      <string id="unknown_1013">F10</string>
+      <string id="unknown_1015">F11</string>
+      <string id="unknown_1017">F12</string>
+      <string id="unknown_1019">&lt;Отключено&gt;</string>
+      <string id="unknown_1021">SHIFT</string>
+      <string id="unknown_1023">CTRL</string>
+      <string id="unknown_1025">ALT</string>
+      <string id="unknown_1027">&lt;Отключено&gt;</string>
+      <string id="unknown_1029">TAB</string>
+      <string id="unknown_1031">звездочка</string>
+      <string id="unknown_1033">плюс</string>
+      <string id="unknown_1035">минус</string>
+      <string id="unknown_1037">F1</string>
+      <string id="unknown_1039">F2</string>
+      <string id="unknown_1041">F3</string>
+      <string id="unknown_1043">F4</string>
+      <string id="unknown_1045">F5</string>
+      <string id="unknown_1047">F6</string>
+      <string id="unknown_1049">F7</string>
+      <string id="unknown_1051">F8</string>
+      <string id="unknown_1053">F9</string>
+      <string id="unknown_1055">F10</string>
+      <string id="unknown_1057">F11</string>
+      <string id="unknown_1059">F12</string>
+      <string id="unknown_1061">&lt;Отключено&gt;</string>
+      <string id="unknown_1063">SHIFT</string>
+      <string id="unknown_1065">CTRL</string>
+      <string id="unknown_1067">ALT</string>
+      <string id="unknown_1069">&lt;Отключено&gt;</string>
+      <string id="unknown_1071">TAB</string>
+      <string id="unknown_1073">звездочка</string>
+      <string id="unknown_1075">плюс</string>
+      <string id="unknown_1077">минус</string>
+      <string id="unknown_1079">F1</string>
+      <string id="unknown_1081">F2</string>
+      <string id="unknown_1083">F3</string>
+      <string id="unknown_1085">F4</string>
+      <string id="unknown_1087">F5</string>
+      <string id="unknown_1089">F6</string>
+      <string id="unknown_1091">F7</string>
+      <string id="unknown_1093">F8</string>
+      <string id="unknown_1095">F9</string>
+      <string id="unknown_1097">F10</string>
+      <string id="unknown_1099">F11</string>
+      <string id="unknown_1101">F12</string>
+      <string id="unknown_1103">&lt;Отключено&gt;</string>
+      <string id="unknown_1105">SHIFT</string>
+      <string id="unknown_1107">CTRL</string>
+      <string id="unknown_1109">ALT</string>
+      <string id="unknown_1111">&lt;Отключено&gt;</string>
+      <string id="unknown_1113">TAB</string>
+      <string id="unknown_1115">звездочка</string>
+      <string id="unknown_1117">плюс</string>
+      <string id="unknown_1119">минус</string>
+      <string id="unknown_1121">F1</string>
+      <string id="unknown_1123">F2</string>
+      <string id="unknown_1125">F3</string>
+      <string id="unknown_1127">F4</string>
+      <string id="unknown_1129">F5</string>
+      <string id="unknown_1131">F6</string>
+      <string id="unknown_1133">F7</string>
+      <string id="unknown_1135">F8</string>
+      <string id="unknown_1137">F9</string>
+      <string id="unknown_1139">F10</string>
+      <string id="unknown_1141">F11</string>
+      <string id="unknown_1143">F12</string>
+      <string id="unknown_1145">&lt;Отключено&gt;</string>
+      <string id="unknown_1147">SHIFT</string>
+      <string id="unknown_1149">CTRL</string>
+      <string id="unknown_1151">ALT</string>
+      <string id="unknown_1153">&lt;Отключено&gt;</string>
+      <string id="unknown_1155">TAB</string>
+      <string id="unknown_1157">звездочка</string>
+      <string id="unknown_1159">плюс</string>
+      <string id="unknown_1161">минус</string>
+      <string id="unknown_1163">F1</string>
+      <string id="unknown_1165">F2</string>
+      <string id="unknown_1167">F3</string>
+      <string id="unknown_1169">F4</string>
+      <string id="unknown_1171">F5</string>
+      <string id="unknown_1173">F6</string>
+      <string id="unknown_1175">F7</string>
+      <string id="unknown_1177">F8</string>
+      <string id="unknown_1179">F9</string>
+      <string id="unknown_1181">F10</string>
+      <string id="unknown_1183">F11</string>
+      <string id="unknown_1185">F12</string>
+	  <string id="unknown_1187">НЕТ</string>
+	  <string id="unknown_1189">FIPS</string>
+      <string id="unknown_1191">SP800-52</string>
+	  <string id="unknown_1195">Любой</string>
+	  <string id="unknown_1197">TLS</string>
+	  <string id="unknown_1199">Регулируется (безопас.)</string>
+	  <string id="unknown_1201">Любой</string>
+	  <string id="unknown_1203">TLS1.2</string>
+	  <string id="unknown_1205">TLS1.1 | TLS1.2</string>
+	  <string id="unknown_1207">TLS1.0 | TLS1.1 | TLS1.2</string>
+	  <string id="unknown_1209">Проверять с полным доступом и требовать список отзыва сертификатов (для всех)</string>	 
+	  <string id="unknown_1210">Отключить вкладку отображения приложения</string>
+	  <string id="unknown_1211">Отключить вкладку параметров повторного подключения</string>
+	  <string id="unknown_1212">Отключить весь пользовательский интерфейс</string>
+	  <string id="unknown_1213">A: всегда</string>
+	  <string id="unknown_1214">S: безопасность</string>
+	  <string id="unknown_1215">N: никогда</string>
+	  <string id="unknown_1217">&lt;Отключено&gt;</string>
+      <string id="unknown_1219">SHIFT</string>
+      <string id="unknown_1221">CTRL</string>
+      <string id="unknown_1223">ALT</string>
+      <string id="unknown_1225">&lt;Отключено&gt;</string>
+      <string id="unknown_1227">TAB</string>
+      <string id="unknown_1229">звездочка</string>
+      <string id="unknown_1231">плюс</string>
+      <string id="unknown_1233">минус</string>
+      <string id="unknown_1235">F1</string>
+      <string id="unknown_1237">F2</string>
+      <string id="unknown_1239">F3</string>
+      <string id="unknown_1241">F4</string>
+      <string id="unknown_1243">F5</string>
+      <string id="unknown_1245">F6</string>
+      <string id="unknown_1247">F7</string>
+      <string id="unknown_1249">F8</string>
+      <string id="unknown_1251">F9</string>
+      <string id="unknown_1253">F10</string>
+      <string id="unknown_1255">F11</string>
+      <string id="unknown_1257">F12</string>
+      <string id="Policy_EnableAutoUpdatePolicy">Обновления Citrix Workspace</string>
+      <string id="Explain_EnableAutoUpdatePolicy">Не настроено: функция &quot;Обновления Citrix Workspace&quot; включена.
+Включено: функция &quot;Обновления Citrix Workspace&quot; включена с дополнительными параметрами, перечисленными в этом диалоговом окне.
+Отключено: функция &quot;Обновления Citrix Workspace&quot; не отображается в разделе &quot;Дополнительные параметры&quot;, уведомления об обновлениях не приходят.
+Включить политику обновления Citrix Workspace:
+	Автоматически = Citrix Workspace проверяет наличие обновлений автоматически. 
+	Вручную = пользователь проверяет наличие обновлений вручную. 
+	  
+ТОЛЬКО LTSR: 
+	True = Доступны только обновления LTSR.
+Citrix-Workspace-Update-DeferUpdate-Count:
+	-1: пользователь может откладывать обновление неограниченное количество раз.
+	0: пользователю не предлагается вариант &quot;Напомнить позже&quot;.
+	число: пользователю предлагается вариант &quot;Напомнить позже&quot; указанное число раз.
+	  </string> 
+	  <string id="AutoUpdate">Авто</string> 
+	  <string id="Manual">Вручную</string> 
+      <string id="Policy_CheckAutoUpdatePolicy">Установите задержку в проверке обновления</string>
+      <string id="Explain_CheckAutoUpdatePolicy">Эта политика применяется для установки параметров, когда для пользователей выпущено обновление Citrix Workspace.
+- (Быстро) — доступные обновления выгружаются для пользователей в начале периода поставки.
+- (Средне) — доступные обновления выгружаются для пользователей в середине периода поставки.
+- (Медленно) — доступные обновления выгружаются для пользователей в конце периода поставки.
+</string> 
+	  <string id="Fast">Быстро</string>
+      <string id="Medium">Средн.</string> 
+	  <string id="Slow">Медленно</string>
+      <string id="AllowPublishContent">Разрешить</string>
+      <string id="PreventPublishContent">Запретить</string>
+      <string id="ICAClient">Citrix Workspace</string>
+      <string id="Explain_ICAClient">С помощью приложения Citrix Workspace можно подключаться к удаленным приложениям и рабочим столам в фермах.</string>
+      <string id="Network">Сетевая маршрутизация</string>
+      <string id="Explain_Network">С помощью этих политик можно управлять тем, как Citrix Workspace маршрутизирует подключения к ферме.</string>
+      <string id="Authentication">Проверка подлинности пользователя</string>
+      <string id="Explain_Authentication">Эти политики контролируют, как Citrix Workspace проверяет подлинность пользователя в удаленном приложении или рабочем столе.</string>
+      <string id="UserExperience">Условия работы пользователя</string>
+      <string id="Explain_UserExperience">Citrix Workspace можно настроить на разное взаимодействие с приложениями клиентских компьютеров.  С помощью этих параметров можно управлять тем, как клиентские компьютеры отображают удаленные приложения и рабочие столы для пользователя.</string>
+	  <string id="Policy_HWacceleration">Аппаратное ускорение для графики</string>
+	  <string id="Explain_HWacceleration">С помощью этой политики можно включать или отключать аппаратное ускорение (графический процессор) для удаленного отображения графики. Если не было настройки, использование аппаратного ускорения включено на не встроенных графических процессорах. Когда эта политика включена, Citrix Workspace будет пытаться ускорять удаленное отображение графики с помощью клиентского графического процессора. Эта функция автоматически отключается на клиентских устройствах, не поддерживающих ее.</string>
+      <string id="Policy_EnableH265">Декодирование H265 для отображения графики</string>
+      <string id="Explain_EnableH265">С помощью этой политики можно включать или отключать декодирование H265 для удаленного отображения графики. Если не было настройки, декодирование H265 будет недоступно. Когда эта политика включена, Citrix Workspace будет пытаться использовать клиентский графический процессор, чтобы декодировать с помощью декодера H265 (если сервер поддерживает кодирование H265). Эта функция автоматически отключается на клиентских устройствах, не поддерживающих ее, и возвращается к декодированию H264</string>
+      <string id="Proxy">Прокси-сервер</string>
+      <string id="Explain_Proxy">Citrix Workspace можно настроить на использование определенной маршрутизации прокси для удаленных приложений и рабочих столов.  Эти параметры позволяют настраивать прокси-серверы клиента отдельно от других программ на клиентском компьютере.</string>
+	  <string id="AdvancePreferencesOptions">Дополнительные параметры — параметры</string>
+      <string id="Explain_AdvancePreferencesOptions">Включить/отключить параметры, представленные на вкладке &quot;Дополнительные параметры&quot;</string>
+      <string id="ClientEngine">Подсистема клиента</string>
+      <string id="Explain_ClientEngine">Citrix Workspace можно настроить на взаимодействие со свойствами конфигурации подсистемы клиента (например, с параметрами ICA-файлов)</string>
+      <string id="MultiStreamICA">Многопоточная архитектура ICA</string>
+      <string id="Explain_MultiStreamICA">Эта политика позволяет настроить несколько подключений для переноса трафика ICA между клиентом и сервером.</string>
+      <string id="SelfService">SelfService</string>
+      <string id="Explain_SelfService">Эти политики управляют параметрами модуля самообслуживания</string>
+      <string id="RealTimeTransport">Транспортировка в реальном времени</string>
+      <string id="Explain_RealTimeTransport">Транспортировка в реальном времени</string>
+      <string id="RealTimeTransportThroughGateway">Транспортировка в реальном времени через NetScaler Gateway</string>
+      <string id="Explain_RealTimeTransportThroughGateway">Транспортировка в реальном времени через NetScaler Gateway</string>
+      <string id="Policy_EnableICAClient">Разрешить клиентские подключения</string>
+      <string id="Explain_EnableICAClient">С помощью этой политики можно включить или полностью отключить подключения приложения Citrix Workspace.  
+      
+Если эта политика не настроена, клиент не разрешает подключаться к серверам.  
+      
+Когда эта политика включена, клиент подключается к серверу только тогда, когда включен параметр &quot;Включить клиент&quot; и когда версия клиента соответствует или выше &quot;минимальной версии клиента&quot;.  
+
+Если эта политика отключена, клиент не разрешает подключаться к серверам.  
+
+
+Устранение неполадок.
+Если в подключении отказано из-за того, что клиент не включен, появляется сообщение об ошибке &quot;ОШИБКА &lt;сервера&gt;: не удается подключиться к серверу Citrix XenApp. Сервер (…) не является доверенным для подключений ICA. Подключение к области (все области) не разрешено параметрами блокировки. Свяжитесь с администратором.&quot;  
+
+Если клиент не разрешает подключиться из-за слишком ранней версии, появляется сообщение об ошибке &quot;Номер ошибки 2321: диспетчер конфигурации клиента ICA: слишком ранняя версия клиента ICA, поэтому запуск с использованием установленных данных конфигурации невозможен&quot;.</string>
+      <string id="Part_EnableICAClient_Enable">Включить клиент</string>
+      <string id="Part_EnableICAClient_Minimum">Минимальная версия клиента</string>
+      <string id="Policy_ProxyLockdown">Настроить параметры прокси-сервера клиента</string>
+      <string id="Explain_ProxyLockdown">Включите эту политику, чтобы настроить основные прокси-серверы сети, с помощью которых клиент может подключиться к удаленному приложению или рабочему столу. 
+В раскрывающемся меню &quot;Тип прокси-сервера&quot; доступны следующие варианты. 
+– &quot;Авто&quot;: клиент определяет прокси-сервер с помощью параметров локального компьютера. 
+– &quot;Нет&quot;: клиент может подключиться к серверу напрямую, не используя прокси-сервер. 
+– &quot;Сценарий&quot;: клиент может извлекать PAC-файл (Java), перейдя по URL-адресу, указанному в списке URL-адресов сценария прокси-сервера. PAC-файл выполняется для определения прокси-сервера, который используется для подключения. 
+– &quot;Безопасный&quot;: если выбрано значение &quot;Безопасный&quot;, клиент будет подключаться к прокси-серверу, который указан в параметрах &quot;Имена хостов прокси&quot; и &quot;Порты прокси-сервера&quot;. Протокол согласования использует запрос заголовка &quot;HTTP CONNECT&quot;, который определяет нужный адрес назначения. Этот протокол прокси-соединения обычно используется для трафика, передаваемого по протоколу HTTP, и поддерживает проверку подлинности прокси GSSAPI. 
+– &quot;SOCKS/SOCKS V4/SOCKS V5&quot;: когда выбран прокси-сервер &quot;SOCKS&quot;, клиент отправляет подтверждение SOCKS V4 или SOCKS V5 прокси-серверу, который указан в параметрах &quot;Имена узлов прокси-сервера&quot; и &quot;Порты прокси-сервера&quot;. Параметр &quot;SOCKS&quot; определяет и использует нужную версию Socks. 
+
+Чтобы включить обход прокси-серверов, выберите &quot;Список серверов обхода&quot;. 
+
+Устранение неполадок. 
+Некоторые клиентские платформы не поддерживают тип прокси-сервера &quot;Авто&quot; из-за ограничений операционной системы. Подробности см. в руководстве администратора. Для этих платформ параметры прокси-сервера нужно настроить вручную на клиентском устройстве.  
+
+При настройке сервера Web Interface можно указать нужный прокси-сервер для определенного расположения клиента. При настройке прокси-серверов с использованием групповой политики важно не переопределять эти параметры. Если можно выбрать несколько прокси-серверов, просто воспользуйтесь списком вариантов (с разделителями-запятыми), в котором первый вариант — это прокси-сервер по умолчанию. 
+
+Для большинства клиентских развертываний интрасети следует указать для типа прокси-сервера значение &quot;Нет&quot;. В противном случае клиент может предпринять попытку подключиться через Интернет. Для более сложных развертываний можно использовать параметр &quot;Список серверов обхода&quot;. Кроме того, топология сети поддерживает доступные PAC-сценарии и конфигурацию доверенного сервера. 
+
+Некоторые прокси-серверы автоматически разрывают подключение, если оно было неактивным некоторое время. Из-за этого возможно отключение неиспользуемых сеансов клиентов. С помощью серверного параметра &quot;Проверка активности ICA&quot; можно отправлять дополнительные пакеты данных в периоды неактивности, чтобы прокси-серверы не разрывали подключение.</string>
+      <string id="Part_Proxy_ProxyTypeLockdown">Типы прокси-серверов</string>
+      <string id="Part_Proxy_ProxyHostLockdown">Имена узлов прокси-серверов</string>
+      <string id="Part_Proxy_ProxyPortLockdown">Порты прокси-серверов</string>
+      <string id="Part_Proxy_ProxyAutoConfigUrlLockdown">URL-адреса сценариев прокси-сервера</string>
+      <string id="Part_Proxy_ProxyBypassListLockdown">Список серверов обхода</string>
+      <string id="Policy_AltProxyLockdown">Настроить параметры клиентского прокси-сервера отработки отказа</string>
+      <string id="Explain_AltProxyLockdown">С помощью этой политики можно настроить альтернативные прокси-серверы, которые клиент может использовать, если основным прокси-серверам сети не удается подключиться к удаленному приложению или рабочему столу.  
+
+Когда эта политика не настроена, то подключение или неподключение клиента с помощью прокси-сервера зависит от параметров клиента.  
+
+Когда эта политика включена, клиент пытается подключиться с помощью альтернативного прокси-сервера, если не удается подключиться к основному прокси-серверу. Параметры прокси-сервера обработки отказа действуют идентично параметрам основного прокси-сервера.  
+
+Если не удается подключиться и с помощью основного, и с помощью альтернативного прокси-серверов, установите флажок &quot;Обработка отказа: подключение напрямую&quot;. Тогда клиент попробует подключиться напрямую, не используя прокси-серверы.
+
+
+Устранение неполадок.
+Из-за некоторых ошибок прокси-сервера может показаться, что клиент зависает при подключении. Обычно это происходит потому, что прокси-сервер сам пытается повторно подключиться или для него настроено большое значение времени ожидания. В зависимости от топологии сети может понадобиться настроить сервер Web Interface, чтобы определить функционирующие прокси-серверы, или изменить настройки времени ожидания для прокси-сервера.</string>
+      <string id="Part_AltProxy_ProxyTypeLockdown">Типы прокси-серверов</string>
+      <string id="Part_AltProxy_ProxyHostLockdown">Имена узлов прокси-серверов</string>
+      <string id="Part_AltProxy_ProxyPortLockdown">Порты прокси-серверов</string>
+      <string id="Part_AltProxy_ProxyAutoConfigUrlLockdown">URL-адреса сценариев прокси-сервера</string>
+      <string id="Part_AltProxy_ProxyBypassListLockdown">Список серверов обхода</string>
+      <string id="Part_AltProxy_ProxyFallbackLockdown">Обработка отказа: подключение напрямую</string>
+      <string id="Policy_ProxySocks">Настроить параметры прокси-сервера SOCKS</string>
+      <string id="Explain_ProxySocks">С помощью этой политики можно настроить использование дополнительных прокси-серверов SOCKS, которые нужны для некоторых расширенных топологий сети.  
+
+Если она включена, клиент проверяет параметр &quot;Версия протокола SOCKS&quot;. Если подключение через SOCKS не отключено, клиент попытается подключиться с помощью прокси-сервера SOCKS, указанного в параметрах &quot;Имена узлов прокси-сервера&quot; и &quot;Порты прокси-сервера&quot;.  
+
+Клиент поддерживает подключения с помощью прокси-серверов SOCKS 4 или SOCKS 5. Иногда клиент может автоматически определить версию, которую использует прокси-сервер.  
+
+
+Устранение неполадок.
+Параметры прокси SOCKS предназначены для использования еще одного прокси-сервера в дополнение к основному и альтернативному прокси-серверу.  При использовании только одного прокси-сервера эти параметры прокси SOCKS следует отключить.</string>
+      <string id="Part_ProxySocks_Version">Версия протокола SOCKS</string>
+      <string id="Part_ProxySocks_ProxyHostLockdown">Имена узлов прокси-серверов</string>
+      <string id="Part_ProxySOCKS_ProxyPortLockdown">Порты прокси-серверов</string>
+      <string id="Policy_ProxyAuthentication">Настроить проверку подлинности прокси</string>
+      <string id="Explain_ProxyAuthentication">Эта политика позволяет управлять механизмами проверки подлинности, с помощью которых клиент подключается к прокси-серверу. С помощью проверки подлинности прокси-серверов можно отслеживать трафик данных в больших сетевых развертываниях. 
+
+Обычно проверку подлинности выполняет операционная система, но в некоторых случаях это делает определенный пользователь, которому предоставляются имя пользователя и пароль. Чтобы система не спрашивала у пользователя эти учетные данные, снимите флажок &quot;Запрашивать учетные данные у пользователя&quot;. В этом случае клиент попробует подключиться анонимно. Кроме того, можно настроить клиент так, чтобы он подключался с помощью учетных данных, переданных ему сервером Web Interface, или их можно указать через групповую политику в параметрах &quot;Явное имя пользователя&quot; и &quot;Явный пароль&quot;.
+
+
+Устранение неполадок
+Обычно проверка подлинности прокси-сервера по протоколу NTLM выполняется под управлением контроллера доменов и ей не может управлять клиент. И в клиенте, и в прокси-сервере нужно настроить соответствующие отношения доверия на уровне домена.  
+
+Проверку подлинности прокси-сервера нельзя объединить с клиентской функцией сквозной проверки подлинности. Обычно пароль прокси-сервера никак не связан с паролями пользователей.</string>
+      <string id="Policy_ProxyExplicitAuthenticationEnabled">Запрашивать учетные данные у пользователя</string>
+      <string id="Policy_ProxyBasicAuthenticationEnabled">Разрешить обычную проверку подлинности (простой текст)</string>
+      <string id="Policy_ProxyNTLMAuthenticationEnabled">Разрешить проверку подлинности на основе хэша по протоколу NTLM</string>
+      <string id="Part_Proxy_Socks5User">Явное имя пользователя</string>
+      <string id="Part_Proxy_Socks5Password">Явный пароль</string>
+      <string id="Policy_ClientAutoReconnect">Надежность сеансов и автоматическое повторное подключение</string>
+      <string id="Explain_ClientAutoReconnect">&quot;С помощью этой политики можно настроить поведение клиента в случае ошибки сети.
+
+Чтобы настроить переподключение, выберите один из следующих пунктов:
+
+&quot;Включить автоматическое переподключение&quot;: в случае ошибки сети клиент автоматически пробует переподключиться к серверу.
+
+&quot;Включить надежность сеансов&quot;: в случае ошибки сети клиент пробует переподключиться к серверу SSL/TS. 
+
+ПРИМЕЧАНИЕ. Если выбраны оба значения, то по умолчанию клиент в случае ошибки сети выбирает параметр &quot;Включить надежность сеансов&quot;. 
+
+ПРИМЕЧАНИЕ. Если эта политика включена и не выбрано ни одно значение параметра, то политика не применяется.
+
+&quot;Уровень прозрачности&quot;: уровень прозрачности, примененный в сеансе XA или XD при переподключении к нему. 
+
+Если задать значение 0, окно сеанса XA или XD становится черным при переподключении.
+
+Если задано значение 100, слой прозрачности не применяется (замерзший экран)
+
+Устранение неполадок:
+Некоторые прокси-серверы автоматически разрывают подключение, если оно было неактивным некоторое время.  Из-за этого возможно отключение неиспользуемых сеансов клиентов.  С помощью серверного параметра &quot;Проверка активности ICA&quot; можно во время неактивности отправлять дополнительные пакеты данных, чтобы прокси-серверы не разрывали подключение. &quot;
+</string>
+      <string id="Part_ClientAutoReconnect_Reconnect">Включить автоматическое повторное подключение</string>
+      <string id="Part_ClientAutoReconnect_CGP">Включить надежность сеансов (имеет приоритет, если выбраны оба параметра)</string>
+	  <string id="Part_ClientAutoReconnect_Dimming">Уровень прозрачности</string>
+      <string id="Policy_SSLLockdown">Конфигурация TLS и режима совместимости</string>
+      <string id="Policy_DeprecatedCiphers">Устаревшие комплекты шифров</string>
+      <string id="Explain_SSLLockdown">Этот параметр позволяет приложению Citrix Workspace определять безопасные подключения и шифровать обмен данных в пределах сервера. 
+
+Ниже приведены типы безопасного подключения по протоколу TLS между Citrix Workspace, XenApp и XenDesktop, которые поддерживает корпорация Citrix:
+1. TLS 1.0
+2. TLS 1.1
+3. TLS 1.2 
+
+Значения параметра &quot;Режим соответствия требованиям безопасности&quot;:
+- FIPS - Включение режима FIPS принуждает операционную систему Windows и ее подсистемы использовать алгоритмы шифрования, првоеренные FIPS.
+- Нет — режим соответствия требованиям не применяется
+- SP800-52 — применяется режим соответствия требованиям NIST SP800-52r1.
+Если выбрать SP800-52 из раскрывающегося меню &quot;Режим соответствия безопасности&quot;, разрешаются следующие политики проверки отзыва сертификатов (CRCP):
+- &quot;Проверять с полным доступом и требовать список отзыва сертификатов&quot;. Это значение по умолчанию.
+- &quot;Проверять с полным доступом и требовать список отзыва сертификатов (для всех)&quot; 
+
+Вы можете настроить Citrix Workspace на подключение только к серверам, указанным в списке через запятую в параметре &quot;Разрешенные серверы TLS&quot;. В нем можно указать подстановочные знаки и номера портов, например обозначение *.citrix.com:4433 позволяет подключаться к любому серверу, общее имя которого заканчивается символами .citrix.com и который использует порт 4433. Точность информации в сертификате безопасности гарантирует издатель сертификата.  Если Citrix Workspace не распознает издателя сертификата и не доверяет ему, то подключение отклоняется.
+
+Вы можете указать следующие сочетания версий TLS:
+
+- TLS 1.0, TLS 1.1 или TLS 1.2
+- TLS 1.1 или TLS 1.2
+- только TLS 1.2
+
+Набор шифров TLS — это комплект наборов шифров, разрешенный клиентом. Можно настроить один из следующих наборов шифров TLS. 
+Примечание. Наборы шифров TLS_RSA_* можно отключить с помощью политики использования устаревших наборов шифров.
+- &quot;Любой&quot;: если выбрать вариант &quot;Любой&quot;, политика не настраивается и разрешаются следующие комплекты шифров:
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- &quot;Коммерческий&quot;: когда выбран вариант &quot;Коммерческий&quot;, разрешены только следующие комплекты шифров:
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- &quot;Государственный&quot;: когда выбран вариант &quot;Государственный&quot;, разрешены только следующие комплекты шифров:
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+
+Проверка отзыва сертификатов используется для улучшения криптографической проверки подлинности сервера Citrix. Кроме того, она улучшает общую безопасность TLS-соединений между клиентом и сервером. 
+Примечание. Проверка отзыва сертификатов действует только при выборе Режима соответствия требованиям безопасности SP800-52.
+Если включить этот параметр, клиент будет проверять, отозван или нет сертификат сервера. Есть несколько уровней проверки списка отзыва сертификатов.  Например, клиент может проверять только свой локальный список сертификатов или как локальные, так и сетевые списки. Кроме того, проверку сертификатов можно настроить так, чтобы пользователи могли входить только после проверки всех списков отзыва сертификатов.
+Политика проверки отзыва сертификатов является расширенной функцией, которую поддерживают только некоторые издатели сертификатов. С ее помощью администраторы могут отзывать сертификаты безопасности (аннулированные прежде истечения срока действия) в случае компрометации закрытого ключа сертификата.
+Для этого параметра можно выбрать следующие значения:
+
+- &quot;Не проверять&quot; — списки отзыва сертификатов не проверяются.
+- &quot;Проверять без доступа к сети&quot; — списки отзыва сертификатов проверяются. Проверка выполняется только в локальных хранилищах этих списков. Все точки распространения игнорируются. Для проверки сертификата целевого сервера, представленного сервером SSL Relay/Secure Gateway, нахождение списка отзыва сертификатов не является критически важным.
+- &quot;Проверять с полным доступом&quot; — списки отзыва сертификатов проверяются. Проверка выполняется в локальных хранилищах списков и всех точках распространения. Если найдена информация об отзыве сертификата, подключение отклоняется. Для проверки сертификата сервера, представленного целевым сервером, нахождение списка отзыва сертификатов не является критически важным. 
+- &quot;Проверять с полным доступом и требовать список отзыва сертификатов (для всех)&quot; — проверяются списки отзыва сертификатов, в том числе корневой ЦС. Проверка выполняется в локальных хранилищах списков и всех точках распространения. Если найдена информация об отзыве сертификата, подключение отклоняется. Для проверки критически важно найти все требуемые списки отзыва сертификатов.
+&quot;Проверять с полным доступом и требовать список отзыва сертификатов (для всех)&quot; — проверяются списки отзыва сертификатов, в том числе корневой ЦС. Проверка выполняется в локальных хранилищах списков и всех точках распространения. Если найдена информация об отзыве сертификата, подключение отклоняется. Для проверки критически важно найти все требуемые списки отзыва сертификатов.
+Чтобы определить серверы, предназначенные для приложения Citrix Workspace, организации, настраивающие протокол TLS для ряда продуктов, могут указывать идентификатор OID расширения политики сертификата в рамках сертификата безопасности.  Если идентификатор OID расширения политики задается здесь, Citrix Workspace принимает только сертификаты, в которых заявляется о совместимой политике.
+
+При подключении по протоколу TLS сервер (если его соответствующим образом настроить) может требовать у приложения Citrix Workspace предъявить сертификат безопасности.  С помощью параметра &quot;Проверка подлинности клиента&quot; укажите, следует ли предъявлять удостоверение автоматически или нужно уведомлять пользователя. Вы можете выбрать следующие значения этого параметра:
+
+- &quot;Отключено&quot; — проверка подлинности клиента отключена
+- &quot;Отобразить средство выбора сертификатов&quot; — всегда просить пользователя выбрать сертификат.
+- &quot;Если возможно, выбирать автоматически&quot; — отображать запрос, только если есть несколько сертификатов на выбор
+Никогда не предъявлять удостоверение
+- Не настроено — Проверка подлинности клиента не настроена. Применяется поведение по умолчанию.
+- &quot;Использовать указанный сертификат&quot; — использовать сертификат клиента, указанный в упомянутом ниже параметре
+
+Указать отпечаток сертификата-удостоверения (чтобы запрос для пользователя не отображался без необходимости) можно с помощью параметра &quot;Сертификат клиента&quot;.
+</string>
+ 
+ 
+  
+ 
+      <string id="Part_SSL_EnabledLockdown">Требовать TLS для всех подключений</string>
+      <string id="Part_SSL_SSLProxyHostLockdown">Разрешенные серверы TLS</string>
+      <string id="Part_SSL_SSLPolicyOID">Идентификатор OID расширения политики</string>
+      <string id="Part_SSL_SSLProtocolLockdown">Версия TLS</string>
+      <string id="Part_SSL_CiphersetLockdown">Набор шифров TLS</string>
+      <string id="Part_SSL_RevocationLockdown">Политика проверки отзыва сертификатов</string>
+      <string id="Part_SSL_ClientAuthentication">Проверка подлинности клиента</string>
+      <string id="Part_SSL_ClientCertificate">Сертификат клиента</string>
+      <string id="Policy_ConfigureClientSelectiveTrust">Настроить конфигурацию доверенного сервера</string>
+      <string id="Explain_ConfigureClientSelectiveTrust">С помощью этой политики можно управлять тем, как клиент определяет опубликованное приложение или рабочий стол, к которому он подключается. Клиент определяет уровень доверия, который называется &quot;областью доверия&quot; подключения. От области доверия зависят параметры клиента, используемые для подключения.
+
+Когда эта политика включена, на клиенте можно принудительно определить область с помощью параметра &quot;Применить конфигурацию доверенного сервера&quot;.
+
+По умолчанию идентификация области основана на адресе сервера, к которому подключается клиент. Чтобы быть членом доверенной области, серверу нужно быть членом зоны &quot;Доверенные сайты Windows&quot;. Ее можно настроить с помощью параметра &quot;Интернет-зона Windows&quot;.
+
+Если нужна совместимость для клиентов, находящихся не под управлением Windows, можно настроить доверие к адресу сервера. Для этого воспользуйтесь параметром &quot;Адрес&quot;. Это разделенный запятыми список серверов, поддерживающий использование подстановочных знаков (например, cps*.citrix.com).
+
+Устранение неполадок:
+Когда используемая по умолчанию конфигурация доверенного сервера не дает клиенту подключиться, отображается следующее сообщение об ошибке:
+
+    &quot;ОШИБКА &lt;сервера&gt;: не удается подключиться к серверу Citrix XenApp. Сервер (xxx) не считается надежным для подключений ICA. Подключения к области (ненадежной области) не разрешены параметрами блокировки. Свяжитесь с администратором.&quot;
+
+Чтобы установить подключение, нужно добавить сервер, обозначенный знаками &quot;xxx&quot;, в зону &quot;Доверенные сайты Windows&quot; (используя обозначения http:// или https://, если это SSL-подключение).
+
+Обратите внимание, что в рамках SSL-подключений обычное имя сертификата должно быть доверенным. В рамках других подключений должен быть доверенным каждый сервер, с которым устанавливается связь. Это значит, что при просмотре приложений должны быть доверенными и XML-служба, и сервер, на который она перенаправляет данные.
+</string>
+      <string id="Part_ConfigureClientSelectiveTrust_IEZone">Зона Интернета Windows</string>
+      <string id="Part_ConfigureClientSelectiveTrust_EffectiveAddress">Адрес</string>
+      <string id="Part_EnableClientSelectiveTrust">Применить конфигурацию доверенного сервера</string>
+      <string id="Policy_Smartcard">Проверка подлинности с помощью смарт-карты</string>
+      <string id="Explain_Smartcard">С помощью этой политики управляйте тем, как клиент использует смарт-карты, подключенные к клиентскому устройству.  
+
+Когда эта политика включена, удаленный сервер может получать доступ к смарт-картам, подключенным к клиентскому устройству, для проверки подлинности и других целей. 
+
+Когда эта политика отключена, сервер не может получать доступ к смарт-картам, подключенным к клиентскому устройству. 
+
+
+Устранение неполадок.
+Если в среде Citrix используются смарт-карты, на сервере нужно установить драйвер для устройства чтения смарт-карт. Если на клиентском компьютере используется другая операционная система, то, возможно, понадобится убедиться в том, что с ней совместимы используемые драйверы для устройства смарт-карт.</string>
+      <string id="Part_Smartcard_Enable">Разрешить проверку подлинности с помощью смарт-карты</string>
+      <string id="Part_SmartcardPin_Enable">Использовать сквозную проверку подлинности для PIN-кода</string>
+      <string id="Policy_WITicket">Запрос на проверку подлинности Web Interface</string>
+      <string id="Explain_WITicket">С помощью этой политики управляйте инфраструктурой запросов, которая используется при проверке подлинности с помощью Web Interface. 
+
+Когда эта политика включена, можно отключить старые запросы Web Interface. Для этого нужно снять флажок &quot;Старая обработка запросов&quot;. Раньше запросы Web Interface обрабатывались так: одноразовый файл cookie проверки подлинности передавался на сервер с помощью поля пароля &quot;Открытый текст&quot;.  
+
+Начиная с Web Interface 4.5, клиент обрабатывает маркер проверки подлинности в форме непрозрачного объекта LogonTicket, с которым связана интерпретация, заданная типом LogonTicketType. Чтобы отключить эту функцию, снимите флажок &quot;Web Interface 4.5 и более поздние версии&quot;.</string>
+      <string id="Part_WITicket_Legacy_Enable">Старая обработка запросов</string>
+      <string id="Part_WITicket_LogonTicket_Enable">Web Interface 4.5 и более поздние версии</string>
+      <string id="Policy_KerberosLockdown">Проверка подлинности Kerberos</string>
+      <string id="Explain_KerberosLockdown">Эта политика позволяет управлять тем, как клиент с помощью Kerberos проверяет подлинность пользователя при подключении к удаленному приложению или рабочему столу.
+
+Когда эта политика включена, клиент может проверять подлинность пользователя с помощью протокола Kerberos. Kerberos — это операция авторизованной проверки подлинности контроллера домена, в рамках которой реальные учетные данные пользователя не передаются на сервер. 
+
+Когда эта политика отключена, клиент не использует проверку подлинности Kerberos.  
+
+
+Устранение неполадок.
+Компьютер, на котором запущен клиент, и сервер, на котором запущено удаленное приложение, должны находиться в доменах, между которыми существуют отношения доверия. Контроллеру домена должно быть известно, что сервер Citrix XenApp будет выполнять полный вход пользователя (интерактивный вход в систему) с помощью Kerberos. Для этого нужно соответствующим образом настроить параметр &quot;Доверять делегированной проверке подлинности&quot; в контроллере домена.
+
+При подключении с помощью средства Web Interface серверу Web Interface должно быть известно, что клиент будет подключаться с помощью проверки подлинности Kerberos. Это необходимо, так как по умолчанию сервер Web Interface использует IP-адрес сервера назначения, тогда как при проверке подлинности Kerberos нужно указать полное доменное имя.
+
+У компьютеров клиента и сервера должны быть правильно зарегистрированные записи DNS. Это необходимо, так как терминалы проверяют подлинность друг друга во время подключения.</string>
+      <string id="Policy_SSONForNSG">Single Sign-on для NetScaler Gateway</string>
+      <string id="Explain_SSONForNSG">Используйте эту политику, чтобы разрешить Workspace использовать те же учетные данные для входа в систему (для сквозной проверки подлинности) в NetScaler Gateway.</string>
+      <string id="Policy_LocalCredentialsLockdown">Локальное имя пользователя и пароль</string>
+      <string id="Explain_LocalCredentialsLockdown">Эта политика позволяет настроить клиент так, чтобы он использовал те же учетные данные для входа (сквозная проверка подлинности) для сервера Citrix XenApp, что и клиентский компьютер.  
+
+Если эта политика включена, клиенту можно запретить использовать учетные данные текущего пользователя для проверки подлинности при подключении к удаленному серверу. Для этого нужно снять флажок &quot;Включить сквозную проверку подлинности&quot;.  
+
+Клиент налагает определенные ограничения на то, когда может происходить сквозная проверка подлинности (подробности см. в библиотеке Citrix eDocs по адресу http://support.citrix.com/proddocs/). Если эти ограничения слишком строги для вашей среды, то, чтобы обойти их, установите флажок &quot;Разрешить сквозную проверку подлинности для всех подключений ICA&quot;. 
+
+При работе в среде сервера каталогов Novell установите флажок &quot;Использовать учетные данные сервера каталогов Novell&quot;. Вследствие этого клиент должен будет использовать учетные данные NDS пользователя.  
+
+
+Устранение неполадок.
+Включить сквозную проверку подлинности можно только в том случае, если клиент установлен администратором и при установке был включен параметр &quot;Разрешить сквозную проверку подлинности с помощью локальных учетных данных&quot;.  
+
+Каждый пользователь может отключить сквозную проверку подлинности. Для этого нужно изменить параметры реестра клиента, воспользоваться окном программного окружения или изменить свою копию файла AppSrv.ini. Чтобы включить сквозную проверку подлинности, нужно в пользовательской копии файла AppSrv.ini задать параметр &quot;EnableSSonThruICAFile=true&quot;.</string>
+      <string id="Part_LocalCredentialsLockdown_Enable">Включить сквозную проверку подлинности</string>
+      <string id="Part_LegacyLocalUserNameAndPassword_Enable">Разрешить сквозную проверку подлинности для всех подключений ICA</string>
+      <string id="Part_NovellCredentials">Использовать учетные данные сервера каталогов Novell</string>
+      <string id="Policy_EnableDriveMapping">Подключение дисков клиента</string>
+      <string id="Explain_EnableDriveMapping">С помощью этой политики можно включить и ограничить доступ удаленного приложения или рабочего стола к файловым системам клиента.  
+
+Когда эта политика включена, клиент полностью запрещает доступ виртуальному каналу подключения дисков клиента (CDM) к файловой системе клиента, если не установлен флажок &quot;Включить подключение дисков клиента&quot;. Это не дает библиотеке DLL, которая реализует виртуальный канал подключения дисков клиента (vdcdmn.dll), загрузиться при запуске клиента. На этом этапе вы можете удалить библиотеку DLL из пакета клиента.  
+
+Если функция CDM включена, становятся доступными дополнительные параметры, с помощью которых можно ограничить тип доступа для сервера. Если установлен флажок &quot;Клиентские диски только для чтения&quot;, виртуальный канал CDM предоставляет к клиентским дискам исключительно доступ только для чтения.  
+
+Чтобы отключить доступ к дискам Windows, нужно ввести соответствующую букву диска в поле &quot;Не подключать диски&quot;. Содержимое поля — это объединение всех дисков, которые не следует подключать при соединении с опубликованным приложением или рабочим столом (например, если в поле введено ABFK, это значит, что отключены диски A, B, F и K).  
+
+
+Устранение неполадок.
+Эти политики переопределяют настройки, выбранные пользователями в диалоговых окнах &quot;Безопасность файлов&quot; модуля Desktop Viewer. Информацию о том, как не дать пользователям изменять настройки в центре подключений клиентов, см. в центре Citrix Knowledge Center.</string>
+      <string id="Part_EnableDriveMappingCheckbox">Включить подключение дисков клиента</string>
+      <string id="Part_EnableDriveMappingReadonly">Клиентские диски только для чтения</string>
+      <string id="Part_EnableDriveMappingDisableDrives">Не подключать диски</string>
+      <string id="Policy_EnablePrinterMapping">Клиентские принтеры</string>
+      <string id="Explain_EnablePrinterMapping">С помощью этой политики можно включать и ограничивать доступ удаленного приложения или рабочего стола к клиентским принтерам.  
+
+Когда эта политика отключена, клиент запрещает серверу получать доступ к принтерам, доступным на клиентском устройстве, или печатать с их помощью.</string>
+      <string id="Part_EnablePrinterMapping">Подключить клиентские принтеры</string>
+      <string id="Policy_LocalPort">Доступ к оборудованию клиента</string>
+      <string id="Explain_LocalPort">С помощью этой политики можно указать максимальное количество последовательных портов, поддерживаемых клиентской платформой. 
+
+Кроме того, с ее помощью можно включать и ограничивать доступ удаленного приложения или рабочего стола к последовательным, параллельным и USB-портам клиента. Это позволяет серверу использовать локальное оборудование. 
+
+
+Устранение неполадок.
+В рамках удаленной синхронизации КПК используются &quot;виртуальные COM-порты&quot;. Это подключения к последовательным портам, маршрутизируемые через USB-подключения. По этой причине нужно включить доступ к последовательным портам, чтобы использовать синхронизацию КПК.</string>
+      <string id="Part_MaxPort">Максимальное количество последовательных портов</string>
+      <string id="Part_EnableSerialPortCheckbox">Подключить последовательные порты</string>
+      <string id="Part_EnableVirtualSerialPortCheckbox">Разрешить синхронизацию КПК</string>
+      <string id="Part_EnableParallelPortCheckbox">Подключить параллельные порты</string>
+      <string id="Policy_ImageCapture">Захват изображений</string>
+      <string id="Explain_ImageCapture">С помощью этой политики можно включать и ограничивать доступ удаленного приложения или рабочего стола к сканерам, веб-камерам и другим устройствам обработки изображений на клиентском устройстве.</string>
+      <string id="Policy_AudioInput">Микрофон клиента</string>
+      <string id="Explain_AudioInput">С помощью этой политики можно включать и ограничивать доступ удаленного приложения или рабочего стола к локальным устройствам захвата звука (микрофонам).</string>
+      <string id="Part_BiDiAudio_Enable">Включить микрофон клиента</string>
+      <string id="Policy_Clipboard">Буфер обмена</string>
+      <string id="Explain_Clipboard">С помощью этой политики можно включать и ограничивать доступ удаленного приложения или рабочего стола к содержимому буфера обмена клиента.</string>
+      <string id="Part_Clipboard_Enabled">Включить буфер обмена</string>
+      <string id="Policy_USB_PNP_Devices">USB-устройства Plug-n-Play</string>
+      <string id="Explain_USB_PNP_Devices">С помощью этой политики можно включать и отключать доступ опубликованного приложения или рабочего стола к USB-устройствам Plug-n-Play клиента. Параметр &quot;Не настроено&quot; разрешает доступ к устройствам, пока вы вручную не включите или не отключите доступ.</string>
+      <string id="Part_USB_PNP_Enabled">Включить PNP</string>
+      <string id="Policy_PointOfSales">USB-устройства терминала продаж</string>
+      <string id="Explain_PointOfSales">С помощью этой политики можно включить или отключить доступ опубликованного приложения или рабочего стола к клиентским USB-устройствам терминала продаж. Эта политика применяется, когда для политики &quot;USB-устройства Plug-n-Play&quot; заданы значения &quot;Включено&quot; и &quot;Не настроено&quot;.</string>
+      <string id="Part_PointOfSales_Enabled">Включить терминал продаж</string>
+	  <string id="Policy_Foreground_Progress_Bar">Настроить отображаемый на переднем плане статус индикатора выполнения</string>
+	  <string id="Explain_Foreground_Progress_Bar"/>
+      <string id="Policy_Audio">Параметры звука клиента</string>
+      <string id="Explain_Audio">Этот параметр управляет тем, как звук с удаленного приложения или рабочего стола направляется к клиентскому компьютеру. 
+
+Чтобы отключить сопоставление аудио на клиенте, выберите &quot;Включить звук&quot;. Это не повлияет на передачу звуковых данных от клиента к серверу, так как передачей этих данных управляет политика &quot;Удаленное взаимодействие с клиентскими устройствами&quot;.  
+
+Качество звука, передаваемого между клиентом и сервером, можно указать в раскрывающемся меню &quot;Качество звука&quot;. Доступные варианты: &quot;Высокое&quot;, &quot;Низкое&quot;, &quot;Среднее&quot;.
+Допустимый диапазон номеров портов: 16384–65535.
+
+Устранение неполадок
+Так как параметры звука на сервере имеют приоритет над этими параметрами, указанное на клиенте высокое качество не всегда будет применено. Сервер не сможет повысить качество звука, выбранное клиентом.</string>
+      <string id="Part_Audio_Enabled">Включить звук</string>
+      <string id="Part_Audio_Quality">Качество звука</string>
+      <string id="Part_RealtimeTransport_Enabled">Включить транспортировку в реальном времени</string>
+      <string id="Part_RtpAudioLowestPort">Самый маленький номер порта</string>
+      <string id="Part_RtpAudioHighestPort">Самый большой номер порта</string>
+      <string id="Part_RealtimeTransportThroughGateway_Enabled">Разрешить транспортировку в реальном времени через NetScaler Gateway</string>
+      <string id="Policy_Graphics">Клиентские параметры графики</string>
+      <string id="Explain_Graphics">Этот параметр позволяет управлять качеством графики, отображаемой удаленным приложением или рабочим столом.
+В раскрывающемся меню глубины цветов выберите нужный диапазон. Доступные варианты: 16-разрядный цвет и 32-разрядный цвет. ПРИМЕЧАНИЕ. При низкой пропускной способности эффективнее использовать низкую глубину цвета.
+Включите параметр &quot;Кэширование на диске&quot;, чтобы разрешить временное сохранение графики в кэше локального диска.
+Включите параметр &quot;Сжатие с потерями&quot;, чтобы снизить качество графики, обеспечив максимальные сжатие и скорость отклика.
+Включите параметр &quot;Ускорение браузера HDX 3D&quot;, чтобы браузером Microsoft IE управлял канал виртуального ускорения HDX 3D.
+Включите параметр &quot;Ускорение браузера HDX 3D — сжатие с потерями&quot;, чтобы браузер Microsoft IE мог снизить качество графики, обеспечив максимальные сжатие и скорость отклика.
+Включите параметр &quot;Удаленное видео&quot;, чтобы сервер выполнял потоковую передачу видеоданных непосредственно клиенту. </string>
+      <string id="Part_Graphics_ColorDepth">Глубина цвета</string>
+      <string id="Part_Graphics_ImageAcceleration">Сжатие с потерями</string>
+      <string id="Part_Graphics_SpeedScreenBrowser">Ускорение браузера HDX 3D</string>
+      <string id="Part_Graphics_SpeedScreenBrowserCompression">Ускорение браузера HDX 3D — сжатие с потерями</string>
+      <string id="Part_Graphics_SpeedScreenMultimedia">Удаленное видео</string>
+      <string id="Part_Graphics_ZeroLatencyKeyboard">Уменьшение задержки SpeedScreen — локальный эхо-вывод для клавиатуры</string>
+      <string id="Part_Graphics_ZeroLatencyMouse">Уменьшение задержки SpeedScreen — прогнозирование положения указателя мыши</string>
+      <string id="Part_Graphics_DiskCache">Кэширование на диске</string>
+      <string id="Policy_Display">Клиентские параметры отображения</string>
+      <string id="Explain_Display">Этот параметр управляет тем, как клиент отображает удаленные приложения и рабочие столы для пользователя. 
+В раскрывающемся меню &quot;Бесшовное окно&quot;, выберите значение &quot;Истина&quot;, чтобы клиент мог запрашивать бесшовные окна. Чтобы клиент мог отключать отображение бесшовных окон, выберите значение &quot;Ложь&quot;. 
+
+ПРИМЕЧАНИЕ. Сервер может отклонить запрос клиента, даже если выбрано значение &quot;Истина&quot;. 
+В списке &quot;Ширина окна&quot; выберите нужные значения. Доступные значения: 1024 и 800. 
+
+ПРИМЕЧАНИЕ. Этот параметр не работает, если включен параметр &quot;Бесшовное окно&quot;. 
+В списке &quot;Высота окна&quot; выберите нужные значения. Доступные значения: 600 и 734.
+
+ПРИМЕЧАНИЕ. Этот параметр не работает, если включен параметр &quot;Бесшовное окно&quot;. 
+В раскрывающемся меню &quot;Размер окна в процентах&quot; выберите нужные значения. Доступные варианты 50 %, 75 % и &quot;Другое&quot;. Это меню позволяет настроить высоту и ширину окна вручную. 
+
+ПРИМЕЧАНИЕ. Выбранное значение применяется ко всему экрану. 
+В меню &quot;Сжатие рабочей области&quot; выберите нужный диапазон. Рекомендуемые значения: 3–5. 
+
+Чтобы отобразить клиент в полноэкранном режиме, включите параметр &quot;Во весь экран&quot;. </string>
+      <string id="Part_Display_Seamless">Бесшовные окна</string>
+      <string id="Part_Display_Width">Ширина окна</string>
+      <string id="Part_Display_Height">Высота окна</string>
+      <string id="Part_Display_Percent">Размер окна в процентах</string>
+      <string id="Part_Display_WorkArea">Сжатие рабочей области</string>
+      <string id="Part_Display_FullScreen">Во весь экран</string>
+      <string id="Policy_LocalAppAccess">Параметры доступа к локальному приложению</string>
+      <string id="Explain_LocalAppAccess">С помощью этой политики можно управлять тем, как клиент отображает локальные приложения на размещенном рабочем столе.
+
+Доступ к локальному приложению позволяет интегрировать локальные приложения на размещенном рабочем столе. Когда пользователь запускает локальное приложение, щелкая его ярлык, на экране отображается, что приложение запускается на размещенном рабочем столе, хотя оно работает на локальном устройстве.
+
+Когда эта политика включена, клиент отображает локальные приложения на размещенном рабочем столе в виде ярлыков.
+Когда она отключена, клиент не отображает локальные приложения на размещенном рабочем столе. Кроме того, отключается перенаправление URL-адреса. 
+
+
+Разрешить перенаправление URL-адреса
+
+Когда этот флажок установлен, клиент позволяет перенаправлять URL-адреса из браузера размещенного рабочего стола в локальный браузер или наоборот. Какие URL-адреса перенаправляются, а какие нет, зависит от черного и белого списков URL-адресов узла. Кроме того, нужно включить надстройки, расширения и модули браузера, требуемые для этой функции. 
+Когда этот флажок не установлен, URL-адреса не перенаправляются с размещенного рабочего стола на клиент и наоборот. Надстройки, расширения и модули браузера не отключаются.</string>
+      <string id="Part_Allow_URLRedirection">Разрешить перенаправление URL-адреса</string>
+      <string id="Policy_ExtraURLProtocols">Параметры перенаправления с узла на клиент</string>
+      <string id="Explain_ExtraURLProtocols">С помощью этой политики можно указать, нужно ли функции перенаправления URL-адреса (с узла на клиент) поддерживать дополнительные протоколы. По умолчанию поддерживаются только протоколы HTTP и HTTPS.</string>
+      <string id="Part_ExtraURLProtocols">Протоколы ExtraURL</string>
+      <string id="Policy_Keyboard_Hotkeys">Сочетания клавиш</string>
+      <string id="Policy_ToggleFullScreen">Сочетание клавиш для Desktop Viewer</string>
+	  <string id="Explain_Policy_ToggleFullScreen">Эта функция позволяет переключаться между полноэкранным и оконным режимом в сеансе рабочего стола. Теперь можно переключаться на предпочтительный режим, используя специальные сочетания клавиш, которые можно использовать в качестве горячих клавиш. 
+Функция настройка горячих клавиш переключения полноэкранного режима позволяет вам выбрать удобные для вас комбинации клавиш для переключения между режимами
+Примечание. Это сочетание клавиш работает независимо от значения реестра &quot;AllowHotKeys&quot;. </string>
+<string id="Explain_Keyboard_Hotkeys">Этот параметр позволяет настраивать сочетания клавиш, которые могут использоваться в приложении Citrix Workspace.
+В раскрывающемся меню, которое появляется при нажатии клавиши Windows, выберите нужный параметр. Доступные варианты: &quot;Доступ к локальному рабочему столу&quot;, &quot;Доступ к удаленному сеансу&quot; и &quot;Доступ к удаленному сеансу только в полноэкранном режиме&quot;.
+Когда выбран параметр &quot;Доступ к локальному рабочему столу&quot;, сочетание клавиш применимо только к локальному рабочему столу. 
+Когда выбран параметр &quot;Доступ к удаленному сеансу&quot;, сочетание клавиш применимо только к удаленному сеансу. 
+Когда выбран параметр &quot;Доступ к удаленному сеансу только в полноэкранном режиме&quot;, сочетание клавиш применяется к небесшовным сеансам ICA в полноэкранном режиме. Этот параметр задан по умолчанию. </string>
+      <string id="Part_Keyboard_Windows_Key">Клавиша Windows:</string>
+      <string id="Part_Keyboard_Hotkey_Tasklist">Список задач:</string>
+      <string id="Part_Keyboard_Hotkey_Tasklist_Plus">             +</string>
+      <string id="Part_Keyboard_Hotkey_Close_Remote_Application">Закрыть приложение:</string>
+      <string id="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">                          +</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Title_Bar">Переключение в полноэкранный режим:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">                            +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Del">CTRL + ALT + DEL:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">               +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Esc">CTRL + ESC:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">           +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt">CTRL + ALT:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">         +</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Tab">ALT + TAB:</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Tab_Plus">          +</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Backtab">ALT + SHIFT + TAB:</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Backtab_Plus">                  +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">Диспетчер задач:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">                      +</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">Уменьшение задержки:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">                             +</string>
+	  <string id="Part_Keyboard_Hotkey_Toggle_LOCALIME">Обычный режим IME:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</string>
+      <string id="Policy_PublishedApplications">Удаленные приложения</string>
+      <string id="Explain_PublishedApplications">С помощью этой политики можно управлять тем, как клиент работает с удаленными приложениями.  
+
+Когда эта политика включена, она с помощью списка в поле &quot;Приложение&quot; определяет, какие опубликованные приложения может запустить непосредственно клиент.  
+
+Вы можете запросить, чтобы удаленные приложения совместно использовали сеансы (запускались в рамках одного подключения ICA). Это улучшает условия работы пользователя, но при этом не всегда является желательным. Чтобы отключить совместное использование сеансов, нужно снять флажок &quot;Совместный доступ к сеансам&quot;.  
+
+Устранение неполадок
+Опубликованные приложения обозначаются символом #, который стоит перед именем приложения.  Если пропустить символ #, будет выполнена попытка запустить определенную программу или рабочий стол.  По умолчанию это не разрешается компьютером, на котором запущено решение Citrix XenApp, и он отклоняет подключение.
+
+При этом отображается сообщение об ошибке: &quot;У вас нет доступа к этому сеансу.&quot;  Совместным доступом к сеансам управляет ключ SessionSharingKey, который не дает приложениям, запущенным на разных серверах Web Interface, совместно использовать сеансы.</string>
+      <string id="Part_PublishedApplications_InitialProgram">Приложение</string>
+      <string id="Part_PublishedApplications_SessionSharing">Совместный доступ к сеансам</string>
+      <string id="Policy_HostRenderedAudio">Звук через стандартное перенаправление USB</string>
+      <string id="Explain_HostRenderedAudio">С помощью этой политики можно управлять перенаправлением звука через стандартное перенаправление USB. Эта политика применяется только к хосту XenApp.</string>
+      <string id="Part_HostRenderedAudio">Включить политику &quot;Звук через стандартное перенаправление USB&quot;</string>
+      <string id="Policy_ICAFileSettings">Параметры ICA-файлов</string>
+      <string id="Explain_ICAFileSettings">С помощью этой политики можно сделать так, чтобы ICA-файл удалялся тогда, когда завершается сеанс клиента. </string>
+      <string id="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</string>
+      <string id="Policy_AllowLegacySessionSharing">Разрешить совместный доступ к сеансам старого типа</string>
+      <string id="Explain_AllowLegacySessionSharing">Разрешить совместный доступ к сеансам Program Neighborhood</string>
+      <string id="Part_AllowLegacySessionSharing_SessionSharing">AllowLegacySessionSharing</string>
+      <string id="Policy_MSISettings">Многопоточная архитектура ICA</string>
+      <string id="Explain_MSISettings">Используйте эту политику для настройки параметров многопоточной архитектуры ICA. Эта функция включена по умолчанию.</string>
+	  <string id="Policy_EnableFTU">EnableFTU</string>
+        <string id="Policy_EnableNPS">Включить NPS</string>
+      <string id="Policy_EnableFTA">Включить FTA</string>
+	  <string id="Policy_Vprefer">vPrefer</string>
+	  <string id="AllowAllApps">Разрешить все приложения</string>
+	  <string id="AllowNetworkApps">Разрешить сетевые приложения</string>
+	  <string id="AllowInstalledApps">Разрешить установленные приложения</string>
+      <string id="Policy_EnableDefaultFTA">Включить FTA по умолчанию</string>
+	  <string id="Allowed_Apps">Разрешить</string>
+	  <string id="Policy_HideSettings">Скрыть параметры</string>
+	  <string id="Policy_HideConfigChecker">Скрыть средство проверки конфигурации</string>
+	  <string id="Policy_HideSupportInfo">Скрыть сведения о поддержке</string>
+	  <string id="Policy_HideDeletePassword">Скрыть удаление сохраненных паролей</string>
+	  <string id="Policy_HideDataCollection">Скрыть сбор данных</string>
+	  <string id="Policy_HideLocalKeyboardLayoutSetting">Скрыть настройку локальной клавиатуры</string>
+	  <string id="Policy_HideConnectionCenter">Скрыть центр подключений</string>
+	  <string id="Policy_HideDPIsettings">Скрыть параметры DPI</string>
+	  <string id="Policy_HideAdvancedPreferences">Скрыть дополнительные параметры</string>
+	  <string id="Policy_HideCitrixFiles">Скрыть Citrix Files</string>
+	  <string id="Policy_HideCitrixCasting">Скрыть Citrix Casting</string>
+	  <string id="Policy_SmartcardRemovalAction_x86">Политика удаления смарт-карт для компьютеров на базе x86</string>
+	  <string id="Policy_SmartcardRemovalAction_AMD64">Политика удаления смарт-карт для компьютеров на базе x64</string>	  
+	  <string id="Pick_UI_display">Выбор отображения пользовательского интерфейса</string>
+      <string id="Policy_SelfServiceMode_Enable">Управление режимом SelfServiceMode</string>
+      <string id="Policy_AddAccounts">Разрешить пользователям добавление и удаление учетных записей</string>
+      <string id="Policy_EnablePreLaunch">Включить предварительный запуск приложений</string>
+	  <string id="Explain_EnablePreLaunch">Функция предварительного запуска позволяет быстрее запускать сеансы приложений и рабочих столов за счет того, что ресурс запускается при первом доступе и быстрее откликается при последующем доступе. Если включить этот параметр политики, функция предварительного запуска сеансов и приложений будет включена.
+
+
+Если отключить этот параметр политики, функция предварительного запуска сеансов и приложений будет выключена.
+
+Если отключить этот параметр политики, функция предварительного запуска сеансов и приложений будет выключена.
+</string>
+      <string id="Policy_PublishSafeContent">Разрешить/запретить пользователям публиковать безопасное содержимое</string>
+      <string id="Policy_PublishUnsafeContent">Разрешить/запретить пользователям публиковать небезопасное содержимое</string>
+      <string id="Policy_ReconnectMode">Определяется, в какой момент приложение Citrix Workspace пытается повторно подключиться к существующим сеансам</string>
+      <string id="Pick_ReconnectMode">Выбирать правильное сочетание условий повторного подключения.</string>
+      <string id="Explain_Policy_ReconnectMode">Если включить этот параметр политики, он будет управлять поведением приложения Citrix Workspace при повторном подключении.
+
+Citrix Workspace может с помощью хранилища искать существующие сеансы, подключение к которым разъединено, и повторно подключать их к клиенту. Это может происходить в разное время: 
+
+— При запуске: когда приложение Citrix Workspace запускается или открывается
+- При обновлении: когда в пользовательском интерфейсе или после входа выдается команда &quot;Обновить приложение&quot;.
+— При открытии: когда открывается пользовательский интерфейс Citrix Workspace
+- При входе в Windows: при первом запуске. 
+
+По умолчанию используется вариант &quot;При запуске&quot; или &quot;При обновлении&quot;. Выберите нужное сочетание.
+</string>
+      <string id="Policy_EnableAppShortCut">Управление ярлыками приложения</string>
+      <string id="Part_StartMenuDir_Text">Каталог меню &quot;Пуск&quot;</string>
+      <string id="Part_DesktopDir_Text">Каталог рабочего стола</string>
+      <string id="Part_DesktopShortcut_Enable">Включить ярлык рабочего стола</string>
+      <string id="Part_StartMenuShortcut_Disable">Отключить ярлык меню &quot;Пуск&quot;</string>
+      <string id="Part_UseCategoryAsStartMenuPath_Disable">Отключить путь к категории для меню &quot;Пуск&quot;</string>
+	  <string id="Part_UseCategoryAsDesktopPath_Enable">Включить путь к категории для рабочего стола</string>
+	  <string id="Part_UseDifferentPathsforStartmenuAndDesktop_Enable">Включите, чтобы для рабочего стола и меню &quot;Пуск&quot; использовались разные пути к категории. Отключите, чтобы для рабочего стола использовался тот же путь к категории, что и для меню &quot;Пуск&quot;.</string>
+      <string id="Part_RemoveAppsOnLogoff_Enable">Удалять приложения при выходе из системы</string>
+      <string id="Part_RemoveAppsOnExit_Enable">Удалять приложения при выходе</string>
+      <string id="Part_ClearAppListOnLogoff_Enable">При выходе очистить набор приложений, отображаемых в окне приложения Citrix Workspace</string>
+      <string id="Part_AllAppsAreMandatory_Enable">Игнорировать выбор приложений, сделанный с помощью самообслуживания, и сделать все обязательными. Это понадобится для автоматического добавления всех приложений, если Citrix Workspace работает со службой PNAgent. Если Citrix Workspace работает с хранилищем StoreFront, настройте сервер StoreFront, чтобы хранилище было обязательным. (Этот параметр сейчас не применяется к хранилищам StoreFront.)</string>
+      <string id="Part_SuppressRefreshOnStartup_Enable">Запретить приложению Citrix Workspace обновлять список приложений при открытии.</string>
+	  <string id="Explain_EnableFTU">Используйте для включения или отключения диалогового окна FTU</string>
+        <string id="Explain_EnableNPS">Индекс потребительской лояльности (NPS) помогает оценить удобство работы с приложением Citrix Workspace for Windows (Store) и предоставить отзыв о нем. Эта служба отзывов предназначена для улучшения Citrix Workspace for Windows (Store). Оценки и отзывы позволяют усовершенствовать пользовательский интерфейс. По умолчанию эта функция включена.
+Примечание. Если вы поставите оценку 4 или 5, вы будете перенаправлены для оценки приложения Citrix Workspace в Microsoft Store. При указании оценки 4 или 5 вы будете перенаправлены для оценки приложения Citrix Receiver в магазине Microsoft.
+При выборе оценки 3 или ниже вы будете перенаправлены на форму обратной связи, где можно предоставить более подробную информацию о выбранной оценке.
+Параметры: 1.
+2. Отключено: диалоговое окно NPS не появляется.
+</string>
+	  <string id="Explain_Vprefer">Теперь можно определять, должно ли удаленное приложение Citrix Workspace запускать экземпляр приложения, установленного на сервере или рабочем столе первого прыжка (при наличии), вместо запуска удаленного приложения. 
+
+Выберите один из следующих параметров.
+
+1. Разрешить все приложения: запуск экземпляра клиента для всех приложений. 2. Разрешить установленные приложения: запуск экземпляра клиента только для установленных приложений.
+2. Разрешить установленные приложения: запуск экземпляра клиента только для установленных приложений.
+3. Разрешить сетевые приложения: запуск экземпляра приложения, опубликованного в общей сети.
+</string>
+      <string id="Explain_EnableFTA">Используйте этот параметр, чтобы изменить настройки FTA (сопоставления типов файлов). 
+По умолчанию для этой политики задано значение &quot;Не настроено&quot;. 
+Выберите параметр &quot;Включено&quot;, чтобы включить FTA. 
+Выберите параметр &quot;Отключено&quot;, чтобы отключить FTA.</string>
+      <string id="Explain_EnableDefaultFTA">Используйте этот параметр, чтобы изменить настройки FTA (сопоставления типов файлов). 
+По умолчанию для этой политики задано значение &quot;Не настроено&quot;. 
+Выберите параметр &quot;Включено&quot;, чтобы включить FTA. 
+Выберите параметр &quot;Отключено&quot;, чтобы отключить FTA.
+Если параметр &quot;Включить FTA&quot; отключен, настройка этой политики окажется бесполезной. Политика будет обрабатываться как отключенная.</string>
+	  <string id="Explain_HideConfigChecker">Используйте этот параметр, чтобы скрыть\отобразить диалоговое окно &quot;Средство проверки конфигурации&quot; в разделе &quot;Дополнительные параметры&quot;</string>
+	  <string id="Explain_HideSupportInfo">Используйте этот параметр, чтобы скрыть\отобразить диалоговое окно &quot;Сведения о поддержке&quot; в разделе &quot;Дополнительные параметры&quot;</string>
+	  <string id="Explain_HideDeletePassword">Используйте этот параметр, чтобы скрыть\отобразить диалоговое окно &quot;Удаление сохраненных паролей&quot; в разделе &quot;Дополнительные параметры&quot;</string>
+	  <string id="Explain_HideDataCollection">Используйте этот параметр, чтобы скрыть\отобразить диалоговое окно &quot;Сбор данных&quot; в разделе &quot;Дополнительные параметры&quot;</string>
+	  <string id="Explain_HideLocalKeyboardLayoutSetting">Используйте этот параметр, чтобы скрыть\отобразить диалоговое окно &quot;Настройка локальной клавиатуры&quot; в разделе &quot;Дополнительные параметры&quot;</string>
+	  <string id="Explain_HideConnectionCenter">Используйте этот параметр, чтобы скрыть\отобразить диалоговое окно &quot;Центр подключений&quot; в разделе &quot;Дополнительные параметры&quot;</string>
+	  <string id="Explain_HideAdvancedPreferences">Используйте этот параметр, чтобы скрыть или отобразить параметр &quot;Дополнительные параметры&quot; на значке приложения Citrix Workspace на панели задач</string>
+	  <string id="Explain_HideDPIsettings">Используйте этот параметр, чтобы скрыть\отобразить параметры DPI в разделе &quot;Дополнительные параметры&quot;</string>
+	  <string id="Explain_HideCitrixFiles">Используйте этот параметр, чтобы скрыть\отобразить Citrix Files в разделе &quot;Дополнительные параметры&quot;</string>
+	  <string id="Explain_HideCitrixCasting">Используйте этот параметр, чтобы скрыть\отобразить диалоговое окно Citrix Casting в разделе &quot;Дополнительные параметры&quot;</string>
+	  <string id="Explain_SmartCardRemovalAction_x86">С помощью этой политики можно управлять поведением при удалении смарт-карты, когда пользователь проходит проверку подлинности на сайте Citrix Web Interface 5.4 PNAgent с помощью смарт-карты через приложение Windows Citrix Workspace.
+	  
+Этот параметр позволяет пользователю задать поведение в сеансе пользователя при удалении смарт-карты с клиента. 
+
+ПРИМЕЧАНИЕ. 
+
+Этот параметр доступен только для 32-разрядной версии операционной системы. Для возможности включения этой политики необходимо, чтобы в службах WI XenApp был установлен параметр удаления смарт-карты. Если политика включена, пользователь по-прежнему будет введен в Citrix Workspace, несмотря на то, что смарт-карта извлечена из клиента. Если политика включена, пользователь не будет отключен от Citrix Receiver несмотря на то, что смарт-карта удалена на клиенте.
+</string>	  
+<string id="Explain_SmartCardRemovalAction_AMD64">С помощью этой политики можно управлять поведением при удалении смарт-карты, когда пользователь проходит проверку подлинности на сайте Citrix Web Interface 5.4 PNAgent с помощью смарт-карты через Windows Citrix Workspace. 
+	 
+Этот параметр позволяет пользователю задать поведение в сеансе пользователя при удалении смарт-карты с клиента. 
+
+Эта политика применима только для 64-разрядных операционных систем. Чтобы проверить разрядность операционной системы на компьютерах под управлением Windows, нажмите кнопку &quot;Пуск&quot;, щелкните правой кнопкой мыши &quot;Компьютер&quot; и выберите пункт &quot;Свойства&quot;. В разделе &quot;Система&quot; проверьте тип запущенной системы. Эта политика применима, если отображается 64-разрядный тип операционной системы. 
+
+Для возможности включения этой политики убедитесь, что в службах WI XenApp установлен параметр удаления смарт-карты. Ознакомьтесь с документацией XenApp по процедуре включения параметра удаления смарт-карты в XenApp. Если политика включена, пользователь по-прежнему будет введен в Citrix Workspace, несмотря на то, что смарт-карта извлечена из клиента. Однако сеанс пользователя в XenApp будет завершен.
+
+Когда политика выключена, сеанс пользователя XenApp будет всегда отключен, если смарт-карта удалена с клиентского устройства, а удаление смарт-карты из служб WI XenApp Services не оказывает никакого влияния. 
+</string>  
+	  <string id="Explain_HideSettings">Эта политика позволяет управлять ярлыками приложений на рабочем столе и при запуске, а также параметрами рабочего пространства с помощью пользовательского интерфейса. Конечному пользователю нужно управлять расположением приложений в меню &quot;Пуск&quot;. В пользовательском интерфейсе есть возможность разместить ярлыки в папке меню &quot;Пуск&quot;, указанной пользователем. Такая же возможность доступна для ярлыков рабочего стола. Эта политика позволяет также пользоваться интерфейсом, с помощью которого можно управлять параметрами контроля рабочего пространства. Благодаря этому повышается удобство использования приложения Windows Citrix Workspace.
+
+Если включить этот параметр политики, можно явно отказаться от трех имеющихся вариантов, то есть полностью отключить пользовательский интерфейс, отключить вкладку приложений или отключить вкладку рабочего пространства. (Обратите внимание, что после включения этого параметра политики нужно сбросить приложение Citrix Workspace на терминале, чтобы изменения вступили в силу.)
+
+Отключение этого параметра политики соответствует состоянию &quot;Не настроено&quot;. 
+ 
+</string>
+      <string id="Explain_SelfServiceMode_Enable">С помощью этой политики можно включить или отключить параметры режима SelfServiceMode приложения Citrix Workspace.
+
+Когда эта политика включена, отображается интерфейс SelfServiceUI.
+
+Когда она отключена, интерфейс SelfServiceUI скрыт, а подписка на все приложения происходит автоматически.
+</string>
+
+<string id="Explain_PublishSafeContent">Используйте эту политику, чтобы разрешить или запретить пользователям публиковать безопасное содержимое.
+</string>
+
+<string id="Explain_PublishUnsafeContent">Используйте эту политику, чтобы разрешить или запретить пользователям публиковать небезопасное содержимое.
+</string>
+
+      <string id="Explain_DisableADSCheck">Используйте эту политику, чтобы отключить ADS.</string>
+      <string id="Explain_EnableAppShortCut">Если включить этот параметр политики, произойдет следующее:
+
+— При выходе очистить набор приложений, отображаемых в окне приложения Citrix Workspace. Если этот флажок установлен, сведения о пользователе удаляются, когда он выходит из Citrix Workspace. Когда этот флажок снят, то при выходе пользователя из приложения Citrix Workspace оно не может удалять сведения о нем.
+
+— Запретить приложению Citrix Workspace обновлять список приложений при открытии. Когда этот флажок установлен, Citrix Workspace не обновляет список приложений после запуска. Когда этот флажок снят, Citrix Workspace при запуске обновляет список приложений.
+
+-  Игнорировать выбор приложений, сделанный с помощью самообслуживания, и сделать все обязательными. Это понадобится для автоматического добавления всех приложений, если Citrix Workspace работает со службой PNAgent. Если Citrix Workspace работает с хранилищем StoreFront, настройте сервер StoreFront, чтобы хранилище было обязательным. (Этот параметр сейчас не применяется к хранилищам StoreFront.) Когда этот флажок установлен, выполняется подписка на все приложения в SelfService для сайтов PNAgent. Если он снят, конечному пользователю придется самому подписываться на все или необходимые приложения (сайты PNAgent).
+</string>
+      <string id="Explain_AddAccount_Enable">С помощью этой политики можно дать пользователям возможность добавлять и удалять учетные записи в режиме NonSelfServiceMode</string>
+      <string id="Receiver">Citrix Workspace</string>
+      <string id="Storefront">StoreFront</string>
+      <string id="Storefronts">URL-адрес NetScaler Gateway/список учетных записей StoreFront</string>
+      <string id="Storefronts_Part">Введите здесь URL-адрес NetScaler Gateway или сведения об учетной записи StoreFront:</string>
+      <string id="Storefronts_Help">Этот параметр политики позволяет управлять списком учетных записей StoreFront или URL-адресом NetScaler Gateway.
+
+Если включить этот параметр политики, вы можете ввести список учетных записей StoreFront и URL-адрес NetScaler Gateway. Указать можно только один URL-адрес NetScaler и несколько URL-адресов StoreFront. Для каждой записи, добавляемой в список, введите следующую информацию (в качестве разделителя используйте точку с запятой):
+
+Имя хранилища — имя хранилища, которое будет видеть пользователь.
+
+URL-адрес хранилища — URL-адрес хранилища.
+
+Включенное состояние хранилища — Вкл./выкл.
+
+Описание хранилища — описание хранилища, которое будет видеть пользователь.
+
+Пример для StoreFront:
+
+Хранилище_отдела_продаж;https://sales.mycompany.com/Citrix/Store/discovery;On;Хранилище для отдела продаж
+
+Пример для URL-адреса NetScaler Gateway.
+
+Хранилище_отдела_кадров;https://ag.mycompany.com#Storename;On;Хранилище для отдела кадров
+
+#Storename — это имя хранилища, с которым работает решение NetScaler Gateway и для которого нужно выполнить настройку.
+Примечание.
+
+</string>
+      <string id="Fast_Connect_API_Support">Поддержка интерфейса API Fast Connect</string>
+      <string id="Explain_FastConnect">Эти политики управляют поддержкой интерфейса API Fast Connect</string>
+      <string id="Policy_FastConnectAPI_Support">Управление поддержкой API FastConnect.</string>
+      <string id="Explain_FastConnectAPI_Support">С помощью API Fast Connect можно быстро изменить удостоверение пользователя в Citrix Workspace с помощью специального API-интерфейса. Это упрощает переключение пользователей.  
+
+Это упрощает переключение между пользователями.
+
+- &quot;Включить API Fast Connect перехода&quot;. Этот параметр запрещает следующие команды: selfservice.exe-terminate, selfservice.exe-fastterminate.
+
+— Оставить приложения запущенными при выходе: когда этот параметр включен, сеансы приложений остаются открытыми, даже если пользователь отключился от Citrix Workspace.
+
+– &quot;Включить API  Fast Connect перехода&quot;. </string>
+      <string id="Explain_EnableFastConnectTransitionAPI">EnableFastConnectTransitionAPI</string>
+      <string id="Explain_LeaveAppsRuningOnLogoff">Оставить приложения запущенными при выходе из системы</string>
+      <string id="Explain_FastConnectUsingSSP">Интегрировать модуль самообслуживания с FastConnect</string>
+	  <string id="Policy_EngineErrMsg">Включить сообщения об ошибках подсистемы</string>
+      <string id="Polciy_CEIP">Включить CEIP</string>
+	  <string id="Policy_Dpi">Высокий DPI</string>
+      <string id="Polciy_CEIP_Configuration">Конфигурация CEIP</string>
+      <string id="Part_Enable_CEIP">Включить CEIP.</string>
+      <string id="Part_CEIP_ServerURL">URL-адрес сервера CEIP</string>
+      <string id="Part_CEIP_UploadClass">Класс отправки CEIP</string>
+      <string id="Part_CEIP_UploadFrequencyInWeeks">Инициализировать частоту отправки CEIP (в неделях)</string>
+      <string id="Part_AllowUnSecureURL">Разрешить незащищенный URL-адрес (http вместо https)</string>
+      <string id="Explain_CEIP_Configuration">1. Указать URL-адрес сервера CEIP. 
+2. Указать класс выгрузки CEIP. 3. Задать частоту выгрузки. 
+4. Разрешить использование незащищенного URL-адреса. Задать частоту выгрузки
+4. Разрешить использование незащищенного URL-адреса </string>
+	  <string id="Explain_EnableEngineErrMsg">Этот параметр включает конкретные сообщения об ошибках подсистемы. Общие ошибки драйвера протокола будут заменены на конкретные сообщения об ошибках</string>
+      <string id="Explain_EnableCEIP">CEIP — это программа улучшения качества программного обеспечения Citrix. Дополнительные сведения о CEIP доступны на веб-сайте http://www.citrix.com/cms/ws/ceip.</string>
+	  <string id="Explain_Policy_Dpi">Эта политика позволяет управлять масштабированием сеанса. 
+	  
+Когда эта политика включена, Citrix Workspace может поддерживать определение DPI, а параметры сеанса могут изменяться в соответствии со значением DPI, примененным в сеансе с несколькими мониторами.
+
+Когда политика включена, предлагаются два варианта 
+1. Да — масштабировать сеанс
+2. Нет — использовать основное разрешение
+	  
+По умолчанию политика выключена. Пока она выключена, операционная система может масштабировать разрешение. </string>
+	  <string id="Explain_EnableDPIAwareness">Citrix Workspace может поддерживать определение DPI (DpiAware). Этот параметр включен по умолчанию. Благодаря этой политике Citrix Workspace может изменять масштаб сеанса в соответствии со значением DPI, примененным в сеансах с несколькими мониторами. Подробные сведения о поддержке определения DPI см. здесь: https://support.citrix.com/article/CTX230017</string>
+      <string id="CEIP">CEIP</string>
+	  <string id="DPI">DPI</string>
+      <string id="Explain_CEIP">CEIP — это программа улучшения качества программного обеспечения Citrix. Дополнительные сведения о CEIP доступны на веб-сайте http://www.citrix.com/cms/ws/ceip/.</string>
+	  <string id="Explain_DPI">Масштабировать сеанс для высокого разрешения .</string>
+      <string id="AlwaysOn">Диагностика</string>
+      <string id="Explain_AlwaysOn">С помощью этой политики можно постоянно собирать журналы трассировки с компьютеров пользователей.</string>
+      <string id="Policy_AlwaysOn">Всегда включенная трассировка</string>
+      <string id="Explain_EnableAlwaysOn">Этот параметр включен по умолчанию, чтобы непрерывно выполнялся сбор журналов трассировки с компьютеров пользователей.</string>
+      <string id="FedRAMP">Соответствие требованиям</string>
+      <string id="Explain_FedRAMP">Используйте эту политику, чтобы отключить отправку данных сторонним службам, например, Google Analytics.
+Отключить: если этот параметр отключен, анонимные данные могут отправляться сторонним службам.
+Включить: если этот параметр включен, данные не будут отправляться сторонним службам.
+      </string>
+      <string id="Policy_FedRAMP">Отключить отправку данных сторонним службам</string>
+      <string id="ADMXMigrator_UnresolvedString">Средство переноса ADMX столкнулось со строкой, которой нет в исходной таблице строк ADM.</string>
+      <string id="ADMXMigrator_NoSupportedOn">Средство переноса ADMX столкнулось с политикой, которая не имеет значения supportedOn.</string>
+	  <string id="ADMXPolicy_SupportedOn">Все платформы, которые поддерживает приложение Citrix Workspace</string>
+	  <string id="ADMXPolicy_SupportedOn_Explain_SmartCardRemovalAction">Поддерживается в приложении Citrix Workspace 4.5 и более поздних версий</string>
+	  <string id="HDXoverUDP_Off">Выкл.</string>
+	  <string id="HDXoverUDP_On">Вкл.</string>
+	  <string id="HDXoverUDP_Preferred">Предпочтительно</string>
+	  <string id="Policy_TransportProtocal">Транспортный протокол для Citrix Workspace</string>
+	  <string id="Explain_TransportProtocal">Откл.: использовать только TCP.
+Предпочтительно: сначала попытаться использовать UDP, затем откатиться к TCP. 
+Вкл.: принудительно использовать UDP без отката к TCP.					
+	  </string>
+      <string id="Explain_BidirectionalContentRedirection">Перенаправление двунаправленного содержимого — это функция, которая позволяет перенаправлять URL-адреса с клиента на сервер и наоборот в зависимости от конфигурации.
+– Имя опубликованного приложения или рабочего стола: указывает имя опубликованного приложения или рабочего стола, которое будет использоваться для запуска URL-адреса перенаправления. Этот параметр не используется, если функция перенаправления двунаправленного содержимого включена в каком-либо из активных сеансов ICA. Этот параметр не используется, если функция перенаправления двунаправленного содержимого включена в каком-либо из активных сеансов ICA.
+– Указанное имя предназначено для публикуемого типа: показывает, что указанное выше имя — это имя приложения или рабочего стола.
+– URL-адреса, которые разрешено перенаправлять к VDA: указывает на список URL-адресов, которые будут открыты в VDA. Точка с запятой (;) служит в качестве разделителя. Звездочку (*) можно использовать в качестве подстановочного знака. Например, *.xyz.com.
+
+
+– URL-адреса, которые разрешено перенаправлять на клиент: указывает список URL-адресов, которые будут открыты в клиенте. Точка с запятой (;) служит в качестве разделителя. Звездочку (*) можно использовать в качестве подстановочного знака. Например, *.xyz.com.
+Примечание. 
+1) Если URL-адрес находится в обоих местах, он будет запущен из исходного расположения.
+2) Если URL-адрес не находится ни в одном из мест, он будет также он будет запущен из исходного расположения.
+      </string>
+      <string id="Policy_BidirectionalContentRedirection">Перенаправление двунаправленного содержимого</string>
+      <string id="Part_BidirectionalContentRedirectionPubAppOrDesktopName">Имя опубликованного приложения или рабочего стола: </string>
+      <string id="Part_BidirectionalContentRedirectionPubNameType">Указанное имя предназначено для публикуемого типа:</string>
+      <string id="Part_BidirectionalContentRedirectionApplication">Приложение</string>
+      <string id="Part_BidirectionalContentRedirectionDesktop">Рабочий стол</string>
+      <string id="Part_BidirectionalContentRedirectionVDAURLs">URL-адреса, которые разрешено перенаправлять к VDA:</string>
+      <string id="Part_BidirectionalContentRedirectionClientURLs">URL-адреса, которые разрешено перенаправлять на клиент:</string>
+      <string id="Policy_BidirectionalContentRedirectionOverrides">Переопределения перенаправления двунаправленного содержимого</string>
+      <string id="Explain_BidirectionalContentRedirectionOverrides">Переопределения перенаправления двунаправленного содержимого представляют собой переопределения, относящиеся к URL-адресу, которые применяются к функции перенаправления двунаправленного содержимого.
+-Переопределения, относящиеся к URL-адресу опубликованного приложения или рабочего стола: этот параметр отвечает за переопределения, относящиеся к URL-адресу опубликованного приложения или рабочего стола.  Поле &quot;Имя значения&quot; должно точно совпадать с записью в списке &quot;URL-адреса, которые разрешено перенаправлять к VDA&quot;, а в поле &quot;Значение&quot; будет указано имя опубликованного приложения или рабочего стола, соответствующего этому URL-адресу.
+</string>
+      <string id="Part_BidirectionalContentRedirectionVDAAppOverrides">Переопределения, относящиеся к URL-адресу опубликованного приложения или рабочего стола:</string>
+	  <string id="Dir_AutoUpdate">Обновления Citrix Workspace</string>
+	  <string id="MinusOne">-1</string>
+	  <string id="Zero">0</string>
+	  <string id="One">1</string>
+	  <string id="Two">2</string>
+	  <string id="Three">3</string>
+	  <string id="Four">4</string>
+	  <string id="Five">5</string>
+	  <string id="Six">6</string>
+	  <string id="Seven">7</string>
+	  <string id="Eight">8</string>
+	  <string id="Nine">9</string>
+	  <string id="Ten">10</string>
+	  <string id="Eleven">11</string>
+	  <string id="Twelve">12</string>
+	  <string id="Thirteen">13</string>
+	  <string id="Fourteen">14</string>
+	  <string id="Fifteen">15</string>
+	  <string id="Sixteen">16</string>
+	  <string id="Seventeen">17</string>
+	  <string id="Eighteen">18</string>
+	  <string id="Nineteen">19</string>
+	  <string id="Twenty">20</string>
+	  <string id="TwentyOne">21</string>
+	  <string id="TwentyTwo">22</string>
+	  <string id="TwentyThree">23</string>
+	  <string id="TwentyFour">24</string>
+	  <string id="TwentyFive">25</string>
+	  <string id="TwentySix">26</string>
+	  <string id="TwentySeven">27</string>
+	  <string id="TwentyEight">28</string>
+	  <string id="TwentyNine">29</string>
+	  <string id="Thirty">30</string>
+	  <string id="POL_CONFIGURE_LAN_PROXY_MANUALLY">Настроить прокси-сервер NetScaler LAN вручную</string>
+      <string id="POL_CONFIGURE_LAN_PROXY_DLL">Настроить прокси-сервер NetScaler LAN с помощью DLL</string>
+	  <string id="CitrixSecureBrowser">Citrix Secure Browser</string>
+	  <string id="Explain_CitrixSecureBrowser">Citrix Secure Browser используется для подключения к SaaS-приложениям.</string>
+	  <string id="CitrixSecureBrowser_Cache">Кэширование</string>
+	  <string id="Explain_CitrixSecureBrowser_Cache">Используйте эту политику для включения/отключения кэша браузера.
+По умолчанию кэширование включено.
+
+Если этот параметр включен, в браузере файлы cookie и ресурсы кэшируются на локальном диске.
+Если этот параметр выключен, в браузере файлы cookie и ресурсы не сохраняются.
+
+	  </string>
+	  <string id="AppProtectionAdvanced">Защита приложений — расширенная</string>
+	  <string id="Explain_AppProtectionAdvanced">Эта политика обеспечивает дополнительный уровень безопасности за счет проверки подписи всех модулей приложения Citrix Workspace. и обеспечивает защиту этих модулей от атак внедрения DLL.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="Policy_EnableICAClient">
+        <checkBox defaultChecked="true" refId="Part_EnableICAClient_Enable">Включить клиент</checkBox>
+        <decimalTextBox defaultValue="10000" refId="Part_EnableICAClient_Minimum">Минимальная версия клиента</decimalTextBox>
+      </presentation>
+      <presentation id="Storefronts">
+        <listBox refId="Storefronts_Part">Введите здесь сведения об учетной записи NetScaler Gateway или StoreFront:</listBox>
+      </presentation>
+      <presentation id="Policy_ProxyLockdown">
+        <comboBox refId="Part_Proxy_ProxyTypeLockdown">
+          <label>Типы прокси-серверов</label>
+          <suggestion>Авто</suggestion>
+          <suggestion>Нет</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Безопасный</suggestion>
+          <suggestion>Сценарий</suggestion>
+        </comboBox>
+        <textBox refId="Part_Proxy_ProxyHostLockdown">
+          <label>Имена узлов прокси-серверов</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyPortLockdown">
+          <label>Порты прокси-серверов</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyAutoConfigUrlLockdown">
+          <label>URL-адреса сценариев прокси-сервера</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyBypassListLockdown">
+          <label>Список серверов обхода</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_AltProxyLockdown">
+        <comboBox refId="Part_AltProxy_ProxyTypeLockdown">
+          <label>Типы прокси-серверов</label>
+          <suggestion>Авто</suggestion>
+          <suggestion>Нет</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Безопасный</suggestion>
+          <suggestion>Сценарий</suggestion>
+        </comboBox>
+        <textBox refId="Part_AltProxy_ProxyHostLockdown">
+          <label>Имена узлов прокси-серверов</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyPortLockdown">
+          <label>Порты прокси-серверов</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyAutoConfigUrlLockdown">
+          <label>URL-адреса сценариев прокси-сервера</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyBypassListLockdown">
+          <label>Список серверов обхода</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_AltProxy_ProxyFallbackLockdown">Обработка отказа: подключение напрямую</checkBox>
+      </presentation>
+      <presentation id="Policy_ProxySocks">
+        <dropdownList defaultItem="1" refId="Part_ProxySocks_Version">Версия протокола SOCKS</dropdownList>
+        <textBox refId="Part_ProxySocks_ProxyHostLockdown">
+          <label>Имена узлов прокси-серверов</label>
+        </textBox>
+        <textBox refId="Part_ProxySOCKS_ProxyPortLockdown">
+          <label>Порты прокси-серверов</label>
+        </textBox>
+      </presentation>
+	  <presentation id="Policy_EnableAutoUpdatePolicy">
+        <dropdownList defaultItem="0" refId="Part_EnableAutoUpdatePolicy">Включить политику обновления Citrix Workspace</dropdownList>
+        <checkBox defaultChecked="false" refId="Part_EnableAutoUpdatePolicy_version">ТОЛЬКО LTSR</checkBox>
+		<dropdownList defaultItem="0" noSort="true" refId="Part_EnableAutoUpdatePolicy_RemindMeLater">Citrix-Workspace-Update-DeferUpdate-Count</dropdownList>
+      </presentation>
+	  <presentation id="Policy_CheckAutoUpdatePolicy">
+        <dropdownList defaultItem="0" refId="Part_CheckAutoUpdatePolicy">Группа задержки</dropdownList>
+      </presentation>
+      <presentation id="Policy_ProxyAuthentication">
+        <checkBox defaultChecked="true" refId="Policy_ProxyExplicitAuthenticationEnabled">Запрашивать учетные данные у пользователя</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyBasicAuthenticationEnabled">Разрешить обычную проверку подлинности (простой текст)</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyNTLMAuthenticationEnabled">Разрешить проверку подлинности на основе хэша по протоколу NTLM</checkBox>
+        <textBox refId="Part_Proxy_Socks5User">
+          <label>Явное имя пользователя</label>
+        </textBox>
+        <textBox refId="Part_Proxy_Socks5Password">
+          <label>Явный пароль</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_SSLLockdown">
+        <checkBox defaultChecked="true" refId="Part_SSL_EnabledLockdown">Требовать TLS для всех подключений</checkBox>
+		<dropdownList defaultItem="0" refId="Part_SSL_SecurityComplianceMode">Режим соответствия требованиям безопасности</dropdownList>
+        <comboBox refId="Part_SSL_SSLProxyHostLockdown">
+          <label>Разрешенные серверы TLS</label>
+          <suggestion>*:443</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_SSL_SSLProtocolLockdown">Версия TLS</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_SSL_CiphersetLockdown">Набор шифров TLS</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_SSL_RevocationLockdown">Политика проверки отзыва сертификатов</dropdownList>
+        <comboBox refId="Part_SSL_SSLPolicyOID">
+          <label>Идентификатор OID расширения политики</label>
+          <suggestion>2.5.29.32.0</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="2" refId="Part_SSL_ClientAuthentication">Проверка подлинности клиента</dropdownList>
+        <comboBox refId="Part_SSL_ClientCertificate">
+          <label>Сертификат клиента</label>
+          <suggestion/>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ConfigureClientSelectiveTrust">
+        <checkBox defaultChecked="true" refId="Part_EnableClientSelectiveTrust">Применить конфигурацию доверенного сервера</checkBox>
+        <comboBox refId="Part_ConfigureClientSelectiveTrust_IEZone">
+          <label>Зона Интернета Windows</label>
+          <suggestion>Доверенный</suggestion>
+          <suggestion>Доверенный, интрасеть</suggestion>
+        </comboBox>
+        <comboBox refId="Part_ConfigureClientSelectiveTrust_EffectiveAddress">
+          <label>Адрес</label>
+          <suggestion>*.finance.citrix.com,*.sales.citrix.com</suggestion>
+          <suggestion>cps*.citrix.com</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ClientAutoReconnect">
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_Reconnect">Включить автоматическое повторное подключение</checkBox>
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_CGP">Включить надежность сеансов (имеет приоритет, если выбраны оба параметра)</checkBox>
+		<decimalTextBox defaultValue="80" refId="Part_ClientAutoReconnect_Dimming">Уровень прозрачности</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_Smartcard">
+        <checkBox defaultChecked="true" refId="Part_Smartcard_Enable">Разрешить проверку подлинности с помощью смарт-карты</checkBox>
+        <checkBox refId="Part_SmartcardPin_Enable">Использовать сквозную проверку подлинности для PIN-кода</checkBox>
+      </presentation>
+      <presentation id="Policy_KerberosLockdown"/>
+      <presentation id="Policy_SSONForNSG"/>
+      <presentation id="Policy_LocalCredentialsLockdown">
+        <checkBox defaultChecked="true" refId="Part_LocalCredentialsLockdown_Enable">Включить сквозную проверку подлинности</checkBox>
+        <checkBox refId="Part_LegacyLocalUserNameAndPassword_Enable">Разрешить сквозную проверку подлинности для всех подключений ICA</checkBox>
+        <checkBox refId="Part_NovellCredentials">Использовать учетные данные сервера каталогов Novell</checkBox>
+      </presentation>
+      <presentation id="Policy_WITicket">
+        <checkBox defaultChecked="true" refId="Part_WITicket_Legacy_Enable">Старая обработка запросов</checkBox>
+        <checkBox defaultChecked="true" refId="Part_WITicket_LogonTicket_Enable">Web Interface 4.5 и более поздние версии</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableDriveMapping">
+        <checkBox defaultChecked="true" refId="Part_EnableDriveMappingCheckbox">Включить подключение дисков клиента</checkBox>
+        <checkBox refId="Part_EnableDriveMappingReadonly">Клиентские диски только для чтения</checkBox>
+        <comboBox refId="Part_EnableDriveMappingDisableDrives">
+          <label>Не подключать диски</label>
+          <suggestion>C</suggestion>
+          <suggestion>ABCDEFGHIJKLMNOPQRSTUVWXYZ</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_EnablePrinterMapping"/>
+      <presentation id="Policy_LocalPort">
+        <textBox refId="Part_MaxPort">
+          <label>Максимальное количество последовательных портов</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_EnableSerialPortCheckbox">Подключить последовательные порты</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableVirtualSerialPortCheckbox">Разрешить синхронизацию КПК</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableParallelPortCheckbox">Подключить параллельные порты</checkBox>
+      </presentation>
+      <presentation id="Policy_ImageCapture"/>
+      <presentation id="Policy_AudioInput">
+        <checkBox defaultChecked="true" refId="Part_BiDiAudio_Enable">Включить микрофон клиента</checkBox>
+      </presentation>
+      <presentation id="Policy_Clipboard"/>
+      <presentation id="Policy_USB_PNP_Devices"/>
+      <presentation id="Policy_PointOfSales"/>
+	  <presentation id="Policy_Foreground_Progress_Bar"/>
+	  <presentation id="Policy_HWacceleration"/>
+        <presentation id="Policy_EnableH265"/>
+      <presentation id="Policy_Audio">
+        <checkBox defaultChecked="true" refId="Part_Audio_Enabled">Включить звук</checkBox>
+        <dropdownList defaultItem="0" refId="Part_Audio_Quality">Качество звука</dropdownList>
+        <checkBox refId="Part_RealtimeTransport_Enabled">Включить транспортировку в реальном времени</checkBox>
+        <decimalTextBox defaultValue="16500" refId="Part_RtpAudioLowestPort" spinStep="2">Самый маленький номер порта</decimalTextBox>
+        <decimalTextBox defaultValue="16509" refId="Part_RtpAudioHighestPort" spinStep="2">Самый большой номер порта</decimalTextBox>
+        <checkBox refId="Part_RealtimeTransportThroughGateway_Enabled">Разрешить транспортировку в реальном времени через NetScaler Gateway</checkBox>
+      </presentation>
+      <presentation id="Policy_Graphics">
+        <dropdownList defaultItem="1" refId="Part_Graphics_ColorDepth">Глубина цвета</dropdownList>
+        <checkBox refId="Part_Graphics_DiskCache">Кэширование на диске</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ImageAcceleration">Сжатие с потерями</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowser">Ускорение браузера HDX 3D</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowserCompression">Ускорение браузера HDX 3D — сжатие с потерями</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenMultimedia">Удаленное видео</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyKeyboard">Уменьшение задержки SpeedScreen — локальный эхо-вывод для клавиатуры</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyMouse">Уменьшение задержки SpeedScreen — прогнозирование положения указателя мыши</checkBox>
+      </presentation>
+      <presentation id="Policy_Display">
+        <comboBox refId="Part_Display_Seamless">
+          <label>Бесшовные окна</label>
+		  <default/>
+          <suggestion>True</suggestion>
+          <suggestion>False</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Width">
+          <label>Ширина окна</label>
+		  <default/>
+          <suggestion>1024-</suggestion>
+          <suggestion>800-</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Height">
+          <label>Высота окна</label>
+		  <default/>
+          <suggestion>734-</suggestion>
+          <suggestion>600-</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_Display_Percent">Размер окна в процентах</dropdownList>
+        <comboBox refId="Part_Display_WorkArea">
+          <label>Сжатие рабочей области</label>
+		  <default/>
+          <suggestion>5</suggestion>
+        </comboBox>
+        <checkBox refId="Part_Display_FullScreen">Во весь экран</checkBox>
+     </presentation>
+      <presentation id="Policy_Dpi">
+       <dropdownList defaultItem="0" refId="scaling_option">Масштабировать сеанс для высокого разрешения?</dropdownList>
+      </presentation>
+      <presentation id="Policy_LocalAppAccess">
+        <checkBox refId="Part_Allow_URLRedirection">Разрешить перенаправление URL-адреса</checkBox>
+      </presentation>
+      <presentation id="Policy_Keyboard_Hotkeys">
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Windows_Key">Клавиша Windows:</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Tasklist">Список задач:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Tasklist_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Close_Remote_Application">Закрыть приложение:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar">Переключение в полноэкранный режим:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del">CTRL + ALT + DEL:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">Диспетчер задач:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Alt_Tab">ALT + TAB:</dropdownList>
+        <dropdownList defaultItem="11" refId="Part_Keyboard_Hotkey_Alt_Tab_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Alt_Backtab">ALT + SHIFT + TAB:</dropdownList>
+        <dropdownList defaultItem="12" refId="Part_Keyboard_Hotkey_Alt_Backtab_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Esc">CTRL + ESC:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Ctrl_Alt">CTRL + ALT:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">Уменьшение задержки:</dropdownList>
+        <dropdownList defaultItem="8" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">+</dropdownList>
+		<dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME">Обычный режим IME:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishedApplications">
+        <comboBox refId="Part_PublishedApplications_InitialProgram">
+          <label>Приложение</label>
+          <suggestion>#Блокнот</suggestion>
+          <suggestion>#*</suggestion>
+        </comboBox>
+        <checkBox defaultChecked="true" refId="Part_PublishedApplications_SessionSharing">Совместный доступ к сеансам</checkBox>
+      </presentation>
+      <presentation id="Policy_HostRenderedAudio"/>
+      <presentation id="Policy_ICAFileSettings">
+        <checkBox defaultChecked="true" refId="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</checkBox>
+      </presentation>
+      <presentation id="Policy_ExtraURLProtocols">
+        <textBox refId="Part_ExtraURLProtocols">
+          <label>Протоколы ExtraURL</label>
+        </textBox>
+      </presentation>
+	  <presentation id="Policy_EngineErrMsg"/>
+      <presentation id="Polciy_CEIP"/>
+	  <presentation id="AppProtectionAdvanced" />
+      <presentation id="Polciy_CEIP_Configuration">
+        <textBox refId="Part_CEIP_ServerURL">
+          <label>URL-адрес сервера CEIP</label>
+		  <defaultValue>https://rttf.citrix.com</defaultValue>
+        </textBox>
+        <textBox refId="Part_CEIP_UploadClass">
+          <label>Класс отправки CEIP</label>
+		  <defaultValue>callhome_analytics</defaultValue>
+        </textBox>
+        <decimalTextBox defaultValue="1" refId="Part_CEIP_UploadFrequencyInWeeks">Инициализировать частоту отправки CEIP (в неделях)</decimalTextBox>
+        <checkBox refId="Part_AllowUnSecureURL">Разрешить незащищенный URL-адрес (http вместо https)</checkBox>
+      </presentation>
+      <presentation id="Policy_BidirectionalContentRedirection">
+        <textBox refId="Part_BidirectionalContentRedirectionPubAppOrDesktopName">
+            <label>Имя опубликованного приложения или рабочего стола:</label>
+        </textBox>
+        <dropdownList defaultItem="0" refId="Part_BidirectionalContentRedirectionPubNameType">Указанное имя предназначено для публикуемого типа:</dropdownList>
+        <textBox refId="Part_BidirectionalContentRedirectionVDAURLs">
+            <label>URL-адреса, которые разрешено перенаправлять к VDA:</label>
+        </textBox>
+        <textBox refId="Part_BidirectionalContentRedirectionClientURLs">
+            <label>URL-адреса, которые разрешено перенаправлять на клиент:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_BidirectionalContentRedirectionOverrides">
+        <listBox refId="Part_BidirectionalContentRedirectionVDAAppOverrides">Переопределения, относящиеся к URL-адресу опубликованного приложения или рабочего стола:</listBox>
+      </presentation>
+      <presentation id="Policy_AlwaysOn"/>
+      <presentation id="Policy_FedRAMP"/>
+      <presentation id="Policy_PublishSafeContent">
+        <dropdownList defaultItem="0" refId="Pick_Publish_SafeContent">Выберите, разрешить или запретить пользователям публиковать безопасное содержимое.</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishUnsafeContent">
+        <dropdownList defaultItem="1" refId="Pick_Publish_UnsafeContent">Выберите, разрешить или запретить пользователям публиковать небезопасное содержимое.</dropdownList>
+      </presentation>
+	  <presentation id="Policy_EnableFTU"/>
+        <presentation id="Policy_EnableNPS"/>
+	  <presentation id="Policy_Vprefer">
+	    <dropdownList defaultItem="1" refId="Allowed_Apps">Разрешить</dropdownList>
+	  </presentation>
+      <presentation id="Policy_EnableFTA"/>
+      <presentation id="Policy_EnableDefaultFTA"/>
+	  <presentation id="Policy_HideAdvancePreferencesOptions"/>	  
+	  <presentation id="Policy_SmartcardRemovalAction"/>
+	  <presentation id="Policy_HideSettings">
+		<dropdownList defaultItem="2" refId="Pick_UI_display">Выберите внешний вид пользовательского интерфейса параметров.</dropdownList>
+	  </presentation>
+      <presentation id="Policy_SelfServiceMode_Enable"/>
+      <presentation id="Policy_EnableAppShortCut">
+        <textBox refId="Part_StartMenuDir_Text">
+          <label>Каталог меню &quot;Пуск&quot;</label>
+		  <defaultValue>Citrix</defaultValue>
+        </textBox>
+        <textBox refId="Part_DesktopDir_Text">
+          <label>Каталог рабочего стола</label>
+		  <defaultValue>Citrix</defaultValue>
+        </textBox>
+        <checkBox refId="Part_StartMenuShortcut_Disable">Отключить ярлык меню &quot;Пуск&quot;</checkBox>
+        <checkBox refId="Part_DesktopShortcut_Enable">Включить ярлык рабочего стола</checkBox>
+        <checkBox refId="Part_UseCategoryAsStartMenuPath_Disable">Отключить путь к категории для меню &quot;Пуск&quot;</checkBox>
+		<checkBox refId="Part_UseCategoryAsDesktopPath_Enable">Включить путь к категории для рабочего стола</checkBox>
+		<checkBox refId="Part_UseDifferentPathsforStartmenuAndDesktop_Enable">Включите, чтобы для рабочего стола и меню &quot;Пуск&quot; использовались разные пути к категории. Отключите, чтобы для рабочего стола использовался тот же путь к категории, что и для меню &quot;Пуск&quot;.</checkBox>
+        <checkBox refId="Part_RemoveAppsOnLogoff_Enable">Удалять приложения при выходе из системы</checkBox>
+        <checkBox refId="Part_RemoveAppsOnExit_Enable">Удалять приложения при выходе</checkBox>
+		<checkBox refId="Part_ClearAppListOnLogoff_Enable">При выходе очистить набор приложений, отображаемых в окне приложения Citrix Workspace</checkBox>
+        <checkBox refId="Part_SuppressRefreshOnStartup_Enable">Запретить приложению Citrix Workspace обновлять список приложений при открытии.</checkBox>
+        <checkBox refId="Part_AllAppsAreMandatory_Enable">Игнорировать выбор приложений, сделанный с помощью самообслуживания, и сделать все обязательными. Это понадобится для автоматического добавления всех приложений, если Citrix Workspace работает со службой PNAgent. Если Citrix Workspace работает с хранилищем StoreFront, настройте сервер StoreFront, чтобы хранилище было обязательным. (Этот параметр сейчас не применяется к хранилищам StoreFront.)</checkBox>
+      </presentation>
+      <presentation id="Policy_AddAccounts"/>
+      <presentation id="Policy_EnablePreLaunch"/>
+      <presentation id="Policy_ReconnectMode">
+        <dropdownList defaultItem="4" refId="Pick_ReconnectMode">Выбирать правильное сочетание условий повторного подключения.</dropdownList>
+      </presentation>
+      <presentation id="Policy_FastConnectAPI_Support">
+        <checkBox defaultChecked="true" refId="Explain_FastConnectAPI_Functionality">Включить функции API FastConnect</checkBox>
+        <checkBox refId="Explain_EnableFastConnectTransitionAPI">EnableFastConnectTransitionAPI</checkBox>
+        <checkBox refId="Explain_LeaveAppsRuningOnLogoff">Оставить приложения запущенными при выходе из системы</checkBox>
+        <checkBox refId="Explain_FastConnectUsingSSP">Интегрировать модуль самообслуживания с FastConnect</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableICAClient_1">
+        <checkBox defaultChecked="true" refId="Part_EnableICAClient_Enable">Включить клиент</checkBox>
+        <decimalTextBox defaultValue="10000" refId="Part_EnableICAClient_Minimum">Минимальная версия клиента</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_ProxyLockdown_1">
+        <comboBox refId="Part_Proxy_ProxyTypeLockdown">
+          <label>Типы прокси-серверов</label>
+          <suggestion>Авто</suggestion>
+          <suggestion>Нет</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Безопасный</suggestion>
+          <suggestion>Сценарий</suggestion>
+        </comboBox>
+        <textBox refId="Part_Proxy_ProxyHostLockdown">
+          <label>Имена узлов прокси-серверов</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyPortLockdown">
+          <label>Порты прокси-серверов</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyAutoConfigUrlLockdown">
+          <label>URL-адреса сценариев прокси-сервера</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyBypassListLockdown">
+          <label>Список серверов обхода</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_AltProxyLockdown_1">
+        <comboBox refId="Part_AltProxy_ProxyTypeLockdown">
+          <label>Типы прокси-серверов</label>
+          <suggestion>Авто</suggestion>
+          <suggestion>Нет</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Безопасный</suggestion>
+          <suggestion>Сценарий</suggestion>
+        </comboBox>
+        <textBox refId="Part_AltProxy_ProxyHostLockdown">
+          <label>Имена узлов прокси-серверов</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyPortLockdown">
+          <label>Порты прокси-серверов</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyAutoConfigUrlLockdown">
+          <label>URL-адреса сценариев прокси-сервера</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyBypassListLockdown">
+          <label>Список серверов обхода</label>
+        </textBox>
+        <comboBox refId="Part_AltProxy_ProxyFallbackLockdown">
+          <label>Обработка отказа: подключение напрямую</label>
+          <suggestion>False</suggestion>
+          <suggestion>True</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ProxySocks_1">
+        <dropdownList defaultItem="1" refId="Part_ProxySocks_Version">Версия протокола SOCKS</dropdownList>
+        <textBox refId="Part_ProxySocks_ProxyHostLockdown">
+          <label>Имена узлов прокси-серверов</label>
+        </textBox>
+        <textBox refId="Part_ProxySOCKS_ProxyPortLockdown">
+          <label>Порты прокси-серверов</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_ProxyAuthentication_1">
+        <checkBox defaultChecked="true" refId="Policy_ProxyExplicitAuthenticationEnabled">Запрашивать учетные данные у пользователя</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyBasicAuthenticationEnabled">Разрешить обычную проверку подлинности (простой текст)</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyNTLMAuthenticationEnabled">Разрешить проверку подлинности на основе хэша по протоколу NTLM</checkBox>
+        <textBox refId="Part_Proxy_Socks5User">
+          <label>Явное имя пользователя</label>
+        </textBox>
+        <textBox refId="Part_Proxy_Socks5Password">
+          <label>Явный пароль</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_SSLLockdown_1">
+        <checkBox defaultChecked="true" refId="Part_SSL_EnabledLockdown">Требовать TLS для всех подключений</checkBox>
+		<dropdownList defaultItem="0" refId="Part_SSL_SecurityComplianceMode">Режим соответствия требованиям безопасности</dropdownList>
+        <comboBox refId="Part_SSL_SSLProxyHostLockdown">
+          <label>Разрешенные серверы TLS</label>
+          <suggestion>*:443</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_SSL_SSLProtocolLockdown">Версия TLS</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_SSL_CiphersetLockdown">Комплект шифров TLS</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_SSL_RevocationLockdown">Политика проверки отзыва сертификатов</dropdownList>
+        <comboBox refId="Part_SSL_SSLPolicyOID">
+          <label>Идентификатор OID расширения политики</label>
+          <suggestion>2.5.29.32.0</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="2" refId="Part_SSL_ClientAuthentication">Проверка подлинности клиента</dropdownList>
+        <comboBox refId="Part_SSL_ClientCertificate">
+          <label>Сертификат клиента</label>
+          <suggestion/>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ConfigureClientSelectiveTrust_1">
+        <checkBox defaultChecked="true" refId="Part_EnableClientSelectiveTrust">Применить конфигурацию доверенного сервера</checkBox>
+      </presentation>
+      <presentation id="Policy_ClientAutoReconnect_1">
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_Reconnect">Включить автоматическое повторное подключение</checkBox>
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_CGP">Включить надежность сеансов (имеет приоритет, если выбраны оба параметра)</checkBox>
+		<decimalTextBox defaultValue="80" refId="Part_ClientAutoReconnect_Dimming">Уровень прозрачности</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_Smartcard_1">
+        <checkBox defaultChecked="true" refId="Part_Smartcard_Enable">Разрешить проверку подлинности с помощью смарт-карты</checkBox>
+        <checkBox refId="Part_SmartcardPin_Enable">Использовать сквозную проверку подлинности для PIN-кода</checkBox>
+      </presentation>
+      <presentation id="Policy_KerberosLockdown_1"/>
+      <presentation id="Policy_LocalCredentialsLockdown_1">
+        <checkBox defaultChecked="true" refId="Part_LocalCredentialsLockdown_Enable">Включить сквозную проверку подлинности</checkBox>
+        <checkBox refId="Part_LegacyLocalUserNameAndPassword_Enable">Разрешить сквозную проверку подлинности для всех подключений ICA</checkBox>
+        <checkBox refId="Part_NovellCredentials">Использовать учетные данные сервера каталогов Novell</checkBox>
+      </presentation>
+      <presentation id="Policy_WITicket_1">
+        <checkBox defaultChecked="true" refId="Part_WITicket_Legacy_Enable">Старая обработка запросов</checkBox>
+        <checkBox defaultChecked="true" refId="Part_WITicket_LogonTicket_Enable">Web Interface 4.5 и более поздние версии</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableDriveMapping_1">
+        <checkBox defaultChecked="true" refId="Part_EnableDriveMappingCheckbox">Включить подключение дисков клиента</checkBox>
+        <checkBox refId="Part_EnableDriveMappingReadonly">Клиентские диски только для чтения</checkBox>
+        <comboBox refId="Part_EnableDriveMappingDisableDrives">
+          <label>Не подключать диски</label>
+          <suggestion>C</suggestion>
+          <suggestion>ABCDEFGHIJKLMNOPQRSTUVWXYZ</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_EnablePrinterMapping_1"/>
+      <presentation id="Policy_LocalPort_1">
+        <textBox refId="Part_MaxPort">
+          <label>Максимальное количество последовательных портов</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_EnableSerialPortCheckbox">Подключить последовательные порты</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableVirtualSerialPortCheckbox">Разрешить синхронизацию КПК</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableParallelPortCheckbox">Подключить параллельные порты</checkBox>
+      </presentation>
+      <presentation id="Policy_ImageCapture_1"/>
+      <presentation id="Policy_AudioInput_1">
+        <checkBox defaultChecked="true" refId="Part_BiDiAudio_Enable">Включить микрофон клиента</checkBox>
+      </presentation>
+      <presentation id="Policy_Clipboard_1"/>
+      <presentation id="Policy_USB_PNP_Devices_1"/>
+      <presentation id="Policy_PointOfSales_1"/>
+      <presentation id="Policy_Audio_1">
+        <checkBox defaultChecked="true" refId="Part_Audio_Enabled">Включить звук</checkBox>
+        <dropdownList defaultItem="0" refId="Part_Audio_Quality">Качество звука</dropdownList>
+        <checkBox refId="Part_RealtimeTransport_Enabled">Включить транспортировку в реальном времени</checkBox>
+        <decimalTextBox defaultValue="16500" refId="Part_RtpAudioLowestPort" spinStep="2">Самый маленький номер порта</decimalTextBox>
+        <decimalTextBox defaultValue="16509" refId="Part_RtpAudioHighestPort" spinStep="2">Самый большой номер порта</decimalTextBox>
+        <checkBox refId="Part_RealtimeTransportThroughGateway_Enabled">Разрешить транспортировку в реальном времени через NetScaler Gateway</checkBox>
+      </presentation>
+      <presentation id="Policy_Graphics_1">
+        <dropdownList defaultItem="1" refId="Part_Graphics_ColorDepth">Глубина цвета</dropdownList>
+        <checkBox refId="Part_Graphics_DiskCache">Кэширование на диске</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ImageAcceleration">Сжатие с потерями</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowser">Ускорение браузера HDX 3D</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowserCompression">Ускорение браузера HDX 3D — сжатие с потерями</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenMultimedia">Удаленное видео</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyKeyboard">Уменьшение задержки SpeedScreen — локальный эхо-вывод для клавиатуры</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyMouse">Уменьшение задержки SpeedScreen — прогнозирование положения указателя мыши</checkBox>
+      </presentation>
+      <presentation id="Policy_Display_1">
+        <comboBox refId="Part_Display_Seamless">
+          <label>Бесшовные окна</label>
+		  <default/>
+          <suggestion>True</suggestion>
+          <suggestion>False</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Width">
+          <label>Ширина окна</label>
+		  <default/>
+          <suggestion>1024-</suggestion>
+          <suggestion>800-</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Height">
+          <label>Высота окна</label>
+		  <default/>
+          <suggestion>734-</suggestion>
+          <suggestion>600-</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_Display_Percent">Размер окна в процентах</dropdownList>
+        <comboBox refId="Part_Display_WorkArea">
+          <label>Сжатие рабочей области</label>
+		  <default/>
+          <suggestion>5</suggestion>
+        </comboBox>
+        <checkBox refId="Part_Display_FullScreen">Во весь экран</checkBox>
+      </presentation>
+      <presentation id="Policy_LocalAppAccess_1">
+        <checkBox refId="Part_Allow_URLRedirection">Разрешить перенаправление URL-адреса</checkBox>
+      </presentation>
+      <presentation id="Policy_Keyboard_Hotkeys_1">
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Windows_Key">Клавиша Windows:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Tasklist">Список задач:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Tasklist_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Close_Remote_Application">Закрыть приложение:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar">Переключение в полноэкранный режим:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del">CTRL + ALT + DEL:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">Диспетчер задач:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Tab">ALT + TAB:</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Tab_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Backtab">ALT + SHIFT + TAB:</dropdownList>
+        <dropdownList defaultItem="4" refId="Part_Keyboard_Hotkey_Alt_Backtab_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Esc">CTRL + ESC:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Ctrl_Alt">CTRL + ALT:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">Уменьшение задержки:</dropdownList>
+        <dropdownList defaultItem="9" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">+</dropdownList>
+		<dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME">Обычный режим IME:</dropdownList>
+        <dropdownList defaultItem="8" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</dropdownList>
+      </presentation>
+	   <presentation id="Policy_ToggleFullScreen">
+        <dropdownList defaultItem="1" refId="Part_ToggleFullScreen_FirstKey">Настроить переключение в полноэкранный режим:</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_ToggleFullScreen_SecondKey">+</dropdownList>
+		<dropdownList defaultItem="0" refId="Part_ToggleFullScreen_ThirdKey">+</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishedApplications_1">
+        <comboBox refId="Part_PublishedApplications_InitialProgram">
+          <label>Приложение</label>
+          <suggestion>#Блокнот</suggestion>
+          <suggestion>#*</suggestion>
+        </comboBox>
+        <checkBox defaultChecked="true" refId="Part_PublishedApplications_SessionSharing">Совместный доступ к сеансам</checkBox>
+      </presentation>
+      <presentation id="Policy_HostRenderedAudio_1"/>
+      <presentation id="Policy_ICAFileSettings_1">
+        <checkBox defaultChecked="true" refId="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</checkBox>
+      </presentation>
+      <presentation id="Policy_AllowLegacySessionSharing">
+        <checkBox defaultChecked="true" refId="Part_AllowLegacySessionSharing_SessionSharing">AllowLegacySessionSharing</checkBox>
+      </presentation>
+	  
+	  <presentation id="EnableICAFileSigning">
+        <listBox refId="TrustedCertificates">Доверенные сертификаты:</listBox>
+        <dropdownList defaultItem="0" refId="Securitypolicy">Политика безопасности:</dropdownList>
+		<checkBox refId="TrustedLaunchers">Отключить для доверенных средств запуска</checkBox>
+      </presentation>
+	<presentation id="POL_CONFIGURE_LAN_PROXY_MANUALLY">
+        <textBox refId="TXT_PROXY_HOST">
+          <label>Узел прокси-сервера</label>
+        </textBox>
+		<decimalTextBox defaultValue="443" refId="TXT_PROXY_PORT">Порт прокси-сервера</decimalTextBox>
+      </presentation>
+      <presentation id="POL_CONFIGURE_LAN_PROXY_DLL">
+        <textBox refId="TXT_ProxyChooserDLL">
+          <label>Путь к DLL для выбора прокси-сервера</label>
+        </textBox>
+      </presentation>
+	  
+	<presentation id="EnableUSBForceRedirection">
+      </presentation>
+	  
+	 <presentation id="SplitDevices">
+      </presentation>
+	  <presentation id="DeviceRules">
+        <text>Список правил USB-устройств, разделенный точками с запятой.</text>
+        <textBox refId="DeviceRules_Value">
+          <label>Правила USB-устройств</label>
+        </textBox>
+      </presentation>
+      <presentation id="RemoveOnLock">
+	<text>Список правил USB-устройств, разделенный точками с запятой, для удаления при блокировке.</text>
+	<textBox refId="RemoveOnLock_Value">
+	  <label>Удалить при блокировке</label>
+	  <defaultValue>class=03 subclass=01 prot=01;class=03 subclass=01 prot=02;class=03 subclass=00 prot=01;class=03 subclass=00 prot=02</defaultValue>
+	</textBox>
+      </presentation>
+      <presentation id="ExistingDevices_Policy">
+        <dropdownList defaultItem="2" refId="ExistingDevices_Value">При запуске рабочего стола</dropdownList>
+      </presentation>
+      <presentation id="NewDevices_Policy">
+        <dropdownList defaultItem="2" refId="NewDevices_Value">При вставке USB-устройства</dropdownList>
+      </presentation>
+      <presentation id="HideSimpleDevices_Policy">
+        <checkBox defaultChecked="true" refId="HideSimpleDevices_Value">Скрыть USB-устройства, которые можно подключить с помощью других технологий HDX</checkBox>
+      </presentation>
+      <presentation id="ExistingDevices_Policy_1">
+        <dropdownList defaultItem="2" refId="ExistingDevices_Value">При запуске рабочего стола</dropdownList>
+      </presentation>
+      <presentation id="NewDevices_Policy_1">
+        <dropdownList defaultItem="2" refId="NewDevices_Value">При вставке USB-устройства</dropdownList>
+      </presentation>
+      <presentation id="HideSimpleDevices_Policy_1">
+        <checkBox defaultChecked="true" refId="HideSimpleDevices_Value">Скрыть USB-устройства, которые можно подключить с помощью других технологий HDX</checkBox>
+      </presentation>
+      <presentation id="RedirectUnknownDevices">       
+      </presentation>
+	  
+	  <presentation id="Policy_HDXoverUDP">
+		<dropdownList defaultItem="0" refId="refid_HDXoverUDP">Выберите протокол связи для Citrix Workspace</dropdownList>
+	  </presentation>
+	  
+	  <presentation id="Presentation_CitrixSecureBrowser_Cache"/>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

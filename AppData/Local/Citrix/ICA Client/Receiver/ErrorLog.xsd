@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ErrorLog"
+  targetNamespace="http://www.citrix.com/AppReceiver"
+  elementFormDefault="qualified"
+  xmlns="http://www.citrix.com/AppReceiver"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:annotation>
+    <xs:documentation>Copyright 2009-2010 Citrix Systems, Inc. All Rights Reserved.</xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="Errors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1001" name="Error">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" name="Text" type="xs:string" />
+              <xs:element minOccurs="1" name="TimeStamp" type="xs:string" />
+              <xs:element minOccurs="1" name="Message" type="xs:string" />
+              <xs:element minOccurs="1" name="Parameter" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="Archived" type="xs:boolean" use="required" />
+            <xs:attribute name="Code" type="xs:decimal" use="required" />
+            <xs:attribute name="Flags" type="xs:decimal" use="required" />
+            <xs:attribute name="Id" type="xs:decimal" use="required" />
+            <xs:attribute name="SubCode" type="xs:decimal" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

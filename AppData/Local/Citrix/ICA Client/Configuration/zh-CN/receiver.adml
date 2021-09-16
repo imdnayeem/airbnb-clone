@@ -1,0 +1,2078 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName/>
+  <description/>
+  <resources>
+    <stringTable>
+	
+	  <string id="Category_Citrix">Citrix 组件</string>
+      <string id="Category_Citrix_Explanation">此组策略可用于管理您的 Citrix 客户端。</string>
+	  <string id="ClientDevices">远程连接客户端设备</string>
+	  <string id="Explain_ClientDevices">这些策略控制服务器访问客户端计算机资源的方式。  可以将 Citrix Workspace 应用程序配置为允许远程应用程序使用磁盘驱动器、打印机等，就像在客户端计算机上运行一样。</string>
+	
+	  <string id="unknown_0">启用 ICA 文件签名</string>
+      <string id="unknown_16">仅允许签名的启动(更安全)</string>
+      <string id="unknown_17">在进行未签名的启动时提示用户(不安全)</string>
+      <string id="Explain_IcaFileSigning">使用此策略可启用并配置 ICA 文件签名。</string>
+	
+	
+      <string id="GenericUSB">通用 USB 远程连接</string>
+      <string id="DeviceRules">USB 设备规则</string>
+      <string id="DeviceRules_Explain">用于指定允许或拒绝使用的 USB 设备。
+
+每条规则都不区分大小写，并且格式为 {Allow: | Deny:}，后跟任意数量的 &lt;tag&gt;=&lt;value&gt; 限定符。多条规则应使用分号分隔。注释以“#”开头，遇分号结束。
+
+例如，Allow: VID=1234 PID=5678 # Comment ; Deny: Class=03。
+
+支持的标记为 VID、PID、REL、CLASS、SUBCLASS 和 PROT。</string>
+	<string id="RemoveOnLock">锁定时删除</string>
+	<string id="RemoveOnLock_Explain">指定锁定客户端计算机时要删除的设备或类。 
+语法:
+每个设备都不区分大小写，格式如下: 
+VID=XXX PID=XX;VID=YYY PID=YY
+每个类都不区分大小写，格式如下: 
+class=XXX subclass=XX prot=X
+示例:
+class=03 subclass=01 prot=01;VID=173E PID=0046
+默认行为:
+客户端锁定和解锁过程中，将删除并自动重定向 HID 键盘和鼠标(class=03 subclass=01 prot=01;class=03 subclass=01 prot=02;class=03 subclass=00 prot=01;class=03 subclass=00 prot=02)。
+	</string>
+	  <string id="SplitDevices">SplitDevices</string>
+	  <string id="SplitDevices_Explain">拆分复合设备的接口以便用作独立的设备。</string>
+      <string id="DeviceRules_Tip1">以分号分隔的 USB 设备规则列表。</string>
+      <string id="DeviceRules_Value">USB 设备规则</string>
+      <string id="RemoveOnLock_Value">锁定时删除</string>
+	  <string id="SplitDevices_Value">SplitDevices</string>
+      <string id="ExistingDevices_Policy">现有 USB 设备</string>
+      <string id="EnableUSBForceRedirection">EnableUSBForceRedirection</string>
+      <string id="EnableUSBForceRedirection_Explain">允许自动强制重定向客户端上正在使用的设备。 </string>
+      <string id="EnableUSBForceRedirection_Value">EnableUSBForceRedirection_Value</string>
+      <string id="ExistingDevices_Explain">选择启动会话时可用 USB 设备发生的情况。此设置会覆盖用户的首选项。</string>
+      <string id="ExistingDevices_Value">桌面启动时</string>
+      <string id="ExistingDevices_Always">连接所有可用的 USB 设备</string>
+      <string id="ExistingDevices_Ask">显示消息并允许用户进行选择</string>
+      <string id="ExistingDevices_Ignore">不执行任何操作</string>
+      <string id="NewDevices_Policy">新 USB 设备</string>
+      <string id="NewDevices_Explain">选择会话期间插入 USB 设备时发生的情况。此设置会覆盖用户的首选项。</string>
+      <string id="NewDevices_Value">插入 USB 设备时</string>
+      <string id="NewDevices_Always">连接 USB 设备</string>
+      <string id="NewDevices_Ask">显示消息并允许用户进行选择</string>
+      <string id="NewDevices_Ignore">不执行任何操作</string>
+      <string id="HideSimpleDevices_Policy">Desktop Viewer 中的 USB 设备列表</string>
+      <string id="HideSimpleDevices_Explain">选择可以使用备用 HDX 技术连接的 USB 设备是否应在 USB 设备列表中显示。
+
+可以使用其他 HDX 技术连接的设备包括简单的 USB 驱动器、摄像头、扫描仪、打印机和音频设备。
+
+此设置会覆盖用户的首选项。</string>
+      <string id="HideSimpleDevices_Value">隐藏可以使用其他 HDX 技术连接的 USB 设备</string>
+      <string id="RedirectUnknownDevices">重定向未知 USB 设备</string>
+      <string id="RedirectUnknownDevices_Explain">允许/拒绝重定向未知 USB 设备。
+未在端点上安装设备驱动程序的 USB 设备将在 Windows 设备管理器中显示为未知 USB 设备。
+      </string>
+      <string id="RedirectUnknownDevices_Value">重定向未知 USB 设备</string>
+	  
+
+	
+      <string id="unknown_2">已禁用</string>
+      <string id="unknown_4">检测版本</string>
+      <string id="unknown_6">SOCKS v4</string>
+      <string id="unknown_8">SOCKS v5</string>
+      <string id="unknown_18">检测版本</string>
+      <string id="unknown_20">TLS1.0 | TLS1.1 | TLS1.2</string>
+      <string id="unknown_24">检测版本</string>
+      <string id="unknown_26">政府</string>
+      <string id="unknown_28">商用</string>
+      <string id="unknown_30">默认</string>
+      <string id="unknown_32">已禁用</string>
+      <string id="unknown_34">仅检查本地存储的 CRL</string>
+      <string id="unknown_36">从网络检索 CRL</string>
+      <string id="unknown_38">需要使用 CRL 进行连接</string>
+      <string id="unknown_40">未配置</string>
+      <string id="unknown_42">显示证书选择器</string>
+      <string id="unknown_44">已禁用</string>
+      <string id="unknown_46">使用指定的证书</string>
+      <string id="unknown_48">如果可能，则自动选择</string>
+      <string id="unknown_112">高</string>
+      <string id="unknown_114">中</string>
+      <string id="unknown_116">低</string>
+      <string id="unknown_122">16 位色</string>
+      <string id="unknown_124">32 位色</string>
+      <string id="unknown_140"/>
+      <string id="unknown_142">50%</string>
+	  <string id="yes">是</string>
+	  <string id="no">否，使用本机分辨率</string>
+      <string id="unknown_144">75%</string>
+      <string id="unknown_146">其他</string>
+      <string id="unknown_158">访问本地桌面</string>
+      <string id="unknown_160">访问远程会话</string>
+      <string id="unknown_162">仅在全屏模式下访问远程会话</string>
+      <string id="unknown_164">&lt;已禁用&gt;</string>
+      <string id="unknown_166">Alt</string>
+      <string id="unknown_168">Ctrl</string>
+      <string id="unknown_170">Shift</string>
+      <string id="unknown_172">&lt;已禁用&gt;</string>
+      <string id="unknown_174">F1</string>
+      <string id="unknown_176">F10</string>
+      <string id="unknown_178">F11</string>
+      <string id="unknown_180">F12</string>
+      <string id="unknown_182">F2</string>
+      <string id="unknown_184">F3</string>
+      <string id="unknown_186">F4</string>
+      <string id="unknown_188">F5</string>
+      <string id="unknown_190">F6</string>
+      <string id="unknown_192">F7</string>
+      <string id="unknown_194">F8</string>
+      <string id="unknown_196">F9</string>
+      <string id="unknown_198">减号</string>
+      <string id="unknown_200">加号</string>
+      <string id="unknown_202">星号键</string>
+      <string id="unknown_204">Tab</string>
+      <string id="unknown_206">&lt;已禁用&gt;</string>
+      <string id="unknown_208">Alt</string>
+      <string id="unknown_210">Ctrl</string>
+      <string id="unknown_212">Shift</string>
+      <string id="unknown_214">&lt;已禁用&gt;</string>
+      <string id="unknown_216">F1</string>
+      <string id="unknown_218">F10</string>
+      <string id="unknown_220">F11</string>
+      <string id="unknown_222">F12</string>
+      <string id="unknown_224">F2</string>
+      <string id="unknown_226">F3</string>
+      <string id="unknown_228">F4</string>
+      <string id="unknown_230">F5</string>
+      <string id="unknown_232">F6</string>
+      <string id="unknown_234">F7</string>
+      <string id="unknown_236">F8</string>
+      <string id="unknown_238">F9</string>
+      <string id="unknown_240">减号</string>
+      <string id="unknown_242">加号</string>
+      <string id="unknown_244">星号</string>
+      <string id="unknown_246">Tab</string>
+      <string id="unknown_248">&lt;已禁用&gt;</string>
+      <string id="unknown_250">Alt</string>
+      <string id="unknown_252">Ctrl</string>
+      <string id="unknown_254">Shift</string>
+      <string id="unknown_256">&lt;已禁用&gt;</string>
+      <string id="unknown_258">F1</string>
+      <string id="unknown_260">F10</string>
+      <string id="unknown_262">F11</string>
+      <string id="unknown_264">F12</string>
+      <string id="unknown_266">F2</string>
+      <string id="unknown_268">F3</string>
+      <string id="unknown_270">F4</string>
+      <string id="unknown_272">F5</string>
+      <string id="unknown_274">F6</string>
+      <string id="unknown_276">F7</string>
+      <string id="unknown_278">F8</string>
+      <string id="unknown_280">F9</string>
+      <string id="unknown_282">减号</string>
+      <string id="unknown_284">加号</string>
+      <string id="unknown_286">星号</string>
+      <string id="unknown_288">Tab</string>
+      <string id="unknown_290">&lt;已禁用&gt;</string>
+      <string id="unknown_292">Alt</string>
+      <string id="unknown_294">Ctrl</string>
+      <string id="unknown_296">Shift</string>
+      <string id="unknown_298">&lt;已禁用&gt;</string>
+      <string id="unknown_300">F1</string>
+      <string id="unknown_302">F10</string>
+      <string id="unknown_304">F11</string>
+      <string id="unknown_306">F12</string>
+      <string id="unknown_308">F2</string>
+      <string id="unknown_310">F3</string>
+      <string id="unknown_312">F4</string>
+      <string id="unknown_314">F5</string>
+      <string id="unknown_316">F6</string>
+      <string id="unknown_318">F7</string>
+      <string id="unknown_320">F8</string>
+      <string id="unknown_322">F9</string>
+      <string id="unknown_324">减号</string>
+      <string id="unknown_326">加号</string>
+      <string id="unknown_328">星号</string>
+      <string id="unknown_330">Tab</string>
+      <string id="unknown_332">&lt;已禁用&gt;</string>
+      <string id="unknown_334">Alt</string>
+      <string id="unknown_336">Ctrl</string>
+      <string id="unknown_338">Shift</string>
+      <string id="unknown_340">&lt;已禁用&gt;</string>
+      <string id="unknown_342">F1</string>
+      <string id="unknown_344">F10</string>
+      <string id="unknown_346">F11</string>
+      <string id="unknown_348">F12</string>
+      <string id="unknown_350">F2</string>
+      <string id="unknown_352">F3</string>
+      <string id="unknown_354">F4</string>
+      <string id="unknown_356">F5</string>
+      <string id="unknown_358">F6</string>
+      <string id="unknown_360">F7</string>
+      <string id="unknown_362">F8</string>
+      <string id="unknown_364">F9</string>
+      <string id="unknown_366">减号</string>
+      <string id="unknown_368">加号</string>
+      <string id="unknown_370">星号</string>
+      <string id="unknown_372">Tab</string>
+      <string id="unknown_374">&lt;已禁用&gt;</string>
+      <string id="unknown_376">Alt</string>
+      <string id="unknown_378">Ctrl</string>
+      <string id="unknown_380">Shift</string>
+      <string id="unknown_382">&lt;已禁用&gt;</string>
+      <string id="unknown_384">F1</string>
+      <string id="unknown_386">F10</string>
+      <string id="unknown_388">F11</string>
+      <string id="unknown_390">F12</string>
+      <string id="unknown_392">F2</string>
+      <string id="unknown_394">F3</string>
+      <string id="unknown_396">F4</string>
+      <string id="unknown_398">F5</string>
+      <string id="unknown_400">F6</string>
+      <string id="unknown_402">F7</string>
+      <string id="unknown_404">F8</string>
+      <string id="unknown_406">F9</string>
+      <string id="unknown_408">减号</string>
+      <string id="unknown_410">加号</string>
+      <string id="unknown_412">星号</string>
+      <string id="unknown_414">Tab</string>
+      <string id="unknown_416">&lt;已禁用&gt;</string>
+      <string id="unknown_418">Alt</string>
+      <string id="unknown_420">Ctrl</string>
+      <string id="unknown_422">Shift</string>
+      <string id="unknown_424">&lt;已禁用&gt;</string>
+      <string id="unknown_426">F1</string>
+      <string id="unknown_428">F10</string>
+      <string id="unknown_430">F11</string>
+      <string id="unknown_432">F12</string>
+      <string id="unknown_434">F2</string>
+      <string id="unknown_436">F3</string>
+      <string id="unknown_438">F4</string>
+      <string id="unknown_440">F5</string>
+      <string id="unknown_442">F6</string>
+      <string id="unknown_444">F7</string>
+      <string id="unknown_446">F8</string>
+      <string id="unknown_448">F9</string>
+      <string id="unknown_450">减号</string>
+      <string id="unknown_452">加号</string>
+      <string id="unknown_454">星号</string>
+      <string id="unknown_456">Tab</string>
+      <string id="unknown_458">&lt;已禁用&gt;</string>
+      <string id="unknown_460">Alt</string>
+      <string id="unknown_462">Ctrl</string>
+      <string id="unknown_464">Shift</string>
+      <string id="unknown_466">&lt;已禁用&gt;</string>
+      <string id="unknown_468">F1</string>
+      <string id="unknown_470">F10</string>
+      <string id="unknown_472">F11</string>
+      <string id="unknown_474">F12</string>
+      <string id="unknown_476">F2</string>
+      <string id="unknown_478">F3</string>
+      <string id="unknown_480">F4</string>
+      <string id="unknown_482">F5</string>
+      <string id="unknown_484">F6</string>
+      <string id="unknown_486">F7</string>
+      <string id="unknown_488">F8</string>
+      <string id="unknown_490">F9</string>
+      <string id="unknown_492">减号</string>
+      <string id="unknown_494">加号</string>
+      <string id="unknown_496">星号</string>
+      <string id="unknown_498">Tab</string>
+      <string id="unknown_500">&lt;已禁用&gt;</string>
+      <string id="unknown_502">Alt</string>
+      <string id="unknown_504">Ctrl</string>
+      <string id="unknown_506">Shift</string>
+      <string id="unknown_508">&lt;已禁用&gt;</string>
+      <string id="unknown_510">F1</string>
+      <string id="unknown_512">F10</string>
+      <string id="unknown_514">F11</string>
+      <string id="unknown_516">F12</string>
+      <string id="unknown_518">F2</string>
+      <string id="unknown_520">F3</string>
+      <string id="unknown_522">F4</string>
+      <string id="unknown_524">F5</string>
+      <string id="unknown_526">F6</string>
+      <string id="unknown_528">F7</string>
+      <string id="unknown_530">F8</string>
+      <string id="unknown_532">F9</string>
+      <string id="unknown_534">减号</string>
+      <string id="unknown_536">加号</string>
+      <string id="unknown_538">星号</string>
+      <string id="unknown_540">Tab</string>
+      <string id="unknown_542">&lt;已禁用&gt;</string>
+      <string id="unknown_544">Alt</string>
+      <string id="unknown_546">Ctrl</string>
+      <string id="unknown_548">Shift</string>
+      <string id="unknown_550">&lt;已禁用&gt;</string>
+      <string id="unknown_552">F1</string>
+      <string id="unknown_554">F10</string>
+      <string id="unknown_556">F11</string>
+      <string id="unknown_558">F12</string>
+      <string id="unknown_560">F2</string>
+      <string id="unknown_562">F3</string>
+      <string id="unknown_564">F4</string>
+      <string id="unknown_566">F5</string>
+      <string id="unknown_568">F6</string>
+      <string id="unknown_570">F7</string>
+      <string id="unknown_572">F8</string>
+      <string id="unknown_574">F9</string>
+      <string id="unknown_576">减号</string>
+      <string id="unknown_578">加号</string>
+      <string id="unknown_580">星号</string>
+      <string id="unknown_582">Tab</string>
+      <string id="unknown_608">已禁用</string>
+      <string id="unknown_610">检测版本</string>
+      <string id="unknown_612">SOCKS v4</string>
+      <string id="unknown_614">SOCKS v5</string>
+      <string id="unknown_624">检测版本</string>
+      <string id="unknown_626">TLS1.0 | TLS1.1 | TLS1.2</string>
+      <string id="unknown_630">检测版本</string>
+      <string id="unknown_632">政府</string>
+      <string id="unknown_634">商用</string>
+      <string id="unknown_636">默认</string>
+      <string id="unknown_638">不检查</string>
+      <string id="unknown_640">在不访问网络的情况下检查</string>
+      <string id="unknown_642">完全访问检查</string>
+      <string id="unknown_644">需要完全访问检查和 CRL</string>
+      <string id="unknown_646">未配置</string>
+      <string id="unknown_648">显示证书选择器</string>
+      <string id="unknown_650">已禁用</string>
+      <string id="unknown_652">使用指定的证书</string>
+      <string id="unknown_654">如果可能，则自动选择</string>
+	  <string id="unknown_656">已禁用</string>
+      <string id="unknown_658">启动</string>
+      <string id="unknown_660">刷新</string>
+      <string id="unknown_662">启动、刷新</string>
+      <string id="unknown_664">打开</string>
+      <string id="unknown_666">启动、打开</string>
+      <string id="unknown_668">刷新、打开</string>
+      <string id="unknown_670">刷新、打开、启动</string>
+      <string id="unknown_672">WinLogon</string>
+      <string id="unknown_674">WinLogon、启动</string>
+      <string id="unknown_676">WinLogon、刷新</string>
+      <string id="unknown_678">WinLogon、刷新、启动</string>
+      <string id="unknown_680">WinLogon、打开</string>
+      <string id="unknown_682">WinLogon、打开、启动</string>
+      <string id="unknown_684">WinLogon、打开、刷新</string>
+      <string id="unknown_686">所有选项</string>
+	  <string id="unknown_688">&lt;已禁用&gt;</string>
+      <string id="unknown_690">Alt</string>
+      <string id="unknown_692">Ctrl</string>
+      <string id="unknown_694">Shift</string>
+      <string id="unknown_696">&lt;已禁用&gt;</string>
+      <string id="unknown_698">F1</string>
+      <string id="unknown_700">F10</string>
+      <string id="unknown_702">F11</string>
+      <string id="unknown_704">F12</string>
+      <string id="unknown_706">F2</string>
+      <string id="unknown_708">F3</string>
+      <string id="unknown_710">F4</string>
+      <string id="unknown_712">F5</string>
+      <string id="unknown_714">F6</string>
+      <string id="unknown_716">F7</string>
+      <string id="unknown_718">F8</string>
+      <string id="unknown_720">F9</string>
+      <string id="unknown_722">减号</string>
+      <string id="unknown_724">加号</string>
+      <string id="unknown_726">星号</string>
+      <string id="unknown_728">Tab</string>
+      <string id="unknown_715">高</string>
+      <string id="unknown_717">中</string>
+      <string id="unknown_719">低</string>
+      <string id="unknown_725">16 位色</string>
+      <string id="unknown_727">32 位色</string>
+      <string id="unknown_743"/>
+      <string id="unknown_745">50%</string>
+      <string id="unknown_747">75%</string>
+      <string id="unknown_749">其他</string>
+      <string id="unknown_761">访问本地桌面</string>
+      <string id="unknown_763">访问远程会话</string>
+      <string id="unknown_765">仅在全屏模式下访问远程会话</string>
+      <string id="unknown_767">&lt;已禁用&gt;</string>
+      <string id="unknown_769">Shift</string>
+      <string id="unknown_771">Ctrl</string>
+      <string id="unknown_773">Alt</string>
+      <string id="unknown_775">&lt;已禁用&gt;</string>
+      <string id="unknown_777">Tab</string>
+      <string id="unknown_779">星号</string>
+      <string id="unknown_781">加号</string>
+      <string id="unknown_783">减号</string>
+      <string id="unknown_785">F1</string>
+      <string id="unknown_787">F2</string>
+      <string id="unknown_789">F3</string>
+      <string id="unknown_791">F4</string>
+      <string id="unknown_793">F5</string>
+      <string id="unknown_795">F6</string>
+      <string id="unknown_797">F7</string>
+      <string id="unknown_799">F8</string>
+      <string id="unknown_801">F9</string>
+      <string id="unknown_803">F10</string>
+      <string id="unknown_805">F11</string>
+      <string id="unknown_807">F12</string>
+      <string id="unknown_809">&lt;已禁用&gt;</string>
+      <string id="unknown_811">Shift</string>
+      <string id="unknown_813">Ctrl</string>
+      <string id="unknown_815">Alt</string>
+      <string id="unknown_817">&lt;已禁用&gt;</string>
+      <string id="unknown_819">Tab</string>
+      <string id="unknown_821">星号</string>
+      <string id="unknown_823">加号</string>
+      <string id="unknown_825">减号</string>
+      <string id="unknown_827">F1</string>
+      <string id="unknown_829">F2</string>
+      <string id="unknown_831">F3</string>
+      <string id="unknown_833">F4</string>
+      <string id="unknown_835">F5</string>
+      <string id="unknown_837">F6</string>
+      <string id="unknown_839">F7</string>
+      <string id="unknown_841">F8</string>
+      <string id="unknown_843">F9</string>
+      <string id="unknown_845">F10</string>
+      <string id="unknown_847">F11</string>
+      <string id="unknown_849">F12</string>
+      <string id="unknown_851">&lt;已禁用&gt;</string>
+      <string id="unknown_853">Shift</string>
+      <string id="unknown_855">Ctrl</string>
+      <string id="unknown_857">Alt</string>
+      <string id="unknown_859">&lt;已禁用&gt;</string>
+      <string id="unknown_861">Tab</string>
+      <string id="unknown_863">星号</string>
+      <string id="unknown_865">加号</string>
+      <string id="unknown_867">减号</string>
+      <string id="unknown_869">F1</string>
+      <string id="unknown_871">F2</string>
+      <string id="unknown_873">F3</string>
+      <string id="unknown_875">F4</string>
+      <string id="unknown_877">F5</string>
+      <string id="unknown_879">F6</string>
+      <string id="unknown_881">F7</string>
+      <string id="unknown_883">F8</string>
+      <string id="unknown_885">F9</string>
+      <string id="unknown_887">F10</string>
+      <string id="unknown_889">F11</string>
+      <string id="unknown_891">F12</string>
+      <string id="unknown_893">&lt;已禁用&gt;</string>
+      <string id="unknown_895">Shift</string>
+      <string id="unknown_897">Ctrl</string>
+      <string id="unknown_899">Alt</string>
+      <string id="unknown_901">&lt;已禁用&gt;</string>
+      <string id="unknown_903">Tab</string>
+      <string id="unknown_905">星号</string>
+      <string id="unknown_907">加号</string>
+      <string id="unknown_909">减号</string>
+      <string id="unknown_911">F1</string>
+      <string id="unknown_913">F2</string>
+      <string id="unknown_915">F3</string>
+      <string id="unknown_917">F4</string>
+      <string id="unknown_919">F5</string>
+      <string id="unknown_921">F6</string>
+      <string id="unknown_923">F7</string>
+      <string id="unknown_925">F8</string>
+      <string id="unknown_927">F9</string>
+      <string id="unknown_929">F10</string>
+      <string id="unknown_931">F11</string>
+      <string id="unknown_933">F12</string>
+      <string id="unknown_935">&lt;已禁用&gt;</string>
+      <string id="unknown_937">Shift</string>
+      <string id="unknown_939">Ctrl</string>
+      <string id="unknown_941">Alt</string>
+      <string id="unknown_943">&lt;已禁用&gt;</string>
+      <string id="unknown_945">Tab</string>
+      <string id="unknown_947">星号</string>
+      <string id="unknown_949">加号</string>
+      <string id="unknown_951">减号</string>
+      <string id="unknown_953">F1</string>
+      <string id="unknown_955">F2</string>
+      <string id="unknown_957">F3</string>
+      <string id="unknown_959">F4</string>
+      <string id="unknown_961">F5</string>
+      <string id="unknown_963">F6</string>
+      <string id="unknown_965">F7</string>
+      <string id="unknown_967">F8</string>
+      <string id="unknown_969">F9</string>
+      <string id="unknown_971">F10</string>
+      <string id="unknown_973">F11</string>
+      <string id="unknown_975">F12</string>
+      <string id="unknown_977">&lt;已禁用&gt;</string>
+      <string id="unknown_979">Shift</string>
+      <string id="unknown_981">Ctrl</string>
+      <string id="unknown_983">Alt</string>
+      <string id="unknown_985">&lt;已禁用&gt;</string>
+      <string id="unknown_987">Tab</string>
+      <string id="unknown_989">星号</string>
+      <string id="unknown_991">加号</string>
+      <string id="unknown_993">减号</string>
+      <string id="unknown_995">F1</string>
+      <string id="unknown_997">F2</string>
+      <string id="unknown_999">F3</string>
+      <string id="unknown_1001">F4</string>
+      <string id="unknown_1003">F5</string>
+      <string id="unknown_1005">F6</string>
+      <string id="unknown_1007">F7</string>
+      <string id="unknown_1009">F8</string>
+      <string id="unknown_1011">F9</string>
+      <string id="unknown_1013">F10</string>
+      <string id="unknown_1015">F11</string>
+      <string id="unknown_1017">F12</string>
+      <string id="unknown_1019">&lt;已禁用&gt;</string>
+      <string id="unknown_1021">Shift</string>
+      <string id="unknown_1023">Ctrl</string>
+      <string id="unknown_1025">Alt</string>
+      <string id="unknown_1027">&lt;已禁用&gt;</string>
+      <string id="unknown_1029">Tab</string>
+      <string id="unknown_1031">星号</string>
+      <string id="unknown_1033">加号</string>
+      <string id="unknown_1035">减号</string>
+      <string id="unknown_1037">F1</string>
+      <string id="unknown_1039">F2</string>
+      <string id="unknown_1041">F3</string>
+      <string id="unknown_1043">F4</string>
+      <string id="unknown_1045">F5</string>
+      <string id="unknown_1047">F6</string>
+      <string id="unknown_1049">F7</string>
+      <string id="unknown_1051">F8</string>
+      <string id="unknown_1053">F9</string>
+      <string id="unknown_1055">F10</string>
+      <string id="unknown_1057">F11</string>
+      <string id="unknown_1059">F12</string>
+      <string id="unknown_1061">&lt;已禁用&gt;</string>
+      <string id="unknown_1063">Shift</string>
+      <string id="unknown_1065">Ctrl</string>
+      <string id="unknown_1067">Alt</string>
+      <string id="unknown_1069">&lt;已禁用&gt;</string>
+      <string id="unknown_1071">Tab</string>
+      <string id="unknown_1073">星号</string>
+      <string id="unknown_1075">加号</string>
+      <string id="unknown_1077">减号</string>
+      <string id="unknown_1079">F1</string>
+      <string id="unknown_1081">F2</string>
+      <string id="unknown_1083">F3</string>
+      <string id="unknown_1085">F4</string>
+      <string id="unknown_1087">F5</string>
+      <string id="unknown_1089">F6</string>
+      <string id="unknown_1091">F7</string>
+      <string id="unknown_1093">F8</string>
+      <string id="unknown_1095">F9</string>
+      <string id="unknown_1097">F10</string>
+      <string id="unknown_1099">F11</string>
+      <string id="unknown_1101">F12</string>
+      <string id="unknown_1103">&lt;已禁用&gt;</string>
+      <string id="unknown_1105">Shift</string>
+      <string id="unknown_1107">Ctrl</string>
+      <string id="unknown_1109">Alt</string>
+      <string id="unknown_1111">&lt;已禁用&gt;</string>
+      <string id="unknown_1113">Tab</string>
+      <string id="unknown_1115">星号</string>
+      <string id="unknown_1117">加号</string>
+      <string id="unknown_1119">减号</string>
+      <string id="unknown_1121">F1</string>
+      <string id="unknown_1123">F2</string>
+      <string id="unknown_1125">F3</string>
+      <string id="unknown_1127">F4</string>
+      <string id="unknown_1129">F5</string>
+      <string id="unknown_1131">F6</string>
+      <string id="unknown_1133">F7</string>
+      <string id="unknown_1135">F8</string>
+      <string id="unknown_1137">F9</string>
+      <string id="unknown_1139">F10</string>
+      <string id="unknown_1141">F11</string>
+      <string id="unknown_1143">F12</string>
+      <string id="unknown_1145">&lt;已禁用&gt;</string>
+      <string id="unknown_1147">Shift</string>
+      <string id="unknown_1149">Ctrl</string>
+      <string id="unknown_1151">Alt</string>
+      <string id="unknown_1153">&lt;已禁用&gt;</string>
+      <string id="unknown_1155">Tab</string>
+      <string id="unknown_1157">星号</string>
+      <string id="unknown_1159">加号</string>
+      <string id="unknown_1161">减号</string>
+      <string id="unknown_1163">F1</string>
+      <string id="unknown_1165">F2</string>
+      <string id="unknown_1167">F3</string>
+      <string id="unknown_1169">F4</string>
+      <string id="unknown_1171">F5</string>
+      <string id="unknown_1173">F6</string>
+      <string id="unknown_1175">F7</string>
+      <string id="unknown_1177">F8</string>
+      <string id="unknown_1179">F9</string>
+      <string id="unknown_1181">F10</string>
+      <string id="unknown_1183">F11</string>
+      <string id="unknown_1185">F12</string>
+	  <string id="unknown_1187">无</string>
+	  <string id="unknown_1189">FIPS</string>
+      <string id="unknown_1191">SP800-52</string>
+	  <string id="unknown_1195">任意</string>
+	  <string id="unknown_1197">TLS</string>
+	  <string id="unknown_1199">受管制(安全)</string>
+	  <string id="unknown_1201">任意</string>
+	  <string id="unknown_1203">TLS1.2</string>
+	  <string id="unknown_1205">TLS1.1 | TLS1.2</string>
+	  <string id="unknown_1207">TLS1.0 | TLS1.1 | TLS1.2</string>
+	  <string id="unknown_1209">全部需要完全访问检查和 CRL</string>	 
+	  <string id="unknown_1210">禁用“应用程序显示”选项卡</string>
+	  <string id="unknown_1211">禁用“重新连接选项”选项卡</string>
+	  <string id="unknown_1212">禁用整个 UI</string>
+	  <string id="unknown_1213">A: 总是</string>
+	  <string id="unknown_1214">S: 安全</string>
+	  <string id="unknown_1215">N: 从不</string>
+	  <string id="unknown_1217">&lt;已禁用&gt;</string>
+      <string id="unknown_1219">Shift</string>
+      <string id="unknown_1221">Ctrl</string>
+      <string id="unknown_1223">Alt</string>
+      <string id="unknown_1225">&lt;已禁用&gt;</string>
+      <string id="unknown_1227">Tab</string>
+      <string id="unknown_1229">星号</string>
+      <string id="unknown_1231">加号</string>
+      <string id="unknown_1233">减号</string>
+      <string id="unknown_1235">F1</string>
+      <string id="unknown_1237">F2</string>
+      <string id="unknown_1239">F3</string>
+      <string id="unknown_1241">F4</string>
+      <string id="unknown_1243">F5</string>
+      <string id="unknown_1245">F6</string>
+      <string id="unknown_1247">F7</string>
+      <string id="unknown_1249">F8</string>
+      <string id="unknown_1251">F9</string>
+      <string id="unknown_1253">F10</string>
+      <string id="unknown_1255">F11</string>
+      <string id="unknown_1257">F12</string>
+	  
+      <string id="Policy_EnableAutoUpdatePolicy">Citrix Workspace 更新</string>
+      <string id="Explain_EnableAutoUpdatePolicy">未配置 – 已启用“Citrix Workspace 更新”。
+已启用 – 已通过此对话框中列出的其他选项启用“Citrix Workspace 更新”。
+已禁用 –“Citrix Workspace 更新”选项在“高级首选项”表中隐藏，并且您将不会收到任何更新通知。
+启用 Citrix Workspace 更新策略:
+	自动 = Citrix Workspace 自动检查更新。 
+	手动 = 用户手动检查更新。 
+	  
+仅限 LTSR: 
+	True = 只有 LTSR 更新可用。
+Citrix-Workspace-Update-DeferUpdate-Count:
+	-1: 用户可以推迟任意次。
+	0: 用户看不到以后提醒选项。
+	数值: 用户将看到以后提醒选项指定的次数。
+	  </string> 
+	  <string id="AutoUpdate">自动</string> 
+	  <string id="Manual">手动</string> 
+      <string id="Policy_CheckAutoUpdatePolicy">设置检查更新的延迟</string>
+      <string id="Explain_CheckAutoUpdatePolicy">此策略用于设置向用户推出 Citrix Workspace 更新时的首选项。
+- (快) - 在交付初期向用户推出可用更新。
+- (中) - 在交付中期向用户推出可用更新。
+- (慢) - 在交付末期向用户推出可用更新。
+</string> 
+	  <string id="Fast">快</string>
+      <string id="Medium">中</string> 
+	  <string id="Slow">慢</string>
+      <string id="AllowPublishContent">允许</string>
+      <string id="PreventPublishContent">阻止</string>
+      <string id="ICAClient">Citrix Workspace</string>
+      <string id="Explain_ICAClient">Citrix Workspace 应用程序用于连接到服务器场中的远程应用程序和桌面。</string>
+      <string id="Network">网络路由</string>
+      <string id="Explain_Network">这些策略可用于控制 Citrix Workspace 将其连接路由到服务器场的方式。</string>
+      <string id="Authentication">用户身份验证</string>
+      <string id="Explain_Authentication">这些策略控制 Citrix Workspace 对远程应用程序或桌面验证其用户身份的方式。</string>
+      <string id="UserExperience">用户体验</string>
+      <string id="Explain_UserExperience">可以将 Citrix Workspace 配置为通过不同的方式与客户端计算机应用程序进行交互。  这些设置可用于控制客户端计算机向用户提供远程应用程序和桌面的方式。</string>
+	  <string id="Policy_HWacceleration">图形硬件加速</string>
+	  <string id="Explain_HWacceleration">使用此策略可允许或禁止对远程图形使用硬件加速(GPU)。 如果未配置，则允许在非嵌入式 GPU 上使用硬件加速。 启用时，Citrix Workspace 将尝试使用客户端 GPU 加快远程图形的显示速度。 在不支持此功能的客户端设备上，将无提示禁用此功能。</string>
+      <string id="Policy_EnableH265">图形的 H265 解码</string>
+      <string id="Explain_EnableH265">使用此策略可允许或禁止对远程图形使用 H265 解码。 如果未配置，则不尝试使用 H265 解码。启用时，Citrix Workspace 将尝试使用客户端 GPU 通过 H265 解码器进行解码，前提是服务器支持 H265 编码。 在不支持此功能的客户端设备上，此功能将被无提示禁用，并还原为 H264</string>
+      <string id="Proxy">代理</string>
+      <string id="Explain_Proxy">可以将 Citrix Workspace 配置为对远程应用程序和桌面使用特定代理路由。  这些设置允许独立配置客户端代理，而不需要配置客户端计算机上的其他程序。</string>
+	  <string id="AdvancePreferencesOptions">“高级首选项”选项</string>
+      <string id="Explain_AdvancePreferencesOptions">启用/禁用“高级首选项”中存在的选项</string>
+      <string id="ClientEngine">客户端引擎</string>
+      <string id="Explain_ClientEngine">可以将 Citrix Workspace 配置为与客户端引擎配置属性(例如，ICA 文件设置)进行交互</string>
+      <string id="MultiStreamICA">多流 ICA</string>
+      <string id="Explain_MultiStreamICA">此策略允许您配置多个连接以承载客户端与服务器之间的 ICA 流量。</string>
+      <string id="SelfService">自助服务</string>
+      <string id="Explain_SelfService">这些策略控制自助服务插件设置</string>
+      <string id="RealTimeTransport">实时传输</string>
+      <string id="Explain_RealTimeTransport">实时传输</string>
+      <string id="RealTimeTransportThroughGateway">通过 NetScaler Gateway 实时传输</string>
+      <string id="Explain_RealTimeTransportThroughGateway">通过 NetScaler Gateway 实时传输</string>
+      <string id="Policy_EnableICAClient">允许建立客户端连接</string>
+      <string id="Explain_EnableICAClient">使用此策略可启用或完全禁用来自 Citrix Workspace 应用程序的连接。  
+      
+如果未配置此策略，客户端将允许连接到服务器。  
+      
+如果启用了此策略，客户端将仅在选择了“启用客户端”选项且其版本号高于或等于“最低客户端版本”时连接到服务器。  
+
+如果禁用了此策略，客户端将不允许连接到任何服务器。  
+
+
+故障排除:
+如果连接因未启用客户端而被拒绝，则将显示错误消息“&lt;服务器&gt; 错误: 无法连接到 Citrix XenApp 服务器。  服务器(…)不受 ICA 连接信任。  锁定设置不允许连接到(所有区域)区域。  请与管理员联系。”  
+
+如果客户端因版本号太低而不允许连接，则将显示错误消息“错误号 2321: ICA 客户端配置管理器: ICA 客户端版本太低，无法使用已安装的配置数据运行。”。</string>
+      <string id="Part_EnableICAClient_Enable">启用客户端</string>
+      <string id="Part_EnableICAClient_Minimum">最低客户端版本</string>
+      <string id="Policy_ProxyLockdown">配置客户端代理设置</string>
+      <string id="Explain_ProxyLockdown">启用此策略将配置客户端可用来连接到远程应用程序或桌面的主网络代理。
+从“代理类型”下拉菜单中，选择:
+- 自动: 允许客户端使用本地计算机设置来确定代理服务器。
+- 无: 允许客户端直接连接到服务器，而不使用代理服务器。 
+- 脚本: 允许客户端从在代理脚本 URL 中指定的 URL 检索基于 Java 的 .pac 文件。可以执行 .pac 文件来确定用于建立连接的代理服务器。
+- 安全: 选择“安全”时，客户端将访问由“代理主机名”和“代理端口”设置所确定的代理。协商协议将使用用于指定所需目标地址的“HTTP CONNECT”标头请求。此代理协议通常用于基于 HTTP 的流量，并且支持 GSSAPI 代理身份验证。
+- SOCKS/SOCKS V4/SOCKS V5: 选择“SOCKS”代理时，客户端将与“代理主机名”和“代理端口”设置所确定的代理执行 SOCKS V4 或 SOCKS V5 握手。“SOCKS”选项将检测并使用正确版本的 SOCKS。
+
+要启用代理服务器跳过，请选择“跳过服务器列表”。
+
+故障排除:
+由于操作系统限制，某些客户端平台不支持“自动”代理类型。有关详细信息，请参阅相应的管理员指南。对于这些平台，应在客户端设备上手动设置代理设置。
+
+配置 Web Interface 服务器时，可以为客户端的特定位置指示相应的代理服务器。通过组策略配置代理时，请务必避免覆盖这些设置。如果可以选择多个代理，只需使用逗号分隔的选项列表(其中的第一项是默认值)即可。
+
+大多数 Intranet 客户端部署应对代理类型使用选项“无”，否则，客户端可能会尝试通过 Internet 进行连接。对于更高级的部署，可以使用“跳过服务器列表”选项，或者，也可以使用“.pac”脚本或可信服务器配置以适应网络拓扑。
+
+某些代理服务器会自动断开在特定时间内处于空闲状态的连接。这会导致断开未使用的客户端会话。服务器端选项“ICA 保持连接”可以在不活动期间发送额外的数据包，可用于阻止代理关闭连接。</string>
+      <string id="Part_Proxy_ProxyTypeLockdown">代理类型</string>
+      <string id="Part_Proxy_ProxyHostLockdown">代理主机名</string>
+      <string id="Part_Proxy_ProxyPortLockdown">代理端口</string>
+      <string id="Part_Proxy_ProxyAutoConfigUrlLockdown">代理脚本 URL</string>
+      <string id="Part_Proxy_ProxyBypassListLockdown">跳过服务器列表</string>
+      <string id="Policy_AltProxyLockdown">配置客户端故障转移代理设置</string>
+      <string id="Explain_AltProxyLockdown">使用此策略可配置在主要网络代理无法连接到远程应用程序或桌面时客户端能够使用的备用网络代理。  
+
+如果未配置此策略，客户端将使用自己的设置来决定是否通过代理服务器进行连接。  
+
+如果启用了此策略，客户端将在连接到主要代理失败时尝试使用备用代理进行连接。故障转移代理设置的运行方式与主要代理设置相同。  
+
+如果无法通过主要代理和备用代理建立连接，选中“故障转移至直接连接”复选框将指示客户端尝试不使用代理建立最终的直接连接。
+
+
+故障排除:
+某些代理失败会使客户端显示为在连接时挂起。这通常是由于代理服务器自己重新尝试建立连接或超时期限较长导致的。根据网络拓扑，最好选择配置 Web Interface 服务器来识别当前正在使用的代理，或者更改代理服务器超时设置。</string>
+      <string id="Part_AltProxy_ProxyTypeLockdown">代理类型</string>
+      <string id="Part_AltProxy_ProxyHostLockdown">代理主机名</string>
+      <string id="Part_AltProxy_ProxyPortLockdown">代理端口</string>
+      <string id="Part_AltProxy_ProxyAutoConfigUrlLockdown">代理脚本 URL</string>
+      <string id="Part_AltProxy_ProxyBypassListLockdown">跳过服务器列表</string>
+      <string id="Part_AltProxy_ProxyFallbackLockdown">故障转移至直接连接</string>
+      <string id="Policy_ProxySocks">配置 SOCKS 代理设置</string>
+      <string id="Explain_ProxySocks">使用此策略可配置对某些高级网络拓扑所需的其他 SOCKS 代理的使用。  
+
+启用时，客户端将检查“SOCKS 协议版本”设置。如果未禁用通过 SOCKS 连接，客户端将尝试使用通过“代理主机名”和“代理端口”设置指定的 SOCKS 代理进行连接。  
+
+客户端支持使用 SOCKS v4 或 SOCKS v5 代理服务器的连接。此外，客户端还可以尝试自动检测代理服务器正在使用的版本。  
+
+
+故障排除:
+SOCKS 代理设置设计用于遍历除主要代理服务器或备用代理服务器以外的代理。仅遍历单个代理时，应禁用这些 SOCKS 代理设置。</string>
+      <string id="Part_ProxySocks_Version">SOCKS 协议版本</string>
+      <string id="Part_ProxySocks_ProxyHostLockdown">代理主机名</string>
+      <string id="Part_ProxySOCKS_ProxyPortLockdown">代理端口</string>
+      <string id="Policy_ProxyAuthentication">配置代理身份验证</string>
+      <string id="Explain_ProxyAuthentication">使用此策略可控制在连接到代理服务器时客户端使用的身份验证机制。对代理服务器进行身份验证可用于监视大型网络部署中的数据流量。  
+
+一般而言，身份验证由操作系统处理，但在某些情况下，可能会向用户提供特定的用户名和密码。要阻止系统明确提示用户提供这些凭据，请取消选中“提示用户提供凭据”复选框。这将强制客户端尝试进行匿名连接。此外，还可以将客户端配置为使用 Web Interface 服务器向其传递的凭据进行连接，或者，也可以使用“显式用户名”和“显式密码”选项通过组策略明确指定这些凭据。  
+
+
+故障排除:
+一般而言，NTLM 代理身份验证将在域控制器的控制下进行，不能由客户端控制。需要同时为客户端和代理配置恰当的域级别信任关系。  
+
+不能将代理身份验证链接到客户端的直通身份验证功能。一般而言，代理密码与用户的密码无关。</string>
+      <string id="Policy_ProxyExplicitAuthenticationEnabled">提示用户提供凭据</string>
+      <string id="Policy_ProxyBasicAuthenticationEnabled">允许进行明文身份验证</string>
+      <string id="Policy_ProxyNTLMAuthenticationEnabled">允许进行 NTLM 哈希身份验证</string>
+      <string id="Part_Proxy_Socks5User">显式用户名</string>
+      <string id="Part_Proxy_Socks5Password">显式密码</string>
+      <string id="Policy_ClientAutoReconnect">会话可靠性和自动重新连接</string>
+      <string id="Explain_ClientAutoReconnect">&quot;使用此策略可配置在出现网络故障时客户端的行为。
+
+要设置重新连接，请选择:
+
+启用自动重新连接: 如果发生网络故障，客户端会自动尝试重新连接到服务器
+
+启用会话可靠性: 如果发生网络故障，客户端将尝试重新连接到 SSL/TS 服务器。
+
+注意: 如果同时选中“启用自动重新连接”和“启用会话可靠性”，则默认情况下客户端会在出现网络故障时选择“启用会话可靠性”选项。
+
+注意: 如果已启用此策略，但未选择任何选项，则不强制执行此策略。
+
+透明度级别: 透明度级别在会话重新连接期间应用到 XA/XD 会话。
+
+设置 0 表示 XA/XD 会话窗口将在会话重新连接期间变为黑色。
+
+设置 100 表示不应用任何透明层(冻结屏幕)
+
+故障排除:
+某些代理服务器会自动断开在特定时间内处于空闲状态的连接。这会导致客户端会话在不使用时断开连接。服务器端选项“ICA 保持连接”可以在不活动期间发送额外的数据包，可用于阻止代理关闭连接。&quot;
+</string>
+      <string id="Part_ClientAutoReconnect_Reconnect">启用自动重新连接</string>
+      <string id="Part_ClientAutoReconnect_CGP">启用会话可靠性(同时选中两个选项时具有优先权)</string>
+	  <string id="Part_ClientAutoReconnect_Dimming">透明度级别</string>
+      <string id="Policy_SSLLockdown">TLS 和合规模式配置</string>
+      <string id="Policy_DeprecatedCiphers">弃用的密码套件</string>
+      <string id="Explain_SSLLockdown">此选项使 Citrix Workspace 能够识别安全连接并加密服务器内部的通信。 
+
+下面是 Citrix 支持在 Citrix Workspace 与 XenApp 和 XenDesktop 之间使用的 TLS 安全连接类型:
+1. TLS 1.0
+2. TLS 1.1
+3. TLS 1.2 
+
+“安全性合规模式”值如下:
+- FIPS - 启用 FIPS 模式将强制 Windows 操作系统及其子系统仅使用 FIPS 验证的加密算法。
+- 无 - 不强制执行合规模式。
+- SP800-52 - 强制执行 NIST SP800-52r1 合规模式。
+从“安全性合规模式”下拉菜单中选择“SP800-52”时，将允许执行以下证书吊销检查策略(CRCP):
+- 需要完全访问检查和 CRL。 这是默认选项。
+- 全部需要完全访问检查和 CRL 
+
+可以限制 Citrix Workspace 仅连接到在“允许的 TLS 服务器”选项中以逗号分隔的列表格式指定的服务器。可以在此处指定通配符和端口号，例如，*.citrix.com:4433 允许连接到端口 4433 上公用名结尾为 .citrix.com 的任何服务器。 安全证书中的信息的准确性由证书的颁发者进行断言。  如果 Citrix Workspace 无法识别和信任证书的颁发者，连接将被拒绝。
+
+可以将 TLS 版本限制为以下各项的任意组合:
+
+- TLS 1.0、TLS 1.1 或 TLS 1.2
+- TLS 1.1 或 TLS 1.2
+- 仅限 TLS 1.2
+
+TLS 密码集是指客户端允许使用的一组密码套件。 可以将 TLS 密码集配置为以下选项之一: 
+注意: 可以使用“弃用的密码套件”策略禁用 TLS_RSA_* 密码套件。
+- 任意 : 设置为“任意”时，默认允许在合规模式“无”下使用以下密码套件:
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+&gt; TLS_RSA_WITH_3DES_EDE_CBC_SHA
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- 政府: 设置为“政府”时，仅允许使用以下密码套件:
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+
+“证书吊销检查”用于改进 Citrix 服务器的加密身份验证以及提高客户端与服务器之间的 TLS 连接的整体安全性。 
+注意: 仅当设置了“SP800-52”安全性合规模式时，证书吊销检查才有效。
+启用了此设置时，客户端将检查是否已吊销服务器的证书。 有多种用来检查证书吊销列表的级别。  例如，可以将客户端配置为仅检查其本地证书列表，或者检查本地和网络证书列表。 此外，可以将证书检查配置为仅在验证了所有证书吊销列表时才允许用户登录。
+证书吊销检查是某些证书颁发者支持的高级功能。 此功能允许管理员在危及证书私钥安全时吊销安全证书(在过期日期之前失效)。
+此设置适用的值包括:
+
+- 不检查 - 不执行任何证书吊销检查。
+- 在不访问网络的情况下检查 - 执行证书吊销检查。 仅使用本地证书吊销列表中的存储。 忽略所有分发点。 查找证书吊销列表并非验证目标 SSL Relay/Secure Gateway 服务器提供的服务器证书的关键。
+- 完全访问检查 - 执行证书吊销检查。 使用本地证书吊销列表存储和所有分发点。 如果找到证书的吊销信息，连接将被拒绝。 查找证书吊销列表并非验证目标服务器提供的服务器证书的关键。 
+- 需要完全访问检查和 CRL - 执行证书吊销列表检查，但根 CA 除外。 使用本地证书吊销列表存储和所有分发点。 如果找到证书的吊销信息，连接将被拒绝。 查找所需的所有证书吊销列表是验证的关键。
+- 全部需要完全访问检查和 CRL - 执行证书吊销列表检查，包括根 CA。 使用本地证书吊销列表存储和所有分发点。 如果找到证书的吊销信息，连接将被拒绝。 查找所需的所有证书吊销列表是验证的关键。
+为一系列产品配置了 TLS 的组织可以选择通过指定证书策略扩展 OID 作为安全证书的一部分，来识别 Citrix Workspace 专用的服务器。  如果在此处配置了策略扩展 OID，Citrix Workspace 将仅接受声明了兼容策略的证书。
+
+通过 TLS 连接时，服务器可能会被配置为要求 Citrix Workspace 提供用于识别自身的安全证书。  使用“客户端身份验证”设置可配置是否自动提供标识，或者是否通知用户。 选项如下:
+
+- 已禁用 - 禁用客户端身份验证
+- 显示证书选择器 - 始终提示用户选择证书。
+- 如果可能，则自动选择 - 仅当提供了证书选项时提示用户
+从不提供标识
+- 未配置 - 未配置客户端身份验证。 应用默认行为。
+- 使用指定的证书 - 使用在下面的设置中指定的客户端证书
+
+使用“客户端证书”设置可指定用于识别证书的指纹，以避免不必要地提示用户。
+</string>
+ 
+ 
+  
+ 
+      <string id="Part_SSL_EnabledLockdown">要求对所有连接使用 TLS</string>
+      <string id="Part_SSL_SSLProxyHostLockdown">允许的 TLS 服务器</string>
+      <string id="Part_SSL_SSLPolicyOID">策略扩展 OID</string>
+      <string id="Part_SSL_SSLProtocolLockdown">TLS 版本</string>
+      <string id="Part_SSL_CiphersetLockdown">TLS 密码集</string>
+      <string id="Part_SSL_RevocationLockdown">证书吊销检查策略</string>
+      <string id="Part_SSL_ClientAuthentication">客户端身份验证</string>
+      <string id="Part_SSL_ClientCertificate">客户端证书</string>
+      <string id="Policy_ConfigureClientSelectiveTrust">配置可信服务器配置</string>
+      <string id="Explain_ConfigureClientSelectiveTrust">使用此策略可控制客户端如何识别其要连接到的已发布应用程序或桌面。  客户端将确定信任级别(称为连接的“信任区域”)。  然后，信任区域随后将确定如何为连接配置客户端。  
+
+启用此策略后，可以使用“强制使用可信服务器配置”选项强制客户端执行区域识别。  
+
+默认情况下，区域识别建立在客户端正在连接到的服务器的地址基础上。  服务器必须属于 Windows 的“可信站点”区域的成员，才能成为可信区域的成员。  可以使用“Windows Internet 区域”设置配置此选项。  
+
+此外，要与非 Windows 客户端兼容，可以使用“地址”设置明确信任服务器地址。这是支持使用通配符的以逗号分隔的服务器列表，例如 cps*.citrix.com。
+
+
+故障排除:
+在默认配置中，如果可信服务器配置阻止客户端进行连接，则会显示以下错误消息:
+
+    “&lt;服务器&gt; 错误: 无法连接到 Citrix XenApp 服务器。  服务器(xxx)不受 ICA 连接信任。  锁定设置不允许连接到(不受信任的区域)区域。  请与管理员联系。”
+
+必须将在“xxx”中标识的服务器添加到 Windows 的“可信站点”区域(对于 SSL 连接，格式为 http:// 或 https://)，才能成功建立连接。  
+
+请注意，对于 SSL 连接，必须信任证书公用名。对于非 SSL 连接，必须逐个信任联系的所有服务器。这意味着，当使用应用程序浏览时，必须信任 XML Service 及其重定向到的服务器。
+</string>
+      <string id="Part_ConfigureClientSelectiveTrust_IEZone">Windows Internet 区域</string>
+      <string id="Part_ConfigureClientSelectiveTrust_EffectiveAddress">地址</string>
+      <string id="Part_EnableClientSelectiveTrust">强制使用可信服务器配置</string>
+      <string id="Policy_Smartcard">智能卡身份验证</string>
+      <string id="Explain_Smartcard">使用此策略可控制客户端使用客户端设备所连接的智能卡的方式。  
+
+启用时，此策略将允许远程服务器访问客户端设备所连接的智能卡以进行身份验证和执行其他操作。  
+
+禁用时，服务器将无法访问客户端设备所连接的智能卡。  
+
+
+故障排除:
+在 Citrix 环境中使用智能卡时，必须在服务器上安装智能卡设备驱动程序。在客户端计算机上使用其他操作系统时，可能需要确保正在使用的智能卡设备驱动程序能够正确地交互操作。</string>
+      <string id="Part_Smartcard_Enable">允许进行智能卡身份验证</string>
+      <string id="Part_SmartcardPin_Enable">使用针对 PIN 码的直通身份验证</string>
+      <string id="Policy_WITicket">Web Interface 身份验证票据</string>
+      <string id="Explain_WITicket">使用此策略可控制通过 Web Interface 进行身份验证时使用的票据基础结构。  
+
+如果启用了此策略，则可以通过取消选中“旧票据处理”复选框来禁用旧 Web Interface 票据。旧 Web Interface 票据通过将单一用途身份验证 cookie 传递到明文密码字段进行实施。  
+
+自 Web Interface 4.5 起，客户端会通过 LogonTicketType 定义的相关联转译，以不透明 LogonTicket 的形式处理身份验证令牌。可以通过取消选中“Web Interface 4.5 及更高版本”复选框来禁用此功能。</string>
+      <string id="Part_WITicket_Legacy_Enable">旧票据处理</string>
+      <string id="Part_WITicket_LogonTicket_Enable">Web Interface 4.5 及更高版本</string>
+      <string id="Policy_KerberosLockdown">Kerberos 身份验证</string>
+      <string id="Explain_KerberosLockdown">使用此策略可控制客户端如何使用 Kerberos 对远程应用程序或桌面验证用户的身份。
+
+启用时，此策略将允许客户端使用 Kerberos 协议验证用户的身份。Kerberos 是域控制器授权的身份验证事务，不需要将真实的用户凭据数据传输到服务器。  
+
+禁用时，客户端将不尝试进行 Kerberos 身份验证。  
+
+
+故障排除:
+运行客户端的计算机和运行远程应用程序的服务器必须位于具有信任关系的域中。域控制器必须意识到 Citrix XenApp 服务器将使用 Kerberos 执行完整用户登录(交互式登录)。此策略使用域控制器上的“信任委派身份验证”设置进行配置。
+
+使用 Web Interface 进行连接时，Web Interface 服务器必须意识到客户端将使用 Kerberos 身份验证进行连接。这是必要的，因为默认情况下，Web Interface 服务器使用目标服务器的 IP 地址，而 Kerberos 身份验证需要完全限定的域名。
+
+客户端和服务器计算机都必须具有正确的已注册 DNS 条目。这是必要的，因为端点将在连接过程中相互进行身份验证。</string>
+      <string id="Policy_SSONForNSG">适用于 NetScaler Gateway 的单点登录</string>
+      <string id="Explain_SSONForNSG">使用此策略可允许 Workspace 在 NetScaler Gateway 上使用相同的登录凭据(直通身份验证)。</string>
+      <string id="Policy_LocalCredentialsLockdown">本地用户名和密码</string>
+      <string id="Explain_LocalCredentialsLockdown">使用此策略可指示客户端对 Citrix XenApp 服务器使用与客户端计算机相同的登录凭据(直通身份验证)。  
+
+如果启用了此策略，则将通过取消选中“启用直通身份验证”复选框来阻止客户端使用当前用户的登录凭据对远程服务器进行身份验证。  
+
+客户端会施加某些限制，指定何时会发生直通身份验证(有关详细信息，请参阅 Citrix eDocs，网址为 http://support.citrix.com/proddocs/)。如果这些限制对您的环境而言太严格，请选中“允许对所有 ICA 连接使用直通身份验证”复选框以跳过直通身份验证限制。 
+
+在 Novell Directory Server 环境中运行时，选中“使用 Novell Directory Server 凭据”复选框将要求客户端使用用户的 NDS 凭据。  
+
+
+故障排除:
+客户端必须是由管理员安装的，并且同时选中“允许本地凭据直通”选项，才能启用直通身份验证。  
+
+每个用户都可以选择通过客户端注册表设置、Program Neighbourhood 窗口或编辑 AppSrv.ini 的副本来禁用直通身份验证。用户的 AppSrv.ini 副本必须包含设置“EnableSSonThruICAFile=true”，才能启用直通身份验证。</string>
+      <string id="Part_LocalCredentialsLockdown_Enable">启用直通身份验证</string>
+      <string id="Part_LegacyLocalUserNameAndPassword_Enable">允许对所有 ICA 连接使用直通身份验证</string>
+      <string id="Part_NovellCredentials">使用 Novell Directory Server 凭据</string>
+      <string id="Policy_EnableDriveMapping">客户端驱动器映射</string>
+      <string id="Explain_EnableDriveMapping">使用此策略可启用并限制远程应用程序或桌面对客户端文件系统的访问。  
+
+启用时，客户端会在未选中“启用客户端驱动器映射”复选框时完全拒绝客户端驱动器映射(CDM)虚拟通道对客户端文件系统的访问。这会阻止用于实现客户端驱动器映射虚拟通道(vdcdmn.dll)的 DLL 在客户端启动时加载。此时，您可以从客户端软件包中删除该 DLL。  
+
+如果启用了 CDM，则可以使用其他选项限制服务器可用的访问类型。如果选中“只读客户端驱动器”复选框，CDM 虚拟通道将仅允许对客户端驱动器进行读取访问。  
+
+可以通过在“不映射驱动器”框中输入相关驱动器盘符来禁止访问 Windows 驱动器。这是不应在连接到已发布的应用程序或桌面时映射的所有驱动器的串联，例如，“ABFK”将禁用驱动器 A、B、F 和 K。  
+
+
+故障排除:
+这些策略将覆盖用户在 Desktop Viewer 的“文件安全性”对话框中所做的选择。有关如何阻止用户更改客户端连接中心中的选项的信息，请参阅 Citrix 知识中心。</string>
+      <string id="Part_EnableDriveMappingCheckbox">启用客户端驱动器映射</string>
+      <string id="Part_EnableDriveMappingReadonly">只读客户端驱动器</string>
+      <string id="Part_EnableDriveMappingDisableDrives">不映射驱动器</string>
+      <string id="Policy_EnablePrinterMapping">客户端打印机</string>
+      <string id="Explain_EnablePrinterMapping">使用此策略可启用并限制远程应用程序或桌面对客户端打印机的访问。  
+
+如果禁用了此策略，客户端将阻止服务器访问或打印到客户端设备可用的打印机。</string>
+      <string id="Part_EnablePrinterMapping">映射客户端打印机</string>
+      <string id="Policy_LocalPort">客户端硬件访问</string>
+      <string id="Explain_LocalPort">使用此策略可指定客户端平台支持的最大串行端口数。 
+
+此外，使用此策略还可启用并限制远程应用程序或桌面对客户端的串行端口、USB 端口以及并行端口的访问。这将允许服务器使用本地连接的硬件。 
+
+
+故障排除:
+远程 PDA 同步使用“虚拟 COM 端口”。这是通过 USB 连接路由的串行端口连接。因此，需要启用串行端口访问才能使用 PDA 同步。</string>
+      <string id="Part_MaxPort">最大串行端口数</string>
+      <string id="Part_EnableSerialPortCheckbox">映射串行端口</string>
+      <string id="Part_EnableVirtualSerialPortCheckbox">允许 PDA 同步</string>
+      <string id="Part_EnableParallelPortCheckbox">映射并行端口</string>
+      <string id="Policy_ImageCapture">图像捕获</string>
+      <string id="Explain_ImageCapture">使用此选项可启用并限制远程应用程序或桌面对客户端设备上连接的扫描仪、摄像头和其他图像设备的访问。</string>
+      <string id="Policy_AudioInput">客户端麦克风</string>
+      <string id="Explain_AudioInput">使用此策略可启用并限制远程应用程序或桌面对本地音频捕获设备(麦克风)的访问。</string>
+      <string id="Part_BiDiAudio_Enable">启用客户端麦克风</string>
+      <string id="Policy_Clipboard">剪贴板</string>
+      <string id="Explain_Clipboard">使用此策略可启用并限制远程应用程序或桌面对客户端剪贴板内容的访问。</string>
+      <string id="Part_Clipboard_Enabled">启用剪贴板</string>
+      <string id="Policy_USB_PNP_Devices">USB 即插即用设备</string>
+      <string id="Explain_USB_PNP_Devices">使用此策略可启用和禁用已发布应用程序或桌面对客户端 USB 即插即用设备的访问。“未配置”设置允许设备访问，除非您明确启用或禁用访问。</string>
+      <string id="Part_USB_PNP_Enabled">启用 PNP</string>
+      <string id="Policy_PointOfSales">USB POS 设备</string>
+      <string id="Explain_PointOfSales">使用此策略可启用和禁用已发布应用程序或桌面对客户端 USB POS 设备的访问。如果“USB 即插即用设备”策略设置为“已启用”或“未配置”，则会应用此策略。</string>
+      <string id="Part_PointOfSales_Enabled">启用 POS</string>
+	  <string id="Policy_Foreground_Progress_Bar">配置进度条的前台状态</string>
+	  <string id="Explain_Foreground_Progress_Bar"/>
+      <string id="Policy_Audio">客户端音频设置</string>
+      <string id="Explain_Audio">使用此选项可控制如何将来自远程应用程序或桌面的声音定向到客户端计算机。
+
+选择“启用音频”将禁用客户端音频映射。这不会影响客户端到服务器的音频数据，因为这些数据是通过“远程连接客户端设备”策略控制的。
+
+可以从“音频质量”下拉菜单中设置客户端与服务器之间的音频质量。可用选项包括: 低、中和高。
+最低和最高端口号范围必须介于 -16384 到 65535 之间
+
+故障排除:
+服务器音频选项的优先级高于这些设置，因此，从客户端选择高质量可能不会导致使用高质量音频。服务器无法提高客户端选择的音频质量。</string>
+      <string id="Part_Audio_Enabled">启用音频</string>
+      <string id="Part_Audio_Quality">声音质量</string>
+      <string id="Part_RealtimeTransport_Enabled">启用实时传输</string>
+      <string id="Part_RtpAudioLowestPort">最低端口号</string>
+      <string id="Part_RtpAudioHighestPort">最高端口号</string>
+      <string id="Part_RealtimeTransportThroughGateway_Enabled">允许通过 NetScaler Gateway 实时传输</string>
+      <string id="Policy_Graphics">客户端图形设置</string>
+      <string id="Explain_Graphics">使用此选项可实现远程应用程序或桌面显示的图形质量。
+请从“颜色深度”下拉菜单中选择首选范围。可用选项包括 16 位色和 32 位色。注意: 使用低带宽时，低颜色深度更有效。
+启用“基于磁盘的缓存”可允许将图形临时保存到本地磁盘缓存。
+启用“有损压缩”可实现最高的压缩率和响应能力，但会降低图形质量。
+启用“HDX 3D 浏览器加速”可允许 HDX 3D 虚拟加速通道处理 Microsoft IE。
+启用“HDX 3D 浏览器加速有损压缩”可允许 Microsoft IE 实现最高压缩率和响应能力，但会降低图形质量。
+启用“远程视频”可允许服务器通过流技术将视频数据传输到客户端。 </string>
+      <string id="Part_Graphics_ColorDepth">颜色深度</string>
+      <string id="Part_Graphics_ImageAcceleration">有损压缩</string>
+      <string id="Part_Graphics_SpeedScreenBrowser">HDX 3D 浏览器加速</string>
+      <string id="Part_Graphics_SpeedScreenBrowserCompression">HDX 3D 浏览器加速 - 有损压缩</string>
+      <string id="Part_Graphics_SpeedScreenMultimedia">远程视频</string>
+      <string id="Part_Graphics_ZeroLatencyKeyboard">SpeedScreen 缩短延迟 - 键盘本地回显</string>
+      <string id="Part_Graphics_ZeroLatencyMouse">SpeedScreen 缩短延迟 - 鼠标指针预测</string>
+      <string id="Part_Graphics_DiskCache">基于磁盘的缓存</string>
+      <string id="Policy_Display">客户端显示设置</string>
+      <string id="Explain_Display">使用此选项可控制客户端如何向最终用户显示远程应用程序和桌面。
+在“无缝窗口”下拉菜单中，选择“True”将允许客户端请求无缝窗口。选择“False”将允许客户端禁用无缝窗口显示。
+
+注意: 即使此设置设为“True”，服务器也可能会拒绝客户端请求。
+请在“窗口宽度”中选择首选值。可用选项为 1024 和 800。
+
+注意: 如果启用了“无缝窗口”选项，此功能将不起作用。
+请在“窗口高度”中选择首选值。可用选项为 600 和 734。
+
+注意: 如果启用了“无缝窗口”选项，此功能将不起作用。
+请在“窗口百分比”下拉菜单中选择首选值。可用选项为“50%”、“75%”和“其他”。这是手动设置窗口高度和宽度的方法。
+
+注意: 所选值将应用于整个屏幕。
+请在“缩小工作区”中选择首选范围。建议使用介于 3-5 之间的值。
+
+“启用全屏”可在全屏模式下显示客户端。 </string>
+      <string id="Part_Display_Seamless">无缝窗口</string>
+      <string id="Part_Display_Width">窗口宽度</string>
+      <string id="Part_Display_Height">窗口高度</string>
+      <string id="Part_Display_Percent">窗口百分比</string>
+      <string id="Part_Display_WorkArea">缩小工作区</string>
+      <string id="Part_Display_FullScreen">全屏</string>
+      <string id="Policy_LocalAppAccess">本地应用程序访问设置</string>
+      <string id="Explain_LocalAppAccess">使用此策略可控制客户端在托管桌面内部显示本地应用程序的方式。
+
+“本地应用程序访问”允许在托管桌面内部集成本地安装的应用程序。当用户使用快捷方式启动本地安装的应用程序时，应用程序显示为在其托管桌面上运行，即使其在本地设备上运行也是如此。
+
+如果启用了此策略，客户端会将托管桌面内部本地安装的应用程序显示为快捷方式。
+禁用时，客户端不显示托管桌面内部的本地应用程序。同时禁用 URL 重定向。 
+
+
+允许 URL 重定向:
+
+选中此选项时，客户端允许将 URL 从托管桌面浏览器重定向到本地安装的浏览器，反之亦然。主机上的 URL 黑名单和白名单决定将被重定向的 URL。同时还需要启用此功能所需的浏览器加载项、扩展程序和插件。
+取消选中此选项时，不会将 URL 从托管桌面重定向到客户端，反之亦然。不禁用浏览器加载项、扩展程序和插件。</string>
+      <string id="Part_Allow_URLRedirection">允许 URL 重定向</string>
+      <string id="Policy_ExtraURLProtocols">主机到客户端重定向设置</string>
+      <string id="Explain_ExtraURLProtocols">使用此策略可设置主机到客户端 URL 重定向是否需要支持其他协议。默认仅支持 HTTP 和 HTTPS。</string>
+      <string id="Part_ExtraURLProtocols">ExtraURL 协议</string>
+      <string id="Policy_Keyboard_Hotkeys">键盘快捷方式</string>
+      <string id="Policy_ToggleFullScreen">Desktop Viewer 的热键</string>
+	  <string id="Explain_Policy_ToggleFullScreen">此功能允许您在桌面会话中在全屏模式与窗口模式之间切换。您现在可以使用能够用作热键的自定义键盘快捷方式切换到首选模式。
+自定义全屏切换热键允许您选择更喜欢用于切换的组合键
+此热键与“AllowHotKeys”注册表值无关。 </string>
+<string id="Explain_Keyboard_Hotkeys">此选项允许配置 Citrix Workspace 可以使用的组合键。
+请在“Windows 键”下拉菜单中选择首选选项。可用选项包括“访问本地桌面”、“访问远程会话”和“仅在全屏模式下访问远程会话”。
+选择“访问本地桌面”时，组合键只应用于本地桌面。
+选择“访问远程会话”时，组合键只应用于远程会话。
+选择“仅在全屏模式下访问远程会话”时，组合键将应用于全屏模式下的非无缝 ICA 会话。默认选择此选项。 </string>
+      <string id="Part_Keyboard_Windows_Key">Windows 键:</string>
+      <string id="Part_Keyboard_Hotkey_Tasklist">任务列表:</string>
+      <string id="Part_Keyboard_Hotkey_Tasklist_Plus">             +</string>
+      <string id="Part_Keyboard_Hotkey_Close_Remote_Application">关闭应用程序:</string>
+      <string id="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">                          +</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Title_Bar">切换全屏模式:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">                            +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Del:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">               +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">           +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">         +</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Tab_Plus">          +</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Shift-Tab:</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Backtab_Plus">                  +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">任务管理器:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">                      +</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">缩短延迟:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">                             +</string>
+	  <string id="Part_Keyboard_Hotkey_Toggle_LOCALIME">通用 IME 模式:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</string>
+      <string id="Policy_PublishedApplications">远程应用程序</string>
+      <string id="Explain_PublishedApplications">使用此策略可配置客户端对远程应用程序的处理。  
+
+启用时，此策略将使用“应用程序”框中的列表确定可以直接由客户端启动的已发布应用程序。  
+
+可以要求远程应用程序共享会话(在单个 ICA 会话连接中运行)。这可提供更优异的用户体验，但有时并不需要。可以通过取消选中“会话共享”复选框来禁用会话共享功能。  
+
+
+故障排除:
+已发布应用程序通过应用程序名称前面的 # 表示。省略 # 号将尝试启动特定程序或桌面。运行 Citrix XenApp 的计算机默认不允许省略 # 号，并拒绝连接，同时显示以下错误消息: 您无权访问此会话。
+
+会话共享由 SessionSharingKey 进行控制，可阻止从其他 Web Interface 服务器启动的应用程序共享会话。此外，还阻止具有不同图形或安全性设置的应用程序共享会话。</string>
+      <string id="Part_PublishedApplications_InitialProgram">应用程序</string>
+      <string id="Part_PublishedApplications_SessionSharing">会话共享</string>
+      <string id="Policy_HostRenderedAudio">通过通用 USB 重定向传输音频</string>
+      <string id="Explain_HostRenderedAudio">使用此策略可通过通用 USB 重定向控制音频重定向。此策略仅适用于 XenApp 主机。</string>
+      <string id="Part_HostRenderedAudio">启用通过通用 USB 重定向传输音频</string>
+      <string id="Policy_ICAFileSettings">ICA 文件设置</string>
+      <string id="Explain_ICAFileSettings">使用此策略可允许在客户端会话结束时删除 ICA 文件。 </string>
+      <string id="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</string>
+      <string id="Policy_AllowLegacySessionSharing">允许使用旧版会话共享</string>
+      <string id="Explain_AllowLegacySessionSharing">允许对 Program Neighborhood 会话启用会话共享</string>
+      <string id="Part_AllowLegacySessionSharing_SessionSharing">AllowLegacySessionSharing</string>
+      <string id="Policy_MSISettings">多流 ICA</string>
+      <string id="Explain_MSISettings">使用此策略可配置多流 ICA 设置。默认启用此功能。</string>
+	  <string id="Policy_EnableFTU">EnableFTU</string>
+        <string id="Policy_EnableNPS">启用 NPS</string>
+      <string id="Policy_EnableFTA">启用 FTA</string>
+	  <string id="Policy_Vprefer">vPrefer</string>
+	  <string id="AllowAllApps">允许所有应用程序</string>
+	  <string id="AllowNetworkApps">允许网络应用程序</string>
+	  <string id="AllowInstalledApps">允许已安装的应用程序</string>
+      <string id="Policy_EnableDefaultFTA">启用默认 FTA</string>
+	  <string id="Allowed_Apps">允许</string>
+	  <string id="Policy_HideSettings">隐藏“设置”</string>
+	  <string id="Policy_HideConfigChecker">隐藏“配置检查器”</string>
+	  <string id="Policy_HideSupportInfo">隐藏“支持信息”</string>
+	  <string id="Policy_HideDeletePassword">隐藏“删除保存的密码”</string>
+	  <string id="Policy_HideDataCollection">隐藏“数据收集”</string>
+	  <string id="Policy_HideLocalKeyboardLayoutSetting">隐藏“本地键盘布局设置”</string>
+	  <string id="Policy_HideConnectionCenter">隐藏“连接中心”</string>
+	  <string id="Policy_HideDPIsettings">隐藏“DPI 设置”</string>
+	  <string id="Policy_HideAdvancedPreferences">隐藏“高级首选项”</string>
+	  <string id="Policy_HideCitrixFiles">隐藏 Citrix Files</string>
+	  <string id="Policy_HideCitrixCasting">隐藏 Citrix Casting</string>
+	  <string id="Policy_SmartcardRemovalAction_x86">适用于 x86 计算机的智能卡移除策略</string>
+	  <string id="Policy_SmartcardRemovalAction_AMD64">适用于 x64 计算机的智能卡移除策略</string>	  
+	  <string id="Pick_UI_display">选取 UI 显示</string>
+      <string id="Policy_SelfServiceMode_Enable">管理 SelfServiceMode</string>
+      <string id="Policy_AddAccounts">允许用户添加/删除帐户</string>
+      <string id="Policy_EnablePreLaunch">启用应用程序预启动</string>
+	  <string id="Explain_EnablePreLaunch">通过预启动功能，应用程序和桌面会话能够更加快速地启动。这是通过在首次访问时启动资源并提高其对后续访问的响应速度来实现的。
+
+
+此策略设置为“已启用”时，将启用会话/应用程序预启动功能。
+
+此策略设置为“已禁用”时，将禁用会话/应用程序预启动功能。
+</string>
+      <string id="Policy_PublishSafeContent">允许/阻止用户发布安全内容</string>
+      <string id="Policy_PublishUnsafeContent">允许/阻止用户发布不安全内容</string>
+      <string id="Policy_ReconnectMode">控制 Citrix Workspace 尝试重新连接到现有会话的时间</string>
+      <string id="Pick_ReconnectMode">选择恰当的重新连接条件的组合。</string>
+      <string id="Explain_Policy_ReconnectMode">如果启用此策略设置，则会控制 Citrix Workspace 应用程序重新连接行为。
+
+Citrix Workspace 可以通过应用商店查找已断开连接的现有会话，并将其重新连接到客户端。 可以在不同的时间自动执行此操作: 
+
+- 启动: 启动或打开 Citrix Workspace 应用程序时
+- 刷新: 在用户界面中发出“刷新应用程序”命令时或登录后
+- 打开: 打开 Citrix Workspace UI 时
+- Windows 登录: 首次启动时 
+
+默认在启动或刷新时进行。请选择恰当的组合。
+</string>
+      <string id="Policy_EnableAppShortCut">管理应用程序快捷方式</string>
+      <string id="Part_StartMenuDir_Text">开始菜单目录</string>
+      <string id="Part_DesktopDir_Text">桌面目录</string>
+      <string id="Part_DesktopShortcut_Enable">启用桌面快捷方式</string>
+      <string id="Part_StartMenuShortcut_Disable">禁用开始菜单快捷方式</string>
+      <string id="Part_UseCategoryAsStartMenuPath_Disable">禁用开始菜单的类别路径</string>
+	  <string id="Part_UseCategoryAsDesktopPath_Enable">启用桌面的类别路径</string>
+	  <string id="Part_UseDifferentPathsforStartmenuAndDesktop_Enable">启用可使桌面和开始菜单具有不同的类别路径。禁用可将桌面的类别路径与开始菜单的类别路径相匹配</string>
+      <string id="Part_RemoveAppsOnLogoff_Enable">注销时删除应用程序</string>
+      <string id="Part_RemoveAppsOnExit_Enable">退出时删除应用程序</string>
+      <string id="Part_ClearAppListOnLogoff_Enable">注销时清除 Citrix Workspace 应用程序窗口中显示的应用程序集</string>
+      <string id="Part_AllAppsAreMandatory_Enable">忽略应用程序的自助选择并将所有应用程序设为强制项目。 如果 Citrix Workspace 正与 PNAgent 服务结合使用，则需要执行此操作以自动添加所有应用程序。 如果 Citrix Workspace 正与 StoreFront 应用商店结合使用，请在 StoreFront 服务器上进行更改，以将应用商店设为强制项目。 (此设置当前不适用于 StoreFront 应用商店)。</string>
+      <string id="Part_SuppressRefreshOnStartup_Enable">阻止 Citrix Workspace 在打开时刷新应用程序列表。</string>
+	  <string id="Explain_EnableFTU">使用此策略可启用\禁用 FTU 对话框</string>
+        <string id="Explain_EnableNPS">净推荐值(NPS)有助于您对使用适用于 Windows (应用商店版本)的 Citrix Workspace 的体验进行评分以及提供相关反馈。 此反馈服务旨在改进适用于 Windows (应用商店版本)的 Citrix Workspace。 评分和反馈有助于提供更加出色的用户体验。 默认情况下，此功能处于启用状态。
+注意: 如果选择 4 分或 5 分，系统会将您重定向到 Microsoft 商店以对 Citrix Workspace 应用程序进行评分。 如果选择 3 分或更低的分数，系统会将您重定向到一个反馈表，可以在其中提供与您的评分有关的更多详细信息。
+选项:
+1. 已启用 – “NPS”对话框在每成功连接六次时显示一次。
+2. 已禁用 – 不显示 NPS 对话框。
+</string>
+	  <string id="Explain_Vprefer">您现在可以控制远程 Citrix Workspace 应用程序是否启动第一个跃点服务器/桌面(如果可用)上安装的应用程序的实例，而非启动远程应用程序。 
+
+请选择以下任意选项:
+
+1. 允许所有应用程序: 启动所有应用程序的客户端实例。
+2. 允许已安装的应用程序: 仅启动已安装的应用程序的客户端实例。
+3. 允许网络应用程序: 启动在共享网络中发布的应用程序的实例。
+</string>
+      <string id="Explain_EnableFTA">使用此选项可更改 FTA (文件类型关联)设置。
+此策略默认设置为“未配置”。
+选择“已启用”可启用 FTA。
+选择“已禁用”可禁用 FTA。</string>
+      <string id="Explain_EnableDefaultFTA">使用此选项可更改默认 FTA (文件类型关联)设置。
+此策略默认设置为“未配置”。
+选择“已启用”可启用默认 FTA。
+选择“已禁用”可禁用默认 FTA。
+禁用了“启用 FTA”时，设置此策略将不起作用。此策略将被视为已禁用。</string>
+	  <string id="Explain_HideConfigChecker">使用此选项可隐藏/取消隐藏​​“高级首选项”中的“配置检查器”对话框</string>
+	  <string id="Explain_HideSupportInfo">使用此选项可隐藏/取消隐藏​​“高级首选项”中的“支持信息”对话框</string>
+	  <string id="Explain_HideDeletePassword">使用此选项可隐藏/取消隐藏​​“高级首选项”中的“删除密码”对话框</string>
+	  <string id="Explain_HideDataCollection">使用此选项可隐藏/取消隐藏​​“高级首选项”中的“数据收集”对话框</string>
+	  <string id="Explain_HideLocalKeyboardLayoutSetting">使用此选项可隐藏/取消隐藏​​“高级首选项”中的“本地键盘布局设置”对话框</string>
+	  <string id="Explain_HideConnectionCenter">使用此选项可隐藏/取消隐藏​​“高级首选项”中的“连接中心”对话框</string>
+	  <string id="Explain_HideAdvancedPreferences">使用此选项可隐藏/取消隐藏通知区域的​​ Citrix Workspace 应用程序图标中的“高级首选项”选项</string>
+	  <string id="Explain_HideDPIsettings">使用此选项可隐藏/取消隐藏​​“高级首选项”中的“DPI 设置”对话框</string>
+	  <string id="Explain_HideCitrixFiles">使用此选项可隐藏/取消隐藏​​“高级首选项”中的 Citrix Files</string>
+	  <string id="Explain_HideCitrixCasting">使用此选项可隐藏/取消隐藏​​“高级首选项”中的“Citrix Casting”对话框</string>
+	  <string id="Explain_SmartCardRemovalAction_x86">使用此策略可控制用户使用智能卡通过 Windows Citrix Workspace 应用程序针对 Citrix Web Interface 5.4 PNAgent 站点进行身份验证时智能卡移除操作的行为。
+	  
+此选项允许用户设置从客户端移除智能卡时的用户会话行为。 
+
+注意: 此选项仅在 32 位操作系统中可用。 
+
+请务必在 WI XenApp Services 上设置“智能卡移除”选项，才能启用此策略。 请参阅 XenApp 文档，了解在 XenApp 上设置“智能卡移除”选项的过程。 如果此策略设置为“已启用”，用户将继续登录到 Citrix Workspace，而无论是否已从客户端移除智能卡。 但是，用户将从 XenApp 会话中注销。
+</string>	  
+<string id="Explain_SmartCardRemovalAction_AMD64">使用此策略可控制用户使用智能卡通过 Windows Citrix Workspace 针对 Citrix Web Interface 5.4 PNAgent 站点进行身份验证时智能卡移除操作的行为。 
+
+此选项允许用户设置从客户端移除智能卡时的用户会话行为。 
+
+此策略仅适用于 64 位操作系统。要查看 Windows 计算机的操作系统位数类型，请单击“开始”按钮，右键单击“计算机”，然后单击“属性”。查看“系统”部分下的“系统类型”，确认正在运行的操作系统类型。如果显示的系统类型为 64 位操作系统，则此策略适用。 
+
+必须在 WI XenApp Services 上设置“智能卡移除”选项，才能启用此策略。 请参阅 XenApp 文档，了解在 XenApp 上设置“智能卡移除”选项的过程。 如果此策略设置为“已启用”，用户将继续登录到 Citrix Workspace，而无论是否已从客户端移除智能卡。 但是，用户将从 XenApp 会话中注销。
+
+禁用此策略时，如果从客户端设备移除了智能卡，用户的 XenApp 会话将始终断开连接，并且在 WI XenApp Services 上移除智能卡不会产生任何影响。 
+</string>  
+	  <string id="Explain_HideSettings">此策略允许您通过用户界面管理桌面上的应用程序快捷方式和启动以及工作区设置。 最终用户需要控制应用程序在开始菜单中的展开方式。 用户界面提供用于将快捷方式放置在用户选择的开始菜单文件夹的选项。 也可以相同的方式控制桌面快捷方式。 此外，还提供用于管理工作区控制设置的用户界面。 因此，我们能够提升 Windows Citrix Workspace 应用程序的可用性属性。
+
+如果启用此策略设置，则可以选择不使用所提供的三个选项，即，禁用整个用户界面、禁用“应用程序”选项卡或禁用“工作区”选项卡。 (请注意，启用此策略设置后，需要在端点上重置 Citrix Workspace 应用程序，设置才能生效)
+
+禁用此策略设置与“未配置”状态等效。 
+ 
+</string>
+      <string id="Explain_SelfServiceMode_Enable">使用此策略可启用或禁用 Citrix Workspace 的 SelfServiceMode 设置。
+
+启用时，可以查看 SelfServiceUI。
+
+禁用时，则会隐藏 SelfServiceUI，并且会自动订阅所有应用程序。
+</string>
+
+<string id="Explain_PublishSafeContent">使用此策略可允许或阻止用户发布安全内容。
+</string>
+
+<string id="Explain_PublishUnsafeContent">使用此策略可允许或阻止用户发布不安全内容。
+</string>
+      <string id="Explain_DisableADSCheck">使用此策略可禁用 ADS。</string>
+      <string id="Explain_EnableAppShortCut">如果启用此策略设置:
+
+- 注销时清除 Citrix Workspace 窗口中显示的应用程序集。 选中时，此选项将在 Citrix Workspace 注销时清除用户详细信息。 如果取消选中此选项，Citrix Workspace 在 Citrix Workspace 注销时可能不清除用户详细信息。
+
+- 阻止 Citrix Workspace 在打开时刷新应用程序列表。 选中时，此选项将阻止 Citrix Workspace 在启动后刷新应用程序列表。 如果取消选中此选项，Citrix Workspace 将在启动 Citrix Workspace 后刷新应用程序列表。
+
+- 忽略应用程序的自助选择并将所有应用程序设为强制项目。 如果 Citrix Workspace 正与 PNAgent 服务结合使用，则需要执行此操作以自动添加所有应用程序。 如果 Citrix Workspace 正与 StoreFront 应用商店结合使用，请在 StoreFront 服务器上进行更改，以将应用商店设为强制项目。 (此设置当前不适用于 StoreFront 应用商店)。 选中时，此选项将订阅 PNAgent 站点的自助服务中的所有应用程序。 如果取消选中此选项，最终用户则必须从 PNAgent 站点手动订阅所有应用程序或所需的应用程序。
+</string>
+      <string id="Explain_AddAccount_Enable">使用此策略可向用户提供在 NonSelfServiceMode 下添加或删除帐户的选项</string>
+      <string id="Receiver">Citrix Workspace</string>
+      <string id="Storefront">StoreFront</string>
+      <string id="Storefronts">NetScaler Gateway URL/StoreFront 帐户列表</string>
+      <string id="Storefronts_Part">请在此处输入 NetScaler Gateway URL/StoreFront 帐户详细信息:</string>
+      <string id="Storefronts_Help">此策略设置允许您管理 StoreFront 帐户或 NetScaler Gateway URL 的列表。
+
+如果启用此策略设置，则可以输入 StoreFront 帐户和 NetScaler Gateway URL 的列表。只能提供一个 NetScaler URL 和多个 StoreFront URL。对于添加到列表中的每个条目，请输入以下信息(以分号分隔):
+
+应用商店名称 - 向用户显示的此应用商店的名称。
+
+应用商店 URL - 应用商店的 URL。
+
+应用商店的启用状态 - On/Off。
+
+应用商店说明 - 向用户显示的此应用商店的说明。
+
+StoreFront 示例:
+
+SalesStore;https://sales.mycompany.com/Citrix/Store/discovery;On;Store for Sales staff
+
+NetScaler Gateway URL 示例:
+
+HRStore;https://ag.mycompany.com#Storename;On;Store for HR staff
+
+#Storename 是我们需要在 NetScaler Gateway 后面为应用商店配置的名称。
+注意: 使用此方法配置的 NetScaler Gateway URL 不支持 NetScaler Gateway 后面的 PNA 服务站点。
+
+</string>
+      <string id="Fast_Connect_API_Support">FastConnect API 支持</string>
+      <string id="Explain_FastConnect">这些策略控制 FastConnect API 支持</string>
+      <string id="Policy_FastConnectAPI_Support">管理 FastConnect API 支持</string>
+      <string id="Explain_FastConnectAPI_Support">Fast Connect API 通过提供 API 来快速更改 Citrix Workspace 中的用户身份，简化了用户切换过程。  
+- 启用 Fast Connect API: 此选项通过提供 API 来更改新用户身份，实现快速用户切换
+- 启用 FastConnect 转换 API: 启用此选项将禁止以下命令: selfservice.exe-terminate、selfservice.exe-fastterminate。
+-注销时保持应用程序继续运行: 此选项允许应用程序会话在用户已断开 Citrix Workspace 连接的情况下仍保持连接。
+-将自助服务插件与 FastConnect 相集成: 此选项允许在使用 FastConnect 库/SDK 时向自助服务插件发出通知。 </string>
+      <string id="Explain_EnableFastConnectTransitionAPI">EnableFastConnectTransitionAPI</string>
+      <string id="Explain_LeaveAppsRuningOnLogoff">注销时保持应用程序继续运行</string>
+      <string id="Explain_FastConnectUsingSSP">将自助服务插件与 FastConnect 相集成</string>
+	  <string id="Policy_EngineErrMsg">启用引擎错误消息</string>
+      <string id="Polciy_CEIP">启用 CEIP</string>
+	  <string id="Policy_Dpi">高 DPI</string>
+      <string id="Polciy_CEIP_Configuration">CEIP 配置</string>
+      <string id="Part_Enable_CEIP">启用 CEIP。</string>
+      <string id="Part_CEIP_ServerURL">CEIP 服务器 URL</string>
+      <string id="Part_CEIP_UploadClass">CEIP 上载类别</string>
+      <string id="Part_CEIP_UploadFrequencyInWeeks">初始化 CEIP 上载频率(以周为单位)</string>
+      <string id="Part_AllowUnSecureURL">允许使用不安全的 URL (http，而非 https)</string>
+      <string id="Explain_CEIP_Configuration">1. 提供 CEIP 服务器 URL
+2. 提供 CEIP 上载类
+3. 设置上载频率
+4. 允许不安全的 URL </string>
+	  <string id="Explain_EnableEngineErrMsg">这将启用特定的引擎错误消息。它会将通用协议驱动程序错误替换为特定的错误消息</string>
+      <string id="Explain_EnableCEIP">CEIP 是指 Citrix 客户体验改善计划。有关 CEIP 的更多详细信息，请访问 http://www.citrix.com/cms/ws/ceip</string>
+	  <string id="Explain_Policy_Dpi">使用此策略可管理会话缩放。 
+	  
+启用此策略将使 Citrix Workspace DPI 能够被感知，并且使会话的灵活性能够根据在多显示器会话中应用的 DPI 而变化。
+
+启用此策略将提供两个选项 
+1. 是 - 缩放会话
+2. 否 - 使用本机分辨率
+	  
+此策略默认处于禁用状态。禁用此策略将允许操作系统缩放分辨率。 </string>
+	  <string id="Explain_EnableDPIAwareness">使 Citrix Workspace DPI 能够被感知。 此设置默认处于启用状态。 此设置使 Citrix Workspace 能够根据在多显示器会话中应用的 DPI 缩放会话。 有关 DPI 感知的更多详细信息，请参阅 https://support.citrix.com/article/CTX230017</string>
+      <string id="CEIP">CEIP</string>
+	  <string id="DPI">DPI</string>
+      <string id="Explain_CEIP">CEIP 是指 Citrix 客户体验改善计划。有关 CEIP 的更多详细信息，请访问 http://www.citrix.com/cms/ws/ceip/。</string>
+	  <string id="Explain_DPI">调整会话以适应高分辨率。</string>
+      <string id="AlwaysOn">诊断</string>
+      <string id="Explain_AlwaysOn">使用此策略可持续收集用户的跟踪日志。</string>
+      <string id="Policy_AlwaysOn">始终启用跟踪</string>
+      <string id="Explain_EnableAlwaysOn">默认启用此选项以持续从用户处收集跟踪日志。</string>
+      <string id="FedRAMP">合规性</string>
+      <string id="Explain_FedRAMP">使用此策略将禁止将数据发送到第三方服务，例如 Google Analytics。
+禁用: 禁用此策略时，可能会将匿名数据发送到第三方服务。
+启用: 启用此策略时，不会向第三方服务发送任何数据。
+      </string>
+      <string id="Policy_FedRAMP">禁止向第三方发送数据</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator 遇到源 ADM 字符串表中不存在的字符串。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator 遇到未设置 supportedOn 值的策略。</string>
+	  <string id="ADMXPolicy_SupportedOn">Citrix Workspace 支持的所有平台</string>
+	  <string id="ADMXPolicy_SupportedOn_Explain_SmartCardRemovalAction">在 Citrix Workspace 4.5 及更高版本上受支持</string>
+	  <string id="HDXoverUDP_Off">Off</string>
+	  <string id="HDXoverUDP_On">On</string>
+	  <string id="HDXoverUDP_Preferred">首选</string>
+	  <string id="Policy_TransportProtocal">Citrix Workspace 的传输协议</string>
+	  <string id="Explain_TransportProtocal">关: 仅使用 TCP。
+首选: 先试用 UDP，回退到 TCP。
+开: 强制使用 UDP，不回退到 TCP。					
+	  </string>
+      <string id="Explain_BidirectionalContentRedirection">双向内容重定向是一项允许您根据配置将 URL 从客户端重定向到服务器的功能，反之亦然。
+- 已发布的应用程序/桌面名称: 指示要用于启动重定向的 URL 的已发布应用程序/桌面的名称。在任何活动 ICA 会话中启用了双向内容重定向时不使用此选项。根据在下面指定的类型确定是桌面还是应用程序。
+- 上面的名称适用的已发布类型: 指示上面的名称是应用程序还是桌面。
+- 允许重定向到 VDA 的 URL: 指示要在 VDA 上打开的 URL 的列表。 分号“;”用作分隔符。 “*”可用作通配符。 例如 *.xyz.com。
+
+
+- 允许重定向到客户端的 URL: 指示要在客户端上打开的 URL 的列表。 分号“;”用作分隔符。 “*”可用作通配符。 例如 *.xyz.com。
+注意: 
+1) 如果存在放置在这两个位置的一个 URL，该 URL 将从其来源位置启动。
+2) 如果该 URL 不放置在这两个位置，在这种情况下，该 URL 也将从其来源位置启动。
+      </string>
+      <string id="Policy_BidirectionalContentRedirection">双向内容重定向</string>
+      <string id="Part_BidirectionalContentRedirectionPubAppOrDesktopName">已发布的应用程序/桌面名称: </string>
+      <string id="Part_BidirectionalContentRedirectionPubNameType">上面的名称适用的已发布类型:</string>
+      <string id="Part_BidirectionalContentRedirectionApplication">应用程序</string>
+      <string id="Part_BidirectionalContentRedirectionDesktop">桌面</string>
+      <string id="Part_BidirectionalContentRedirectionVDAURLs">允许重定向到 VDA 的 URL:</string>
+      <string id="Part_BidirectionalContentRedirectionClientURLs">允许重定向到客户端的 URL:</string>
+      <string id="Policy_BidirectionalContentRedirectionOverrides">双向内容重定向覆盖</string>
+      <string id="Explain_BidirectionalContentRedirectionOverrides">双向内容重定向覆盖是特定于 URL 的覆盖，适用于双向内容重定向功能。
+- URL 特定的已发布应用程序或桌面替代: 这表示已发布的应用程序/桌面名称的 URL 特定的替代。  “值名称”应与“允许重定向到 VDA 的 URL”列表中的条目完全匹配，“值”将指定该 URL 特定的已发布应用程序/桌面名称。
+</string>
+      <string id="Part_BidirectionalContentRedirectionVDAAppOverrides">URL 特定的已发布应用程序或桌面替代:</string>
+	  <string id="Dir_AutoUpdate">Citrix Workspace 更新</string>
+	  <string id="MinusOne">-1</string>
+	  <string id="Zero">0</string>
+	  <string id="One">1</string>
+	  <string id="Two">2</string>
+	  <string id="Three">3</string>
+	  <string id="Four">4</string>
+	  <string id="Five">5</string>
+	  <string id="Six">6</string>
+	  <string id="Seven">7</string>
+	  <string id="Eight">8</string>
+	  <string id="Nine">9</string>
+	  <string id="Ten">10</string>
+	  <string id="Eleven">11</string>
+	  <string id="Twelve">12</string>
+	  <string id="Thirteen">13</string>
+	  <string id="Fourteen">14</string>
+	  <string id="Fifteen">15</string>
+	  <string id="Sixteen">16</string>
+	  <string id="Seventeen">17</string>
+	  <string id="Eighteen">18</string>
+	  <string id="Nineteen">19</string>
+	  <string id="Twenty">20</string>
+	  <string id="TwentyOne">21</string>
+	  <string id="TwentyTwo">22</string>
+	  <string id="TwentyThree">23</string>
+	  <string id="TwentyFour">24</string>
+	  <string id="TwentyFive">25</string>
+	  <string id="TwentySix">26</string>
+	  <string id="TwentySeven">27</string>
+	  <string id="TwentyEight">28</string>
+	  <string id="TwentyNine">29</string>
+	  <string id="Thirty">30</string>
+	  <string id="POL_CONFIGURE_LAN_PROXY_MANUALLY">手动配置 NetScaler LAN 代理</string>
+      <string id="POL_CONFIGURE_LAN_PROXY_DLL">使用 DLL 配置 NetScaler LAN 代理</string>
+	  <string id="CitrixSecureBrowser">Citrix Secure Browser</string>
+	  <string id="Explain_CitrixSecureBrowser">Citrix Secure Browser 用于连接到 SaaS 应用程序。</string>
+	  <string id="CitrixSecureBrowser_Cache">缓存</string>
+	  <string id="Explain_CitrixSecureBrowser_Cache">使用此策略可启用/禁用浏览器缓存。
+默认启用缓存。
+
+启用时，浏览器 cookie 和资源缓存在本地磁盘上。
+禁用时，不存储浏览器 cookie 和资源。
+
+	  </string>
+	  <string id="AppProtectionAdvanced">应用程序保护 - 高级</string>
+	  <string id="Explain_AppProtectionAdvanced">此策略通过验证所有 Citrix Workspace 应用程序模块的签名来提供额外的安全性。 同时保护这些模块免受 DLL 注入攻击。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="Policy_EnableICAClient">
+        <checkBox defaultChecked="true" refId="Part_EnableICAClient_Enable">启用客户端</checkBox>
+        <decimalTextBox defaultValue="10000" refId="Part_EnableICAClient_Minimum">最低客户端版本</decimalTextBox>
+      </presentation>
+      <presentation id="Storefronts">
+        <listBox refId="Storefronts_Part">请在此处输入 NetScaler Gateway/StoreFront 帐户详细信息:</listBox>
+      </presentation>
+      <presentation id="Policy_ProxyLockdown">
+        <comboBox refId="Part_Proxy_ProxyTypeLockdown">
+          <label>代理类型</label>
+          <suggestion>自动</suggestion>
+          <suggestion>无</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>安全</suggestion>
+          <suggestion>脚本</suggestion>
+        </comboBox>
+        <textBox refId="Part_Proxy_ProxyHostLockdown">
+          <label>代理主机名</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyPortLockdown">
+          <label>代理端口</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyAutoConfigUrlLockdown">
+          <label>代理脚本 URL</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyBypassListLockdown">
+          <label>跳过服务器列表</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_AltProxyLockdown">
+        <comboBox refId="Part_AltProxy_ProxyTypeLockdown">
+          <label>代理类型</label>
+          <suggestion>自动</suggestion>
+          <suggestion>无</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>安全</suggestion>
+          <suggestion>脚本</suggestion>
+        </comboBox>
+        <textBox refId="Part_AltProxy_ProxyHostLockdown">
+          <label>代理主机名</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyPortLockdown">
+          <label>代理端口</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyAutoConfigUrlLockdown">
+          <label>代理脚本 URL</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyBypassListLockdown">
+          <label>跳过服务器列表</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_AltProxy_ProxyFallbackLockdown">故障转移至直接连接</checkBox>
+      </presentation>
+      <presentation id="Policy_ProxySocks">
+        <dropdownList defaultItem="1" refId="Part_ProxySocks_Version">SOCKS 协议版本</dropdownList>
+        <textBox refId="Part_ProxySocks_ProxyHostLockdown">
+          <label>代理主机名</label>
+        </textBox>
+        <textBox refId="Part_ProxySOCKS_ProxyPortLockdown">
+          <label>代理端口</label>
+        </textBox>
+      </presentation>
+	  <presentation id="Policy_EnableAutoUpdatePolicy">
+        <dropdownList defaultItem="0" refId="Part_EnableAutoUpdatePolicy">启用 Citrix Workspace 更新策略</dropdownList>
+        <checkBox defaultChecked="false" refId="Part_EnableAutoUpdatePolicy_version">仅限 LTSR</checkBox>
+		<dropdownList defaultItem="0" noSort="true" refId="Part_EnableAutoUpdatePolicy_RemindMeLater">Citrix-Workspace-Update-DeferUpdate-Count</dropdownList>
+      </presentation>
+	  <presentation id="Policy_CheckAutoUpdatePolicy">
+        <dropdownList defaultItem="0" refId="Part_CheckAutoUpdatePolicy">延迟组</dropdownList>
+      </presentation>
+      <presentation id="Policy_ProxyAuthentication">
+        <checkBox defaultChecked="true" refId="Policy_ProxyExplicitAuthenticationEnabled">提示用户提供凭据</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyBasicAuthenticationEnabled">允许进行明文身份验证</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyNTLMAuthenticationEnabled">允许进行 NTLM 哈希身份验证</checkBox>
+        <textBox refId="Part_Proxy_Socks5User">
+          <label>显式用户名</label>
+        </textBox>
+        <textBox refId="Part_Proxy_Socks5Password">
+          <label>显式密码</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_SSLLockdown">
+        <checkBox defaultChecked="true" refId="Part_SSL_EnabledLockdown">要求对所有连接使用 TLS</checkBox>
+		<dropdownList defaultItem="0" refId="Part_SSL_SecurityComplianceMode">安全性合规模式</dropdownList>
+        <comboBox refId="Part_SSL_SSLProxyHostLockdown">
+          <label>允许的 TLS 服务器</label>
+          <suggestion>*:443</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_SSL_SSLProtocolLockdown">TLS 版本</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_SSL_CiphersetLockdown">TLS 密码集</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_SSL_RevocationLockdown">证书吊销检查策略</dropdownList>
+        <comboBox refId="Part_SSL_SSLPolicyOID">
+          <label>策略扩展 OID</label>
+          <suggestion>2.5.29.32.0</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="2" refId="Part_SSL_ClientAuthentication">客户端身份验证</dropdownList>
+        <comboBox refId="Part_SSL_ClientCertificate">
+          <label>客户端证书</label>
+          <suggestion/>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ConfigureClientSelectiveTrust">
+        <checkBox defaultChecked="true" refId="Part_EnableClientSelectiveTrust">强制使用可信服务器配置</checkBox>
+        <comboBox refId="Part_ConfigureClientSelectiveTrust_IEZone">
+          <label>Windows Internet 区域</label>
+          <suggestion>可信</suggestion>
+          <suggestion>可信、Intranet</suggestion>
+        </comboBox>
+        <comboBox refId="Part_ConfigureClientSelectiveTrust_EffectiveAddress">
+          <label>地址</label>
+          <suggestion>*.finance.citrix.com,*.sales.citrix.com</suggestion>
+          <suggestion>cps*.citrix.com</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ClientAutoReconnect">
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_Reconnect">启用自动重新连接</checkBox>
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_CGP">启用会话可靠性(同时选中两个选项时具有优先权)</checkBox>
+		<decimalTextBox defaultValue="80" refId="Part_ClientAutoReconnect_Dimming">透明度级别</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_Smartcard">
+        <checkBox defaultChecked="true" refId="Part_Smartcard_Enable">允许进行智能卡身份验证</checkBox>
+        <checkBox refId="Part_SmartcardPin_Enable">使用针对 PIN 码的直通身份验证</checkBox>
+      </presentation>
+      <presentation id="Policy_KerberosLockdown"/>
+      <presentation id="Policy_SSONForNSG"/>
+      <presentation id="Policy_LocalCredentialsLockdown">
+        <checkBox defaultChecked="true" refId="Part_LocalCredentialsLockdown_Enable">启用直通身份验证</checkBox>
+        <checkBox refId="Part_LegacyLocalUserNameAndPassword_Enable">允许对所有 ICA 连接使用直通身份验证</checkBox>
+        <checkBox refId="Part_NovellCredentials">使用 Novell Directory Server 凭据</checkBox>
+      </presentation>
+      <presentation id="Policy_WITicket">
+        <checkBox defaultChecked="true" refId="Part_WITicket_Legacy_Enable">旧票据处理</checkBox>
+        <checkBox defaultChecked="true" refId="Part_WITicket_LogonTicket_Enable">Web Interface 4.5 及更高版本</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableDriveMapping">
+        <checkBox defaultChecked="true" refId="Part_EnableDriveMappingCheckbox">启用客户端驱动器映射</checkBox>
+        <checkBox refId="Part_EnableDriveMappingReadonly">只读客户端驱动器</checkBox>
+        <comboBox refId="Part_EnableDriveMappingDisableDrives">
+          <label>不映射驱动器</label>
+          <suggestion>C</suggestion>
+          <suggestion>ABCDEFGHIJKLMNOPQRSTUVWXYZ</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_EnablePrinterMapping"/>
+      <presentation id="Policy_LocalPort">
+        <textBox refId="Part_MaxPort">
+          <label>最大串行端口数</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_EnableSerialPortCheckbox">映射串行端口</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableVirtualSerialPortCheckbox">允许 PDA 同步</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableParallelPortCheckbox">映射并行端口</checkBox>
+      </presentation>
+      <presentation id="Policy_ImageCapture"/>
+      <presentation id="Policy_AudioInput">
+        <checkBox defaultChecked="true" refId="Part_BiDiAudio_Enable">启用客户端麦克风</checkBox>
+      </presentation>
+      <presentation id="Policy_Clipboard"/>
+      <presentation id="Policy_USB_PNP_Devices"/>
+      <presentation id="Policy_PointOfSales"/>
+	  <presentation id="Policy_Foreground_Progress_Bar"/>
+	  <presentation id="Policy_HWacceleration"/>
+        <presentation id="Policy_EnableH265"/>
+      <presentation id="Policy_Audio">
+        <checkBox defaultChecked="true" refId="Part_Audio_Enabled">启用音频</checkBox>
+        <dropdownList defaultItem="0" refId="Part_Audio_Quality">声音质量</dropdownList>
+        <checkBox refId="Part_RealtimeTransport_Enabled">启用实时传输</checkBox>
+        <decimalTextBox defaultValue="16500" refId="Part_RtpAudioLowestPort" spinStep="2">最低端口号</decimalTextBox>
+        <decimalTextBox defaultValue="16509" refId="Part_RtpAudioHighestPort" spinStep="2">最高端口号</decimalTextBox>
+        <checkBox refId="Part_RealtimeTransportThroughGateway_Enabled">允许通过 NetScaler Gateway 实时传输</checkBox>
+      </presentation>
+      <presentation id="Policy_Graphics">
+        <dropdownList defaultItem="1" refId="Part_Graphics_ColorDepth">颜色深度</dropdownList>
+        <checkBox refId="Part_Graphics_DiskCache">基于磁盘的缓存</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ImageAcceleration">有损压缩</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowser">HDX 3D 浏览器加速</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowserCompression">HDX 3D 浏览器加速 - 有损压缩</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenMultimedia">远程视频</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyKeyboard">SpeedScreen 缩短延迟 - 键盘本地回显</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyMouse">SpeedScreen 缩短延迟 - 鼠标指针预测</checkBox>
+      </presentation>
+      <presentation id="Policy_Display">
+        <comboBox refId="Part_Display_Seamless">
+          <label>无缝窗口</label>
+		  <default/>
+          <suggestion>True</suggestion>
+          <suggestion>False</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Width">
+          <label>窗口宽度</label>
+		  <default/>
+          <suggestion>1024-</suggestion>
+          <suggestion>800-</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Height">
+          <label>窗口高度</label>
+		  <default/>
+          <suggestion>734-</suggestion>
+          <suggestion>600-</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_Display_Percent">窗口百分比</dropdownList>
+        <comboBox refId="Part_Display_WorkArea">
+          <label>缩小工作区</label>
+		  <default/>
+          <suggestion>5</suggestion>
+        </comboBox>
+        <checkBox refId="Part_Display_FullScreen">全屏</checkBox>
+     </presentation>
+      <presentation id="Policy_Dpi">
+       <dropdownList defaultItem="0" refId="scaling_option">调整会话以适应高分辨率?</dropdownList>
+      </presentation>
+      <presentation id="Policy_LocalAppAccess">
+        <checkBox refId="Part_Allow_URLRedirection">允许 URL 重定向</checkBox>
+      </presentation>
+      <presentation id="Policy_Keyboard_Hotkeys">
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Windows_Key">Windows 键:</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Tasklist">任务列表:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Tasklist_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Close_Remote_Application">关闭应用程序:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar">切换全屏模式:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Del:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">任务管理器:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</dropdownList>
+        <dropdownList defaultItem="11" refId="Part_Keyboard_Hotkey_Alt_Tab_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Shift-Tab:</dropdownList>
+        <dropdownList defaultItem="12" refId="Part_Keyboard_Hotkey_Alt_Backtab_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">缩短延迟:</dropdownList>
+        <dropdownList defaultItem="8" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">+</dropdownList>
+		<dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME">通用 IME 模式:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishedApplications">
+        <comboBox refId="Part_PublishedApplications_InitialProgram">
+          <label>应用程序</label>
+          <suggestion>#记事本</suggestion>
+          <suggestion>#*</suggestion>
+        </comboBox>
+        <checkBox defaultChecked="true" refId="Part_PublishedApplications_SessionSharing">会话共享</checkBox>
+      </presentation>
+      <presentation id="Policy_HostRenderedAudio"/>
+      <presentation id="Policy_ICAFileSettings">
+        <checkBox defaultChecked="true" refId="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</checkBox>
+      </presentation>
+      <presentation id="Policy_ExtraURLProtocols">
+        <textBox refId="Part_ExtraURLProtocols">
+          <label>ExtraURL 协议</label>
+        </textBox>
+      </presentation>
+	  <presentation id="Policy_EngineErrMsg"/>
+      <presentation id="Polciy_CEIP"/>
+	  <presentation id="AppProtectionAdvanced" />
+      <presentation id="Polciy_CEIP_Configuration">
+        <textBox refId="Part_CEIP_ServerURL">
+          <label>CEIP 服务器 URL</label>
+		  <defaultValue>https://rttf.citrix.com</defaultValue>
+        </textBox>
+        <textBox refId="Part_CEIP_UploadClass">
+          <label>CEIP 上载类别</label>
+		  <defaultValue>callhome_analytics</defaultValue>
+        </textBox>
+        <decimalTextBox defaultValue="1" refId="Part_CEIP_UploadFrequencyInWeeks">初始化 CEIP 上载频率(以周为单位)</decimalTextBox>
+        <checkBox refId="Part_AllowUnSecureURL">允许使用不安全的 URL (http，而非 https)</checkBox>
+      </presentation>
+      <presentation id="Policy_BidirectionalContentRedirection">
+        <textBox refId="Part_BidirectionalContentRedirectionPubAppOrDesktopName">
+            <label>已发布的应用程序/桌面名称:</label>
+        </textBox>
+        <dropdownList defaultItem="0" refId="Part_BidirectionalContentRedirectionPubNameType">上面的名称适用的已发布类型:</dropdownList>
+        <textBox refId="Part_BidirectionalContentRedirectionVDAURLs">
+            <label>允许重定向到 VDA 的 URL:</label>
+        </textBox>
+        <textBox refId="Part_BidirectionalContentRedirectionClientURLs">
+            <label>允许重定向到客户端的 URL:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_BidirectionalContentRedirectionOverrides">
+        <listBox refId="Part_BidirectionalContentRedirectionVDAAppOverrides">URL 特定的已发布应用程序或桌面替代:</listBox>
+      </presentation>
+      <presentation id="Policy_AlwaysOn"/>
+      <presentation id="Policy_FedRAMP"/>
+      <presentation id="Policy_PublishSafeContent">
+        <dropdownList defaultItem="0" refId="Pick_Publish_SafeContent">选中可允许/阻止用户发布安全内容。</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishUnsafeContent">
+        <dropdownList defaultItem="1" refId="Pick_Publish_UnsafeContent">选中可允许/阻止用户发布不安全内容。</dropdownList>
+      </presentation>
+	  <presentation id="Policy_EnableFTU"/>
+        <presentation id="Policy_EnableNPS"/>
+	  <presentation id="Policy_Vprefer">
+	    <dropdownList defaultItem="1" refId="Allowed_Apps">允许</dropdownList>
+	  </presentation>
+      <presentation id="Policy_EnableFTA"/>
+      <presentation id="Policy_EnableDefaultFTA"/>
+	  <presentation id="Policy_HideAdvancePreferencesOptions"/>	  
+	  <presentation id="Policy_SmartcardRemovalAction"/>
+	  <presentation id="Policy_HideSettings">
+		<dropdownList defaultItem="2" refId="Pick_UI_display">选择恰当的设置 UI 的显示方式。</dropdownList>
+	  </presentation>
+      <presentation id="Policy_SelfServiceMode_Enable"/>
+      <presentation id="Policy_EnableAppShortCut">
+        <textBox refId="Part_StartMenuDir_Text">
+          <label>开始菜单目录</label>
+		  <defaultValue>Citrix</defaultValue>
+        </textBox>
+        <textBox refId="Part_DesktopDir_Text">
+          <label>桌面目录</label>
+		  <defaultValue>Citrix</defaultValue>
+        </textBox>
+        <checkBox refId="Part_StartMenuShortcut_Disable">禁用开始菜单快捷方式</checkBox>
+        <checkBox refId="Part_DesktopShortcut_Enable">启用桌面快捷方式</checkBox>
+        <checkBox refId="Part_UseCategoryAsStartMenuPath_Disable">禁用开始菜单的类别路径</checkBox>
+		<checkBox refId="Part_UseCategoryAsDesktopPath_Enable">启用桌面的类别路径</checkBox>
+		<checkBox refId="Part_UseDifferentPathsforStartmenuAndDesktop_Enable">启用可使桌面和开始菜单具有不同的类别路径。禁用可将桌面的类别路径与开始菜单的类别路径相匹配</checkBox>
+        <checkBox refId="Part_RemoveAppsOnLogoff_Enable">注销时删除应用程序</checkBox>
+        <checkBox refId="Part_RemoveAppsOnExit_Enable">退出时删除应用程序</checkBox>
+		<checkBox refId="Part_ClearAppListOnLogoff_Enable">注销时清除 Citrix Workspace 窗口中显示的应用程序集</checkBox>
+        <checkBox refId="Part_SuppressRefreshOnStartup_Enable">阻止 Citrix Workspace 在打开时刷新应用程序列表。</checkBox>
+        <checkBox refId="Part_AllAppsAreMandatory_Enable">忽略应用程序的自助选择并将所有应用程序设为强制项目。 如果 Citrix Workspace 正与 PNAgent 服务结合使用，则需要执行此操作以自动添加所有应用程序。 如果 Citrix Workspace 正与 StoreFront 应用商店结合使用，请在 StoreFront 服务器上进行更改，以将应用商店设为强制项目。 (此设置当前不适用于 StoreFront 应用商店)。</checkBox>
+      </presentation>
+      <presentation id="Policy_AddAccounts"/>
+      <presentation id="Policy_EnablePreLaunch"/>
+      <presentation id="Policy_ReconnectMode">
+        <dropdownList defaultItem="4" refId="Pick_ReconnectMode">选择恰当的重新连接条件的组合。</dropdownList>
+      </presentation>
+      <presentation id="Policy_FastConnectAPI_Support">
+        <checkBox defaultChecked="true" refId="Explain_FastConnectAPI_Functionality">启用 FastConnect API 功能</checkBox>
+        <checkBox refId="Explain_EnableFastConnectTransitionAPI">EnableFastConnectTransitionAPI</checkBox>
+        <checkBox refId="Explain_LeaveAppsRuningOnLogoff">注销时保持应用程序继续运行</checkBox>
+        <checkBox refId="Explain_FastConnectUsingSSP">将自助服务插件与 FastConnect 相集成</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableICAClient_1">
+        <checkBox defaultChecked="true" refId="Part_EnableICAClient_Enable">启用客户端</checkBox>
+        <decimalTextBox defaultValue="10000" refId="Part_EnableICAClient_Minimum">最低客户端版本</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_ProxyLockdown_1">
+        <comboBox refId="Part_Proxy_ProxyTypeLockdown">
+          <label>代理类型</label>
+          <suggestion>自动</suggestion>
+          <suggestion>无</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>安全</suggestion>
+          <suggestion>脚本</suggestion>
+        </comboBox>
+        <textBox refId="Part_Proxy_ProxyHostLockdown">
+          <label>代理主机名</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyPortLockdown">
+          <label>代理端口</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyAutoConfigUrlLockdown">
+          <label>代理脚本 URL</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyBypassListLockdown">
+          <label>跳过服务器列表</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_AltProxyLockdown_1">
+        <comboBox refId="Part_AltProxy_ProxyTypeLockdown">
+          <label>代理类型</label>
+          <suggestion>自动</suggestion>
+          <suggestion>无</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>安全</suggestion>
+          <suggestion>脚本</suggestion>
+        </comboBox>
+        <textBox refId="Part_AltProxy_ProxyHostLockdown">
+          <label>代理主机名</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyPortLockdown">
+          <label>代理端口</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyAutoConfigUrlLockdown">
+          <label>代理脚本 URL</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyBypassListLockdown">
+          <label>跳过服务器列表</label>
+        </textBox>
+        <comboBox refId="Part_AltProxy_ProxyFallbackLockdown">
+          <label>故障转移至直接连接</label>
+          <suggestion>false</suggestion>
+          <suggestion>true</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ProxySocks_1">
+        <dropdownList defaultItem="1" refId="Part_ProxySocks_Version">SOCKS 协议版本</dropdownList>
+        <textBox refId="Part_ProxySocks_ProxyHostLockdown">
+          <label>代理主机名</label>
+        </textBox>
+        <textBox refId="Part_ProxySOCKS_ProxyPortLockdown">
+          <label>代理端口</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_ProxyAuthentication_1">
+        <checkBox defaultChecked="true" refId="Policy_ProxyExplicitAuthenticationEnabled">提示用户提供凭据</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyBasicAuthenticationEnabled">允许进行明文身份验证</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyNTLMAuthenticationEnabled">允许进行 NTLM 哈希身份验证</checkBox>
+        <textBox refId="Part_Proxy_Socks5User">
+          <label>显式用户名</label>
+        </textBox>
+        <textBox refId="Part_Proxy_Socks5Password">
+          <label>显式密码</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_SSLLockdown_1">
+        <checkBox defaultChecked="true" refId="Part_SSL_EnabledLockdown">要求对所有连接使用 TLS</checkBox>
+		<dropdownList defaultItem="0" refId="Part_SSL_SecurityComplianceMode">安全性合规模式</dropdownList>
+        <comboBox refId="Part_SSL_SSLProxyHostLockdown">
+          <label>允许的 TLS 服务器</label>
+          <suggestion>*:443</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_SSL_SSLProtocolLockdown">TLS 版本</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_SSL_CiphersetLockdown">TLS 密码套件</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_SSL_RevocationLockdown">证书吊销检查策略</dropdownList>
+        <comboBox refId="Part_SSL_SSLPolicyOID">
+          <label>策略扩展 OID</label>
+          <suggestion>2.5.29.32.0</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="2" refId="Part_SSL_ClientAuthentication">客户端身份验证</dropdownList>
+        <comboBox refId="Part_SSL_ClientCertificate">
+          <label>客户端证书</label>
+          <suggestion/>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ConfigureClientSelectiveTrust_1">
+        <checkBox defaultChecked="true" refId="Part_EnableClientSelectiveTrust">强制使用可信服务器配置</checkBox>
+      </presentation>
+      <presentation id="Policy_ClientAutoReconnect_1">
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_Reconnect">启用自动重新连接</checkBox>
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_CGP">启用会话可靠性(同时选中两个选项时具有优先权)</checkBox>
+		<decimalTextBox defaultValue="80" refId="Part_ClientAutoReconnect_Dimming">透明度级别</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_Smartcard_1">
+        <checkBox defaultChecked="true" refId="Part_Smartcard_Enable">允许进行智能卡身份验证</checkBox>
+        <checkBox refId="Part_SmartcardPin_Enable">使用针对 PIN 码的直通身份验证</checkBox>
+      </presentation>
+      <presentation id="Policy_KerberosLockdown_1"/>
+      <presentation id="Policy_LocalCredentialsLockdown_1">
+        <checkBox defaultChecked="true" refId="Part_LocalCredentialsLockdown_Enable">启用直通身份验证</checkBox>
+        <checkBox refId="Part_LegacyLocalUserNameAndPassword_Enable">允许对所有 ICA 连接使用直通身份验证</checkBox>
+        <checkBox refId="Part_NovellCredentials">使用 Novell Directory Server 凭据</checkBox>
+      </presentation>
+      <presentation id="Policy_WITicket_1">
+        <checkBox defaultChecked="true" refId="Part_WITicket_Legacy_Enable">旧票据处理</checkBox>
+        <checkBox defaultChecked="true" refId="Part_WITicket_LogonTicket_Enable">Web Interface 4.5 及更高版本</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableDriveMapping_1">
+        <checkBox defaultChecked="true" refId="Part_EnableDriveMappingCheckbox">启用客户端驱动器映射</checkBox>
+        <checkBox refId="Part_EnableDriveMappingReadonly">只读客户端驱动器</checkBox>
+        <comboBox refId="Part_EnableDriveMappingDisableDrives">
+          <label>不映射驱动器</label>
+          <suggestion>C</suggestion>
+          <suggestion>ABCDEFGHIJKLMNOPQRSTUVWXYZ</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_EnablePrinterMapping_1"/>
+      <presentation id="Policy_LocalPort_1">
+        <textBox refId="Part_MaxPort">
+          <label>最大串行端口数</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_EnableSerialPortCheckbox">映射串行端口</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableVirtualSerialPortCheckbox">允许 PDA 同步</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableParallelPortCheckbox">映射并行端口</checkBox>
+      </presentation>
+      <presentation id="Policy_ImageCapture_1"/>
+      <presentation id="Policy_AudioInput_1">
+        <checkBox defaultChecked="true" refId="Part_BiDiAudio_Enable">启用客户端麦克风</checkBox>
+      </presentation>
+      <presentation id="Policy_Clipboard_1"/>
+      <presentation id="Policy_USB_PNP_Devices_1"/>
+      <presentation id="Policy_PointOfSales_1"/>
+      <presentation id="Policy_Audio_1">
+        <checkBox defaultChecked="true" refId="Part_Audio_Enabled">启用音频</checkBox>
+        <dropdownList defaultItem="0" refId="Part_Audio_Quality">声音质量</dropdownList>
+        <checkBox refId="Part_RealtimeTransport_Enabled">启用实时传输</checkBox>
+        <decimalTextBox defaultValue="16500" refId="Part_RtpAudioLowestPort" spinStep="2">最低端口号</decimalTextBox>
+        <decimalTextBox defaultValue="16509" refId="Part_RtpAudioHighestPort" spinStep="2">最高端口号</decimalTextBox>
+        <checkBox refId="Part_RealtimeTransportThroughGateway_Enabled">允许通过 NetScaler Gateway 实时传输</checkBox>
+      </presentation>
+      <presentation id="Policy_Graphics_1">
+        <dropdownList defaultItem="1" refId="Part_Graphics_ColorDepth">颜色深度</dropdownList>
+        <checkBox refId="Part_Graphics_DiskCache">基于磁盘的缓存</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ImageAcceleration">有损压缩</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowser">HDX 3D 浏览器加速</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowserCompression">HDX 3D 浏览器加速 - 有损压缩</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenMultimedia">远程视频</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyKeyboard">SpeedScreen 缩短延迟 - 键盘本地回显</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyMouse">SpeedScreen 缩短延迟 - 鼠标指针预测</checkBox>
+      </presentation>
+      <presentation id="Policy_Display_1">
+        <comboBox refId="Part_Display_Seamless">
+          <label>无缝窗口</label>
+		  <default/>
+          <suggestion>True</suggestion>
+          <suggestion>False</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Width">
+          <label>窗口宽度</label>
+		  <default/>
+          <suggestion>1024-</suggestion>
+          <suggestion>800-</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Height">
+          <label>窗口高度</label>
+		  <default/>
+          <suggestion>734-</suggestion>
+          <suggestion>600-</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_Display_Percent">窗口百分比</dropdownList>
+        <comboBox refId="Part_Display_WorkArea">
+          <label>缩小工作区</label>
+		  <default/>
+          <suggestion>5</suggestion>
+        </comboBox>
+        <checkBox refId="Part_Display_FullScreen">全屏</checkBox>
+      </presentation>
+      <presentation id="Policy_LocalAppAccess_1">
+        <checkBox refId="Part_Allow_URLRedirection">允许 URL 重定向</checkBox>
+      </presentation>
+      <presentation id="Policy_Keyboard_Hotkeys_1">
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Windows_Key">Windows 键:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Tasklist">任务列表:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Tasklist_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Close_Remote_Application">关闭应用程序:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar">切换全屏模式:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Del:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">任务管理器:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Tab_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Shift-Tab:</dropdownList>
+        <dropdownList defaultItem="4" refId="Part_Keyboard_Hotkey_Alt_Backtab_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">缩短延迟:</dropdownList>
+        <dropdownList defaultItem="9" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">+</dropdownList>
+		<dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME">通用 IME 模式:</dropdownList>
+        <dropdownList defaultItem="8" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</dropdownList>
+      </presentation>
+	   <presentation id="Policy_ToggleFullScreen">
+        <dropdownList defaultItem="1" refId="Part_ToggleFullScreen_FirstKey">自定义全屏切换:</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_ToggleFullScreen_SecondKey">+</dropdownList>
+		<dropdownList defaultItem="0" refId="Part_ToggleFullScreen_ThirdKey">+</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishedApplications_1">
+        <comboBox refId="Part_PublishedApplications_InitialProgram">
+          <label>应用程序</label>
+          <suggestion>#记事本</suggestion>
+          <suggestion>#*</suggestion>
+        </comboBox>
+        <checkBox defaultChecked="true" refId="Part_PublishedApplications_SessionSharing">会话共享</checkBox>
+      </presentation>
+      <presentation id="Policy_HostRenderedAudio_1"/>
+      <presentation id="Policy_ICAFileSettings_1">
+        <checkBox defaultChecked="true" refId="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</checkBox>
+      </presentation>
+      <presentation id="Policy_AllowLegacySessionSharing">
+        <checkBox defaultChecked="true" refId="Part_AllowLegacySessionSharing_SessionSharing">AllowLegacySessionSharing</checkBox>
+      </presentation>
+	  
+	  <presentation id="EnableICAFileSigning">
+        <listBox refId="TrustedCertificates">可信证书:</listBox>
+        <dropdownList defaultItem="0" refId="Securitypolicy">安全策略:</dropdownList>
+		<checkBox refId="TrustedLaunchers">禁用可信 Launcher</checkBox>
+      </presentation>
+	<presentation id="POL_CONFIGURE_LAN_PROXY_MANUALLY">
+        <textBox refId="TXT_PROXY_HOST">
+          <label>代理主机</label>
+        </textBox>
+		<decimalTextBox defaultValue="443" refId="TXT_PROXY_PORT">代理端口</decimalTextBox>
+      </presentation>
+      <presentation id="POL_CONFIGURE_LAN_PROXY_DLL">
+        <textBox refId="TXT_ProxyChooserDLL">
+          <label>代理选择器 DLL 路径</label>
+        </textBox>
+      </presentation>
+	  
+	<presentation id="EnableUSBForceRedirection">
+      </presentation>
+	  
+	 <presentation id="SplitDevices">
+      </presentation>
+	  <presentation id="DeviceRules">
+        <text>以分号分隔的 USB 设备规则列表。</text>
+        <textBox refId="DeviceRules_Value">
+          <label>USB 设备规则</label>
+        </textBox>
+      </presentation>
+      <presentation id="RemoveOnLock">
+	<text>要在锁定时删除的以分号分隔的 USB 设备列表。</text>
+	<textBox refId="RemoveOnLock_Value">
+	  <label>锁定时删除</label>
+	  <defaultValue>class=03 subclass=01 prot=01;class=03 subclass=01 prot=02;class=03 subclass=00 prot=01;class=03 subclass=00 prot=02</defaultValue>
+	</textBox>
+      </presentation>
+      <presentation id="ExistingDevices_Policy">
+        <dropdownList defaultItem="2" refId="ExistingDevices_Value">桌面启动时</dropdownList>
+      </presentation>
+      <presentation id="NewDevices_Policy">
+        <dropdownList defaultItem="2" refId="NewDevices_Value">插入 USB 设备时</dropdownList>
+      </presentation>
+      <presentation id="HideSimpleDevices_Policy">
+        <checkBox defaultChecked="true" refId="HideSimpleDevices_Value">隐藏可以使用其他 HDX 技术连接的 USB 设备</checkBox>
+      </presentation>
+      <presentation id="ExistingDevices_Policy_1">
+        <dropdownList defaultItem="2" refId="ExistingDevices_Value">桌面启动时</dropdownList>
+      </presentation>
+      <presentation id="NewDevices_Policy_1">
+        <dropdownList defaultItem="2" refId="NewDevices_Value">插入 USB 设备时</dropdownList>
+      </presentation>
+      <presentation id="HideSimpleDevices_Policy_1">
+        <checkBox defaultChecked="true" refId="HideSimpleDevices_Value">隐藏可以使用其他 HDX 技术连接的 USB 设备</checkBox>
+      </presentation>
+      <presentation id="RedirectUnknownDevices">       
+      </presentation>
+	  	  
+	  <presentation id="Policy_HDXoverUDP">
+		<dropdownList defaultItem="0" refId="refid_HDXoverUDP">选择 Citrix Workspace 的通信协议</dropdownList>
+	  </presentation>
+	  
+	  <presentation id="Presentation_CitrixSecureBrowser_Cache"/>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

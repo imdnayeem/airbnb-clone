@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--                                                                             -->
+<!-- This file defines the "Citrix Components" folder in the Group Policy editor -->
+<!--                                                                             -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns=
+   "http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"
+   revision="1.0" schemaVersion="1.0">
+  <displayName>Map Citrix-onderdelen</displayName>
+  <description>Dit bestand definieert de map &quot;Citrix-onderdelen&quot;</description>
+  <resources>
+    <stringTable>
+      <string id="CITRIX_COMPONENTS">Citrix-onderdelen</string>
+      <string id="CITRIX_COMPONENTS_HELP">Met het groepsbeleid in deze map kunt u de toegangsinfrastructuur van Citrix Systems beheren.</string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

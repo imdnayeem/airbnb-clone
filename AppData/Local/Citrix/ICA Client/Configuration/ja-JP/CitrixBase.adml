@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--                                                                             -->
+<!-- This file defines the "Citrix Components" folder in the Group Policy editor -->
+<!--                                                                             -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns=
+   "http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"
+   revision="1.0" schemaVersion="1.0">
+  <displayName>Citrix コンポーネント フォルダー</displayName>
+  <description>このファイルは「Citrix コンポーネント」フォルダーを定義します</description>
+  <resources>
+    <stringTable>
+      <string id="CITRIX_COMPONENTS">Citrix コンポーネント</string>
+      <string id="CITRIX_COMPONENTS_HELP">このフォルダーのグループ ポリシーは Citrix Systems Access Infrastructure の管理に使用できます。</string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

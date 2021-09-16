@@ -1,0 +1,5 @@
+CITRIX LIZENZVERTRAG
+
+Die Verwendung dieser Komponente unterliegt der Citrix Lizenz oder den Nutzungsbedingungen für die Citrix Produkte und/oder Dienste, mit denen Sie diese Komponente verwenden. Diese Komponente ist nur für die Verwendung mit solchen Produkten und/oder Diensten von Citrix lizenziert.
+
+CTX_code EP_T_A10352779

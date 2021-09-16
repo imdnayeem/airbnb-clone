@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LocalizedDataSet>
+  <!-- Global package localizable strings -->
+  <String>
+    <!-- Product named used for uninstall string -->
+    <Key>ProductName</Key>
+    <Value>Citrix Workspace 1912</Value>
+  </String>
+  <String>
+    <Key>ApplicationTitle</Key>
+    <Value>Citrix Workspace</Value>
+  </String>
+
+  <!-- Individual packages -->
+  <Group>
+    <Key>XenAppSuite</Key>
+    <DisplayName>Suite du plug-in XenApp</DisplayName>
+    <Description>Ces installations sont partagées par tous les produits qui utilisent le plug-in XenApp.</Description>
+  </Group>
+  <Component>
+    <Key>ReceiverInside</Key>
+    <DisplayName>Citrix Workspace Inside</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>ReceiverUpdater</Key>
+    <DisplayName>Citrix Workspace</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>ICA_Client</Key>
+    <DisplayName>XenApp Web Plug-in</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp.</Description>
+    </Component>
+  <Component>
+    <Key>USB</Key>
+    <DisplayName>USB</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp.</Description>
+  </Component>
+  <Component>
+    <Key>DesktopViewer</Key>
+    <DisplayName>Citrix Workspace (DV)</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>Vd3d</Key>
+    <DisplayName>HDX Aero</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>AM</Key>
+    <DisplayName>Authentication Manager</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>SSON</Key>
+    <DisplayName>Single Sign on</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>SELFSERVICE</Key>
+    <DisplayName>Self Service Plug-in</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>WebHelper</Key>
+    <DisplayName>WebHelper</DisplayName>
+    <Description>These installations are specific to XenApp or XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>BrowserEngine</Key>
+    <DisplayName>BrowserEngine</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component> 
+  <Component>
+    <Key>WorkspaceHub</Key>
+    <DisplayName>WorkspaceHub</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component> 
+  <Component>
+    <Key>AppProtection</Key>
+    <DisplayName>AppProtection</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component> 
+    <Component>
+    <Key>AppProtectionAdvanced</Key>
+    <DisplayName>AppProtectionAdvanced</DisplayName>
+    <Description>Ces installations sont spécifiques à XenApp ou XenDesktop.</Description>
+  </Component> 
+  
+  <!-- License Agreement Dialog -->
+  <Eula>
+    <Key>Main</Key>
+    <FileName>eula_pointer.rtf</FileName>
+    <ScrollRequired>Vous devez accepter les termes de ce contrat de licence pour pouvoir continuer.</ScrollRequired>
+  </Eula>
+
+  <!-- Uninstall Strings -->
+  <String>
+    <Key>UninstallPrompt</Key>
+    <Value>Êtes-vous sûr de vouloir désinstaller ce logiciel ?</Value>
+  </String>
+  <String>
+    <Key>Publisher</Key>
+    <Value>Citrix Systems, Inc.</Value>
+  </String>
+  <String>
+    <Key>Contact</Key>
+    <Value>Citrix Systems, Inc.</Value>
+  </String>
+  <String>
+    <Key>Telephone</Key>
+    <Value>1-800-424-8749</Value>
+  </String>
+  <String>
+    <Key>UrlInfoAbout</Key>
+    <Value>www.citrix.com</Value>
+  </String>
+  <String>
+    <Key>NoModify</Key>
+    <Value>Oui</Value>
+  </String>
+  <String>
+    <Key>NoRepair</Key>
+    <Value>Oui</Value>
+  </String>
+
+
+
+  <!-- Additional strings -->
+  <String>
+    <Key>SSON-Pkg</Key>
+    <Value>Installation de Citrix PNA</Value>
+  </String>
+  <String>
+    <Key>UsageText</Key>
+    <Value>
+      <![CDATA[Paramètres pris en charge :
+/help               - Affiche ces informations d'utilisation
+/uninstall          - Supprime une installation existante
+/silent - Supprime tous les dialogues
+/noreboot - Supprime tous les redémarrages et dialogues de redémarrage
+/preview - Affiche un aperçu des modifications sans modifier la machine
+/extract &lt;dossier&gt; - Extrait un pack auto-extractible sur un dossier existant
+/includeSSON        - Installe le composant Single Sign-On pour l'ouverture de session unique au domaine
+/EnableCEIP         - Active (true) ou désactive (false) le Programme Citrix d'amélioration de la satisfaction client (CEIP)
+/AutoUpdateCheck - Active la mise à jour automatique (auto), active la mise à jour manuelle (manual), interdit la mise à jour automatique (disabled)
+/AutoUpdateStream - Spécifie le cycle de mise à jour automatique : Long Term Service Release (LTSR) ou Short Term Service Releases (Current)
+/DeferUpdateCount - Spécifie le nombre de fois qu'il est possible de différer la mise à jour automatique
+
+Les valeurs de propriété MSI sont prises en charge et doivent être séparées par des espaces, par ex. :
+   PROPERTY="Valeur" PROPERTY2="Valeur2"
+
+Exemple de ligne de commande silencieuse utilisant toutes les valeurs par défaut :
+   CitrixWorkspaceApp.exe /silent
+
+Exemple de ligne de commande spécifiant de multiples options :
+CitrixWorkspaceApp.exe /silent ADDLOCAL="ReceiverInside,ICA_Client,USB,DesktopViewer,Vd3d,WebHelper,BrowserEngine"
+INSTALLDIR="C:\mondossier"
+ENABLE_DYNAMIC_CLIENT_NAME="No" CLIENT_NAME="mon_nom_remplacé" DEFAULT_NDSCONTEXT="Contexte1,Contexte2" 
+
+Exemple de ligne de commande pour activer l'authentification unique au domaine :
+CitrixWorkspaceApp.exe /silent /includeSSON ADDLOCAL="ReceiverInside,ICA_Client,SSON,USB,DesktopViewer,Vd3d,WebHelper,BrowserEngine"
+INSTALLDIR="C:\mondossier"
+ENABLE_DYNAMIC_CLIENT_NAME="No" CLIENT_NAME="mon_nom_remplacé" DEFAULT_NDSCONTEXT="Contexte1,Contexte2" 
+   
+Exemple de ligne de commande pour installer le serveur Single Sign-On mais pour désactiver la capture des informations d'identification d'ouverture de session :
+   CitrixWorkspaceApp.exe /includesson LOGON_CREDENTIAL_CAPTURE_ENABLE=No [valeur par défaut Yes]
+   
+Exemple de ligne de commande pour installer Citrix Workspace en mode non autonome
+   CitrixWorkspaceApp.exe SELFSERVICEMODE = false [la valeur par défaut est true]
+
+Exemple de ligne de commande destinée à prendre en charge la mise à niveau de versions non prises en charge vers la dernière version
+CitrixWorkspaceApp.exe /RCU
+
+Exemple de ligne de commande pour désactiver le programme CEIP :
+CitrixWorkspaceApp.exe /EnableCEIP=false [la valeur par défaut est true]
+
+Exemple de ligne de commande pour activer la mise à jour manuelle :
+CitrixWorkspaceApp.exe /AutoUpdateCheck=manual [valeur par défaut = auto]
+Exemple de ligne de commande pour désactiver la mise à jour automatique :
+CitrixWorkspaceApp.exe /AutoUpdateCheck=disabled
+
+Exemple de ligne de commande pour choisir un cycle Long Term Service Release :
+    CitrixWorkspaceApp.exe /AutoUpdateStream=LTSR
+Exemple de ligne de commande pour différer deux fois la mise à jour automatique :
+    CitrixWorkspaceApp.exe /DeferUpdateCount=2
+[Appuyez sur Entrée pour fermer cette fenêtre.]
+]]>
+    </Value>
+  </String>
+</LocalizedDataSet>

@@ -1,0 +1,2074 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName/>
+  <description/>
+  <resources>
+    <stringTable>
+	
+	  <string id="Category_Citrix">Componentes de Citrix</string>
+      <string id="Category_Citrix_Explanation">Esta directiva de grupo se puede utilizar para administrar los clientes Citrix.</string>
+	  <string id="ClientDevices">Uso remoto de dispositivos cliente</string>
+	  <string id="Explain_ClientDevices">Estas directivas controlan cómo accede el servidor a los recursos de las máquinas cliente.  La aplicación Citrix Workspace se puede configurar para permitir que las aplicaciones remotas usen las unidades de disco, las impresoras, etc., como si se estuvieran ejecutando en la máquina cliente.</string>
+	
+	  <string id="unknown_0">Habilitar ICA File Signing</string>
+      <string id="unknown_16">Permitir inicios con firma solamente (más seguro)</string>
+      <string id="unknown_17">Preguntar al usuario en inicios sin firma (menos seguro)</string>
+      <string id="Explain_IcaFileSigning">Use esta directiva para habilitar y configurar la función ICA File Signing para la firma de archivos ICA.</string>
+	
+	
+      <string id="GenericUSB">Uso remoto de USB genérico</string>
+      <string id="DeviceRules">Reglas de dispositivos USB</string>
+      <string id="DeviceRules_Explain">Se usa para especificar qué dispositivos USB se permiten y cuáles se deniegan.
+
+Las reglas no distinguen el uso de mayúsculas o minúsculas. Cada regla tiene el formato {Allow: | Deny:} seguido de cualquier cantidad de calificadores &lt;etiqueta&gt;=&lt;valor&gt;. Cuando hay varias reglas, hay que separarlas con punto y coma. Los comentarios comienzan con '#' y continúan hasta un punto y coma.
+
+Por ejemplo 'Allow: VID=1234 PID=5678 # Comentario ; Deny: Class=03'.
+
+Las etiquetas admitidas son VID, PID, REL, CLASS, SUBCLASS, PROT.</string>
+	<string id="RemoveOnLock">Quitar en bloqueo</string>
+	<string id="RemoveOnLock_Explain">Especifica los dispositivos o las clases que hay que quitar cuando la máquina cliente está bloqueada. 
+Sintaxis:
+Los dispositivos no distinguen el uso de mayúsculas y minúsculas y tienen el formato
+VID=XXX PID=XX;VID=YYY PID=YY
+Las clases no distinguen el uso de mayúsculas y minúsculas y tienen el formato 
+class=XXX subclass=XX prot=X
+Ejemplo:
+class=03 subclass=01 prot=01;VID=173E PID=0046
+Comportamiento predeterminado:
+Los teclados y los mouse HID (class=03 subclass=01 prot=01;class=03 subclass=01 prot=02;class=03 subclass=00 prot=01;class=03 subclass=00 prot=02) se quitan y se redireccionan automáticamente durante el bloqueo y desbloqueo del cliente.
+	</string>
+	  <string id="SplitDevices">Dividir dispositivos</string>
+	  <string id="SplitDevices_Explain">División de las interfaces de los dispositivos compuestos, como si fueran dispositivos distintos.</string>
+      <string id="DeviceRules_Tip1">Lista de reglas de dispositivos USB separadas por punto y coma.</string>
+      <string id="DeviceRules_Value">Reglas de dispositivos USB</string>
+      <string id="RemoveOnLock_Value">Quitar en bloqueo</string>
+	  <string id="SplitDevices_Value">Dividir dispositivos</string>
+      <string id="ExistingDevices_Policy">Dispositivos USB existentes</string>
+      <string id="EnableUSBForceRedirection">EnableUSBForceRedirection</string>
+      <string id="EnableUSBForceRedirection_Explain">Permite la redirección automática forzosa de los dispositivos que se utilizan en el cliente. </string>
+      <string id="EnableUSBForceRedirection_Value">EnableUSBForceRedirection_Value</string>
+      <string id="ExistingDevices_Explain">Elija qué ocurre con los dispositivos USB disponibles cuando comienza una sesión. Esta configuración anula la preferencia del usuario.</string>
+      <string id="ExistingDevices_Value">Cuando se abre el escritorio</string>
+      <string id="ExistingDevices_Always">Conectar todos los dispositivos USB disponibles</string>
+      <string id="ExistingDevices_Ask">Mostrar un mensaje y dejar que el usuario elija</string>
+      <string id="ExistingDevices_Ignore">No hacer nada</string>
+      <string id="NewDevices_Policy">Dispositivos USB nuevos</string>
+      <string id="NewDevices_Explain">Elija qué ocurre cuando se introduce un nuevo dispositivo USB durante una sesión. Esta configuración anula la preferencia del usuario.</string>
+      <string id="NewDevices_Value">Cuando se introduce un dispositivo USB</string>
+      <string id="NewDevices_Always">Conectar el dispositivo USB</string>
+      <string id="NewDevices_Ask">Mostrar un mensaje y dejar que el usuario elija</string>
+      <string id="NewDevices_Ignore">No hacer nada</string>
+      <string id="HideSimpleDevices_Policy">Lista de dispositivos USB en Desktop Viewer</string>
+      <string id="HideSimpleDevices_Explain">Elija si los dispositivos USB que se pueden conectar usando tecnologías HDX alternativas deben aparecer en la lista de Dispositivos USB.
+
+Los dispositivos que se pueden conectar mediante otras tecnologías HDX incluyen unidades USB, cámaras Web, escáneres, impresoras y dispositivos de audio.
+
+Esta configuración anula la preferencia del usuario.</string>
+      <string id="HideSimpleDevices_Value">Ocultar dispositivos USB que se puedan conectar mediante otras tecnologías HDX</string>
+      <string id="RedirectUnknownDevices">Redirigir dispositivos USB desconocidos</string>
+      <string id="RedirectUnknownDevices_Explain">Permitir/rechazar el redireccionamiento de los dispositivos USB desconocidos.
+Los dispositivos USB para los que no haya controladores instalados en el dispositivo de punto final se mostrarán como dispositivos USB desconocidos en al Administrador de dispositivos de Windows.
+      </string>
+      <string id="RedirectUnknownDevices_Value">Redirigir dispositivos USB desconocidos</string>
+	  
+      <string id="unknown_2">Inhabilitado</string>
+      <string id="unknown_4">Detectar versión</string>
+      <string id="unknown_6">SOCKS v4</string>
+      <string id="unknown_8">SOCKS v5</string>
+      <string id="unknown_18">Detectar versión</string>
+      <string id="unknown_20">TLS1.0 | TLS1.1 | TLS1.2</string>
+      <string id="unknown_24">Detectar versión</string>
+      <string id="unknown_26">Gubernamental</string>
+      <string id="unknown_28">Comercial</string>
+      <string id="unknown_30">Predeterminado</string>
+      <string id="unknown_32">Inhabilitado</string>
+      <string id="unknown_34">Verificar solo listas de revocación de certificados almacenadas localmente</string>
+      <string id="unknown_36">Obtener listas de revocación de certificados en la red</string>
+      <string id="unknown_38">Requerir listas de revocación de certificados para conectar</string>
+      <string id="unknown_40">No configurado</string>
+      <string id="unknown_42">Mostrar selector de certificados</string>
+      <string id="unknown_44">Inhabilitado</string>
+      <string id="unknown_46">Usar un certificado especificado</string>
+      <string id="unknown_48">Seleccionar automáticamente, si es posible</string>
+      <string id="unknown_112">Alta</string>
+      <string id="unknown_114">Media</string>
+      <string id="unknown_116">Baja</string>
+      <string id="unknown_122">Color de 16 bits</string>
+      <string id="unknown_124">Color de 32 bits</string>
+      <string id="unknown_140"/>
+      <string id="unknown_142">50%</string>
+	  <string id="yes">Sí</string>
+	  <string id="no">No, usar la resolución nativa</string>
+      <string id="unknown_144">75%</string>
+      <string id="unknown_146">Otro</string>
+      <string id="unknown_158">Acceder a escritorio local</string>
+      <string id="unknown_160">Acceder a sesión remota</string>
+      <string id="unknown_162">Acceder a sesión remota solo en modo de pantalla completa</string>
+      <string id="unknown_164">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_166">Alt</string>
+      <string id="unknown_168">Ctrl</string>
+      <string id="unknown_170">Mayús</string>
+      <string id="unknown_172">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_174">F1</string>
+      <string id="unknown_176">F10</string>
+      <string id="unknown_178">F11</string>
+      <string id="unknown_180">F12</string>
+      <string id="unknown_182">F2</string>
+      <string id="unknown_184">F3</string>
+      <string id="unknown_186">F4</string>
+      <string id="unknown_188">F5</string>
+      <string id="unknown_190">F6</string>
+      <string id="unknown_192">F7</string>
+      <string id="unknown_194">F8</string>
+      <string id="unknown_196">F9</string>
+      <string id="unknown_198">menos</string>
+      <string id="unknown_200">más</string>
+      <string id="unknown_202">asterisco</string>
+      <string id="unknown_204">tabulador</string>
+      <string id="unknown_206">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_208">Alt</string>
+      <string id="unknown_210">Ctrl</string>
+      <string id="unknown_212">Mayús</string>
+      <string id="unknown_214">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_216">F1</string>
+      <string id="unknown_218">F10</string>
+      <string id="unknown_220">F11</string>
+      <string id="unknown_222">F12</string>
+      <string id="unknown_224">F2</string>
+      <string id="unknown_226">F3</string>
+      <string id="unknown_228">F4</string>
+      <string id="unknown_230">F5</string>
+      <string id="unknown_232">F6</string>
+      <string id="unknown_234">F7</string>
+      <string id="unknown_236">F8</string>
+      <string id="unknown_238">F9</string>
+      <string id="unknown_240">menos</string>
+      <string id="unknown_242">más</string>
+      <string id="unknown_244">asterisco</string>
+      <string id="unknown_246">tabulador</string>
+      <string id="unknown_248">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_250">Alt</string>
+      <string id="unknown_252">Ctrl</string>
+      <string id="unknown_254">Mayús</string>
+      <string id="unknown_256">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_258">F1</string>
+      <string id="unknown_260">F10</string>
+      <string id="unknown_262">F11</string>
+      <string id="unknown_264">F12</string>
+      <string id="unknown_266">F2</string>
+      <string id="unknown_268">F3</string>
+      <string id="unknown_270">F4</string>
+      <string id="unknown_272">F5</string>
+      <string id="unknown_274">F6</string>
+      <string id="unknown_276">F7</string>
+      <string id="unknown_278">F8</string>
+      <string id="unknown_280">F9</string>
+      <string id="unknown_282">menos</string>
+      <string id="unknown_284">más</string>
+      <string id="unknown_286">asterisco</string>
+      <string id="unknown_288">tabulador</string>
+      <string id="unknown_290">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_292">Alt</string>
+      <string id="unknown_294">Ctrl</string>
+      <string id="unknown_296">Mayús</string>
+      <string id="unknown_298">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_300">F1</string>
+      <string id="unknown_302">F10</string>
+      <string id="unknown_304">F11</string>
+      <string id="unknown_306">F12</string>
+      <string id="unknown_308">F2</string>
+      <string id="unknown_310">F3</string>
+      <string id="unknown_312">F4</string>
+      <string id="unknown_314">F5</string>
+      <string id="unknown_316">F6</string>
+      <string id="unknown_318">F7</string>
+      <string id="unknown_320">F8</string>
+      <string id="unknown_322">F9</string>
+      <string id="unknown_324">menos</string>
+      <string id="unknown_326">más</string>
+      <string id="unknown_328">asterisco</string>
+      <string id="unknown_330">tabulador</string>
+      <string id="unknown_332">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_334">Alt</string>
+      <string id="unknown_336">Ctrl</string>
+      <string id="unknown_338">Mayús</string>
+      <string id="unknown_340">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_342">F1</string>
+      <string id="unknown_344">F10</string>
+      <string id="unknown_346">F11</string>
+      <string id="unknown_348">F12</string>
+      <string id="unknown_350">F2</string>
+      <string id="unknown_352">F3</string>
+      <string id="unknown_354">F4</string>
+      <string id="unknown_356">F5</string>
+      <string id="unknown_358">F6</string>
+      <string id="unknown_360">F7</string>
+      <string id="unknown_362">F8</string>
+      <string id="unknown_364">F9</string>
+      <string id="unknown_366">menos</string>
+      <string id="unknown_368">más</string>
+      <string id="unknown_370">asterisco</string>
+      <string id="unknown_372">tabulador</string>
+      <string id="unknown_374">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_376">Alt</string>
+      <string id="unknown_378">Ctrl</string>
+      <string id="unknown_380">Mayús</string>
+      <string id="unknown_382">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_384">F1</string>
+      <string id="unknown_386">F10</string>
+      <string id="unknown_388">F11</string>
+      <string id="unknown_390">F12</string>
+      <string id="unknown_392">F2</string>
+      <string id="unknown_394">F3</string>
+      <string id="unknown_396">F4</string>
+      <string id="unknown_398">F5</string>
+      <string id="unknown_400">F6</string>
+      <string id="unknown_402">F7</string>
+      <string id="unknown_404">F8</string>
+      <string id="unknown_406">F9</string>
+      <string id="unknown_408">menos</string>
+      <string id="unknown_410">más</string>
+      <string id="unknown_412">asterisco</string>
+      <string id="unknown_414">tabulador</string>
+      <string id="unknown_416">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_418">Alt</string>
+      <string id="unknown_420">Ctrl</string>
+      <string id="unknown_422">Mayús</string>
+      <string id="unknown_424">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_426">F1</string>
+      <string id="unknown_428">F10</string>
+      <string id="unknown_430">F11</string>
+      <string id="unknown_432">F12</string>
+      <string id="unknown_434">F2</string>
+      <string id="unknown_436">F3</string>
+      <string id="unknown_438">F4</string>
+      <string id="unknown_440">F5</string>
+      <string id="unknown_442">F6</string>
+      <string id="unknown_444">F7</string>
+      <string id="unknown_446">F8</string>
+      <string id="unknown_448">F9</string>
+      <string id="unknown_450">menos</string>
+      <string id="unknown_452">más</string>
+      <string id="unknown_454">asterisco</string>
+      <string id="unknown_456">tabulador</string>
+      <string id="unknown_458">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_460">Alt</string>
+      <string id="unknown_462">Ctrl</string>
+      <string id="unknown_464">Mayús</string>
+      <string id="unknown_466">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_468">F1</string>
+      <string id="unknown_470">F10</string>
+      <string id="unknown_472">F11</string>
+      <string id="unknown_474">F12</string>
+      <string id="unknown_476">F2</string>
+      <string id="unknown_478">F3</string>
+      <string id="unknown_480">F4</string>
+      <string id="unknown_482">F5</string>
+      <string id="unknown_484">F6</string>
+      <string id="unknown_486">F7</string>
+      <string id="unknown_488">F8</string>
+      <string id="unknown_490">F9</string>
+      <string id="unknown_492">menos</string>
+      <string id="unknown_494">más</string>
+      <string id="unknown_496">asterisco</string>
+      <string id="unknown_498">tabulador</string>
+      <string id="unknown_500">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_502">Alt</string>
+      <string id="unknown_504">Ctrl</string>
+      <string id="unknown_506">Mayús</string>
+      <string id="unknown_508">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_510">F1</string>
+      <string id="unknown_512">F10</string>
+      <string id="unknown_514">F11</string>
+      <string id="unknown_516">F12</string>
+      <string id="unknown_518">F2</string>
+      <string id="unknown_520">F3</string>
+      <string id="unknown_522">F4</string>
+      <string id="unknown_524">F5</string>
+      <string id="unknown_526">F6</string>
+      <string id="unknown_528">F7</string>
+      <string id="unknown_530">F8</string>
+      <string id="unknown_532">F9</string>
+      <string id="unknown_534">menos</string>
+      <string id="unknown_536">más</string>
+      <string id="unknown_538">asterisco</string>
+      <string id="unknown_540">tabulador</string>
+      <string id="unknown_542">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_544">Alt</string>
+      <string id="unknown_546">Ctrl</string>
+      <string id="unknown_548">Mayús</string>
+      <string id="unknown_550">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_552">F1</string>
+      <string id="unknown_554">F10</string>
+      <string id="unknown_556">F11</string>
+      <string id="unknown_558">F12</string>
+      <string id="unknown_560">F2</string>
+      <string id="unknown_562">F3</string>
+      <string id="unknown_564">F4</string>
+      <string id="unknown_566">F5</string>
+      <string id="unknown_568">F6</string>
+      <string id="unknown_570">F7</string>
+      <string id="unknown_572">F8</string>
+      <string id="unknown_574">F9</string>
+      <string id="unknown_576">menos</string>
+      <string id="unknown_578">más</string>
+      <string id="unknown_580">asterisco</string>
+      <string id="unknown_582">tabulador</string>
+      <string id="unknown_608">Inhabilitado</string>
+      <string id="unknown_610">Detectar versión</string>
+      <string id="unknown_612">SOCKS v4</string>
+      <string id="unknown_614">SOCKS v5</string>
+      <string id="unknown_624">Detectar versión</string>
+      <string id="unknown_626">TLS1.0 | TLS1.1 | TLS1.2</string>
+      <string id="unknown_630">Detectar versión</string>
+      <string id="unknown_632">Gubernamental</string>
+      <string id="unknown_634">Comercial</string>
+      <string id="unknown_636">Predeterminado</string>
+      <string id="unknown_638">No comprobar</string>
+      <string id="unknown_640">Comprobar sin acceso a red</string>
+      <string id="unknown_642">Comprobar con acceso completo</string>
+      <string id="unknown_644">Requerir comprobación con acceso completo y lista de revocación de certificados</string>
+      <string id="unknown_646">No configurado</string>
+      <string id="unknown_648">Mostrar selector de certificados</string>
+      <string id="unknown_650">Inhabilitado</string>
+      <string id="unknown_652">Usar un certificado especificado</string>
+      <string id="unknown_654">Seleccionar automáticamente, si es posible</string>
+	  <string id="unknown_656">Inhabilitado</string>
+      <string id="unknown_658">Iniciar</string>
+      <string id="unknown_660">Actualizar</string>
+      <string id="unknown_662">Iniciar, Actualizar</string>
+      <string id="unknown_664">Abrir</string>
+      <string id="unknown_666">Iniciar, Abrir</string>
+      <string id="unknown_668">Actualizar, Abrir</string>
+      <string id="unknown_670">Actualizar, Abrir, Iniciar</string>
+      <string id="unknown_672">WinLogon</string>
+      <string id="unknown_674">WinLogon, Iniciar</string>
+      <string id="unknown_676">WinLogon, Actualizar</string>
+      <string id="unknown_678">WinLogon, Actualizar, Iniciar</string>
+      <string id="unknown_680">WinLogon, Abrir</string>
+      <string id="unknown_682">WinLogon, Abrir, Iniciar</string>
+      <string id="unknown_684">WinLogon, Abrir, Actualizar</string>
+      <string id="unknown_686">Todas las opciones</string>
+	  <string id="unknown_688">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_690">Alt</string>
+      <string id="unknown_692">Ctrl</string>
+      <string id="unknown_694">Mayús</string>
+      <string id="unknown_696">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_698">F1</string>
+      <string id="unknown_700">F10</string>
+      <string id="unknown_702">F11</string>
+      <string id="unknown_704">F12</string>
+      <string id="unknown_706">F2</string>
+      <string id="unknown_708">F3</string>
+      <string id="unknown_710">F4</string>
+      <string id="unknown_712">F5</string>
+      <string id="unknown_714">F6</string>
+      <string id="unknown_716">F7</string>
+      <string id="unknown_718">F8</string>
+      <string id="unknown_720">F9</string>
+      <string id="unknown_722">menos</string>
+      <string id="unknown_724">más</string>
+      <string id="unknown_726">asterisco</string>
+      <string id="unknown_728">tabulador</string>
+      <string id="unknown_715">Alta</string>
+      <string id="unknown_717">Media</string>
+      <string id="unknown_719">Baja</string>
+      <string id="unknown_725">Color de 16 bits</string>
+      <string id="unknown_727">Color de 32 bits</string>
+      <string id="unknown_743"/>
+      <string id="unknown_745">50%</string>
+      <string id="unknown_747">75%</string>
+      <string id="unknown_749">Otro</string>
+      <string id="unknown_761">Acceder a escritorio local</string>
+      <string id="unknown_763">Acceder a sesión remota</string>
+      <string id="unknown_765">Acceder a sesión remota solo en modo de pantalla completa</string>
+      <string id="unknown_767">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_769">Mayús</string>
+      <string id="unknown_771">Ctrl</string>
+      <string id="unknown_773">Alt</string>
+      <string id="unknown_775">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_777">tabulador</string>
+      <string id="unknown_779">asterisco</string>
+      <string id="unknown_781">más</string>
+      <string id="unknown_783">menos</string>
+      <string id="unknown_785">F1</string>
+      <string id="unknown_787">F2</string>
+      <string id="unknown_789">F3</string>
+      <string id="unknown_791">F4</string>
+      <string id="unknown_793">F5</string>
+      <string id="unknown_795">F6</string>
+      <string id="unknown_797">F7</string>
+      <string id="unknown_799">F8</string>
+      <string id="unknown_801">F9</string>
+      <string id="unknown_803">F10</string>
+      <string id="unknown_805">F11</string>
+      <string id="unknown_807">F12</string>
+      <string id="unknown_809">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_811">Mayús</string>
+      <string id="unknown_813">Ctrl</string>
+      <string id="unknown_815">Alt</string>
+      <string id="unknown_817">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_819">tabulador</string>
+      <string id="unknown_821">asterisco</string>
+      <string id="unknown_823">más</string>
+      <string id="unknown_825">menos</string>
+      <string id="unknown_827">F1</string>
+      <string id="unknown_829">F2</string>
+      <string id="unknown_831">F3</string>
+      <string id="unknown_833">F4</string>
+      <string id="unknown_835">F5</string>
+      <string id="unknown_837">F6</string>
+      <string id="unknown_839">F7</string>
+      <string id="unknown_841">F8</string>
+      <string id="unknown_843">F9</string>
+      <string id="unknown_845">F10</string>
+      <string id="unknown_847">F11</string>
+      <string id="unknown_849">F12</string>
+      <string id="unknown_851">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_853">Mayús</string>
+      <string id="unknown_855">Ctrl</string>
+      <string id="unknown_857">Alt</string>
+      <string id="unknown_859">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_861">tabulador</string>
+      <string id="unknown_863">asterisco</string>
+      <string id="unknown_865">más</string>
+      <string id="unknown_867">menos</string>
+      <string id="unknown_869">F1</string>
+      <string id="unknown_871">F2</string>
+      <string id="unknown_873">F3</string>
+      <string id="unknown_875">F4</string>
+      <string id="unknown_877">F5</string>
+      <string id="unknown_879">F6</string>
+      <string id="unknown_881">F7</string>
+      <string id="unknown_883">F8</string>
+      <string id="unknown_885">F9</string>
+      <string id="unknown_887">F10</string>
+      <string id="unknown_889">F11</string>
+      <string id="unknown_891">F12</string>
+      <string id="unknown_893">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_895">Mayús</string>
+      <string id="unknown_897">Ctrl</string>
+      <string id="unknown_899">Alt</string>
+      <string id="unknown_901">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_903">tabulador</string>
+      <string id="unknown_905">asterisco</string>
+      <string id="unknown_907">más</string>
+      <string id="unknown_909">menos</string>
+      <string id="unknown_911">F1</string>
+      <string id="unknown_913">F2</string>
+      <string id="unknown_915">F3</string>
+      <string id="unknown_917">F4</string>
+      <string id="unknown_919">F5</string>
+      <string id="unknown_921">F6</string>
+      <string id="unknown_923">F7</string>
+      <string id="unknown_925">F8</string>
+      <string id="unknown_927">F9</string>
+      <string id="unknown_929">F10</string>
+      <string id="unknown_931">F11</string>
+      <string id="unknown_933">F12</string>
+      <string id="unknown_935">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_937">Mayús</string>
+      <string id="unknown_939">Ctrl</string>
+      <string id="unknown_941">Alt</string>
+      <string id="unknown_943">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_945">tabulador</string>
+      <string id="unknown_947">asterisco</string>
+      <string id="unknown_949">más</string>
+      <string id="unknown_951">menos</string>
+      <string id="unknown_953">F1</string>
+      <string id="unknown_955">F2</string>
+      <string id="unknown_957">F3</string>
+      <string id="unknown_959">F4</string>
+      <string id="unknown_961">F5</string>
+      <string id="unknown_963">F6</string>
+      <string id="unknown_965">F7</string>
+      <string id="unknown_967">F8</string>
+      <string id="unknown_969">F9</string>
+      <string id="unknown_971">F10</string>
+      <string id="unknown_973">F11</string>
+      <string id="unknown_975">F12</string>
+      <string id="unknown_977">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_979">Mayús</string>
+      <string id="unknown_981">Ctrl</string>
+      <string id="unknown_983">Alt</string>
+      <string id="unknown_985">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_987">tabulador</string>
+      <string id="unknown_989">asterisco</string>
+      <string id="unknown_991">más</string>
+      <string id="unknown_993">menos</string>
+      <string id="unknown_995">F1</string>
+      <string id="unknown_997">F2</string>
+      <string id="unknown_999">F3</string>
+      <string id="unknown_1001">F4</string>
+      <string id="unknown_1003">F5</string>
+      <string id="unknown_1005">F6</string>
+      <string id="unknown_1007">F7</string>
+      <string id="unknown_1009">F8</string>
+      <string id="unknown_1011">F9</string>
+      <string id="unknown_1013">F10</string>
+      <string id="unknown_1015">F11</string>
+      <string id="unknown_1017">F12</string>
+      <string id="unknown_1019">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_1021">Mayús</string>
+      <string id="unknown_1023">Ctrl</string>
+      <string id="unknown_1025">Alt</string>
+      <string id="unknown_1027">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_1029">tabulador</string>
+      <string id="unknown_1031">asterisco</string>
+      <string id="unknown_1033">más</string>
+      <string id="unknown_1035">menos</string>
+      <string id="unknown_1037">F1</string>
+      <string id="unknown_1039">F2</string>
+      <string id="unknown_1041">F3</string>
+      <string id="unknown_1043">F4</string>
+      <string id="unknown_1045">F5</string>
+      <string id="unknown_1047">F6</string>
+      <string id="unknown_1049">F7</string>
+      <string id="unknown_1051">F8</string>
+      <string id="unknown_1053">F9</string>
+      <string id="unknown_1055">F10</string>
+      <string id="unknown_1057">F11</string>
+      <string id="unknown_1059">F12</string>
+      <string id="unknown_1061">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_1063">Mayús</string>
+      <string id="unknown_1065">Ctrl</string>
+      <string id="unknown_1067">Alt</string>
+      <string id="unknown_1069">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_1071">tabulador</string>
+      <string id="unknown_1073">asterisco</string>
+      <string id="unknown_1075">más</string>
+      <string id="unknown_1077">menos</string>
+      <string id="unknown_1079">F1</string>
+      <string id="unknown_1081">F2</string>
+      <string id="unknown_1083">F3</string>
+      <string id="unknown_1085">F4</string>
+      <string id="unknown_1087">F5</string>
+      <string id="unknown_1089">F6</string>
+      <string id="unknown_1091">F7</string>
+      <string id="unknown_1093">F8</string>
+      <string id="unknown_1095">F9</string>
+      <string id="unknown_1097">F10</string>
+      <string id="unknown_1099">F11</string>
+      <string id="unknown_1101">F12</string>
+      <string id="unknown_1103">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_1105">Mayús</string>
+      <string id="unknown_1107">Ctrl</string>
+      <string id="unknown_1109">Alt</string>
+      <string id="unknown_1111">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_1113">tabulador</string>
+      <string id="unknown_1115">asterisco</string>
+      <string id="unknown_1117">más</string>
+      <string id="unknown_1119">menos</string>
+      <string id="unknown_1121">F1</string>
+      <string id="unknown_1123">F2</string>
+      <string id="unknown_1125">F3</string>
+      <string id="unknown_1127">F4</string>
+      <string id="unknown_1129">F5</string>
+      <string id="unknown_1131">F6</string>
+      <string id="unknown_1133">F7</string>
+      <string id="unknown_1135">F8</string>
+      <string id="unknown_1137">F9</string>
+      <string id="unknown_1139">F10</string>
+      <string id="unknown_1141">F11</string>
+      <string id="unknown_1143">F12</string>
+      <string id="unknown_1145">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_1147">Mayús</string>
+      <string id="unknown_1149">Ctrl</string>
+      <string id="unknown_1151">Alt</string>
+      <string id="unknown_1153">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_1155">tabulador</string>
+      <string id="unknown_1157">asterisco</string>
+      <string id="unknown_1159">más</string>
+      <string id="unknown_1161">menos</string>
+      <string id="unknown_1163">F1</string>
+      <string id="unknown_1165">F2</string>
+      <string id="unknown_1167">F3</string>
+      <string id="unknown_1169">F4</string>
+      <string id="unknown_1171">F5</string>
+      <string id="unknown_1173">F6</string>
+      <string id="unknown_1175">F7</string>
+      <string id="unknown_1177">F8</string>
+      <string id="unknown_1179">F9</string>
+      <string id="unknown_1181">F10</string>
+      <string id="unknown_1183">F11</string>
+      <string id="unknown_1185">F12</string>
+	  <string id="unknown_1187">NINGUNO</string>
+	  <string id="unknown_1189">FIPS</string>
+      <string id="unknown_1191">SP800-52</string>
+	  <string id="unknown_1195">Cualquiera</string>
+	  <string id="unknown_1197">TLS</string>
+	  <string id="unknown_1199">Regulado (Seguro)</string>
+	  <string id="unknown_1201">Cualquiera</string>
+	  <string id="unknown_1203">TLS1.2</string>
+	  <string id="unknown_1205">TLS1.1 | TLS1.2</string>
+	  <string id="unknown_1207">TLS1.0 | TLS1.1 | TLS1.2</string>
+	  <string id="unknown_1209">Requerir comprobación con acceso completo y todas las listas de revocación de certificados</string>	 
+	  <string id="unknown_1210">Inhabilitar la ficha Presentación de las aplicaciones</string>
+	  <string id="unknown_1211">Inhabilitar la ficha Opciones de reconexión</string>
+	  <string id="unknown_1212">Inhabilitar interfaz de usuario entera</string>
+	  <string id="unknown_1213">A: Siempre</string>
+	  <string id="unknown_1214">S: Seguro</string>
+	  <string id="unknown_1215">N: Nunca</string>
+	  <string id="unknown_1217">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_1219">Mayús</string>
+      <string id="unknown_1221">Ctrl</string>
+      <string id="unknown_1223">Alt</string>
+      <string id="unknown_1225">&lt;Inhabilitado&gt;</string>
+      <string id="unknown_1227">tabulador</string>
+      <string id="unknown_1229">asterisco</string>
+      <string id="unknown_1231">más</string>
+      <string id="unknown_1233">menos</string>
+      <string id="unknown_1235">F1</string>
+      <string id="unknown_1237">F2</string>
+      <string id="unknown_1239">F3</string>
+      <string id="unknown_1241">F4</string>
+      <string id="unknown_1243">F5</string>
+      <string id="unknown_1245">F6</string>
+      <string id="unknown_1247">F7</string>
+      <string id="unknown_1249">F8</string>
+      <string id="unknown_1251">F9</string>
+      <string id="unknown_1253">F10</string>
+      <string id="unknown_1255">F11</string>
+      <string id="unknown_1257">F12</string>
+      <string id="Policy_EnableAutoUpdatePolicy">Actualizaciones de Citrix Workspace</string>
+      <string id="Explain_EnableAutoUpdatePolicy">No configurado: Las Actualizaciones de Citrix Workspace están habilitadas.
+Habilitado: Las Actualizaciones de Citrix Workspace están habilitadas con las opciones adicionales enumeradas en este diálogo.
+Inhabilitado: La opción Actualizaciones de Citrix Workspace está oculta, no se ve en la hoja de Preferencias avanzadas y usted no recibirá ninguna notificación para actualizar.
+Directiva para habilitar la actualización de Citrix Workspace:
+	Automático = Citrix Workspace comprueba automáticamente si hay actualizaciones. 
+	Manual = El usuario comprueba manualmente si hay actualizaciones. 
+	  
+SOLO LTSR: 
+	Verdadero = Solo estarán disponibles las actualizaciones de LTSR.
+Citrix-Workspace-Update-DeferUpdate-Count:
+	-1: El usuario puede diferir la actualizaciones cuantas veces quiera.
+	0: El usuario no ve la opción para recordárselo más tarde.
+        número: El usuario ve la opción para recordárselo más tarde, cuantas veces indique el número.
+	  </string> 
+	  <string id="AutoUpdate">Automática</string> 
+	  <string id="Manual">Manual</string> 
+      <string id="Policy_CheckAutoUpdatePolicy">Definir demora para comprobar actualizaciones</string>
+      <string id="Explain_CheckAutoUpdatePolicy">Esta directiva se utiliza para definir cuándo se prefiere implementar la actualización de Citrix Workspace en los dispositivos de los usuarios.
+- Rápido: Las actualizaciones disponibles se aplican al principio del periodo de entrega.
+- Medio: Las actualizaciones disponibles se aplican en medio del periodo de entrega.
+- Lento: Las actualizaciones disponibles se aplican al final del periodo de entrega.
+</string> 
+	  <string id="Fast">Rápido</string>
+      <string id="Medium">Medio</string> 
+	  <string id="Slow">Lento</string>
+      <string id="AllowPublishContent">Permitir</string>
+      <string id="PreventPublishContent">Impedir</string>
+      <string id="ICAClient">Citrix Workspace</string>
+      <string id="Explain_ICAClient">La aplicación Citrix Workspace se usa para conectar con aplicaciones y escritorios remotos en comunidades de servidores.</string>
+      <string id="Network">Redirección de red</string>
+      <string id="Explain_Network">Estas directivas se pueden usar para controlar cómo redirige Citrix Workspace sus conexiones a una comunidad de servidores.</string>
+      <string id="Authentication">Autenticación de usuarios</string>
+      <string id="Explain_Authentication">Estas directivas controlan cómo autentica Citrix Workspace a sus usuarios en una aplicación o escritorio remotos.</string>
+      <string id="UserExperience">Experiencia de usuario</string>
+      <string id="Explain_UserExperience">Citrix Workspace se puede configurar para interactuar con las aplicaciones de la máquina cliente de distintas formas.  Estas configuraciones se pueden usar para controlar el modo en que las máquinas cliente presentan las aplicaciones o los escritorios remotos al usuario.</string>
+	  <string id="Policy_HWacceleration">Aceleración de hardware para gráficos</string>
+	  <string id="Explain_HWacceleration">Use esta directiva para habilitar o inhabilitar el uso de la aceleración de hardware (GPU) para gráficos remotos. Cuando no está configurada, el uso de la aceleración de hardware está habilitado en unidades GPU no incrustadas. Cuando está habilitada, Citrix Workspace intentará usar la GPU del cliente para acelerar los gráficos remotos. En los dispositivos cliente que no respaldan esta función, la directiva se inhabilita de manera silenciosa.</string>
+      <string id="Policy_EnableH265">Descodificación H265 para gráficos</string>
+      <string id="Explain_EnableH265">Utilice esta directiva para habilitar o inhabilitar el uso de la descodificación H265 para gráficos remotos. Cuando no está configurado, no se intenta usar la descodificación H265. Cuando está habilitado, Citrix Workspace intentará usar la GPU del cliente para descodificar usando el descodificador H265, siempre y cuando el servidor respalde la codificación H265. En los dispositivos cliente que no respaldan esta función, ésta se inhabilita de manera silenciosa. y se recurre de nuevo a la codificación H264</string>
+      <string id="Proxy">Proxy</string>
+      <string id="Explain_Proxy">Citrix Workspace se puede configurar para usar una redirección de proxy específica para las aplicaciones y escritorios remotos.  Estos parámetros permiten configurar proxys de cliente de forma independiente para otros programas de la máquina cliente.</string>
+	  <string id="AdvancePreferencesOptions">Opciones de Preferencias avanzadas</string>
+      <string id="Explain_AdvancePreferencesOptions">Habilitar/inhabilitar la vista de opciones en las Preferencias avanzadas</string>
+      <string id="ClientEngine">Motor de cliente</string>
+      <string id="Explain_ClientEngine">Citrix Workspace se puede configurar para que interactúe con las propiedades de configuración del motor del cliente, como los parámetros del archivo ICA</string>
+      <string id="MultiStreamICA">Multi-Stream ICA</string>
+      <string id="Explain_MultiStreamICA">Esta directiva le permite configurar varias conexiones para transportar el tráfico ICA entre el cliente y el servidor.</string>
+      <string id="SelfService">Autoservicio</string>
+      <string id="Explain_SelfService">Estas directivas controlan los parámetros del Self-Service Plug-in</string>
+      <string id="RealTimeTransport">Transporte en tiempo real</string>
+      <string id="Explain_RealTimeTransport">Transporte en tiempo real</string>
+      <string id="RealTimeTransportThroughGateway">Transporte en tiempo real a través de puerta de enlace</string>
+      <string id="Explain_RealTimeTransportThroughGateway">Transporte en tiempo real a través de puerta de enlace</string>
+      <string id="Policy_EnableICAClient">Permitir conexiones de cliente</string>
+      <string id="Explain_EnableICAClient">Use esta directiva para habilitar o inhabilitar completamente las conexiones desde la aplicación Citrix Workspace.  
+      
+Cuando esta directiva no está configurada, el cliente permitirá la conexión con los servidores. 
+      
+Cuando esta directiva está habilitada, el cliente solo se conectará con un servidor si la opción &quot;Habilitar cliente&quot; está seleccionada y si el número de versión es mayor o igual que la &quot;Versión mínima del cliente&quot;.  
+
+Cuando la directiva está inhabilitada, el cliente no permitirá conexiones con ningún servidor. 
+
+Solución de problemas:
+Si una conexión se rechaza porque el cliente no está habilitado, aparecerá el mensaje de error &quot;ERROR de &lt;servidor&gt;: No se puede conectar con el servidor Citrix XenApp. El servidor (,,,) no es de confianza para las conexiones ICA. Las conexiones con la región (Todas las regiones) no están permitidas en los parámetros de bloqueo. Póngase en contacto con el administrador.&quot;
+
+Si el cliente no permite una conexión porque el número de versión es inferior, aparece el mensaje de error &quot;Error number 2321:  ICA Client Configuration Manager:  The ICA Client version is too low to run using the installed configuration data.&quot;</string>
+      <string id="Part_EnableICAClient_Enable">Habilitar cliente</string>
+      <string id="Part_EnableICAClient_Minimum">Versión mínima del cliente</string>
+      <string id="Policy_ProxyLockdown">Configurar parámetros de proxy del cliente</string>
+      <string id="Explain_ProxyLockdown">Habilite esta directiva para configurar los proxys de red principales que el cliente puede utilizar para conectarse a aplicaciones o escritorios remotos.
+En el menú desplegable Tipo de proxy, seleccione:
+- Automático, para permitir que el cliente use los parámetros de la máquina local para determinar el servidor proxy.
+- Ninguno, para permitir que el cliente se conecte directamente al servidor sin utilizar un servidor proxy.
+- Script, para permitir que el cliente obtenga un archivo .pac basado en Java desde la URL especificada en las URL de scripts del proxy. El archivo .pac se ejecuta para identificar el servidor proxy utilizado para la conexión.
+- Seguro: Si se ha seleccionado &quot;Seguro&quot;, el cliente se pondrá en contacto con el proxy identificado por los parámetros &quot;Nombres de host de proxy&quot; y &quot;Puertos de proxy&quot;. El protocolo de negociación utilizará una solicitud de encabezado &quot;HTTP CONNECT&quot; especificando la dirección de destino deseada. Este protocolo de proxy se utiliza comúnmente para el tráfico basado en HTTP y admite la autenticación de proxy GSSAPI.
+- SOCKS/SOCKS V4/SOCKS V5: Si se ha seleccionado un proxy &quot;SOCKS&quot;, el cliente realizará un proceso de negociación SOCKS V4 o SOCKS V5 con el proxy identificado en los parámetros &quot;Nombres de host de proxy&quot; y &quot;Puertos de proxy&quot;. La opción &quot;SOCKS&quot; detectará y usará la versión correcta de SOCKS.
+
+Para habilitar la omisión de servidores proxy, seleccione Lista de omisión de servidores.
+
+Solución de problemas:
+Algunas plataformas de cliente no respaldan el tipo de proxy &quot;Automático&quot; debido a limitaciones del sistema operativo. Consulte la Guía del administrador correspondiente, para obtener más información. Para estas plataformas, los parámetros de proxy deben definirse manualmente en el dispositivo cliente.
+
+Al configurar el servidor de Interfaz Web, se puede indicar un servidor proxy adecuado para la ubicación concreta del cliente. Cuando se configuren proxys mediante Directivas de grupo, es importante evitar la anulación de esos parámetros. Cuando se pueda elegir entre varios proxys, simplemente use una lista de proxys, separados por comas. El primer proxy de la lista será el predeterminado.
+
+La mayoría de las implementaciones de cliente de intranet usan la opción &quot;Ninguno&quot; para el tipo de proxy; de lo contrario, el cliente podría intentar conectar a través de Internet. Para las implementaciones más avanzadas, se puede usar la opción &quot;Lista de omisión de servidores&quot;, o scripts &quot;.pac&quot;, o la opción de configuración de servidores de confianza, en función de la topología de la red.
+
+Algunos servidores proxy desconectan automáticamente las conexiones que están inactivas durante cierto tiempo.  Esto puede hacer que se desconecten sesiones de cliente cuando no se estén utilizando.  Hay una opción de servidor, &quot;&quot;ICA Keep-Alive&quot;&quot;, que se puede usar para enviar paquetes de datos durante los periodos de inactividad, y así evitar que los proxys cierren las conexiones.</string>
+      <string id="Part_Proxy_ProxyTypeLockdown">Tipo de proxy</string>
+      <string id="Part_Proxy_ProxyHostLockdown">Nombres de host de proxy</string>
+      <string id="Part_Proxy_ProxyPortLockdown">Puertos de proxy</string>
+      <string id="Part_Proxy_ProxyAutoConfigUrlLockdown">Direcciones URL de scripts de proxy</string>
+      <string id="Part_Proxy_ProxyBypassListLockdown">Lista de omisión de servidores</string>
+      <string id="Policy_AltProxyLockdown">Configurar parámetros de proxys alternativos del cliente</string>
+      <string id="Explain_AltProxyLockdown">Use esta directiva para configurar proxys de red alternativos que el cliente puede usar si el proxy de red principal no puede conectar con una aplicación o un escritorio remoto.  
+
+Cuando esta directiva no está configurada, el cliente usará sus propios parámetros para decidir si tiene que conectar a través de un servidor proxy.  
+
+Cuando esta directiva está habilitada, el cliente intentará una conexión usando un proxy alternativo si falla la conexión con un proxy principal.  Los parámetros de proxys alternativos funcionan de manera idéntica a los parámetros de los proxys principales.  
+
+Si tanto el proxy principal como el alternativo fallan a la hora de conectar, cuando la casilla &quot;Recurrir a conexión directa&quot; está seleccionada, el cliente intentará una conexión final directa, sin proxys.
+
+
+Solución de problemas:
+Algunos fallos de proxy pueden hacer que parezca que el cliente se cuelga al conectar. Esto se debe normalmente a que el servidor proxy vuelve a intentar él mismo la conexión, o a que tiene un tiempo de espera muy largo. En función de la topología de la red, puede ser preferible configurar el servidor de la Interfaz Web para que identifique el proxy actual en funcionamiento, o cambiar los parámetros de tiempo de espera del proxy.</string>
+      <string id="Part_AltProxy_ProxyTypeLockdown">Tipo de proxy</string>
+      <string id="Part_AltProxy_ProxyHostLockdown">Nombres de host de proxy</string>
+      <string id="Part_AltProxy_ProxyPortLockdown">Puertos de proxy</string>
+      <string id="Part_AltProxy_ProxyAutoConfigUrlLockdown">Direcciones URL de scripts de proxy</string>
+      <string id="Part_AltProxy_ProxyBypassListLockdown">Lista de omisión de servidores</string>
+      <string id="Part_AltProxy_ProxyFallbackLockdown">Recurrir a conexión directa</string>
+      <string id="Policy_ProxySocks">Configurar parámetros de proxy SOCKS</string>
+      <string id="Explain_ProxySocks">Use esta directiva para configurar el uso de proxys SOCKS adicionales que son necesarios en algunas topologías de red avanzadas.  
+
+Cuando está habilitada, el cliente examina el parámetro de &quot;Versión del protocolo SOCKS&quot;. Si la conexión a través de SOCKS no está inhabilitada, el cliente intentará conectar usando el proxy SOCKS especificado en los parámetros &quot;Nombres de host de proxy&quot; y &quot;Puertos de proxy&quot;.  
+
+El cliente admite conexiones mediante servidores proxy SOCKS v4 o SOCKS v5.  De forma alternativa, puede intentar detectar automáticamente la versión que está usando el servidor proxy.  
+
+Solución de problemas:
+Los parámetros de proxy SOCKS están diseñados para atravesar un proxy además del servidor proxy principal o alternativo. Cuando se atraviesa un único proxy, estos parámetros de proxy SOCKS deben inhabilitarse.</string>
+      <string id="Part_ProxySocks_Version">Versión del protocolo SOCKS</string>
+      <string id="Part_ProxySocks_ProxyHostLockdown">Nombres de host de proxy</string>
+      <string id="Part_ProxySOCKS_ProxyPortLockdown">Puertos de proxy</string>
+      <string id="Policy_ProxyAuthentication">Configurar la autenticación de proxy</string>
+      <string id="Explain_ProxyAuthentication">Use esta directiva para controlar los mecanismos de autenticación que el cliente usa al conectar con un servidor proxy.  La autenticación en servidores proxy se puede usar para supervisar el tráfico de datos en implementaciones de red de gran tamaño.  
+
+En general,  es el sistema operativo el que se encarga de la autenticación, pero en algunos casos, el usuario puede haber recibido un nombre de usuario y una contraseña específicos para este fin. Para evitar que se pida estas credenciales específicamente al usuario, deje sin marcar la casilla &quot;Pedir credenciales al usuario&quot;.  Esto obligará al cliente a intentar una conexión anónima.  De manera alternativa, puede configurar el cliente para conectarse usando las credenciales que le pase el servidor de la Interfaz Web o, estas credenciales se pueden especificar explícitamente a través de una directiva de grupo, usando las opciones &quot;Nombre de usuario explícito&quot; y &quot;Contraseña explícita&quot;.  
+
+Solución de problemas:
+En general la autenticación de proxy NTLM se llevará a cabo bajo el control del controlador de dominio y el cliente no puede controlarla.  Será necesario configurar tanto el cliente como el proxy con las relaciones de confianza en el nivel de dominio que correspondan.  
+
+La autenticación de proxy no se puede vincular a la función de autenticación por paso de credenciales (PassThrough) del cliente. En general, la contraseña del proxy no tendrá relación alguna con las contraseñas de los usuarios.</string>
+      <string id="Policy_ProxyExplicitAuthenticationEnabled">Pedir credenciales al usuario</string>
+      <string id="Policy_ProxyBasicAuthenticationEnabled">Permitir autenticación en texto no cifrado</string>
+      <string id="Policy_ProxyNTLMAuthenticationEnabled">Permitir autenticación con hash NTLM</string>
+      <string id="Part_Proxy_Socks5User">Nombre de usuario explícito</string>
+      <string id="Part_Proxy_Socks5Password">Contraseña explícita</string>
+      <string id="Policy_ClientAutoReconnect">Fiabilidad de la sesión y reconexión automática</string>
+      <string id="Explain_ClientAutoReconnect">&quot;Esta directiva configura cómo se comporta el cliente en caso de producirse un fallo de red.
+    
+Para definir la reconexión, seleccione:
+
+Habilitar la reconexión automática: En caso de producirse un fallo de red, el cliente intenta volver a conectar con un servidor automáticamente
+
+Habilitar la fiabilidad de la sesión: En caso de fallo de red, el cliente intenta la reconexión con un servidor SSL/TLS.
+
+NOTA: Si estas dos opciones, Habilitar la reconexión automática y Habilitar la fiabilidad de la sesión están seleccionadas, de manera predeterminada el cliente selecciona la opción Habilitar la fiabilidad de la sesión en caso de fallo de red. 
+
+NOTA: Si esta directiva está habilitada y ninguna de sus opciones está seleccionada, la directiva no se aplica.
+
+Nivel de transparencia: El nivel de transparencia aplicado a la sesión de XenApp/XenDesktop durante la reconexión de la sesión. 
+
+El valor 0 indica que la ventana de la sesión de XenApp y XenDesktop se pondrá en negro mientras se reconecta la sesión.
+
+El valor 100 indica que no se aplicará ninguna capa de transparencia (pantalla congelada).
+
+Solución de problemas:
+Algunos servidores proxy desconectan automáticamente las conexiones que están inactivas durante cierto tiempo. Esto puede hacer que las sesiones de cliente se desconecten cuando no se estén usando. Hay una opción de servidor, &quot;&quot;ICA Keep-Alive&quot;&quot;, que se puede usar para enviar paquetes de datos durante los periodos de inactividad, y así evitar que los proxys cierren las conexiones. &quot;
+</string>
+      <string id="Part_ClientAutoReconnect_Reconnect">Habilitar la reconexión automática</string>
+      <string id="Part_ClientAutoReconnect_CGP">Habilitar la fiabilidad de la sesión (tiene preferencia si se seleccionan ambas)</string>
+	  <string id="Part_ClientAutoReconnect_Dimming">Nivel de transparencia</string>
+      <string id="Policy_SSLLockdown">Configuración del modo de conformidad y TLS</string>
+      <string id="Policy_DeprecatedCiphers">Conjuntos de cifrado retirados</string>
+      <string id="Explain_SSLLockdown">Esta opción permite a Citrix Workspace identificar conexiones seguras y cifrar la comunicación dentro del servidor. 
+
+Estos son los tipos de conexiones seguras con TLS entre Citrix Workspace y XenApp y XenDesktop que Citrix respalda:
+1. TLS 1.0
+2. TLS 1.1
+3. TLS 1.2 
+
+Los valores del Modo de conformidad para la seguridad son:
+- FIPS: Cuando se habilita el modo FIPS, se obliga al sistema operativo Windows y sus subsistemas a usar solamente algoritmos criptográficos validados por FIPS.
+- Ninguno: No se obliga a aplicar ningún modo de conformidad.
+- SP800-52: Se obliga a aplicar NIST SP800-52r1.
+Cuando se selecciona la opción SP800-52 en el menú desplegable de Modo de conformidad para la seguridad, se permite la siguiente Directiva de comprobación de revocación de certificados (CRCP):
+- Requerir comprobación con acceso completo y lista de revocación de certificados: Esta es la opción predeterminada.
+- Requerir comprobación con acceso completo y todas las listas de revocación de certificados 
+
+Puede restringir Citrix Workspace para que solo se conecte con servidores especificados, definiendo una lista de servidores separados por comas en el parámetro Servidores TLS permitidos. Pueden usar comodines y números de puerto. Por ejemplo, *.citrix.com:4433 permite la conexión con cualquier servidor cuyo nombre común termine en .citrix.com en el puerto 4433. La exactitud de la información incluida en un certificado de seguridad está aseverada por el emisor del certificado.  Si Citrix Workspace no reconoce ni confía en el emisor de un certificado, la conexión se rechaza.
+
+La versión de TLS se puede restringir a cualquier combinación de:
+
+- TLS 1.0, TLS 1.1 o TLS 1.2
+- TLS 1.1 o TLS 1.2
+- Solo TLS 1.2
+
+El conjunto de cifrado TLS es un grupo de conjuntos de cifrado permitidos por el cliente. El conjunto de cifrado TLS se puede configurar con alguno de los siguientes: 
+Nota: Los conjuntos de cifrado TLS_RSA_* se pueden inhabilitar mediante la directiva Conjuntos de cifrado retirados.
+- Cualquiera: Cuando se configura el valor &quot;Cualquiera&quot;, se permiten los siguientes conjuntos de cifrado en el modo de conformidad NINGUNO, de manera predeterminada:
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- Comercial: Con esta opción, solo se permite usar los conjuntos de cifrado siguientes:
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- Gubernamental: Con esta opción, solo se permite usar los conjuntos de cifrado siguientes:
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+
+La Directiva de comprobación de revocación de certificados se usa para mejorar la autenticación criptográfica del servidor Citrix y mejora la seguridad global de las conexiones TLS entre cliente y servidor. 
+Nota: La comprobación de la revocación de certificados solo es válida cuando el Modo de conformidad para la seguridad es SP800-52.
+Cuando se habilita este parámetro, el cliente comprueba si el certificado del servidor ha sido revocado o no. Hay varios niveles de comprobación de la lista de revocación de certificados.  Por ejemplo, se puede configurar el cliente para que solo compruebe su lista de certificados local, o para que compruebe la lista de certificados local y las listas que existan en la red. Además, la comprobación de certificados se puede configurar para permitir que los usuarios inicien sesiones solo si se han verificado todas las listas de revocación de certificados.
+La comprobación de revocación de certificados es una función avanzada admitida por algunos emisores de certificados. Permite a los administradores revocar certificados de seguridad (invalidados antes de su fecha de caducidad) en el caso de detectarse algún riesgo para la clave privada del certificado.
+Los valores aplicables para esta configuración son:
+
+- No comprobar: No se lleva a cabo ninguna comprobación de revocación de certificados.
+- Comprobar sin acceso a red: Se lleva a cabo la comprobación de revocación de certificados. Solo se usan los almacenes de la lista de revocación de certificados local. Se ignoran todos los puntos de distribución. Para la verificación del certificado de servidor que presenta el servidor SSL Relay/Secure Gateway de destino no es de importancia fundamental encontrar una lista de revocación de certificados.
+- Comprobar con acceso completo: Se lleva a cabo la comprobación de revocación de certificados. Se usan tanto los almacenes locales de listas de revocación de certificados como los de todos los puntos de distribución. Si se encuentra información de revocación de un certificado, la conexión se rechaza. Para la verificación del certificado de servidor que presenta el servidor de destino no es de importancia fundamental encontrar una lista de revocación de certificados. 
+- Requerir comprobación con acceso completo y lista de revocación de certificados: Se lleva a cabo una comprobación de listas de revocación de certificados, excluyendo la entidad de certificación (CA) raíz. Se usan tanto los almacenes locales de listas de revocación de certificados como los de todos los puntos de distribución. Si se encuentra información de revocación de un certificado, la conexión se rechaza. Para la verificación es de importancia fundamental encontrar todas las listas de revocación de certificados.
+- Requerir comprobación con acceso completo y todas las listas de revocación de certificados: Se lleva a cabo una comprobación de listas de revocación de certificados, incluida la entidad de certificación (CA) raíz. Se usan tanto los almacenes locales de listas de revocación de certificados como los de todos los puntos de distribución. Si se encuentra información de revocación de un certificado, la conexión se rechaza. Para la verificación es de importancia fundamental encontrar todas las listas de revocación de certificados.
+Las organizaciones que configuran TLS para una gama de productos pueden identificar los servidores dedicados a Citrix Workspace especificando un ID de objeto (OID) de extensión de directiva de certificado como parte del certificado de seguridad.  Si se configura un OID de extensión de directiva aquí, Citrix Workspace acepta solo aquellos certificados que declaren una directiva compatible.
+
+Al conectar mediante TLS, el servidor puede configurarse para requerir que Citrix Workspace suministre un certificado de seguridad para identificarse a sí mismo.  Use el parámetro &quot;Autenticación del cliente&quot; para configurar si la identificación se proporciona automáticamente, o si se notifica al usuario. Las opciones incluyen:
+
+- Inhabilitado: La autenticación del cliente está inhabilitada
+- Mostrar selector de certificados: Se pide siempre al usuario que seleccione un certificado.
+- Seleccionar automáticamente, si es posible: Solo se pregunta al usuario cuando hay varios certificados que se pueden elegir
+- Nunca: Nunca proporcionar identificación
+- No configurado: La autenticación de cliente no está configurada. Se aplica el comportamiento predeterminado.
+- Usar un certificado especificado: Usar el certificado de cliente especificado en el parámetro más abajo
+
+Use el parámetro &quot;Certificado del cliente&quot; para especificar la huella digital del certificado de identificación y evitar tener que preguntar al usuario innecesariamente.
+</string>
+ 
+ 
+  
+ 
+      <string id="Part_SSL_EnabledLockdown">Requerir TLS para todas las conexiones</string>
+      <string id="Part_SSL_SSLProxyHostLockdown">Servidores TLS permitidos</string>
+      <string id="Part_SSL_SSLPolicyOID">OID de extensión de directiva</string>
+      <string id="Part_SSL_SSLProtocolLockdown">Versión de TLS</string>
+      <string id="Part_SSL_CiphersetLockdown">Conjunto de cifrado TLS</string>
+      <string id="Part_SSL_RevocationLockdown">Directiva de comprobación de revocación de certificados</string>
+      <string id="Part_SSL_ClientAuthentication">Autenticación del cliente</string>
+      <string id="Part_SSL_ClientCertificate">Certificado del cliente</string>
+      <string id="Policy_ConfigureClientSelectiveTrust">Configuración de servidores de confianza</string>
+      <string id="Explain_ConfigureClientSelectiveTrust">Use esta directiva para controlar cómo identifica el cliente la aplicación o el escritorio publicado al que se conecta. El cliente determinará un nivel de confianza, llamado &quot;región de confianza&quot; con una conexión. La región de confianza a su vez determinará cómo se configura el cliente para la conexión. 
+
+Cuando esta directiva está habilitada, se puede obligar al cliente a realizar la identificación de la región usando la opción &quot;Aplicar configuración de servidor de confianza&quot;.    
+
+De manera predeterminada, la identificación de la región se basa en la dirección del servidor con el que se conecta el cliente. Para ser miembro de la región de confianza, el servidor debe ser miembro de la zona de Sitios de confianza de Windows. Esto se puede configurar usando el parámetro &quot;Zona de Internet de Windows&quot;.   
+
+De manera alternativa, para conseguir compatibilidad con clientes de plataformas distintas a Windows, se puede indicar la confianza en una dirección de servidor específica usando el parámetro &quot;Dirección&quot;.  Esta es una lista de servidores, separados por comas, en la que se pueden usar comodines; por ejemplo: cps*.citrix.com.  
+
+
+Solución de problemas:
+En la configuración predeterminada, cuando la configuración del servidor de confianza impide que el cliente se conecte, aparece un mensaje de error como el siguiente:
+
+    &quot;ERROR de &lt;servidor&gt;:  No se puede conectar con el servidor Citrix XenApp.  El servidor (xxx) no es de confianza para las conexiones ICA.  Las conexiones con la región (región que no es de confianza) no están permitidas en los parámetros de bloqueo.  Póngase en contacto con el administrador.&quot;
+
+El servidor identificado &quot;xxx&quot; debe agregarse a la zona de Sitios de confianza de Windows (como http://, o como https:// para conexiones SSL) para que la conexión tenga éxito.   
+
+Observe que para las conexiones SSL, el nombre común del certificado debe ser de confianza. Para las conexiones que no son SSL, es necesario que todos los servidores contactados sean de confianza individualmente. Esto significa que a la hora de buscar aplicaciones tanto el servicio XML como el servidor al que redirige este servicio deben ser de confianza.
+</string>
+      <string id="Part_ConfigureClientSelectiveTrust_IEZone">Zona de Internet de Windows</string>
+      <string id="Part_ConfigureClientSelectiveTrust_EffectiveAddress">Dirección</string>
+      <string id="Part_EnableClientSelectiveTrust">Aplicar configuración de servidor de confianza</string>
+      <string id="Policy_Smartcard">Autenticación con tarjeta inteligente</string>
+      <string id="Explain_Smartcard">Use esta directiva para controlar cómo usa el cliente las tarjetas inteligentes conectadas al dispositivo cliente.  
+
+Cuando está habilitada, esta directiva permite que el servidor remoto acceda a las tarjetas inteligentes conectadas al dispositivo cliente para la autenticación y con otros fines.  
+
+Cuando está inhabilitada, el servidor no puede acceder a las tarjetas inteligentes conectadas al dispositivo cliente.  
+
+
+Solución de problemas:
+Cuando se usan tarjetas inteligentes en un entorno Citrix, el controlador del dispositivo de tarjeta inteligente debe estar instalado en el servidor.  Cuando se utiliza un sistema operativo distinto en la máquina cliente, puede ser necesario asegurarse de que los controladores del dispositivo de tarjeta inteligente utilizados interactúan correctamente.</string>
+      <string id="Part_Smartcard_Enable">Habilitar la autenticación con tarjeta inteligente</string>
+      <string id="Part_SmartcardPin_Enable">Usar autenticación PassThrough para el PIN</string>
+      <string id="Policy_WITicket">Tíquet de autenticación de la Interfaz Web</string>
+      <string id="Explain_WITicket">Use esta directiva para controlar la infraestructura de generación de tiquets utilizada cuando la autenticación tiene lugar a través de la Interfaz Web.  
+
+Cuando esta directiva está habilitada, la generación de tiquets antigua de la Interfaz Web se puede inhabilitar dejando sin marcar la casilla &quot;Gestión de tiquets antiguos&quot;. La generación de tiquets antigua de la Interfaz Web se implementó transfiriendo una cookie de autenticación de un solo uso al servidor en el campo de contraseña ClearText.  
+
+A partir de la versión 4.5 de la Interfaz Web, el cliente gestiona un token de autenticación con el formato de un tíquet de inicio de sesión LogonTicket opaco con una interpretación asociada que se define en LogonTicketType. Esta funcionalidad se puede inhabilitar dejando sin marcar la casilla &quot;Interfaz Web 4.5 y versiones posteriores&quot;.</string>
+      <string id="Part_WITicket_Legacy_Enable">Gestión de tiquets antiguos</string>
+      <string id="Part_WITicket_LogonTicket_Enable">Interfaz Web 4.5 y versiones posteriores</string>
+      <string id="Policy_KerberosLockdown">Autenticación Kerberos</string>
+      <string id="Explain_KerberosLockdown">Use esta directiva para controlar el modo en que el cliente usa Kerberos para autenticar al usuario en la aplicación o el escritorio remotos.
+
+Cuando está habilitada, esta directiva permite que el cliente autentique al usuario usando el protocolo Kerberos.  Kerberos es una transacción de autenticación autorizada por el controlador de dominio que evitar la necesidad de transmitir los datos de credenciales de usuario reales al servidor.  
+
+Cuando está inhabilitada, el cliente no intentará la autenticación Kerberos.  
+
+
+Solución de problemas:
+La máquina que ejecuta el cliente y el servidor que ejecuta la aplicación remota deben estar en dominios que tengan una relación de confianza. El controlador de dominio debe tener conocimiento de que el servidor Citrix XenApp llevará a cabo un inicio de sesión de usuario completo (inicio de sesión interactivo) usando Kerberos.  Esto se configura usando los parámetros de &quot;Confiar en el equipo para la delegación&quot; en el controlador de dominio.
+
+Cuando se realicen conexiones usando la Interfaz Web, el servidor de Interfaz Web debe tener conocimiento de que el cliente se conectará usando autenticación Kerberos. Esto es necesario porque de manera predeterminada el servidor de la Interfaz Web usará una dirección IP para el servidor de destino, mientras que la autenticación Kerberos requiere un nombre de dominio completo (FQDN).
+
+Tanto la máquina cliente como la del servidor deben tener entradas DNS registradas correctamente. Esto es necesario porque los dispositivos de punto final se autenticarán mutuamente durante la conexión.</string>
+      <string id="Policy_SSONForNSG">Single Sign-on para NetScaler Gateway</string>
+      <string id="Explain_SSONForNSG">Utilice esta directiva para que Workspace pueda usar las mismas credenciales de inicio de sesión (autenticación PassThrough) en NetScaler Gateway.</string>
+      <string id="Policy_LocalCredentialsLockdown">Nombre de usuario y contraseña locales</string>
+      <string id="Explain_LocalCredentialsLockdown">Use esta directiva para indicar al cliente que use las mismas credenciales de inicio de sesión utilizadas en el equipo cliente (autenticación PassThrough) para el servidor Citrix XenApp.  
+
+Cuando esta directiva está habilitada, se puede impedir que el cliente use las credenciales de inicio de sesión actuales del usuario para autenticarse el servidor remoto, dejando sin marcar la casilla &quot;Habilitar autenticación PassThrough&quot;.  
+
+El cliente impone ciertas restricciones especificando cuándo puede tener lugar una autenticación PassThrough (para obtener más información, consulte Citrix eDocs: http://support.citrix.com/proddocs/). Si estas restricciones son demasiado estrictas para su entorno, marque la casilla &quot;Permitir autenticación PassThrough para todas las conexiones ICA&quot;. Con ello, circunvalará las restricciones de la autenticación PassThrough. 
+
+Cuando se ejecuta en un entorno de Novell Directory Server, si se marca la casilla &quot;Usar credenciales de Novell Directory Server&quot; se pide que el cliente use las credenciales de NDS.  
+
+
+Solución de problemas:
+Para habilitar la autenticación PassThrough, el cliente debe haber sido instalado por un administrador, y la opción &quot;Permitir el paso de las credenciales locales&quot; debe haber sido seleccionada en el momento de la instalación.  
+
+Cada usuario puede configurar si quiere inhabilitar la autenticación PassThrough en los parámetros de Registro del cliente, o la ventana de Program Neighbourhood, o editando su copia de AppSrv.ini.  Para habilitar la autenticación PassThrough, la copia del usuario de AppSrv.ini debe contener el parámetro &quot;EnableSSonThruICAFile=true&quot;.</string>
+      <string id="Part_LocalCredentialsLockdown_Enable">Habilitar autenticación PassThrough</string>
+      <string id="Part_LegacyLocalUserNameAndPassword_Enable">Permitir autenticación PassThrough para todas las conexiones ICA</string>
+      <string id="Part_NovellCredentials">Usar credenciales de Novell Directory Server</string>
+      <string id="Policy_EnableDriveMapping">Asignación de unidades del cliente</string>
+      <string id="Explain_EnableDriveMapping">Use esta directiva para habilitar y restringir el acceso de la aplicación o el escritorio remotos al sistema de archivos del cliente.  
+
+Cuando está habilitada, el cliente rechazará completamente el acceso de canal virtual de asignación de unidades del cliente, también conocido como CDM (Client Drive Mapping) al sistema de archivos del cliente si la casilla &quot;Habilitar asignación de unidades del cliente&quot; no está marcada.  Esto impide que la DLL que implementa el canal virtual de asignación de unidades del cliente (vdcdmn.dll) se cargue al iniciar el cliente. En ese momento, puede eliminar la DLL del paquete del cliente.  
+
+Si CDM está habilitado, hay más opciones que se pueden seleccionar para restringir el tipo de acceso que puede tener el servidor.  Si se marca la casilla &quot;Unidades de cliente de solo lectura&quot;, el canal virtual de CDM solo permite un acceso de lectura a las unidades del cliente.  
+
+El acceso a unidades en Windows se puede inhabilitar introduciendo la letra de unidad correspondiente en el cuadro &quot;No asignar unidades&quot;.  Esto es una cadena de todas las unidades que no deben asignarse al conectar con una aplicación o un escritorio publicados. Por ejemplo: &quot;ABFK&quot; inhabilita las unidades A, B, F y K. 
+
+ 
+Solución de problemas:
+Estas directivas anulan las opciones seleccionadas por los usuarios en los cuadros de diálogo de Seguridad de archivos de Desktop Viewer. Para obtener información sobre cómo impedir que los usuarios cambien las opciones seleccionadas en la Central de conexiones de Citrix, consulte Citrix Knowledge Center.</string>
+      <string id="Part_EnableDriveMappingCheckbox">Habilitar asignación de unidades del cliente</string>
+      <string id="Part_EnableDriveMappingReadonly">Unidades de cliente de solo lectura</string>
+      <string id="Part_EnableDriveMappingDisableDrives">No asignar unidades</string>
+      <string id="Policy_EnablePrinterMapping">Impresoras del cliente</string>
+      <string id="Explain_EnablePrinterMapping">Use esta directiva para habilitar y restringir el acceso de la aplicación o el escritorio publicados a las impresoras del cliente.  
+
+Cuando esta directiva está inhabilitada, el cliente impide que el servidor acceda o imprima en las impresoras disponibles en el dispositivo cliente.</string>
+      <string id="Part_EnablePrinterMapping">Asignar impresoras del cliente</string>
+      <string id="Policy_LocalPort">Acceso al hardware del cliente</string>
+      <string id="Explain_LocalPort">Use esta directiva para especificar la cantidad máxima de puertos respaldados por la plataforma del cliente. 
+
+Además, use esta directiva para habilitar y restringir el acceso de la aplicación o el escritorio publicados a los puertos paralelos, puertos serie y puertos USB del cliente. Esto permite al servidor usar el hardware conectado localmente. 
+
+
+Solución de problemas:
+La sincronización de PDA remota usa &quot;puertos COM virtuales&quot;.  Son conexiones de puerto serie redirigidas a través de conexiones USB.  Por tanto, es necesario habilitar el acceso a los puertos serie para usar la sincronización de PDA.</string>
+      <string id="Part_MaxPort">Cantidad máxima de puertos serie</string>
+      <string id="Part_EnableSerialPortCheckbox">Asignar puertos serie</string>
+      <string id="Part_EnableVirtualSerialPortCheckbox">Permitir sincronización de PDA</string>
+      <string id="Part_EnableParallelPortCheckbox">Asignar puertos paralelos</string>
+      <string id="Policy_ImageCapture">Captura de imágenes</string>
+      <string id="Explain_ImageCapture">Use esta directiva para habilitar y restringir el acceso de la aplicación o escritorio remotos a los escáneres, cámaras Web y otros dispositivos de imagen en el dispositivo cliente.</string>
+      <string id="Policy_AudioInput">Micrófono del cliente</string>
+      <string id="Explain_AudioInput">Use esta directiva para habilitar y restringir el acceso de la aplicación o escritorio remotos a los dispositivos de captura de audio (micrófonos) locales.</string>
+      <string id="Part_BiDiAudio_Enable">Habilitar micrófono del cliente</string>
+      <string id="Policy_Clipboard">Portapapeles</string>
+      <string id="Explain_Clipboard">Use esta directiva para habilitar y restringir el acceso de la aplicación o escritorio remotos al contenido del portapapeles del cliente.</string>
+      <string id="Part_Clipboard_Enabled">Habilitar el portapapeles</string>
+      <string id="Policy_USB_PNP_Devices">Dispositivos Plug-n-Play USB</string>
+      <string id="Explain_USB_PNP_Devices">Use esta directiva para habilitar e inhabilitar el acceso de los escritorios y aplicaciones publicadas a los dispositivos USB Plug-n-Play del cliente. El parámetro No configurado permite acceder a los dispositivos hasta que usted lo habilite o inhabilite explícitamente.</string>
+      <string id="Part_USB_PNP_Enabled">Habilitar SAML:</string>
+      <string id="Policy_PointOfSales">Dispositivos USB de punto de venta (PoS)</string>
+      <string id="Explain_PointOfSales">Use esta directiva para habilitar e inhabilitar el acceso de los escritorios y las aplicaciones publicadas a dispositivos USB de punto de venta. Esta directiva se aplica si la directiva de Dispositivos USB Plug-n-Play está definida como Habilitada o No configurada.</string>
+      <string id="Part_PointOfSales_Enabled">Habilitar PoS</string>
+	  <string id="Policy_Foreground_Progress_Bar">Configurar estado en primer plano de la barra de progreso</string>
+	  <string id="Explain_Foreground_Progress_Bar"/>
+      <string id="Policy_Audio">Configuración del audio del cliente</string>
+      <string id="Explain_Audio">Esta opción controla cómo se redirige a la máquina cliente el sonido de las aplicaciones o los escritorios remotos.
+  
+Seleccione &quot;Habilitar audio&quot; para inhabilitar la asignación de sonido del cliente. Esto no afecta a los datos de audio del cliente hacia el servidor, que están controlados mediante la directiva &quot;Uso remoto de dispositivos cliente&quot;. 
+ 
+La calidad del audio entre el cliente y el servidor se puede definir en el menú desplegable Calidad de audio. Hay tres opciones de calidad disponibles: alta, media y baja. 
+Los intervalos de puertos mayor y menor deben estar entre:  16384 y 65535
+
+Solución de problemas:
+Las opciones de audio del servidor tienen preferencia sobre estos parámetros, de manera que aunque se seleccione calidad alta en el cliente, puede ocurrir que no se use una calidad de audio alta. El servidor no puede aumentar la calidad del audio que se haya seleccionado en el cliente.</string>
+      <string id="Part_Audio_Enabled">Habilitar audio</string>
+      <string id="Part_Audio_Quality">Calidad del audio</string>
+      <string id="Part_RealtimeTransport_Enabled">Habilitar transporte en tiempo real</string>
+      <string id="Part_RtpAudioLowestPort">Número de puerto más bajo</string>
+      <string id="Part_RtpAudioHighestPort">Número de puerto más alto</string>
+      <string id="Part_RealtimeTransportThroughGateway_Enabled">Permitir transporte en tiempo real a través de NetScaler Gateway</string>
+      <string id="Policy_Graphics">Configuración de gráficos del cliente</string>
+      <string id="Explain_Graphics">Esta opción permite configurar la calidad de los gráficos que muestra la aplicación o el escritorio remoto.
+Seleccione el rango preferido en el menú desplegable Profundidad de color. Los opciones disponibles son Color de 16 bits y Color de 32 bits. NOTA: Una profundidad de color baja es más efectiva cuando hay poco ancho de banda.
+Habilite 'Caché de disco' para permitir que los gráficos se guarden temporalmente en el caché de disco local.
+Habilite 'Compresión con pérdida' para degradar la calidad de los gráficos para conseguir máxima compresión y rapidez de respuesta.
+Habilite 'Aceleración de explorador HDX 3D' para permitir que Microsoft Internet Explorer sea controlado por el canal de aceleración virtual HDX 3D.
+Habilite 'Aceleración de explorador HDX 3D: Compresión con pérdida' para permitir que Microsoft Internet Explorer degrade la calidad de los gráficos para conseguir máxima compresión y rapidez de respuesta.
+Habilite 'Vídeo remoto' para permitir que el servidor transmita datos de vídeo por streaming al cliente. </string>
+      <string id="Part_Graphics_ColorDepth">Profundidad de color</string>
+      <string id="Part_Graphics_ImageAcceleration">Compresión con pérdida</string>
+      <string id="Part_Graphics_SpeedScreenBrowser">Aceleración de explorador HDX 3D</string>
+      <string id="Part_Graphics_SpeedScreenBrowserCompression">Aceleración de explorador HDX 3D: Compresión con pérdida</string>
+      <string id="Part_Graphics_SpeedScreenMultimedia">Vídeo remoto</string>
+      <string id="Part_Graphics_ZeroLatencyKeyboard">Reducción de latencia SpeedScreen: Repetición local del texto</string>
+      <string id="Part_Graphics_ZeroLatencyMouse">Reducción de latencia SpeedScreen: Predicción del puntero</string>
+      <string id="Part_Graphics_DiskCache">Caché de disco</string>
+      <string id="Policy_Display">Configuración de la presentación del cliente</string>
+      <string id="Explain_Display">Esta opción controla cómo muestra el cliente al usuario final la aplicación o el escritorio remoto. 
+En el menú desplegable Ventanas integradas, seleccione Verdadero para permitir que el cliente solicite la presentación en ventanas integradas. Seleccione Falso para permitir que el cliente inhabilite la presentación en ventanas integradas. 
+
+NOTA: El servidor puede rechazar la solicitud del cliente aunque el parámetro esté configurado como Verdadero. 
+En Anchura de la ventana, seleccione los valores preferidos. Las opciones disponibles son 1024 y 800. 
+
+NOTA: Esta característica no tendrá efecto si se ha habilitado la opción Ventanas integradas. 
+En Altura de la ventana, seleccione los valores preferidos. Las opciones disponibles son 600 y 734.
+
+NOTA: Esta característica no tendrá efecto si se ha habilitado la opción Ventanas integradas. 
+En el menú desplegable Porcentaje de la ventana, seleccione los valores preferidos. Las opciones disponibles son 50%, 75% y Otro. Este es un método manual para definir la altura y la anchura de la ventana. 
+
+NOTA: El valor seleccionado es aplicable a la pantalla entera. 
+En Reducir el área de trabajo, seleccione el rango preferido. Los valores recomendados son entre 3 y 5. 
+
+Habilite Pantalla completa si quiere que la presentación del cliente sea en modo de pantalla completa. </string>
+      <string id="Part_Display_Seamless">Ventanas integradas</string>
+      <string id="Part_Display_Width">Anchura de la ventana</string>
+      <string id="Part_Display_Height">Altura de la ventana</string>
+      <string id="Part_Display_Percent">Porcentaje de la ventana</string>
+      <string id="Part_Display_WorkArea">Reducir el área de trabajo</string>
+      <string id="Part_Display_FullScreen">Pantalla completa</string>
+      <string id="Policy_LocalAppAccess">Configuración del acceso a aplicaciones locales</string>
+      <string id="Explain_LocalAppAccess">Use esta directiva para controlar cómo presenta el cliente las aplicaciones locales en el escritorio alojado.
+
+El Acceso a aplicaciones locales habilita la integración de las aplicaciones instaladas localmente, dentro de un escritorio alojado. Cuando los usuarios abren aplicaciones que tienen instaladas localmente usando accesos directos, las aplicaciones parecen estar ejecutándose en el escritorio alojado aunque en realidad están ejecutándose en el dispositivo local.
+
+Cuando esta directiva está habilitada, el cliente presenta las aplicaciones instaladas localmente dentro del escritorio alojado como accesos directos.
+Cuando está inhabilitada, el cliente no presenta las aplicaciones locales dentro del escritorio alojado. La redirección de URL también está inhabilitada. 
+
+
+Permitir redirección de URL:
+
+Cuando esta opción está seleccionada, el cliente permite que se redirijan las URL desde el explorador Web del escritorio alojado al explorador Web instalado localmente y viceversa. Las listas blanca y negra de URL que tiene el host determinan cuáles son las URL que se pueden redirigir. Cualquier complemento, plug-in o extensión de explorador necesarios para esta funcionalidad también deben habilitarse.
+Cuando esta opción no está seleccionada, las URL no se redirigen desde el escritorio alojado al cliente ni viceversa. Los complementos, plug-ins o extensiones de explorador no se inhabilitan.</string>
+      <string id="Part_Allow_URLRedirection">Permitir redirección de URL</string>
+      <string id="Policy_ExtraURLProtocols">Configuración de la redirección del host al cliente</string>
+      <string id="Explain_ExtraURLProtocols">Use esta directiva para definir si la redirección de URL del host al cliente necesita dar respaldo a protocolos extra. De manera predeterminada solo se respaldan HTTP y HTTPS.</string>
+      <string id="Part_ExtraURLProtocols">Protocolos de URL adicionales</string>
+      <string id="Policy_Keyboard_Hotkeys">Teclas de acceso rápido</string>
+      <string id="Policy_ToggleFullScreen">Teclas de acceso rápido para Desktop Viewer</string>
+	  <string id="Explain_Policy_ToggleFullScreen">Esta funcionalidad permite cambiar entre el modo de pantalla completa y el modo de ventana en una sesión de escritorio. Puede cambiar a su modo preferido usando unas teclas de acceso directo personalizadas que se pueden usar como teclas rápidas.
+La opción Personalizar cambio a pantalla completa le permite seleccionar las combinaciones de teclas que prefiera para cambiar de un modo a otro
+Nota: Estas teclas rápidas funcionan independientemente del valor de Registro &quot;AllowHotKeys&quot;. </string>
+<string id="Explain_Keyboard_Hotkeys">Esta opción permite configurar combinaciones de teclas que puede usar Citrix Workspace.
+En el menú desplegable Tecla de Windows, seleccione la opción preferida. Las opciones disponibles son Acceder a escritorio local, Acceder a sesión remota, Acceder a sesión remota solo en modo de pantalla completa.
+Cuando se selecciona Acceder a escritorio local, la combinación de teclas solo es aplicable al escritorio local.
+Cuando se selecciona Acceder a sesión remota, la combinación de teclas solo es aplicable a la sesión remota.
+Cuando se selecciona Acceder a sesión remota solo en modo de pantalla completa, la combinación de teclas solo es aplicable a sesiones ICA no integradas, en modo de pantalla completa. Esta es la opción predeterminada. </string>
+      <string id="Part_Keyboard_Windows_Key">Tecla Windows:</string>
+      <string id="Part_Keyboard_Hotkey_Tasklist">Lista de tareas.</string>
+      <string id="Part_Keyboard_Hotkey_Tasklist_Plus">             +</string>
+      <string id="Part_Keyboard_Hotkey_Close_Remote_Application">Cerrar aplicación:</string>
+      <string id="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">                          +</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Title_Bar">Cambiar modo de pantalla completa:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">                            +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Supr:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">               +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">           +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">         +</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Tab_Plus">          +</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Mayús-Tab:</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Backtab_Plus">                  +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">Administrador de tareas:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">                      +</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">Reducción de latencia:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">                             +</string>
+	  <string id="Part_Keyboard_Hotkey_Toggle_LOCALIME">Modo IME genérico:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</string>
+      <string id="Policy_PublishedApplications">Aplicaciones remotas</string>
+      <string id="Explain_PublishedApplications">Use esta directiva para configurar cómo gestiona el cliente las aplicaciones remotas.  
+
+Cuando está habilitada, esta directiva usa la lista en el cuadro &quot;Aplicación&quot; para determinar qué aplicaciones publicadas puede iniciar directamente el cliente.  
+
+Puede solicitar que las aplicaciones remotas compartan sesiones (es decir, que se ejecuten en una misma conexión ICA). Esto mejora la experiencia del usuario, aunque a veces puede no ser conveniente. La función de uso compartido de sesiones de puede inhabilitar dejando sin marcar la casilla &quot;Sesiones compartidas&quot;.  
+
+
+Solución de problemas:
+Las aplicaciones publicadas se indican con un signo # delante del nombre de la aplicación. Cuando se omite el símbolo # se intenta iniciar un escritorio o una aplicación en particular. Un equipo que ejecuta Citrix XenApp no permitirá hacer esto de manera predeterminada y mostrará el mensaje:  &quot;No tiene acceso a esta sesión&quot;.
+
+El uso compartido de sesiones está controlado por la clave SessionSharingKey, que impide que las aplicaciones iniciadas desde servidores de Interfaz Web diferentes puedan compartir una misma sesión. Además, las aplicaciones que tienen parámetros de gráficos o de seguridad distintos tampoco pueden compartir sesiones.</string>
+      <string id="Part_PublishedApplications_InitialProgram">Aplicación</string>
+      <string id="Part_PublishedApplications_SessionSharing">Sesiones compartidas</string>
+      <string id="Policy_HostRenderedAudio">Audio a través de redirección USB genérica</string>
+      <string id="Explain_HostRenderedAudio">Use esta directiva para controlar la redirección de audio a través de la redirección USB genérica. Esta directiva se aplica solo a hosts de XenApp.</string>
+      <string id="Part_HostRenderedAudio">Habilitar audio a través de redirección USB genérica</string>
+      <string id="Policy_ICAFileSettings">Configuración del archivo ICA</string>
+      <string id="Explain_ICAFileSettings">Use esta directiva para habilitar la eliminación del archivo ICA cuando finalice la sesión del cliente. </string>
+      <string id="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</string>
+      <string id="Policy_AllowLegacySessionSharing">Permitir uso compartido de sesiones antiguo</string>
+      <string id="Explain_AllowLegacySessionSharing">Permitir uso compartido de sesiones para sesiones de Program Neighborhood</string>
+      <string id="Part_AllowLegacySessionSharing_SessionSharing">AllowLegacySessionSharing</string>
+      <string id="Policy_MSISettings">Multi-Stream ICA</string>
+      <string id="Explain_MSISettings">Use esta directiva para configurar los parámetros de multisecuencia de ICA (Multi-Stream ICA). Esta función está habilitada de manera predeterminada.</string>
+	  <string id="Policy_EnableFTU">EnableFTU</string>
+        <string id="Policy_EnableNPS">Habilitar NPS</string>
+      <string id="Policy_EnableFTA">Habilitar FTA</string>
+	  <string id="Policy_Vprefer">vPrefer</string>
+	  <string id="AllowAllApps">Permitir todas las aplicaciones</string>
+	  <string id="AllowNetworkApps">Permitir aplicaciones de red</string>
+	  <string id="AllowInstalledApps">Permitir aplicaciones instaladas</string>
+      <string id="Policy_EnableDefaultFTA">Habilitar FTA predeterminada</string>
+	  <string id="Allowed_Apps">Permitir</string>
+	  <string id="Policy_HideSettings">Ocultar Parámetros</string>
+	  <string id="Policy_HideConfigChecker">Ocultar Configuration Checker</string>
+	  <string id="Policy_HideSupportInfo">Ocultar Información de asistencia</string>
+	  <string id="Policy_HideDeletePassword">Ocultar Eliminar contraseñas guardadas</string>
+	  <string id="Policy_HideDataCollection">Ocultar Recopilación de datos</string>
+	  <string id="Policy_HideLocalKeyboardLayoutSetting">Ocultar Distribución del teclado local</string>
+	  <string id="Policy_HideConnectionCenter">Ocultar Central de conexiones</string>
+	  <string id="Policy_HideDPIsettings">Ocultar parámetros de PPP</string>
+	  <string id="Policy_HideAdvancedPreferences">Ocultar Preferencias avanzadas</string>
+	  <string id="Policy_HideCitrixFiles">Ocultar Citrix Files</string>
+	  <string id="Policy_HideCitrixCasting">Ocultar Citrix Casting</string>
+	  <string id="Policy_SmartcardRemovalAction_x86">Directiva de extracción de tarjeta inteligente para máquinas x86</string>
+	  <string id="Policy_SmartcardRemovalAction_AMD64">Directiva de extracción de tarjeta inteligente para máquinas x64</string>	  
+	  <string id="Pick_UI_display">Seleccionar presentación de la interfaz</string>
+      <string id="Policy_SelfServiceMode_Enable">Administrar modo Self-Service</string>
+      <string id="Policy_AddAccounts">Permitir a los usuarios agregar o quitar cuentas</string>
+      <string id="Policy_EnablePreLaunch">Habilitar preinicio de aplicaciones</string>
+	  <string id="Explain_EnablePreLaunch">El preinicio permite lanzar más rápidamente las sesiones de aplicaciones y escritorios. Esto se lleva a cabo iniciando el recurso durante el primer acceso, haciendo así más rápida la respuesta en accesos subsiguientes.
+
+
+Si esta directiva está Habilitada, se habilita la funcionalidad de Preinicio de aplicaciones/sesiones.
+
+Si esta directiva está Inhabilitada, se inhabilita la funcionalidad de Preinicio de aplicaciones/sesiones.
+</string>
+      <string id="Policy_PublishSafeContent">Permitir/impedir que los usuarios publiquen contenido seguro</string>
+      <string id="Policy_PublishUnsafeContent">Permitir/impedir que los usuarios publiquen contenido no seguro</string>
+      <string id="Policy_ReconnectMode">Controlar cuándo intenta Citrix Workspace reconectar con sesiones existentes</string>
+      <string id="Pick_ReconnectMode">Elija la combinación de condiciones de reconexión apropiada.</string>
+      <string id="Explain_Policy_ReconnectMode">Si habilita esta configuración de directiva, ésta controlará el comportamiento de reconexión de la aplicación Citrix Workspace.
+
+Citrix Workspace puede buscar sesiones existentes desconectadas a través de la tienda y reconectarlas al cliente. Puede hacerlo en varios momentos: 
+
+- Al iniciar: Cada vez que se inicia o se abre la aplicación Citrix Workspace
+- Al actualizar: Cuando se ejecuta el comando Actualizar aplicaciones en la interfaz de usuario o después de iniciar la sesión
+- Al abrir: Cuando se abre la interfaz de usuario de Citrix Workspace
+- Al iniciar sesión en Windows: En el primer inicio de sesión
+
+El valor predeterminado es Al iniciar o Al actualizar. Seleccione la combinación adecuada.
+</string>
+      <string id="Policy_EnableAppShortCut">Administrar accesos directos de aplicaciones</string>
+      <string id="Part_StartMenuDir_Text">Directorio en el menú Inicio</string>
+      <string id="Part_DesktopDir_Text">Directorio en el escritorio</string>
+      <string id="Part_DesktopShortcut_Enable">Habilitar accesos directos de escritorio</string>
+      <string id="Part_StartMenuShortcut_Disable">Inhabilitar accesos directos del menú Inicio</string>
+      <string id="Part_UseCategoryAsStartMenuPath_Disable">Inhabilitar ruta de categoría para el menú Inicio</string>
+	  <string id="Part_UseCategoryAsDesktopPath_Enable">Habilitar ruta de categoría para el escritorio</string>
+	  <string id="Part_UseDifferentPathsforStartmenuAndDesktop_Enable">Habilítelo para tener una ruta de categoría diferente para el escritorio y para el menú Inicio. Inhabilítelo si quiere unificar la ruta de categoría del escritorio y del menú Inicio</string>
+      <string id="Part_RemoveAppsOnLogoff_Enable">Quitar aplicaciones al cerrar la sesión</string>
+      <string id="Part_RemoveAppsOnExit_Enable">Quitar aplicaciones al salir</string>
+      <string id="Part_ClearAppListOnLogoff_Enable">Borrar el conjunto de aplicaciones de la ventana de la aplicación Citrix Workspace al cerrar la sesión</string>
+      <string id="Part_AllAppsAreMandatory_Enable">Ignorar el autoservicio de selección de aplicaciones y hacerlas todas obligatorias. Si Citrix Workspace está funcionando con un servicio de PNAgent, será necesario hacer esto para que todas las aplicaciones se agreguen automáticamente. Si Citrix Workspace está funcionando con una tienda de StoreFront, haga el cambio en el servidor StoreFront para hacer la tienda obligatoria. (Este parámetro no es aplicable actualmente para tiendas de StoreFront).</string>
+      <string id="Part_SuppressRefreshOnStartup_Enable">Impedir que Citrix Workspace actualice la lista de aplicaciones al abrirlo.</string>
+	  <string id="Explain_EnableFTU">Use esto para habilitar o inhabilitar el diálogo de FTU</string>
+        <string id="Explain_EnableNPS">El indicador NPS (Net Promoter Score) le ayuda a calificar su experiencia con Citrix Workspace para Windows (Store) y dar sus comentarios sobre la misma. Este servicio está destinado a mejorar Citrix Workspace para Windows (Store). La calificación y los comentarios son de ayuda para ofrecer una experiencia de usuario óptima. De manera predeterminada, esta funcionalidad está habilitada.
+Nota: Si selecciona una puntuación de 4 o 5, se le redirigirá para que puntúe la aplicación Citrix Workspace en Microsoft Store. Si selecciona una puntuación de 3 o inferior, se le redirigirá a un formulario de comentarios donde puede ofrecer más detalles.
+Opciones:
+1. Habilitado: El diálogo de NPS aparece a intervalos de 6 conexiones.
+2. Inhabilitado: El diálogo de NPS no aparece.
+</string>
+	  <string id="Explain_Vprefer">Ahora puede controlar si la aplicación Citrix Workspace remota inicia la instancia de una aplicación instalada en el primer servidor/escritorio de salto (si está disponible) con preferencia a iniciar una aplicación remota. 
+
+Seleccione cualquiera de las siguientes opciones:
+
+1. Permitir todas las aplicaciones: Lanza la instancia del cliente de todas las aplicaciones.
+2. Permitir aplicaciones instaladas: Lanza la instancia del cliente de las aplicaciones instaladas solamente.
+3. Permitir aplicaciones de red: Lanza la instancia de una aplicación que está publicada en una red compartida.
+</string>
+      <string id="Explain_EnableFTA">Use esta opción para cambiar los parámetros de asociación de tipos de archivo (FTA).
+De manera predeterminada, esta directiva tiene el valor No configurada.
+Seleccione Habilitada, para habilitar la asociación de tipos de archivo predeterminada.
+Seleccione Inhabilitada, para inhabilitar la asociación de tipos de archivo predeterminada.</string>
+      <string id="Explain_EnableDefaultFTA">Use esta opción para cambiar los parámetros predeterminados de asociación de tipos de archivo (FTA).
+De manera predeterminada, esta directiva tiene el valor No configurada.
+Seleccione Habilitada, para habilitar la asociación de tipos de archivo predeterminada.
+Seleccione Inhabilitada, para inhabilitar la asociación de tipos de archivo predeterminada.
+Si 'Habilitar FTA' no está activado, la configuración de esta directiva no tiene ningún efecto, se considera inhabilitada. La directiva se interpretará como inhabilitada.</string>
+	  <string id="Explain_HideConfigChecker">Use esto para ocultar/mostrar el diálogo de Configuration Checker en las Preferencias avanzadas</string>
+	  <string id="Explain_HideSupportInfo">Use esto para ocultar/mostrar el diálogo de Información de asistencia en las Preferencias avanzadas</string>
+	  <string id="Explain_HideDeletePassword">Use esto para ocultar/mostrar el diálogo de Eliminar contraseñas guardadas en las Preferencias avanzadas</string>
+	  <string id="Explain_HideDataCollection">Use esto para ocultar/mostrar el diálogo de Recopilación de datos en las Preferencias avanzadas</string>
+	  <string id="Explain_HideLocalKeyboardLayoutSetting">Use esto para ocultar/mostrar el diálogo de Distribución del teclado local en las Preferencias avanzadas</string>
+	  <string id="Explain_HideConnectionCenter">Use esto para ocultar/mostrar el diálogo de Central de conexiones en las Preferencias avanzadas</string>
+	  <string id="Explain_HideAdvancedPreferences">Use esta opción para ocultar/mostrar la opción Preferencias avanzadas en el icono de la aplicación Citrix Workspace en el área de notificaciones</string>
+	  <string id="Explain_HideDPIsettings">Use esto para ocultar/mostrar el diálogo de Parámetros de PPP en las Preferencias avanzadas</string>
+	  <string id="Explain_HideCitrixFiles">Use esto para ocultar/mostrar Citrix Files en las Preferencias avanzadas</string>
+	  <string id="Explain_HideCitrixCasting">Use esto para ocultar/mostrar el diálogo de Citrix Casting en Preferencias avanzadas</string>
+	  <string id="Explain_SmartCardRemovalAction_x86">Use esta directiva para controlar el comportamiento de la acción de extraer una tarjeta inteligente cuando el usuario se autentica en un sitio PNAgent de la Interfaz Web de Citrix 5.4 con una tarjeta inteligente a través de la aplicación Citrix Workspace para Windows.
+	  
+Esta opción permite al usuario definir el comportamiento de la sesión de usuario cuando la tarjeta inteligente se extrae del cliente. 
+
+NOTA: Esta opción solo está disponible en sistemas operativos de 32 bits. 
+
+Para poder habilitar esta directiva, asegúrese de que la opción de extracción de tarjeta inteligente está definida en XenApp Services de la Interfaz Web. Consulte la documentación de XenApp para ver el procedimiento para configurar la extracción de tarjetas inteligentes en XenApp. Cuando la directiva está habilitada, el usuario seguirá conectado a Citrix Workspace aunque haya quitado la tarjeta inteligente del cliente. No obstante, la sesión del usuario en XenApp se cerrará.
+</string>	  
+<string id="Explain_SmartCardRemovalAction_AMD64">Use esta directiva para controlar el comportamiento de la acción de extraer una tarjeta inteligente cuando el usuario se autentica en un sitio PNAgent de la Interfaz Web de Citrix 5.4 con una tarjeta inteligente a través de Citrix Workspace para Windows. 
+	 
+Esta opción permite al usuario definir el comportamiento de la sesión de usuario cuando la tarjeta inteligente se extrae del cliente. 
+
+Esta directiva solo es aplicable en sistemas operativos de 64 bits. Para comprobar la arquitectura de bits del sistema operativo de una máquina Windows, haga clic en Iniciar, haga clic con el botón secundario en Equipo y luego seleccione Propiedades. En la sección Sistema, consulte Tipo de sistema para ver el tipo de sistema operativo que ejecuta la máquina. Esta directiva es aplicable si el tipo de sistema es de 64 bits.
+
+Para poder habilitar esta directiva, asegúrese de que la opción de extracción de tarjeta inteligente está definida en XenApp Services de la Interfaz Web. Consulte la documentación de XenApp para ver el procedimiento para configurar la extracción de tarjetas inteligentes en XenApp. Cuando la directiva está habilitada, el usuario seguirá conectado a Citrix Workspace aunque haya quitado la tarjeta inteligente del cliente, pero se cerrará su sesión de XenApp. No obstante, la sesión del usuario en XenApp se cerrará.
+
+Cuando la directiva está inhabilitada, la sesión de XenApp del usuario se desconecta siempre al extraer la tarjeta inteligente del dispositivo cliente, y la opción de extracción de tarjeta inteligente en XenApp Services de la Interfaz Web no tiene ningún efecto. 
+</string>  
+	  <string id="Explain_HideSettings">Esta directiva le permite administrar los accesos directos de las aplicaciones que se colocan en el escritorio y el menú Inicio junto con parámetros de espacio de trabajo a través de la interfaz de usuario. El usuario final necesita poder controlar cómo aparecen las aplicaciones en el menú Inicio. La interfaz de usuario ofrece una opción para colocar los accesos directos en la carpeta de menú Inicio elegida por el usuario. El mismo control se ofrece para los accesos directos de escritorios. También presenta una interfaz de usuario para administrar parámetros de control del espacio de trabajo. Con ello se mejora la usabilidad de la aplicación Citrix Workspace para Windows.
+
+Si habilita esta configuración de directiva, puede descartar las tres opciones posibles, es decir, inhabilitar toda la interfaz de usuario, inhabilitar la ficha Aplicaciones o inhabilitar la ficha Espacio de trabajo. (Tenga en cuenta que después de habilitar esta configuración de directiva, es necesario restablecer Citrix Workspace en el dispositivo de punto final para que los parámetros tengan efecto)
+
+Cuando se inhabilita esta configuración de directiva, el efecto es el mismo que dejarla en estado No configurado. 
+ 
+</string>
+      <string id="Explain_SelfServiceMode_Enable">Use esta directiva para habilitar o inhabilitar los parámetros del modo de autoservicio de Citrix Workspace.
+
+Cuando está habilitada, se puede ver la interfaz de usuario de autoservicio.
+
+Cuando está inhabilitada, la interfaz de usuario de autoservicio se oculta y todas las aplicaciones se suscriben automáticamente.
+</string>
+
+<string id="Explain_PublishSafeContent">Use esta directiva para permitir o impedir que los usuarios publiquen contenido seguro.
+</string>
+
+<string id="Explain_PublishUnsafeContent">Use esta directiva para permitir o impedir que los usuarios publiquen contenido no seguro.
+</string>
+
+      <string id="Explain_DisableADSCheck">Use esta directiva para inhabilitar ADS.</string>
+      <string id="Explain_EnableAppShortCut">Si habilita esta configuración de directiva:
+
+- Borrar el conjunto de aplicaciones de la ventana de Citrix Workspace al cerrar la sesión. Si se selecciona esta opción, se eliminan los detalles del usuario al cerrar la sesión en Citrix Workspace. Si no se selecciona esta opción, es posible que Citrix Workspace no elimine los detalles del usuario al cerrar la sesión de Citrix Workspace.
+
+- Impedir que Citrix Workspace actualice la lista de aplicaciones al abrirlo. Cuando está seleccionada, esta opción impide que Citrix Workspace realice una actualización de la lista de aplicaciones después de iniciarlo. Si esta opción no está seleccionada, Citrix Workspace actualiza la lista de aplicaciones al iniciarse.
+
+Si Receiver está funcionando con una tienda de StoreFront, haga el cambio en el servidor StoreFront para hacer la tienda obligatoria. Si Citrix Workspace está funcionando con un servicio de PNAgent, será necesario hacer esto para que todas las aplicaciones se agreguen automáticamente. Si Citrix Workspace está funcionando con una tienda de StoreFront, haga el cambio en el servidor StoreFront para hacer la tienda obligatoria. Cuando esta opción no está seleccionada, el usuario final debe suscribirse manualmente a todas las aplicaciones o las aplicaciones obligatorias desde los sitios de PNAgent. Cuando está seleccionada, esta opción suscribe todas las aplicaciones en autoservicio para los sitios de PNAgent. Cuando esta opción no está seleccionada, el usuario final debe suscribirse manualmente a todas las aplicaciones o las aplicaciones obligatorias desde los sitios de PNAgent.
+</string>
+      <string id="Explain_AddAccount_Enable">Use esta directiva para dar a los usuarios la opción de agregar o quitar cuentas en NonSelfServiceMode</string>
+      <string id="Receiver">Citrix Workspace</string>
+      <string id="Storefront">StoreFront</string>
+      <string id="Storefronts">Lista de cuentas de StoreFront/URL de NetScaler Gateway</string>
+      <string id="Storefronts_Part">Introduzca los datos de cuentas de StoreFront o URL de NetScaler Gateway aquí:</string>
+      <string id="Storefronts_Help">Esta directiva permite administrar una lista de cuentas de StoreFront o una dirección URL de NetScaler Gateway.
+
+Si habilita esta configuración de directiva, puede introducir una lista de cuentas de StoreFront y una URL de NetScaler Gateway. Solo puede suministrar una URL de NetScaler y varias URL de StoreFront.  Para cada entrada que agregue a la lista, introduzca los datos siguientes, delimitados por punto y coma:
+
+Nombre de la tienda: El nombre de la tienda que verá el usuario.
+
+URL de la tienda: La dirección URL de la tienda.
+
+Habilitación de la tienda: On/Off.
+
+Descripción de la tienda: La descripción de la tienda que verá el usuario.
+
+Ejemplo de StoreFront:
+
+TiendaVentas;https://ventas.miEmpresa.com/Citrix/Store/discovery;On;Tienda para el personal de Ventas
+
+Ejemplo de URL de NetScaler Gateway:
+
+TiendaRRHH;https://ag.miEmpresa.com#NombreDeLaTienda;On;Tienda para el personal de RRHH
+
+#NombreDeLaTienda es el nombre de la tienda detrás del NetScaler Gateway para el que se lo configura.
+Nota: La URL de NetScaler Gateway URL configurada mediante este método no respalda sitios de servicios PNA detrás de NetScaler Gateway.
+
+</string>
+      <string id="Fast_Connect_API_Support">Respaldo para API de Fast Connect.</string>
+      <string id="Explain_FastConnect">Estas directivas controlan el respaldo para la API de Fast Connect</string>
+      <string id="Policy_FastConnectAPI_Support">Administrar respaldo para la API de Fast Connect</string>
+      <string id="Explain_FastConnectAPI_Support">La API de Fast Connect facilita el cambio de usuario mediante interfaces API que permiten cambiar rápidamente la identidad del usuario en Citrix Workspace.  
+-Habilitar API de Fast Connect: Esta opción permite cambiar de usuario rápidamente mediante una API para cambiar el usuario nuevo
+- Habilitar la API de transición de Fast Connect: Al habilitar esta opción, se prohíben los comandos siguientes: selfservice.exe-terminate, selfservice.exe-fastterminate.
+- Dejar las aplicaciones ejecutándose al cerrar la sesión: Con esta opción se permite que las sesiones de aplicaciones permanezcan conectadas incluso aunque el usuario se haya desconectado de Citrix Workspace.
+-Integrar Self-Service Plug-in con Fast Connect: Esta opción habilita la notificación al Self-Service Plugin cuando se usa el SDK o librerías de Fast Connect. </string>
+      <string id="Explain_EnableFastConnectTransitionAPI">Habilitar la API de transición de Fast Connect</string>
+      <string id="Explain_LeaveAppsRuningOnLogoff">Dejar las aplicaciones ejecutándose al cerrar la sesión</string>
+      <string id="Explain_FastConnectUsingSSP">Integrar Self-Service Plug-in con Fast Connect</string>
+	  <string id="Policy_EngineErrMsg">Habililtar mensajes de error del motor</string>
+      <string id="Polciy_CEIP">Habilitar CEIP</string>
+	  <string id="Policy_Dpi">PPP elevado</string>
+      <string id="Polciy_CEIP_Configuration">Configuración de CEIP</string>
+      <string id="Part_Enable_CEIP">Habilitar CEIP</string>
+      <string id="Part_CEIP_ServerURL">URL del servidor CEIP</string>
+      <string id="Part_CEIP_UploadClass">Clase de carga de CEIP</string>
+      <string id="Part_CEIP_UploadFrequencyInWeeks">Frecuencia de inicialización de la carga de CEIP (en semanas)</string>
+      <string id="Part_AllowUnSecureURL">Permitir URL no segura (http en lugar de https)</string>
+      <string id="Explain_CEIP_Configuration">1. Para suministrar la URL del servidor CEIP
+2. Para suministrar la clase de carga de CEIP 
+3. Para definir la frecuencia de carga
+4. Permitir direcciones URL no seguras </string>
+	  <string id="Explain_EnableEngineErrMsg">Esto permitirá mensajes de error específicos del motor. Reemplazará los errores genéricos del controlador de protocolo con mensajes de error específicos</string>
+      <string id="Explain_EnableCEIP">CEIP (Customer Experience Improvement Program) es el programa de mejora de la experiencia del cliente de Citrix. Encontrará más información sobre el programa CEIP aquí: http://www.citrix.com/cms/ws/ceip/</string>
+	  <string id="Explain_Policy_Dpi">Use esta directiva para administrar el ajuste de escala de la sesión.
+
+La habilitación de esta directiva hace que Citrix Workspace tenga en cuenta el valor de PPP y permite más flexibilidad para que la sesión cambie de acuerdo con el valor de PPP aplicado en una sesión con varios monitores.
+
+La habilitación de la directiva tiene dos opciones 
+1. Sí, ajustar escala de la sesión
+2. No, usar la resolución nativa
+
+La directiva está inhabilitada de manera predeterminada. Cuando se inhabilita la directiva, el sistema operativo ajusta la escala de la resolución. </string>
+	  <string id="Explain_EnableDPIAwareness">Hace que Citrix Workspace tenga en cuenta el valor de PPP. Esta configuración está habilitada de manera predeterminada. Permite que Citrix Workspace ajuste la escala de la sesión en función del valor de PPP aplicado en sesiones con varios monitores. Encontrará más información sobre PPP en https://support.citrix.com/article/CTX230017</string>
+      <string id="CEIP">CEIP</string>
+	  <string id="DPI">PPP</string>
+      <string id="Explain_CEIP">CEIP (Citrix Customer Experience Improvement Program) es el programa de mejora de la experiencia del cliente de Citrix. Encontrará más información sobre el programa  CEIP aquí: http://www.citrix.com/cms/ws/ceip/.</string>
+	  <string id="Explain_DPI">Ajustar la escala de la sesión para alta resolución .</string>
+      <string id="AlwaysOn">Diagnóstico</string>
+      <string id="Explain_AlwaysOn">Use esta directiva para recopilar continuamente registros de seguimiento de los usuarios.</string>
+      <string id="Policy_AlwaysOn">Seguimiento permanente</string>
+      <string id="Explain_EnableAlwaysOn">Esta opción está habilitada de manera predeterminada para recopilar continuamente registros de seguimiento de los usuarios.</string>
+      <string id="FedRAMP">Conformidad</string>
+      <string id="Explain_FedRAMP">Use esta directiva para inhabilitar el envío de datos a servicios de terceros, como Google Analytics.
+Inhabilitar: Cuando esta opción está inhabilitada, se pueden enviar datos anónimos a servicios de terceros.
+Habilitar: Cuando esta opción está habilitada, no se pueden enviar datos anónimos a servicios de terceros.
+      </string>
+      <string id="Policy_FedRAMP">Inhabilitar el envío de datos a terceros</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator encontró una cadena que no está presente en la tabla de cadenas del archivo ADM de origen.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encontró una directiva que no tiene un valor &quot;supportedOn&quot;.</string>
+	  <string id="ADMXPolicy_SupportedOn">Todas las plataformas compatibles con Citrix Workspace</string>
+	  <string id="ADMXPolicy_SupportedOn_Explain_SmartCardRemovalAction">Respaldado en Citrix Workspace 4.5 y versiones posteriores</string>
+	  <string id="HDXoverUDP_Off">Desactivado</string>
+	  <string id="HDXoverUDP_On">Activado</string>
+	  <string id="HDXoverUDP_Preferred">Preferido</string>
+	  <string id="Policy_TransportProtocal">Protocolo de transporte para Citrix Workspace</string>
+	  <string id="Explain_TransportProtocal">Desactivado: Usar solo TCP.
+Preferido: Intentar UDP primero, usar TCP como alternativa.
+Activado: Forzar uso de UDP (sin alternativa TCP).					
+	  </string>
+      <string id="Explain_BidirectionalContentRedirection">La Redirección de contenido bidireccional es una función que permite redirigir direcciones URL desde el cliente al servidor y viceversa, en función de cómo esté configurada.
+
+- Nombre de la aplicación/escritorio publicado: Indica el nombre de la aplicación o escritorio publicado que se usará para abrir la URL redirigida. Esto no se usa cuando la Redirección de contenido bidireccional está habilitada en cualquiera de las sesiones ICA activas. Se trata de una aplicación o de un escritorio, dependiendo de cómo se especifique el parámetro de tipo más abajo.
+
+- Tipo de recurso publicado: Indica si el nombre definido arriba es una aplicación o es un escritorio.
+
+- Direcciones URL permitidas para redirigir al VDA: Define la lista de direcciones URL que se abrirán en el VDA. Se puede usar ';' como delimitador. Se puede usar &quot;*&quot; como comodín. Por ejemplo: *.xyz.com.
+
+- Direcciones URL permitidas para redirigir al cliente: Define la lista de direcciones URL que se abrirán en el cliente. Se puede usar ';' como delimitador. Se puede usar &quot;*&quot; como comodín. Por ejemplo: *.xyz.com.
+Nota: 
+1) Si hay una URL que aparece en ambas listas a la vez, se abrirá desde donde se originó.
+2) Si la URL no figura en ninguna de las listas, en este caso también se abrirá desde donde se originó.
+      </string>
+      <string id="Policy_BidirectionalContentRedirection">Redirección de contenido bidireccional</string>
+      <string id="Part_BidirectionalContentRedirectionPubAppOrDesktopName">Nombre de la aplicación/escritorio publicado: </string>
+      <string id="Part_BidirectionalContentRedirectionPubNameType">Tipo de recurso publicado:</string>
+      <string id="Part_BidirectionalContentRedirectionApplication">Aplicación</string>
+      <string id="Part_BidirectionalContentRedirectionDesktop">Escritorio</string>
+      <string id="Part_BidirectionalContentRedirectionVDAURLs">Direcciones URL permitidas para redirigir al VDA:</string>
+      <string id="Part_BidirectionalContentRedirectionClientURLs">Direcciones URL permitidas para redirigir al cliente:</string>
+      <string id="Policy_BidirectionalContentRedirectionOverrides">Anulaciones de redireccionamiento de contenido bidireccional</string>
+      <string id="Explain_BidirectionalContentRedirectionOverrides">Las anulaciones de redireccionamiento de contenido bidireccional son anulaciones específicas de URL que se aplican a la función de redireccionamiento de contenido bidireccional.
+- Reemplazo de aplicaciones o escritorios publicados con direcciones URL específicas: Esto indica el reemplazo con direcciones URL específicas para Nombre de la aplicación/escritorio publicado.  El nombre de &quot;Valor&quot; debe coincidir exactamente con una entrada de la lista &quot;Direcciones URL permitidas para redirigir al VDA&quot;, y &quot;Valor&quot; especificará un nombre de aplicación/escritorio publicado específico para la URL en cuestión.
+</string>
+      <string id="Part_BidirectionalContentRedirectionVDAAppOverrides">Reemplazo de aplicaciones o escritorios publicados con direcciones URL específicas:</string>
+	  <string id="Dir_AutoUpdate">Actualizaciones de Citrix Workspace</string>
+	  <string id="MinusOne">-1</string>
+	  <string id="Zero">0</string>
+	  <string id="One">1</string>
+	  <string id="Two">2</string>
+	  <string id="Three">3</string>
+	  <string id="Four">4</string>
+	  <string id="Five">5</string>
+	  <string id="Six">6</string>
+	  <string id="Seven">7</string>
+	  <string id="Eight">8</string>
+	  <string id="Nine">9</string>
+	  <string id="Ten">10</string>
+	  <string id="Eleven">11</string>
+	  <string id="Twelve">12</string>
+	  <string id="Thirteen">13</string>
+	  <string id="Fourteen">14</string>
+	  <string id="Fifteen">15</string>
+	  <string id="Sixteen">16</string>
+	  <string id="Seventeen">17</string>
+	  <string id="Eighteen">18</string>
+	  <string id="Nineteen">19</string>
+	  <string id="Twenty">20</string>
+	  <string id="TwentyOne">21</string>
+	  <string id="TwentyTwo">22</string>
+	  <string id="TwentyThree">23</string>
+	  <string id="TwentyFour">24</string>
+	  <string id="TwentyFive">25</string>
+	  <string id="TwentySix">26</string>
+	  <string id="TwentySeven">27</string>
+	  <string id="TwentyEight">28</string>
+	  <string id="TwentyNine">29</string>
+	  <string id="Thirty">30</string>
+	  <string id="POL_CONFIGURE_LAN_PROXY_MANUALLY">Configurar el proxy NetScaler LAN manualmente</string>
+      <string id="POL_CONFIGURE_LAN_PROXY_DLL">Configurar el proxy NetScaler LAN con DLL</string>
+	  <string id="CitrixSecureBrowser">Citrix Secure Browser</string>
+	  <string id="Explain_CitrixSecureBrowser">Citrix Secure Browser se utiliza para conectarse a aplicaciones SaaS.</string>
+	  <string id="CitrixSecureBrowser_Cache">Caché</string>
+	  <string id="Explain_CitrixSecureBrowser_Cache">Utilice esta directiva para habilitar/inhabilitar el caché del explorador.
+De forma predeterminada, el almacenamiento en caché está habilitado.
+
+Cuando se habilita, las cookies y los recursos del explorador se almacenan en caché en el disco local.
+Cuando se inhabilitan las cookies y los recursos del explorador no se almacenan.
+	  </string>
+	  <string id="AppProtectionAdvanced">Protección de aplicaciones - Avanzada</string>
+	  <string id="Explain_AppProtectionAdvanced">Esta directiva ofrece una seguridad adicional al verificar la firma de todos los módulos de la aplicación Citrix Workspace. Además, protege estos módulos de ataques de inyección DLL.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="Policy_EnableICAClient">
+        <checkBox defaultChecked="true" refId="Part_EnableICAClient_Enable">Habilitar cliente</checkBox>
+        <decimalTextBox defaultValue="10000" refId="Part_EnableICAClient_Minimum">Versión mínima del cliente</decimalTextBox>
+      </presentation>
+      <presentation id="Storefronts">
+        <listBox refId="Storefronts_Part">Introduzca los datos de cuentas de StoreFront o de NetScaler Gateway aquí:</listBox>
+      </presentation>
+      <presentation id="Policy_ProxyLockdown">
+        <comboBox refId="Part_Proxy_ProxyTypeLockdown">
+          <label>Tipo de proxy</label>
+          <suggestion>Automático</suggestion>
+          <suggestion>Ninguno</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Seguro</suggestion>
+          <suggestion>Script</suggestion>
+        </comboBox>
+        <textBox refId="Part_Proxy_ProxyHostLockdown">
+          <label>Nombres de host de proxy</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyPortLockdown">
+          <label>Puertos de proxy</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyAutoConfigUrlLockdown">
+          <label>Direcciones URL de scripts de proxy</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyBypassListLockdown">
+          <label>Lista de omisión de servidores</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_AltProxyLockdown">
+        <comboBox refId="Part_AltProxy_ProxyTypeLockdown">
+          <label>Tipo de proxy</label>
+          <suggestion>Automático</suggestion>
+          <suggestion>Ninguno</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Seguro</suggestion>
+          <suggestion>Script</suggestion>
+        </comboBox>
+        <textBox refId="Part_AltProxy_ProxyHostLockdown">
+          <label>Nombres de host de proxy</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyPortLockdown">
+          <label>Puertos de proxy</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyAutoConfigUrlLockdown">
+          <label>Direcciones URL de scripts de proxy</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyBypassListLockdown">
+          <label>Lista de omisión de servidores</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_AltProxy_ProxyFallbackLockdown">Recurrir a conexión directa</checkBox>
+      </presentation>
+      <presentation id="Policy_ProxySocks">
+        <dropdownList defaultItem="1" refId="Part_ProxySocks_Version">Versión del protocolo SOCKS</dropdownList>
+        <textBox refId="Part_ProxySocks_ProxyHostLockdown">
+          <label>Nombres de host de proxy</label>
+        </textBox>
+        <textBox refId="Part_ProxySOCKS_ProxyPortLockdown">
+          <label>Puertos de proxy</label>
+        </textBox>
+      </presentation>
+	  <presentation id="Policy_EnableAutoUpdatePolicy">
+        <dropdownList defaultItem="0" refId="Part_EnableAutoUpdatePolicy">Directiva para habilitar la actualización de Citrix Workspace</dropdownList>
+        <checkBox defaultChecked="false" refId="Part_EnableAutoUpdatePolicy_version">SOLO LTSR</checkBox>
+		<dropdownList defaultItem="0" noSort="true" refId="Part_EnableAutoUpdatePolicy_RemindMeLater">Citrix-Workspace-Update-DeferUpdate-Count</dropdownList>
+      </presentation>
+	  <presentation id="Policy_CheckAutoUpdatePolicy">
+        <dropdownList defaultItem="0" refId="Part_CheckAutoUpdatePolicy">Demorar grupo</dropdownList>
+      </presentation>
+      <presentation id="Policy_ProxyAuthentication">
+        <checkBox defaultChecked="true" refId="Policy_ProxyExplicitAuthenticationEnabled">Pedir credenciales al usuario</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyBasicAuthenticationEnabled">Permitir autenticación en texto no cifrado</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyNTLMAuthenticationEnabled">Permitir autenticación con hash NTLM</checkBox>
+        <textBox refId="Part_Proxy_Socks5User">
+          <label>Nombre de usuario explícito</label>
+        </textBox>
+        <textBox refId="Part_Proxy_Socks5Password">
+          <label>Contraseña explícita</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_SSLLockdown">
+        <checkBox defaultChecked="true" refId="Part_SSL_EnabledLockdown">Requerir TLS para todas las conexiones</checkBox>
+		<dropdownList defaultItem="0" refId="Part_SSL_SecurityComplianceMode">Modo de conformidad para la seguridad</dropdownList>
+        <comboBox refId="Part_SSL_SSLProxyHostLockdown">
+          <label>Servidores TLS permitidos</label>
+          <suggestion>*:443</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_SSL_SSLProtocolLockdown">Versión de TLS</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_SSL_CiphersetLockdown">Conjunto de cifrado TLS</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_SSL_RevocationLockdown">Directiva de comprobación de revocación de certificados</dropdownList>
+        <comboBox refId="Part_SSL_SSLPolicyOID">
+          <label>OID de extensión de directiva</label>
+          <suggestion>2.5.29.32.0</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="2" refId="Part_SSL_ClientAuthentication">Autenticación del cliente</dropdownList>
+        <comboBox refId="Part_SSL_ClientCertificate">
+          <label>Certificado del cliente</label>
+          <suggestion/>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ConfigureClientSelectiveTrust">
+        <checkBox defaultChecked="true" refId="Part_EnableClientSelectiveTrust">Aplicar configuración de servidor de confianza</checkBox>
+        <comboBox refId="Part_ConfigureClientSelectiveTrust_IEZone">
+          <label>Zona de Internet de Windows</label>
+          <suggestion>De confianza</suggestion>
+          <suggestion>De confianza,Intranet</suggestion>
+        </comboBox>
+        <comboBox refId="Part_ConfigureClientSelectiveTrust_EffectiveAddress">
+          <label>Dirección</label>
+          <suggestion>*.finance.citrix.com,*.sales.citrix.com</suggestion>
+          <suggestion>cps*.citrix.com</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ClientAutoReconnect">
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_Reconnect">Habilitar la reconexión automática</checkBox>
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_CGP">Habilitar la fiabilidad de la sesión (tiene preferencia si se seleccionan ambas)</checkBox>
+		<decimalTextBox defaultValue="80" refId="Part_ClientAutoReconnect_Dimming">Nivel de transparencia</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_Smartcard">
+        <checkBox defaultChecked="true" refId="Part_Smartcard_Enable">Habilitar la autenticación con tarjeta inteligente</checkBox>
+        <checkBox refId="Part_SmartcardPin_Enable">Usar autenticación PassThrough para el PIN</checkBox>
+      </presentation>
+      <presentation id="Policy_KerberosLockdown"/>
+      <presentation id="Policy_SSONForNSG"/>
+      <presentation id="Policy_LocalCredentialsLockdown">
+        <checkBox defaultChecked="true" refId="Part_LocalCredentialsLockdown_Enable">Habilitar autenticación PassThrough</checkBox>
+        <checkBox refId="Part_LegacyLocalUserNameAndPassword_Enable">Permitir autenticación PassThrough para todas las conexiones ICA</checkBox>
+        <checkBox refId="Part_NovellCredentials">Usar credenciales de Novell Directory Server</checkBox>
+      </presentation>
+      <presentation id="Policy_WITicket">
+        <checkBox defaultChecked="true" refId="Part_WITicket_Legacy_Enable">Gestión de tiquets antiguos</checkBox>
+        <checkBox defaultChecked="true" refId="Part_WITicket_LogonTicket_Enable">Interfaz Web 4.5 y versiones posteriores</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableDriveMapping">
+        <checkBox defaultChecked="true" refId="Part_EnableDriveMappingCheckbox">Habilitar asignación de unidades del cliente</checkBox>
+        <checkBox refId="Part_EnableDriveMappingReadonly">Unidades de cliente de solo lectura</checkBox>
+        <comboBox refId="Part_EnableDriveMappingDisableDrives">
+          <label>No asignar unidades</label>
+          <suggestion>C</suggestion>
+          <suggestion>ABCDEFGHIJKLMNOPQRSTUVWXYZ</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_EnablePrinterMapping"/>
+      <presentation id="Policy_LocalPort">
+        <textBox refId="Part_MaxPort">
+          <label>Cantidad máxima de puertos serie</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_EnableSerialPortCheckbox">Asignar puertos serie</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableVirtualSerialPortCheckbox">Permitir sincronización de PDA</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableParallelPortCheckbox">Asignar puertos paralelos</checkBox>
+      </presentation>
+      <presentation id="Policy_ImageCapture"/>
+      <presentation id="Policy_AudioInput">
+        <checkBox defaultChecked="true" refId="Part_BiDiAudio_Enable">Habilitar micrófono del cliente</checkBox>
+      </presentation>
+      <presentation id="Policy_Clipboard"/>
+      <presentation id="Policy_USB_PNP_Devices"/>
+      <presentation id="Policy_PointOfSales"/>
+	  <presentation id="Policy_Foreground_Progress_Bar"/>
+	  <presentation id="Policy_HWacceleration"/>
+        <presentation id="Policy_EnableH265"/>
+      <presentation id="Policy_Audio">
+        <checkBox defaultChecked="true" refId="Part_Audio_Enabled">Habilitar audio</checkBox>
+        <dropdownList defaultItem="0" refId="Part_Audio_Quality">Calidad del audio</dropdownList>
+        <checkBox refId="Part_RealtimeTransport_Enabled">Habilitar transporte en tiempo real</checkBox>
+        <decimalTextBox defaultValue="16500" refId="Part_RtpAudioLowestPort" spinStep="2">Número de puerto más bajo</decimalTextBox>
+        <decimalTextBox defaultValue="16509" refId="Part_RtpAudioHighestPort" spinStep="2">Número de puerto más alto</decimalTextBox>
+        <checkBox refId="Part_RealtimeTransportThroughGateway_Enabled">Permitir transporte en tiempo real a través de NetScaler Gateway</checkBox>
+      </presentation>
+      <presentation id="Policy_Graphics">
+        <dropdownList defaultItem="1" refId="Part_Graphics_ColorDepth">Profundidad de color</dropdownList>
+        <checkBox refId="Part_Graphics_DiskCache">Caché de disco</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ImageAcceleration">Compresión con pérdida</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowser">Aceleración de explorador HDX 3D</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowserCompression">Aceleración de explorador HDX 3D: Compresión con pérdida</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenMultimedia">Vídeo remoto</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyKeyboard">Reducción de latencia SpeedScreen: Repetición local del texto</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyMouse">Reducción de latencia SpeedScreen: Predicción del puntero</checkBox>
+      </presentation>
+      <presentation id="Policy_Display">
+        <comboBox refId="Part_Display_Seamless">
+          <label>Ventanas integradas</label>
+		  <default/>
+          <suggestion>Verdadero</suggestion>
+          <suggestion>Falso</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Width">
+          <label>Anchura de la ventana</label>
+		  <default/>
+         <suggestion>1024-</suggestion>
+         <suggestion>800-</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Height">
+          <label>Altura de la ventana</label>
+		  <default/>
+         <suggestion>734-</suggestion>
+         <suggestion>600-</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_Display_Percent">Porcentaje de la ventana</dropdownList>
+        <comboBox refId="Part_Display_WorkArea">
+          <label>Reducir el área de trabajo</label>
+		  <default/>
+          <suggestion>5</suggestion>
+        </comboBox>
+        <checkBox refId="Part_Display_FullScreen">Pantalla completa</checkBox>
+      </presentation>
+      <presentation id="Policy_Dpi">
+       <dropdownList defaultItem="0" refId="scaling_option">¿Ajustar la escala de la sesión para alta resolución?</dropdownList>
+     </presentation>
+      <presentation id="Policy_LocalAppAccess">
+        <checkBox refId="Part_Allow_URLRedirection">Permitir redirección de URL</checkBox>
+      </presentation>
+      <presentation id="Policy_Keyboard_Hotkeys">
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Windows_Key">Tecla Windows:</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Tasklist">Lista de tareas:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Tasklist_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Close_Remote_Application">Cerrar aplicación:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar">Cambiar modo de pantalla completa:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Supr:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">Administrador de tareas:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</dropdownList>
+        <dropdownList defaultItem="11" refId="Part_Keyboard_Hotkey_Alt_Tab_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Mayús-Tab:</dropdownList>
+        <dropdownList defaultItem="12" refId="Part_Keyboard_Hotkey_Alt_Backtab_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">Reducción de latencia:</dropdownList>
+        <dropdownList defaultItem="8" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">+</dropdownList>
+		<dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME">Modo IME genérico:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">+</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishedApplications">
+        <comboBox refId="Part_PublishedApplications_InitialProgram">
+          <label>Aplicación</label>
+          <suggestion>#Notepad</suggestion>
+          <suggestion>#*</suggestion>
+        </comboBox>
+        <checkBox defaultChecked="true" refId="Part_PublishedApplications_SessionSharing">Sesiones compartidas</checkBox>
+      </presentation>
+      <presentation id="Policy_HostRenderedAudio"/>
+      <presentation id="Policy_ICAFileSettings">
+        <checkBox defaultChecked="true" refId="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</checkBox>
+      </presentation>
+      <presentation id="Policy_ExtraURLProtocols">
+        <textBox refId="Part_ExtraURLProtocols">
+          <label>Protocolos de URL adicionales</label>
+        </textBox>
+      </presentation>
+	  <presentation id="Policy_EngineErrMsg" />
+      <presentation id="Polciy_CEIP" />
+	  <presentation id="AppProtectionAdvanced" />
+      <presentation id="Polciy_CEIP_Configuration">
+        <textBox refId="Part_CEIP_ServerURL">
+          <label>URL del servidor CEIP</label>
+		  <defaultValue>https://rttf.citrix.com</defaultValue>
+        </textBox>
+        <textBox refId="Part_CEIP_UploadClass">
+          <label>Clase de carga de CEIP</label>
+		  <defaultValue>callhome_analytics</defaultValue>
+        </textBox>
+        <decimalTextBox defaultValue="1" refId="Part_CEIP_UploadFrequencyInWeeks">Frecuencia de inicialización de la carga de CEIP (en semanas)</decimalTextBox>
+        <checkBox refId="Part_AllowUnSecureURL">Permitir URL no segura (http en lugar de https)</checkBox>
+      </presentation>
+      <presentation id="Policy_BidirectionalContentRedirection">
+        <textBox refId="Part_BidirectionalContentRedirectionPubAppOrDesktopName">
+            <label>Nombre de la aplicación/escritorio publicado:</label>
+        </textBox>
+        <dropdownList defaultItem="0" refId="Part_BidirectionalContentRedirectionPubNameType">Tipo de recurso publicado:</dropdownList>
+        <textBox refId="Part_BidirectionalContentRedirectionVDAURLs">
+            <label>Direcciones URL permitidas para redirigir al VDA:</label>
+        </textBox>
+        <textBox refId="Part_BidirectionalContentRedirectionClientURLs">
+            <label>Direcciones URL permitidas para redirigir al cliente:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_BidirectionalContentRedirectionOverrides">
+        <listBox refId="Part_BidirectionalContentRedirectionVDAAppOverrides">Reemplazo de aplicaciones o escritorios publicados con direcciones URL específicas:</listBox>
+      </presentation>
+      <presentation id="Policy_AlwaysOn"/>
+      <presentation id="Policy_FedRAMP"/>
+      <presentation id="Policy_PublishSafeContent">
+        <dropdownList defaultItem="0" refId="Pick_Publish_SafeContent">Elija si quiere permitir o impedir que los usuarios publiquen contenido seguro.</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishUnsafeContent">
+        <dropdownList defaultItem="1" refId="Pick_Publish_UnsafeContent">Elija si quiere permitir o impedir que los usuarios publiquen contenido no seguro.</dropdownList>
+      </presentation>
+	  <presentation id="Policy_EnableFTU"/>
+        <presentation id="Policy_EnableNPS"/>
+	  <presentation id="Policy_Vprefer">
+	    <dropdownList defaultItem="1" refId="Allowed_Apps">Permitir</dropdownList>
+	  </presentation>
+      <presentation id="Policy_EnableFTA"/>
+      <presentation id="Policy_EnableDefaultFTA"/>
+	  <presentation id="Policy_HideAdvancePreferencesOptions"/>	  
+	  <presentation id="Policy_SmartcardRemovalAction"/>
+	  <presentation id="Policy_HideSettings">
+		<dropdownList defaultItem="2" refId="Pick_UI_display">Elija la presentación adecuada de la interfaz de usuario de parámetros.</dropdownList>
+	  </presentation>
+      <presentation id="Policy_SelfServiceMode_Enable"/>
+      <presentation id="Policy_EnableAppShortCut">
+        <textBox refId="Part_StartMenuDir_Text">
+          <label>Directorio en el menú Inicio</label>
+		  <defaultValue>Citrix</defaultValue>
+        </textBox>
+        <textBox refId="Part_DesktopDir_Text">
+          <label>Directorio en el escritorio</label>
+		  <defaultValue>Citrix</defaultValue>
+        </textBox>
+        <checkBox refId="Part_StartMenuShortcut_Disable">Inhabilitar accesos directos del menú Inicio</checkBox>
+        <checkBox refId="Part_DesktopShortcut_Enable">Habilitar accesos directos de escritorio</checkBox>
+        <checkBox refId="Part_UseCategoryAsStartMenuPath_Disable">Inhabilitar ruta de categoría para el menú Inicio</checkBox>
+		<checkBox refId="Part_UseCategoryAsDesktopPath_Enable">Habilitar ruta de categoría para el escritorio</checkBox>
+		<checkBox refId="Part_UseDifferentPathsforStartmenuAndDesktop_Enable">Habilítelo para tener una ruta de categoría diferente para el escritorio y para el menú Inicio. Inhabilítelo si quiere unificar la ruta de categoría del escritorio y del menú Inicio</checkBox>
+        <checkBox refId="Part_RemoveAppsOnLogoff_Enable">Quitar aplicaciones al cerrar la sesión</checkBox>
+        <checkBox refId="Part_RemoveAppsOnExit_Enable">Quitar aplicaciones al salir</checkBox>
+		<checkBox refId="Part_ClearAppListOnLogoff_Enable">Borrar el conjunto de aplicaciones de la ventana de Citrix Workspace al cerrar la sesión</checkBox>
+        <checkBox refId="Part_SuppressRefreshOnStartup_Enable">Impedir que Citrix Workspace actualice la lista de aplicaciones al abrirlo.</checkBox>
+        <checkBox refId="Part_AllAppsAreMandatory_Enable">Ignorar el autoservicio de selección de aplicaciones y hacerlas todas obligatorias. Si Citrix Workspace está funcionando con un servicio de PNAgent, será necesario hacer esto para que todas las aplicaciones se agreguen automáticamente. Si Citrix Workspace está funcionando con una tienda de StoreFront, haga el cambio en el servidor StoreFront para hacer la tienda obligatoria. (Este parámetro no es aplicable actualmente para tiendas de StoreFront).</checkBox>
+      </presentation>
+      <presentation id="Policy_AddAccounts"/>
+      <presentation id="Policy_EnablePreLaunch"/>
+      <presentation id="Policy_ReconnectMode">
+        <dropdownList defaultItem="4" refId="Pick_ReconnectMode">Elija la combinación de condiciones de reconexión apropiada.</dropdownList>
+      </presentation>
+      <presentation id="Policy_FastConnectAPI_Support">
+        <checkBox defaultChecked="true" refId="Explain_FastConnectAPI_Functionality">Habilitar la funcionalidad de la API de Fast Connect</checkBox>
+        <checkBox refId="Explain_EnableFastConnectTransitionAPI">Habilitar la API de transición de Fast Connect</checkBox>
+        <checkBox refId="Explain_LeaveAppsRuningOnLogoff">Dejar las aplicaciones ejecutándose al cerrar la sesión</checkBox>
+        <checkBox refId="Explain_FastConnectUsingSSP">Integrar Self-Service Plug-in con Fast Connect</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableICAClient_1">
+        <checkBox defaultChecked="true" refId="Part_EnableICAClient_Enable">Habilitar cliente</checkBox>
+        <decimalTextBox defaultValue="10000" refId="Part_EnableICAClient_Minimum">Versión mínima del cliente</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_ProxyLockdown_1">
+        <comboBox refId="Part_Proxy_ProxyTypeLockdown">
+          <label>Tipo de proxy</label>
+          <suggestion>Automático</suggestion>
+          <suggestion>Ninguno</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Seguro</suggestion>
+          <suggestion>Script</suggestion>
+        </comboBox>
+        <textBox refId="Part_Proxy_ProxyHostLockdown">
+          <label>Nombres de host de proxy</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyPortLockdown">
+          <label>Puertos de proxy</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyAutoConfigUrlLockdown">
+          <label>Direcciones URL de scripts de proxy</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyBypassListLockdown">
+          <label>Lista de omisión de servidores</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_AltProxyLockdown_1">
+        <comboBox refId="Part_AltProxy_ProxyTypeLockdown">
+          <label>Tipo de proxy</label>
+          <suggestion>Automático</suggestion>
+          <suggestion>Ninguno</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Seguro</suggestion>
+          <suggestion>Script</suggestion>
+        </comboBox>
+        <textBox refId="Part_AltProxy_ProxyHostLockdown">
+          <label>Nombres de host de proxy</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyPortLockdown">
+          <label>Puertos de proxy</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyAutoConfigUrlLockdown">
+          <label>Direcciones URL de scripts de proxy</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyBypassListLockdown">
+          <label>Lista de omisión de servidores</label>
+        </textBox>
+        <comboBox refId="Part_AltProxy_ProxyFallbackLockdown">
+          <label>Recurrir a conexión directa</label>
+          <suggestion>falso</suggestion>
+          <suggestion>verdadero</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ProxySocks_1">
+        <dropdownList defaultItem="1" refId="Part_ProxySocks_Version">Versión del protocolo SOCKS</dropdownList>
+        <textBox refId="Part_ProxySocks_ProxyHostLockdown">
+          <label>Nombres de host de proxy</label>
+        </textBox>
+        <textBox refId="Part_ProxySOCKS_ProxyPortLockdown">
+          <label>Puertos de proxy</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_ProxyAuthentication_1">
+        <checkBox defaultChecked="true" refId="Policy_ProxyExplicitAuthenticationEnabled">Pedir credenciales al usuario</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyBasicAuthenticationEnabled">Permitir autenticación en texto no cifrado</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyNTLMAuthenticationEnabled">Permitir autenticación con hash NTLM</checkBox>
+        <textBox refId="Part_Proxy_Socks5User">
+          <label>Nombre de usuario explícito</label>
+        </textBox>
+        <textBox refId="Part_Proxy_Socks5Password">
+          <label>Contraseña explícita</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_SSLLockdown_1">
+        <checkBox defaultChecked="true" refId="Part_SSL_EnabledLockdown">Requerir TLS para todas las conexiones</checkBox>
+		<dropdownList defaultItem="0" refId="Part_SSL_SecurityComplianceMode">Modo de conformidad para la seguridad</dropdownList>
+        <comboBox refId="Part_SSL_SSLProxyHostLockdown">
+          <label>Servidores TLS permitidos</label>
+          <suggestion>*:443</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_SSL_SSLProtocolLockdown">Versión de TLS</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_SSL_CiphersetLockdown">Conjunto de cifrado TLS</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_SSL_RevocationLockdown">Directiva de comprobación de revocación de certificados</dropdownList>
+        <comboBox refId="Part_SSL_SSLPolicyOID">
+          <label>OID de extensión de directiva</label>
+          <suggestion>2.5.29.32.0</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="2" refId="Part_SSL_ClientAuthentication">Autenticación del cliente</dropdownList>
+        <comboBox refId="Part_SSL_ClientCertificate">
+          <label>Certificado del cliente</label>
+          <suggestion/>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ConfigureClientSelectiveTrust_1">
+        <checkBox defaultChecked="true" refId="Part_EnableClientSelectiveTrust">Aplicar configuración de servidor de confianza</checkBox>
+      </presentation>
+      <presentation id="Policy_ClientAutoReconnect_1">
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_Reconnect">Habilitar la reconexión automática</checkBox>
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_CGP">Habilitar la fiabilidad de la sesión (tiene preferencia si se seleccionan ambas)</checkBox>
+		<decimalTextBox defaultValue="80" refId="Part_ClientAutoReconnect_Dimming">Nivel de transparencia</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_Smartcard_1">
+        <checkBox defaultChecked="true" refId="Part_Smartcard_Enable">Habilitar la autenticación con tarjeta inteligente</checkBox>
+        <checkBox refId="Part_SmartcardPin_Enable">Usar autenticación PassThrough para el PIN</checkBox>
+      </presentation>
+      <presentation id="Policy_KerberosLockdown_1"/>
+      <presentation id="Policy_LocalCredentialsLockdown_1">
+        <checkBox defaultChecked="true" refId="Part_LocalCredentialsLockdown_Enable">Habilitar autenticación PassThrough</checkBox>
+        <checkBox refId="Part_LegacyLocalUserNameAndPassword_Enable">Permitir autenticación PassThrough para todas las conexiones ICA</checkBox>
+        <checkBox refId="Part_NovellCredentials">Usar credenciales de Novell Directory Server</checkBox>
+      </presentation>
+      <presentation id="Policy_WITicket_1">
+        <checkBox defaultChecked="true" refId="Part_WITicket_Legacy_Enable">Gestión de tiquets antiguos</checkBox>
+        <checkBox defaultChecked="true" refId="Part_WITicket_LogonTicket_Enable">Interfaz Web 4.5 y versiones posteriores</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableDriveMapping_1">
+        <checkBox defaultChecked="true" refId="Part_EnableDriveMappingCheckbox">Habilitar asignación de unidades del cliente</checkBox>
+        <checkBox refId="Part_EnableDriveMappingReadonly">Unidades de cliente de solo lectura</checkBox>
+        <comboBox refId="Part_EnableDriveMappingDisableDrives">
+          <label>No asignar unidades</label>
+          <suggestion>C</suggestion>
+          <suggestion>ABCDEFGHIJKLMNOPQRSTUVWXYZ</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_EnablePrinterMapping_1"/>
+      <presentation id="Policy_LocalPort_1">
+        <textBox refId="Part_MaxPort">
+          <label>Cantidad máxima de puertos serie</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_EnableSerialPortCheckbox">Asignar puertos serie</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableVirtualSerialPortCheckbox">Permitir sincronización de PDA</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableParallelPortCheckbox">Asignar puertos paralelos</checkBox>
+      </presentation>
+      <presentation id="Policy_ImageCapture_1"/>
+      <presentation id="Policy_AudioInput_1">
+        <checkBox defaultChecked="true" refId="Part_BiDiAudio_Enable">Habilitar micrófono del cliente</checkBox>
+      </presentation>
+      <presentation id="Policy_Clipboard_1"/>
+      <presentation id="Policy_USB_PNP_Devices_1"/>
+      <presentation id="Policy_PointOfSales_1"/>
+      <presentation id="Policy_Audio_1">
+        <checkBox defaultChecked="true" refId="Part_Audio_Enabled">Habilitar audio</checkBox>
+        <dropdownList defaultItem="0" refId="Part_Audio_Quality">Calidad del audio</dropdownList>
+        <checkBox refId="Part_RealtimeTransport_Enabled">Habilitar transporte en tiempo real</checkBox>
+        <decimalTextBox defaultValue="16500" refId="Part_RtpAudioLowestPort" spinStep="2">Número de puerto más bajo</decimalTextBox>
+        <decimalTextBox defaultValue="16509" refId="Part_RtpAudioHighestPort" spinStep="2">Número de puerto más alto</decimalTextBox>
+        <checkBox refId="Part_RealtimeTransportThroughGateway_Enabled">Permitir transporte en tiempo real a través de NetScaler Gateway</checkBox>
+      </presentation>
+      <presentation id="Policy_Graphics_1">
+        <dropdownList defaultItem="1" refId="Part_Graphics_ColorDepth">Profundidad de color</dropdownList>
+        <checkBox refId="Part_Graphics_DiskCache">Caché de disco</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ImageAcceleration">Compresión con pérdida</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowser">Aceleración de explorador HDX 3D</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowserCompression">Aceleración de explorador HDX 3D: Compresión con pérdida</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenMultimedia">Vídeo remoto</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyKeyboard">Reducción de latencia SpeedScreen: Repetición local del texto</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyMouse">Reducción de latencia SpeedScreen: Predicción del puntero</checkBox>
+      </presentation>
+      <presentation id="Policy_Display_1">
+        <comboBox refId="Part_Display_Seamless">
+          <label>Ventanas integradas</label>
+		  <default/>
+          <suggestion>Verdadero</suggestion>
+          <suggestion>Falso</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Width">
+          <label>Anchura de la ventana</label>
+		  <default/>
+          <suggestion>1024-</suggestion>
+          <suggestion>800-</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Height">
+          <label>Altura de la ventana</label>
+		  <default/>
+          <suggestion>734-</suggestion>
+          <suggestion>600-</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_Display_Percent">Porcentaje de la ventana</dropdownList>
+        <comboBox refId="Part_Display_WorkArea">
+          <label>Reducir el área de trabajo</label>
+		  <default/>
+          <suggestion>5</suggestion>
+        </comboBox>
+        <checkBox refId="Part_Display_FullScreen">Pantalla completa</checkBox>
+      </presentation>
+      <presentation id="Policy_LocalAppAccess_1">
+        <checkBox refId="Part_Allow_URLRedirection">Permitir redirección de URL</checkBox>
+      </presentation>
+      <presentation id="Policy_Keyboard_Hotkeys_1">
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Windows_Key">Tecla Windows:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Tasklist">Lista de tareas:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Tasklist_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Close_Remote_Application">Cerrar aplicación:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar">Cambiar modo de pantalla completa:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Supr:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">Administrador de tareas:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Tab_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Mayús-Tab:</dropdownList>
+        <dropdownList defaultItem="4" refId="Part_Keyboard_Hotkey_Alt_Backtab_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">Reducción de latencia:</dropdownList>
+        <dropdownList defaultItem="9" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">+</dropdownList>
+		<dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME">Modo IME genérico:</dropdownList>
+        <dropdownList defaultItem="8" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">+</dropdownList>
+      </presentation>
+	   <presentation id="Policy_ToggleFullScreen">
+        <dropdownList defaultItem="1" refId="Part_ToggleFullScreen_FirstKey">Personalizar cambio a pantalla completa:</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_ToggleFullScreen_SecondKey">+</dropdownList>
+		<dropdownList defaultItem="0" refId="Part_ToggleFullScreen_ThirdKey">+</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishedApplications_1">
+        <comboBox refId="Part_PublishedApplications_InitialProgram">
+          <label>Aplicación</label>
+          <suggestion>#Notepad</suggestion>
+          <suggestion>#*</suggestion>
+        </comboBox>
+        <checkBox defaultChecked="true" refId="Part_PublishedApplications_SessionSharing">Sesiones compartidas</checkBox>
+      </presentation>
+      <presentation id="Policy_HostRenderedAudio_1"/>
+      <presentation id="Policy_ICAFileSettings_1">
+        <checkBox defaultChecked="true" refId="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</checkBox>
+      </presentation>
+      <presentation id="Policy_AllowLegacySessionSharing">
+        <checkBox defaultChecked="true" refId="Part_AllowLegacySessionSharing_SessionSharing">AllowLegacySessionSharing</checkBox>
+      </presentation>
+	  
+	  <presentation id="EnableICAFileSigning">
+        <listBox refId="TrustedCertificates">Certificados de confianza</listBox>
+        <dropdownList defaultItem="0" refId="Securitypolicy">Directiva de seguridad:</dropdownList>
+		<checkBox refId="TrustedLaunchers">Inhabilitar para selectores de confianza</checkBox>
+      </presentation>
+	<presentation id="POL_CONFIGURE_LAN_PROXY_MANUALLY">
+        <textBox refId="TXT_PROXY_HOST">
+          <label>Host de proxy</label>
+        </textBox>
+		<decimalTextBox defaultValue="443" refId="TXT_PROXY_PORT">Host de proxy</decimalTextBox>
+      </presentation>
+      <presentation id="POL_CONFIGURE_LAN_PROXY_DLL">
+        <textBox refId="TXT_ProxyChooserDLL">
+          <label>Ruta de la DLL del selector de proxy</label>
+        </textBox>
+      </presentation>
+	  
+	<presentation id="EnableUSBForceRedirection">
+      </presentation>
+	  
+	 <presentation id="SplitDevices">
+      </presentation>
+	  <presentation id="DeviceRules">
+        <text>Lista de reglas de dispositivos USB separadas por punto y coma.</text>
+        <textBox refId="DeviceRules_Value">
+          <label>Reglas de dispositivos USB</label>
+        </textBox>
+      </presentation>
+      <presentation id="RemoveOnLock">
+	<text>Lista de dispositivos USB, separados por punto y coma, para quitar al bloquear.</text>
+	<textBox refId="RemoveOnLock_Value">
+	  <label>Quitar en bloqueo</label>
+	  <defaultValue>class=03 subclass=01 prot=01;class=03 subclass=01 prot=02;class=03 subclass=00 prot=01;class=03 subclass=00 prot=02</defaultValue>
+	</textBox>
+      </presentation>
+      <presentation id="ExistingDevices_Policy">
+        <dropdownList defaultItem="2" refId="ExistingDevices_Value">Cuando se abre el escritorio</dropdownList>
+      </presentation>
+      <presentation id="NewDevices_Policy">
+        <dropdownList defaultItem="2" refId="NewDevices_Value">Cuando se introduce un dispositivo USB</dropdownList>
+      </presentation>
+      <presentation id="HideSimpleDevices_Policy">
+        <checkBox defaultChecked="true" refId="HideSimpleDevices_Value">Ocultar dispositivos USB que se puedan conectar mediante otras tecnologías HDX</checkBox>
+      </presentation>
+      <presentation id="ExistingDevices_Policy_1">
+        <dropdownList defaultItem="2" refId="ExistingDevices_Value">Cuando se abre el escritorio</dropdownList>
+      </presentation>
+      <presentation id="NewDevices_Policy_1">
+        <dropdownList defaultItem="2" refId="NewDevices_Value">Cuando se introduce un dispositivo USB</dropdownList>
+      </presentation>
+      <presentation id="HideSimpleDevices_Policy_1">
+        <checkBox defaultChecked="true" refId="HideSimpleDevices_Value">Ocultar dispositivos USB que se puedan conectar mediante otras tecnologías HDX</checkBox>
+      </presentation>
+      <presentation id="RedirectUnknownDevices">       
+      </presentation>
+	  	  
+	  <presentation id="Policy_HDXoverUDP">
+		<dropdownList defaultItem="0" refId="refid_HDXoverUDP">Seleccionar protocolo de comunicación para Citrix Workspace</dropdownList>
+	  </presentation>
+	  
+	  <presentation id="Presentation_CitrixSecureBrowser_Cache"/>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

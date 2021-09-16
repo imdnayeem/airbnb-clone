@@ -1,0 +1,2098 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName/>
+  <description/>
+  <resources>
+    <stringTable>
+	
+	  <string id="Category_Citrix">Citrix-onderdelen</string>
+      <string id="Category_Citrix_Explanation">Dit groepsbeleid kan worden gebruikt om uw Citrix clients te beheren.</string>
+	  <string id="ClientDevices">Externe communicatie met clientapparaten</string>
+	  <string id="Explain_ClientDevices">Dit beleid bepaalt hoe de server toegang krijgt tot clientmachinebronnen.  De Citrix Workspace-app kan worden geconfigureerd om externe toepassingen toe te staan schijfstations, printers, enz. te gebruiken alsof ze op de clientmachine worden uitgevoerd.</string>
+	
+	  <string id="unknown_0">ICA-bestandsondertekening inschakelen</string>
+      <string id="unknown_16">Alleen ondertekende startacties toestaan ​​(veiliger)</string>
+      <string id="unknown_17">Gebruiker vragen bij niet-ondertekende startacties (minder veilig)</string>
+      <string id="Explain_IcaFileSigning">Met dit beleid kunt u ICA-bestandsondertekening inschakelen en configureren.</string>
+	
+	
+      <string id="GenericUSB">Externe communicatie via generieke USB</string>
+      <string id="DeviceRules">USB-apparaatregels</string>
+      <string id="DeviceRules_Explain">Wordt gebruikt om aan te geven welke USB-apparaten worden toegestaan ​​of geweigerd.
+
+Elke regel is niet hoofdlettergevoelig en heeft de indeling {Allow: | Deny:}, gevolgd door een aantal &lt;tag&gt;=&lt;value&gt;-kwalificaties. Meerdere regels moeten worden gescheiden door puntkomma's. Opmerkingen beginnen bij '#' en gaan door tot een puntkomma.
+
+Bijvoorbeeld, 'Allow: VID=1234 PID=5678 # Opmerking; Deny: Class=03'.
+
+Ondersteunde tags zijn VID, PID, REL, CLASS, SUBCLASS, PROT.</string>
+	  
+	<string id="RemoveOnLock">Verwijderen bij vergrendeling</string>
+	<string id="RemoveOnLock_Explain">Hiermee geeft u apparaten of klassen op die moeten worden verwijderd wanneer de clientmachine is vergrendeld. 
+	
+Syntaxis:
+Elk apparaat is niet hoofdlettergevoelig en heeft de indeling 
+VID=XXX PID=XX;VID=YYY PID=YY
+Elke klasse is niet hoofdlettergevoelig en heeft de indeling 
+class=XXX subclass=XX prot=X
+
+Voorbeeld:
+class=03 subclass=01 prot=01;VID=173E PID=0046
+
+Standaardgedrag:
+HID-toetsenborden en muis (class=03 subclass=01 prot=01;class=03 subclass=01 prot=02;class=03 subclass=00 prot=01;class=03 subclass=00 prot=02) worden verwijderd en automatisch omgeleid bij het vergrendelen en ontgrendelen van de client.
+	</string>
+	  <string id="SplitDevices">Apparaten splitsen</string>
+	  <string id="SplitDevices_Explain">Interfaces van samengestelde apparaat splitsen als afzonderlijke apparaten.</string>
+      <string id="DeviceRules_Tip1">Door puntkomma's gescheiden lijst met USB-apparaatregels.</string>
+      <string id="DeviceRules_Value">USB-apparaatregels</string>
+      <string id="RemoveOnLock_Value">Verwijderen bij vergrendeling</string>
+	  <string id="SplitDevices_Value">Apparaten splitsen</string>
+	  <string id="ExistingDevices_Policy">Bestaande USB-apparaten</string>
+      <string id="EnableUSBForceRedirection">EnableUSBForceRedirection</string>
+      <string id="EnableUSBForceRedirection_Explain">Staat automatisch afgedwongen omleiding van apparaten toe die in gebruik zijn op de client. </string>
+      <string id="EnableUSBForceRedirection_Value">EnableUSBForceRedirection_Value</string>
+      <string id="ExistingDevices_Explain">Kies wat er met beschikbare USB-apparaten gebeurt wanneer een sessie wordt gestart. Deze instelling overschrijft de voorkeur van de gebruiker.</string>
+      <string id="ExistingDevices_Value">Wanneer het bureaublad wordt gestart</string>
+      <string id="ExistingDevices_Always">Alle beschikbare USB-apparaten verbinden</string>
+      <string id="ExistingDevices_Ask">Bericht weergeven en de gebruiker laten kiezen</string>
+      <string id="ExistingDevices_Ignore">Niets doen</string>
+      <string id="NewDevices_Policy">Nieuwe USB-apparaten</string>
+      <string id="NewDevices_Explain">Kies wat er gebeurt wanneer een USB-apparaat tijdens een sessie wordt aangesloten. Deze instelling overschrijft de voorkeur van de gebruiker.</string>
+      <string id="NewDevices_Value">Wanneer een USB-apparaat wordt aangesloten</string>
+      <string id="NewDevices_Always">Het USB-apparaat verbinden</string>
+      <string id="NewDevices_Ask">Bericht weergeven en de gebruiker laten kiezen</string>
+      <string id="NewDevices_Ignore">Niets doen</string>
+      <string id="HideSimpleDevices_Policy">USB-apparatenlijst in Desktop Viewer</string>
+      <string id="HideSimpleDevices_Explain">Kies of USB-apparaten die met behulp van alternatieve HDX-technologieën kunnen worden verbonden, in de lijst met USB-apparaten moeten worden weergegeven.
+
+Apparaten die met andere HDX-technologieën kunnen worden verbonden zijn onder meer eenvoudige USB-stations, webcams, scanners, printers en audioapparaten.
+
+Deze instelling overschrijft de voorkeur van de gebruiker.</string>
+      <string id="HideSimpleDevices_Value">USB-apparaten die met behulp van andere HDX-technologieën kunnen worden verbonden, verbergen</string>
+      <string id="RedirectUnknownDevices">Onbekende USB-apparaten omleiden</string>
+      <string id="RedirectUnknownDevices_Explain">Omleiden van onbekende USB-apparaten toestaan/afwijzen.
+USB-apparaten waarvoor apparaatstuurprogramma's niet op het eindpunt zijn geïnstalleerd, worden als onbekende USB-apparaten in Windows Apparaatbeheer weergegeven.
+      </string>
+      <string id="RedirectUnknownDevices_Value">Onbekende USB-apparaten omleiden</string>
+
+      <string id="unknown_2">Uitgeschakeld</string>
+      <string id="unknown_4">Versie detecteren</string>
+      <string id="unknown_6">SOCKS v4</string>
+      <string id="unknown_8">SOCKS v5</string>
+      <string id="unknown_18">Versie detecteren</string>
+      <string id="unknown_20">TLS1.0 | TLS1.1 | TLS1.2</string>
+      <string id="unknown_24">Versie detecteren</string>
+      <string id="unknown_26">Overheid</string>
+      <string id="unknown_28">Commercieel</string>
+      <string id="unknown_30">Standaard</string>
+      <string id="unknown_32">Uitgeschakeld</string>
+      <string id="unknown_34">Alleen lokaal opgeslagen CRL's controleren</string>
+      <string id="unknown_36">CRL's van het netwerk ophalen</string>
+      <string id="unknown_38">CRL's vereisen voor verbinding</string>
+      <string id="unknown_40">Niet geconfigureerd</string>
+      <string id="unknown_42">Certificaatkiezer weergeven</string>
+      <string id="unknown_44">Uitgeschakeld</string>
+      <string id="unknown_46">Opgegeven certificaat gebruiken</string>
+      <string id="unknown_48">Automatisch selecteren indien mogelijk</string>
+      <string id="unknown_112">Hoog</string>
+      <string id="unknown_114">Gemiddeld</string>
+      <string id="unknown_116">Laag</string>
+      <string id="unknown_122">16-bits kleur</string>
+      <string id="unknown_124">32-bits kleur</string>
+      <string id="unknown_140"/>
+      <string id="unknown_142">50%</string>
+	  <string id="yes">Ja</string>
+	  <string id="no">Nee, gebruik de systeemeigen resolutie</string>
+      <string id="unknown_144">75%</string>
+      <string id="unknown_146">Andere</string>
+      <string id="unknown_158">Toegang tot lokaal bureaublad</string>
+      <string id="unknown_160">Toegang tot externe sessie</string>
+      <string id="unknown_162">Alleen toegang tot externe sessie in volledig scherm</string>
+      <string id="unknown_164">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_166">Alt</string>
+      <string id="unknown_168">Ctrl</string>
+      <string id="unknown_170">Shift</string>
+      <string id="unknown_172">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_174">F1</string>
+      <string id="unknown_176">F10</string>
+      <string id="unknown_178">F11</string>
+      <string id="unknown_180">F12</string>
+      <string id="unknown_182">F2</string>
+      <string id="unknown_184">F3</string>
+      <string id="unknown_186">F4</string>
+      <string id="unknown_188">F5</string>
+      <string id="unknown_190">F6</string>
+      <string id="unknown_192">F7</string>
+      <string id="unknown_194">F8</string>
+      <string id="unknown_196">F9</string>
+      <string id="unknown_198">min</string>
+      <string id="unknown_200">plus</string>
+      <string id="unknown_202">ster</string>
+      <string id="unknown_204">tab</string>
+      <string id="unknown_206">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_208">Alt</string>
+      <string id="unknown_210">Ctrl</string>
+      <string id="unknown_212">Shift</string>
+      <string id="unknown_214">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_216">F1</string>
+      <string id="unknown_218">F10</string>
+      <string id="unknown_220">F11</string>
+      <string id="unknown_222">F12</string>
+      <string id="unknown_224">F2</string>
+      <string id="unknown_226">F3</string>
+      <string id="unknown_228">F4</string>
+      <string id="unknown_230">F5</string>
+      <string id="unknown_232">F6</string>
+      <string id="unknown_234">F7</string>
+      <string id="unknown_236">F8</string>
+      <string id="unknown_238">F9</string>
+      <string id="unknown_240">min</string>
+      <string id="unknown_242">plus</string>
+      <string id="unknown_244">ster</string>
+      <string id="unknown_246">tab</string>
+      <string id="unknown_248">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_250">Alt</string>
+      <string id="unknown_252">Ctrl</string>
+      <string id="unknown_254">Shift</string>
+      <string id="unknown_256">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_258">F1</string>
+      <string id="unknown_260">F10</string>
+      <string id="unknown_262">F11</string>
+      <string id="unknown_264">F12</string>
+      <string id="unknown_266">F2</string>
+      <string id="unknown_268">F3</string>
+      <string id="unknown_270">F4</string>
+      <string id="unknown_272">F5</string>
+      <string id="unknown_274">F6</string>
+      <string id="unknown_276">F7</string>
+      <string id="unknown_278">F8</string>
+      <string id="unknown_280">F9</string>
+      <string id="unknown_282">min</string>
+      <string id="unknown_284">plus</string>
+      <string id="unknown_286">ster</string>
+      <string id="unknown_288">tab</string>
+      <string id="unknown_290">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_292">Alt</string>
+      <string id="unknown_294">Ctrl</string>
+      <string id="unknown_296">Shift</string>
+      <string id="unknown_298">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_300">F1</string>
+      <string id="unknown_302">F10</string>
+      <string id="unknown_304">F11</string>
+      <string id="unknown_306">F12</string>
+      <string id="unknown_308">F2</string>
+      <string id="unknown_310">F3</string>
+      <string id="unknown_312">F4</string>
+      <string id="unknown_314">F5</string>
+      <string id="unknown_316">F6</string>
+      <string id="unknown_318">F7</string>
+      <string id="unknown_320">F8</string>
+      <string id="unknown_322">F9</string>
+      <string id="unknown_324">min</string>
+      <string id="unknown_326">plus</string>
+      <string id="unknown_328">ster</string>
+      <string id="unknown_330">tab</string>
+      <string id="unknown_332">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_334">Alt</string>
+      <string id="unknown_336">Ctrl</string>
+      <string id="unknown_338">Shift</string>
+      <string id="unknown_340">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_342">F1</string>
+      <string id="unknown_344">F10</string>
+      <string id="unknown_346">F11</string>
+      <string id="unknown_348">F12</string>
+      <string id="unknown_350">F2</string>
+      <string id="unknown_352">F3</string>
+      <string id="unknown_354">F4</string>
+      <string id="unknown_356">F5</string>
+      <string id="unknown_358">F6</string>
+      <string id="unknown_360">F7</string>
+      <string id="unknown_362">F8</string>
+      <string id="unknown_364">F9</string>
+      <string id="unknown_366">min</string>
+      <string id="unknown_368">plus</string>
+      <string id="unknown_370">ster</string>
+      <string id="unknown_372">tab</string>
+      <string id="unknown_374">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_376">Alt</string>
+      <string id="unknown_378">Ctrl</string>
+      <string id="unknown_380">Shift</string>
+      <string id="unknown_382">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_384">F1</string>
+      <string id="unknown_386">F10</string>
+      <string id="unknown_388">F11</string>
+      <string id="unknown_390">F12</string>
+      <string id="unknown_392">F2</string>
+      <string id="unknown_394">F3</string>
+      <string id="unknown_396">F4</string>
+      <string id="unknown_398">F5</string>
+      <string id="unknown_400">F6</string>
+      <string id="unknown_402">F7</string>
+      <string id="unknown_404">F8</string>
+      <string id="unknown_406">F9</string>
+      <string id="unknown_408">min</string>
+      <string id="unknown_410">plus</string>
+      <string id="unknown_412">ster</string>
+      <string id="unknown_414">tab</string>
+      <string id="unknown_416">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_418">Alt</string>
+      <string id="unknown_420">Ctrl</string>
+      <string id="unknown_422">Shift</string>
+      <string id="unknown_424">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_426">F1</string>
+      <string id="unknown_428">F10</string>
+      <string id="unknown_430">F11</string>
+      <string id="unknown_432">F12</string>
+      <string id="unknown_434">F2</string>
+      <string id="unknown_436">F3</string>
+      <string id="unknown_438">F4</string>
+      <string id="unknown_440">F5</string>
+      <string id="unknown_442">F6</string>
+      <string id="unknown_444">F7</string>
+      <string id="unknown_446">F8</string>
+      <string id="unknown_448">F9</string>
+      <string id="unknown_450">min</string>
+      <string id="unknown_452">plus</string>
+      <string id="unknown_454">ster</string>
+      <string id="unknown_456">tab</string>
+      <string id="unknown_458">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_460">Alt</string>
+      <string id="unknown_462">Ctrl</string>
+      <string id="unknown_464">Shift</string>
+      <string id="unknown_466">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_468">F1</string>
+      <string id="unknown_470">F10</string>
+      <string id="unknown_472">F11</string>
+      <string id="unknown_474">F12</string>
+      <string id="unknown_476">F2</string>
+      <string id="unknown_478">F3</string>
+      <string id="unknown_480">F4</string>
+      <string id="unknown_482">F5</string>
+      <string id="unknown_484">F6</string>
+      <string id="unknown_486">F7</string>
+      <string id="unknown_488">F8</string>
+      <string id="unknown_490">F9</string>
+      <string id="unknown_492">min</string>
+      <string id="unknown_494">plus</string>
+      <string id="unknown_496">ster</string>
+      <string id="unknown_498">tab</string>
+      <string id="unknown_500">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_502">Alt</string>
+      <string id="unknown_504">Ctrl</string>
+      <string id="unknown_506">Shift</string>
+      <string id="unknown_508">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_510">F1</string>
+      <string id="unknown_512">F10</string>
+      <string id="unknown_514">F11</string>
+      <string id="unknown_516">F12</string>
+      <string id="unknown_518">F2</string>
+      <string id="unknown_520">F3</string>
+      <string id="unknown_522">F4</string>
+      <string id="unknown_524">F5</string>
+      <string id="unknown_526">F6</string>
+      <string id="unknown_528">F7</string>
+      <string id="unknown_530">F8</string>
+      <string id="unknown_532">F9</string>
+      <string id="unknown_534">min</string>
+      <string id="unknown_536">plus</string>
+      <string id="unknown_538">ster</string>
+      <string id="unknown_540">tab</string>
+      <string id="unknown_542">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_544">Alt</string>
+      <string id="unknown_546">Ctrl</string>
+      <string id="unknown_548">Shift</string>
+      <string id="unknown_550">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_552">F1</string>
+      <string id="unknown_554">F10</string>
+      <string id="unknown_556">F11</string>
+      <string id="unknown_558">F12</string>
+      <string id="unknown_560">F2</string>
+      <string id="unknown_562">F3</string>
+      <string id="unknown_564">F4</string>
+      <string id="unknown_566">F5</string>
+      <string id="unknown_568">F6</string>
+      <string id="unknown_570">F7</string>
+      <string id="unknown_572">F8</string>
+      <string id="unknown_574">F9</string>
+      <string id="unknown_576">min</string>
+      <string id="unknown_578">plus</string>
+      <string id="unknown_580">ster</string>
+      <string id="unknown_582">tab</string>
+      <string id="unknown_608">Uitgeschakeld</string>
+      <string id="unknown_610">Versie detecteren</string>
+      <string id="unknown_612">SOCKS v4</string>
+      <string id="unknown_614">SOCKS v5</string>
+      <string id="unknown_624">Versie detecteren</string>
+      <string id="unknown_626">TLS1.0 | TLS1.1 | TLS1.2</string>
+      <string id="unknown_630">Versie detecteren</string>
+      <string id="unknown_632">Overheid</string>
+      <string id="unknown_634">Commercieel</string>
+      <string id="unknown_636">Standaard</string>
+      <string id="unknown_638">Geen controle</string>
+      <string id="unknown_640">Controleren zonder netwerktoegang</string>
+      <string id="unknown_642">Volledige toegangscontrole</string>
+      <string id="unknown_644">Volledige toegangscontrole en CRL vereist</string>
+      <string id="unknown_646">Niet geconfigureerd</string>
+      <string id="unknown_648">Certificaatkiezer weergeven</string>
+      <string id="unknown_650">Uitgeschakeld</string>
+      <string id="unknown_652">Opgegeven certificaat gebruiken</string>
+      <string id="unknown_654">Automatisch selecteren indien mogelijk</string>
+	  <string id="unknown_656">Uitgeschakeld</string>
+      <string id="unknown_658">Starten</string>
+      <string id="unknown_660">Vernieuwen</string>
+      <string id="unknown_662">Starten, vernieuwen</string>
+      <string id="unknown_664">Openen</string>
+      <string id="unknown_666">Starten, openen</string>
+      <string id="unknown_668">Vernieuwen, openen</string>
+      <string id="unknown_670">Vernieuwen, openen, starten</string>
+      <string id="unknown_672">WinLogon</string>
+      <string id="unknown_674">WinLogon, starten</string>
+      <string id="unknown_676">WinLogon, vernieuwen</string>
+      <string id="unknown_678">WinLogon, vernieuwen, starten</string>
+      <string id="unknown_680">WinLogon, openen</string>
+      <string id="unknown_682">WinLogon, openen, starten</string>
+      <string id="unknown_684">WinLogon, openen, vernieuwen</string>
+      <string id="unknown_686">Alle opties</string>
+	  <string id="unknown_688">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_690">Alt</string>
+      <string id="unknown_692">Ctrl</string>
+      <string id="unknown_694">Shift</string>
+	  <string id="unknown_696">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_698">F1</string>
+      <string id="unknown_700">F10</string>
+      <string id="unknown_702">F11</string>
+      <string id="unknown_704">F12</string>
+      <string id="unknown_706">F2</string>
+      <string id="unknown_708">F3</string>
+      <string id="unknown_710">F4</string>
+      <string id="unknown_712">F5</string>
+      <string id="unknown_714">F6</string>
+      <string id="unknown_716">F7</string>
+      <string id="unknown_718">F8</string>
+      <string id="unknown_720">F9</string>
+	  <string id="unknown_722">min</string>
+	  <string id="unknown_724">plus</string>
+	  <string id="unknown_726">ster</string>
+	  <string id="unknown_728">tab</string>
+      <string id="unknown_715">Hoog</string>
+      <string id="unknown_717">Gemiddeld</string>
+      <string id="unknown_719">Laag</string>
+      <string id="unknown_725">16-bits kleur</string>
+      <string id="unknown_727">32-bits kleur</string>
+      <string id="unknown_743"/>
+      <string id="unknown_745">50%</string>
+      <string id="unknown_747">75%</string>
+      <string id="unknown_749">Andere</string>
+      <string id="unknown_761">Toegang tot lokaal bureaublad</string>
+      <string id="unknown_763">Toegang tot externe sessie</string>
+      <string id="unknown_765">Alleen toegang tot externe sessie in volledig scherm</string>
+      <string id="unknown_767">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_769">Shift</string>
+      <string id="unknown_771">Ctrl</string>
+      <string id="unknown_773">Alt</string>
+      <string id="unknown_775">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_777">tab</string>
+      <string id="unknown_779">ster</string>
+      <string id="unknown_781">plus</string>
+      <string id="unknown_783">min</string>
+      <string id="unknown_785">F1</string>
+      <string id="unknown_787">F2</string>
+      <string id="unknown_789">F3</string>
+      <string id="unknown_791">F4</string>
+      <string id="unknown_793">F5</string>
+      <string id="unknown_795">F6</string>
+      <string id="unknown_797">F7</string>
+      <string id="unknown_799">F8</string>
+      <string id="unknown_801">F9</string>
+      <string id="unknown_803">F10</string>
+      <string id="unknown_805">F11</string>
+      <string id="unknown_807">F12</string>
+      <string id="unknown_809">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_811">Shift</string>
+      <string id="unknown_813">Ctrl</string>
+      <string id="unknown_815">Alt</string>
+      <string id="unknown_817">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_819">tab</string>
+      <string id="unknown_821">ster</string>
+      <string id="unknown_823">plus</string>
+      <string id="unknown_825">min</string>
+      <string id="unknown_827">F1</string>
+      <string id="unknown_829">F2</string>
+      <string id="unknown_831">F3</string>
+      <string id="unknown_833">F4</string>
+      <string id="unknown_835">F5</string>
+      <string id="unknown_837">F6</string>
+      <string id="unknown_839">F7</string>
+      <string id="unknown_841">F8</string>
+      <string id="unknown_843">F9</string>
+      <string id="unknown_845">F10</string>
+      <string id="unknown_847">F11</string>
+      <string id="unknown_849">F12</string>
+      <string id="unknown_851">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_853">Shift</string>
+      <string id="unknown_855">Ctrl</string>
+      <string id="unknown_857">Alt</string>
+      <string id="unknown_859">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_861">tab</string>
+      <string id="unknown_863">ster</string>
+      <string id="unknown_865">plus</string>
+      <string id="unknown_867">min</string>
+      <string id="unknown_869">F1</string>
+      <string id="unknown_871">F2</string>
+      <string id="unknown_873">F3</string>
+      <string id="unknown_875">F4</string>
+      <string id="unknown_877">F5</string>
+      <string id="unknown_879">F6</string>
+      <string id="unknown_881">F7</string>
+      <string id="unknown_883">F8</string>
+      <string id="unknown_885">F9</string>
+      <string id="unknown_887">F10</string>
+      <string id="unknown_889">F11</string>
+      <string id="unknown_891">F12</string>
+      <string id="unknown_893">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_895">Shift</string>
+      <string id="unknown_897">Ctrl</string>
+      <string id="unknown_899">Alt</string>
+      <string id="unknown_901">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_903">tab</string>
+      <string id="unknown_905">ster</string>
+      <string id="unknown_907">plus</string>
+      <string id="unknown_909">min</string>
+      <string id="unknown_911">F1</string>
+      <string id="unknown_913">F2</string>
+      <string id="unknown_915">F3</string>
+      <string id="unknown_917">F4</string>
+      <string id="unknown_919">F5</string>
+      <string id="unknown_921">F6</string>
+      <string id="unknown_923">F7</string>
+      <string id="unknown_925">F8</string>
+      <string id="unknown_927">F9</string>
+      <string id="unknown_929">F10</string>
+      <string id="unknown_931">F11</string>
+      <string id="unknown_933">F12</string>
+      <string id="unknown_935">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_937">Shift</string>
+      <string id="unknown_939">Ctrl</string>
+      <string id="unknown_941">Alt</string>
+      <string id="unknown_943">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_945">tab</string>
+      <string id="unknown_947">ster</string>
+      <string id="unknown_949">plus</string>
+      <string id="unknown_951">min</string>
+      <string id="unknown_953">F1</string>
+      <string id="unknown_955">F2</string>
+      <string id="unknown_957">F3</string>
+      <string id="unknown_959">F4</string>
+      <string id="unknown_961">F5</string>
+      <string id="unknown_963">F6</string>
+      <string id="unknown_965">F7</string>
+      <string id="unknown_967">F8</string>
+      <string id="unknown_969">F9</string>
+      <string id="unknown_971">F10</string>
+      <string id="unknown_973">F11</string>
+      <string id="unknown_975">F12</string>
+      <string id="unknown_977">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_979">Shift</string>
+      <string id="unknown_981">Ctrl</string>
+      <string id="unknown_983">Alt</string>
+      <string id="unknown_985">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_987">tab</string>
+      <string id="unknown_989">ster</string>
+      <string id="unknown_991">plus</string>
+      <string id="unknown_993">min</string>
+      <string id="unknown_995">F1</string>
+      <string id="unknown_997">F2</string>
+      <string id="unknown_999">F3</string>
+      <string id="unknown_1001">F4</string>
+      <string id="unknown_1003">F5</string>
+      <string id="unknown_1005">F6</string>
+      <string id="unknown_1007">F7</string>
+      <string id="unknown_1009">F8</string>
+      <string id="unknown_1011">F9</string>
+      <string id="unknown_1013">F10</string>
+      <string id="unknown_1015">F11</string>
+      <string id="unknown_1017">F12</string>
+      <string id="unknown_1019">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_1021">Shift</string>
+      <string id="unknown_1023">Ctrl</string>
+      <string id="unknown_1025">Alt</string>
+      <string id="unknown_1027">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_1029">tab</string>
+      <string id="unknown_1031">ster</string>
+      <string id="unknown_1033">plus</string>
+      <string id="unknown_1035">min</string>
+      <string id="unknown_1037">F1</string>
+      <string id="unknown_1039">F2</string>
+      <string id="unknown_1041">F3</string>
+      <string id="unknown_1043">F4</string>
+      <string id="unknown_1045">F5</string>
+      <string id="unknown_1047">F6</string>
+      <string id="unknown_1049">F7</string>
+      <string id="unknown_1051">F8</string>
+      <string id="unknown_1053">F9</string>
+      <string id="unknown_1055">F10</string>
+      <string id="unknown_1057">F11</string>
+      <string id="unknown_1059">F12</string>
+      <string id="unknown_1061">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_1063">Shift</string>
+      <string id="unknown_1065">Ctrl</string>
+      <string id="unknown_1067">Alt</string>
+      <string id="unknown_1069">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_1071">tab</string>
+      <string id="unknown_1073">ster</string>
+      <string id="unknown_1075">plus</string>
+      <string id="unknown_1077">min</string>
+      <string id="unknown_1079">F1</string>
+      <string id="unknown_1081">F2</string>
+      <string id="unknown_1083">F3</string>
+      <string id="unknown_1085">F4</string>
+      <string id="unknown_1087">F5</string>
+      <string id="unknown_1089">F6</string>
+      <string id="unknown_1091">F7</string>
+      <string id="unknown_1093">F8</string>
+      <string id="unknown_1095">F9</string>
+      <string id="unknown_1097">F10</string>
+      <string id="unknown_1099">F11</string>
+      <string id="unknown_1101">F12</string>
+      <string id="unknown_1103">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_1105">Shift</string>
+      <string id="unknown_1107">Ctrl</string>
+      <string id="unknown_1109">Alt</string>
+      <string id="unknown_1111">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_1113">tab</string>
+      <string id="unknown_1115">ster</string>
+      <string id="unknown_1117">plus</string>
+      <string id="unknown_1119">min</string>
+      <string id="unknown_1121">F1</string>
+      <string id="unknown_1123">F2</string>
+      <string id="unknown_1125">F3</string>
+      <string id="unknown_1127">F4</string>
+      <string id="unknown_1129">F5</string>
+      <string id="unknown_1131">F6</string>
+      <string id="unknown_1133">F7</string>
+      <string id="unknown_1135">F8</string>
+      <string id="unknown_1137">F9</string>
+      <string id="unknown_1139">F10</string>
+      <string id="unknown_1141">F11</string>
+      <string id="unknown_1143">F12</string>
+      <string id="unknown_1145">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_1147">Shift</string>
+      <string id="unknown_1149">Ctrl</string>
+      <string id="unknown_1151">Alt</string>
+      <string id="unknown_1153">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_1155">tab</string>
+      <string id="unknown_1157">ster</string>
+      <string id="unknown_1159">plus</string>
+      <string id="unknown_1161">min</string>
+      <string id="unknown_1163">F1</string>
+      <string id="unknown_1165">F2</string>
+      <string id="unknown_1167">F3</string>
+      <string id="unknown_1169">F4</string>
+      <string id="unknown_1171">F5</string>
+      <string id="unknown_1173">F6</string>
+      <string id="unknown_1175">F7</string>
+      <string id="unknown_1177">F8</string>
+      <string id="unknown_1179">F9</string>
+      <string id="unknown_1181">F10</string>
+      <string id="unknown_1183">F11</string>
+      <string id="unknown_1185">F12</string>
+	  <string id="unknown_1187">GEEN</string>
+	  <string id="unknown_1189">FIPS</string>
+      <string id="unknown_1191">SP800-52</string>
+	  <string id="unknown_1195">Willekeurig</string>
+	  <string id="unknown_1197">TLS</string>
+	  <string id="unknown_1199">Gereguleerd (beveiligd)</string>
+	  <string id="unknown_1201">Willekeurig</string>
+	  <string id="unknown_1203">TLS1.2</string>
+	  <string id="unknown_1205">TLS1.1 | TLS1.2</string>
+	  <string id="unknown_1207">TLS1.0 | TLS1.1 | TLS1.2</string>
+	  <string id="unknown_1209">Volledige toegangscontrole en alle CRL vereist</string>	  
+	  <string id="unknown_1210">Tabblad toepassingsweergave uitschakelen</string>
+	  <string id="unknown_1211">Tabblad Opties voor opnieuw verbinden uitschakelen</string>
+	  <string id="unknown_1212">Hele gebruikersinterface uitschakelen</string>
+	  <string id="unknown_1213">A: Altijd</string>
+	  <string id="unknown_1214">S: Beveiligd</string>
+	  <string id="unknown_1215">N: Nooit</string>
+	  <string id="unknown_1217">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_1219">Shift</string>
+      <string id="unknown_1221">Ctrl</string>
+      <string id="unknown_1223">Alt</string>
+      <string id="unknown_1225">&lt;Uitgeschakeld&gt;</string>
+      <string id="unknown_1227">tab</string>
+      <string id="unknown_1229">ster</string>
+      <string id="unknown_1231">plus</string>
+      <string id="unknown_1233">min</string>
+      <string id="unknown_1235">F1</string>
+      <string id="unknown_1237">F2</string>
+      <string id="unknown_1239">F3</string>
+      <string id="unknown_1241">F4</string>
+      <string id="unknown_1243">F5</string>
+      <string id="unknown_1245">F6</string>
+      <string id="unknown_1247">F7</string>
+      <string id="unknown_1249">F8</string>
+      <string id="unknown_1251">F9</string>
+      <string id="unknown_1253">F10</string>
+      <string id="unknown_1255">F11</string>
+      <string id="unknown_1257">F12</string>
+      <string id="Policy_EnableAutoUpdatePolicy">Citrix Workspace-updates</string>
+      <string id="Explain_EnableAutoUpdatePolicy">Niet geconfigureerd: Citrix Workspace-updates is ingeschakeld.
+Ingeschakeld: Citrix Workspace-updates is ingeschakeld met de extra opties die in dit dialoogvenster worden vermeld.
+Uitgeschakeld: De optie Citrix Workspace-updates is verborgen op het tabblad Geavanceerde voorkeuren en u ontvangt geen updatemeldingen.
+
+Citrix Workspace-updatebeleid inschakelen:
+	Auto = Citrix Workspace controleert automatisch op updates. 
+	Handmatig = Gebruiker controleert handmatig op updates.
+	  
+ALLEEN LTSR: 
+	True = Alleen LTSR-updates zijn beschikbaar.
+Citrix-Workspace-Update-DeferUpdate-Count:
+	-1: Gebruiker kan een onbeperkt aantal keer uitstellen.
+	0: Gebruiker ziet de optie voor later herinneren niet.
+	getal: Gebruiker ziet de opties voor later herinneren met het opgegeven aantal keer.
+	  </string> 
+	  <string id="AutoUpdate">Auto</string> 
+	  <string id="Manual">Handmatig</string> 
+      <string id="Policy_CheckAutoUpdatePolicy">De vertraging voor het controleren op updates instellen</string>
+      <string id="Explain_CheckAutoUpdatePolicy">Met dit beleid wordt de voorkeur ingesteld wanneer Citrix Workspace-update wordt uitgerold naar de gebruikers.
+- (Snel) - Beschikbare updates worden aan het begin van de leveringsperiode naar de gebruikers uitgerold.
+- (Gemiddeld): Beschikbare updates worden halverwege de leveringsperiode naar de gebruikers uitgerold
+- (Langzaam) - Beschikbare updates worden aan het einde van de leveringsperiode naar de gebruikers uitgerold.
+</string> 
+	  <string id="Fast">Snel</string>
+      <string id="Medium">Gemiddeld</string> 
+	  <string id="Slow">Langzaam</string>
+      <string id="AllowPublishContent">Toestaan</string>
+      <string id="PreventPublishContent">Voorkomen</string>
+      <string id="ICAClient">Citrix Workspace</string>
+      <string id="Explain_ICAClient">De Citrix Workspace-app wordt gebruikt om verbinding te maken met externe toepassingen en bureaubladen in serverfarms.</string>
+      <string id="Network">Netwerkroutering</string>
+      <string id="Explain_Network">Dit beleid kan worden gebruikt om te bepalen hoe Citrix Workspace de verbindingen naar een serverfarm routeert.</string>
+      <string id="Authentication">Gebruikersverificatie</string>
+      <string id="Explain_Authentication">Dit beleid bepaalt hoe Citrix Workspace de gebruiker verifieert bij een externe toepassing of extern bureaublad.</string>
+      <string id="UserExperience">Gebruikerservaring</string>
+      <string id="Explain_UserExperience">Citrix Workspace kan worden geconfigureerd om op verschillende manieren met toepassingen op clientmachines te werken.  Met deze instellingen kan worden bepaald hoe clientmachines externe toepassingen en bureaubladen aan de gebruiker weergeven.</string>
+	  <string id="Policy_HWacceleration">Hardwareversnelling voor afbeeldingen</string>
+	  <string id="Explain_HWacceleration">Met dit beleid kunt u het gebruik van hardwareversnelling (GPU) voor externe afbeeldingen in- of uitschakelen. Wanneer het beleid niet is geconfigureerd, is het gebruik van hardwareversnelling op niet-ingesloten GPU's ingeschakeld. Wanneer het beleid is ingeschakeld, probeert Citrix Workspace de GPU van de client te gebruiken om externe afbeeldingen te versnellen. Op clientapparaten die deze functie niet ondersteunen, wordt dit automatisch uitgeschakeld.</string>
+      <string id="Policy_EnableH265">H265-ontsleuteling voor afbeeldingen</string>
+      <string id="Explain_EnableH265">Met dit beleid kunt u het gebruik van H265-ontsleuteling voor externe afbeeldingen in- of uitschakelen. Wanneer H265-ontsleuteling niet is geconfigureerd, wordt het niet gebruikt. Wanneer het beleid is ingeschakeld, gebruikt Citrix Workspace de client-GPU voor het ontsleutelen met behulp van de H265-decoder zolang de server H265-versleuteling ondersteunt. Op clientapparaten die deze functie niet ondersteunen, wordt dit automatisch uitgeschakeld en wordt H264 gebruikt</string>
+      <string id="Proxy">Proxy</string>
+      <string id="Explain_Proxy">Citrix Workspace kan worden geconfigureerd om specifieke proxyroutering voor externe toepassingen en bureaubladen te gebruiken.  Met deze instellingen kunnen clientproxy's onafhankelijk van andere programma's op de clientmachine worden geconfigureerd.</string>
+	  <string id="AdvancePreferencesOptions">Geavanceerde voorkeuren - Opties</string>
+      <string id="Explain_AdvancePreferencesOptions">Opties in Geavanceerde voorkeuren in-/uitschakelen</string>
+      <string id="ClientEngine">Clientengine</string>
+      <string id="Explain_ClientEngine">Citrix Workspace kan worden geconfigureerd om te werken met configuratie-eigenschappen van de clientengine, zoals ICA-bestandsinstellingen</string>
+      <string id="MultiStreamICA">Multistream ICA</string>
+      <string id="Explain_MultiStreamICA">Met dit beleid kunt u meerdere verbindingen voor het ICA-verkeer tussen de client en de server configureren.</string>
+      <string id="SelfService">SelfService</string>
+      <string id="Explain_SelfService">Met dit beleid worden de instellingen van de Selfservice plug-in bepaald</string>
+      <string id="RealTimeTransport">Realtime transport</string>
+      <string id="Explain_RealTimeTransport">Realtime transport</string>
+      <string id="RealTimeTransportThroughGateway">Realtime transport via NetScaler Gateway</string>
+      <string id="Explain_RealTimeTransportThroughGateway">Realtime transport via NetScaler Gateway</string>
+      <string id="Policy_EnableICAClient">Clientverbindingen toestaan</string>
+      <string id="Explain_EnableICAClient">Met dit beleid kunt u verbindingen vanaf de Citrix Workspace-app in- of uitschakelen.  
+
+Wanneer dit beleid niet is geconfigureerd, staat de client verbindingen met servers toe.  
+
+Wanneer dit beleid is ingeschakeld, maakt de client alleen verbinding met een server als de optie &quot;Client inschakelen&quot; is geselecteerd en als het versienummer van de client groter dan of gelijk is aan de &quot;Minimale clientversie&quot;.  
+
+Wanneer dit beleid is uitgeschakeld, staat de client geen verbindingen met servers toe.  
+
+
+Problemen oplossen:
+Als een verbinding wordt geweigerd omdat de client niet is ingeschakeld, verschijnt het foutbericht &quot;&lt;Server&gt; FOUT: kan geen verbinding maken met de Citrix XenApp-server.  De server (...) wordt niet vertrouwd voor ICA-verbindingen.  Verbindingen met de regio (Alle regio's) zijn niet toegestaan ​​door de vergrendelingsinstellingen.  Neem contact op met uw beheerder.  
+
+Als de client geen verbinding toestaat omdat het versienummer te laag is, verschijnt het foutbericht &quot;Foutnummer 2321: ICA Client Configuration Manager: de ICA-clientversie is te laag om te worden uitgevoerd met behulp van de geïnstalleerde configuratiegegevens&quot;.</string>
+      <string id="Part_EnableICAClient_Enable">Client inschakelen</string>
+      <string id="Part_EnableICAClient_Minimum">Minimale clientversie</string>
+      <string id="Policy_ProxyLockdown">Clientproxy-instellingen configureren</string>
+      <string id="Explain_ProxyLockdown">Schakel dit beleid in om de primaire netwerkproxy's te configureren die de client kan gebruiken om verbinding te maken met een externe toepassing of extern bureaublad.
+Selecteer een optie in de vervolgkeuzelijst Proxytype:
+- Auto: de client in staat stellen om de lokale machine-instellingen te gebruiken om de proxyserver vast te stellen.
+- Geen: de client in staat stellen om rechtstreeks verbinding met de server te maken zonder gebruik van een proxyserver. 
+- Script: de client in staat stellen een op Java gebaseerd PAC-bestand op te halen uit de URL die in de proxyscript-URL's is opgegeven. Het PAC-bestand wordt uitgevoerd om de proxyserver te identificeren die voor de verbinding wordt gebruikt. 
+- Beveiligd: wanneer &quot;Beveiligd&quot; is geselecteerd, maakt de client contact met de proxy die wordt aangegeven door de instellingen &quot;Proxyhostnamen&quot; en &quot;Proxypoorten&quot;. Het onderhandelingsprotocol gebruikt een &quot;HTTP CONNECT&quot; headeraanvraag waarin het gewenste doeladres wordt vermeld. Dit proxyprotocol wordt doorgaans gebruikt voor HTTP-verkeer en ondersteunt GSSAPI-proxyverificatie.
+- SOCKS/SOCKS V4/SOCKS V5: wanneer een &quot;SOCKS&quot;-proxy wordt geselecteerd, voert de client een SOCKS V4- of SOCKS V5-handshake uit met de proxy die wordt aangegeven door de instellingen &quot;Proxyhostnamen&quot; en &quot;Proxypoorten&quot;. De optie &quot;SOCKS&quot; detecteert en gebruikt de juiste versie van Socks.
+
+Om het omzeilen van de proxyserver in te schakelen, selecteert u de Lijst te omzeilen servers. 
+
+Problemen oplossen:
+Sommige clientplatforms ondersteunen het proxytype &quot;Auto&quot; niet vanwege beperkingen van het besturingssysteem.  Zie de juiste Administrator's Guide voor meer informatie.  Voor deze platforms moeten de proxyinstellingen handmatig op het clientapparaat worden ingesteld.  
+
+Bij het configureren van de webinterfaceserver kan een geschikte proxyserver worden aangegeven voor de specifieke locatie van de client.  Bij het configureren van proxy's via Groepsbeleid is het belangrijk om te voorkomen dat deze instellingen worden overschreven.  Wanneer meerdere proxy's kunnen worden gekozen, gebruikt u gewoon een door komma's gescheiden lijst met opties, waarbij de eerste de standaardproxy is.  
+
+Bij de meeste implementaties van intranetclients moet de optie &quot;Geen&quot; voor het proxytype worden gebruikt, anders probeert de client verbinding te maken via het internet.  Voor geavanceerdere implementaties kan de optie &quot;Lijst te omzeilen servers&quot; worden gebruikt. Daarnaast zijn PAC-scripts of configuratie als vertrouwde server beschikbaar voor de specifieke netwerktopologie.  
+
+Sommige proxyservers verbreken automatisch verbindingen die gedurende een bepaalde tijd inactief zijn.  Hierdoor kunnen clientsessies worden verbroken wanneer ze niet in gebruik zijn.  De optie &quot;ICA Keep-Alive&quot; op de server is beschikbaar om extra datapakketten te verzenden tijdens perioden van inactiviteit om te verhinderen dat proxy's verbindingen sluiten.</string>
+      <string id="Part_Proxy_ProxyTypeLockdown">Proxytypen</string>
+      <string id="Part_Proxy_ProxyHostLockdown">Proxyhostnamen</string>
+      <string id="Part_Proxy_ProxyPortLockdown">Proxypoorten</string>
+      <string id="Part_Proxy_ProxyAutoConfigUrlLockdown">Proxyscript-URL's</string>
+      <string id="Part_Proxy_ProxyBypassListLockdown">Lijst te omzeilen servers</string>
+      <string id="Policy_AltProxyLockdown">Failover-proxyinstellingen client configureren</string>
+      <string id="Explain_AltProxyLockdown">Met dit beleid kunt u alternatieve netwerkproxy's configureren die de client kan gebruiken als de primaire netwerkproxy geen verbinding kan maken met een externe toepassing of een extern bureaublad.  
+
+Wanneer dit beleid niet is geconfigureerd, beslist de client aan de hand van zijn eigen instellingen of er via een proxyserver verbinding wordt gemaakt.  
+
+Wanneer dit beleid is ingeschakeld, probeert de client verbinding te maken via een alternatieve proxy als de verbinding met een primaire proxy mislukt.  De failover-proxyinstellingen werken op dezelfde manier als de primaire proxyinstellingen.  
+
+Wanneer zowel de primaire als de alternatieve proxy de verbinding niet in stand kunnen houden, wordt door het selectievakje &quot;Failover naar rechtstreekse verbinding&quot; in te schakelen de client geïnstrueerd om een rechtstreekse verbinding zonder proxy's tot stand te brengen.
+
+
+Problemen oplossen:
+Bij sommige proxyfouten lijkt het alsof de client bij het verbinden blijft hangen.  Dit komt meestal doordat de proxyserver zelf opnieuw probeert verbinding te maken of een lange time-out heeft.  Afhankelijk van de netwerktopologie, is het mogelijk beter om de webinterfaceserver te configureren om de momenteel functionerende proxy te identificeren of om de time-outinstellingen van de proxyserver te wijzigen.</string>
+      <string id="Part_AltProxy_ProxyTypeLockdown">Proxytypen</string>
+      <string id="Part_AltProxy_ProxyHostLockdown">Proxyhostnamen</string>
+      <string id="Part_AltProxy_ProxyPortLockdown">Proxypoorten</string>
+      <string id="Part_AltProxy_ProxyAutoConfigUrlLockdown">Proxyscript-URL's</string>
+      <string id="Part_AltProxy_ProxyBypassListLockdown">Lijst te omzeilen servers</string>
+      <string id="Part_AltProxy_ProxyFallbackLockdown">Failover naar rechtstreekse verbinding</string>
+      <string id="Policy_ProxySocks">SOCKS-proxyinstellingen configureren</string>
+      <string id="Explain_ProxySocks">Met dit beleid kunt u het gebruik van aanvullende SOCKS-proxy's configureren die vereist zijn voor sommige geavanceerde netwerktopologieën.  
+
+Wanneeer dit beleid is ingeschakeld, controleert de client de instelling &quot;SOCKS-protocolversie&quot;.  Als de verbinding via SOCKS niet is uitgeschakeld, probeert de client verbinding te maken via de SOCKS-proxy die is opgegeven door de instellingen &quot;Proxyhostnamen&quot; en &quot;Proxypoorten&quot;.  
+
+De client ondersteunt verbindingen via SOCKS v4- of SOCKS v5-proxyservers.  Daarnaast kan de client de door de proxyserver gebruikte versie automatisch proberen te detecteren.  
+
+
+Problemen oplossen:
+De SOCKS-proxyinstellingen zijn ontworpen voor het sturen van gegevensverkeer via een proxy, naast de primaire of alternatieve proxyserver.  Wanneer het verkeer slechts via één proxy gaat, moeten deze SOCKS-proxyinstellingen worden uitgeschakeld.</string>
+      <string id="Part_ProxySocks_Version">SOCKS-protocolversie</string>
+      <string id="Part_ProxySocks_ProxyHostLockdown">Proxyhostnamen</string>
+      <string id="Part_ProxySOCKS_ProxyPortLockdown">Proxypoorten</string>
+      <string id="Policy_ProxyAuthentication">Proxyverificatie configureren</string>
+      <string id="Explain_ProxyAuthentication">Met dit beleid kunt u de verificatiemechanismen beheren die de client gebruikt bij het verbinden met een proxyserver.  Verificatie door proxyservers kan worden gebruikt om het gegevensverkeer in grote netwerkimplementaties te bewaken.  
+
+Over het algemeen wordt verificatie afgehandeld door het besturingssysteem, maar in sommige scenario's heeft de gebruiker een specifieke gebruikersnaam en wachtwoord nodig.  Om te voorkomen dat de gebruiker specifiek om deze referenties wordt gevraagd, schakelt u het selectievakje &quot;Gebruiker om referenties vragen&quot; uit.  Dit dwingt de cliënt om een ​​anonieme verbinding te proberen.  U kunt de client ook configureren om verbinding te maken met behulp van referenties die door de webinterfaceserver zijn doorgegeven, of u kunt de referenties expliciet opgeven via groepsbeleid met de opties &quot;Expliciete gebruikersnaam&quot; en &quot;Expliciet wachtwoord&quot;.  
+
+
+Problemen oplossen:
+Over het algemeen wordt de NTLM-proxyverificatie uitgevoerd en beheerd door de domeincontroller en kan dit niet door de client worden gestuurd.  Zowel de client als de proxy moeten worden geconfigureerd met de juiste vertrouwensrelaties op domeinniveau.  
+
+Proxyverificatie kan niet worden gekoppeld aan de Pass-through-verificatiefunctie van de client.  Over het algemeen heeft het proxywachtwoord niets te maken met de wachtwoorden van de gebruiker.</string>
+      <string id="Policy_ProxyExplicitAuthenticationEnabled">Gebruiker om referenties vragen</string>
+      <string id="Policy_ProxyBasicAuthenticationEnabled">Verificatie van ongecodeerde tekst toestaan</string>
+      <string id="Policy_ProxyNTLMAuthenticationEnabled">NTLM-hashverificatie toestaan</string>
+      <string id="Part_Proxy_Socks5User">Expliciete gebruikersnaam</string>
+      <string id="Part_Proxy_Socks5Password">Expliciet wachtwoord</string>
+      <string id="Policy_ClientAutoReconnect">Sessie openhouden en automatisch opnieuw verbinden</string>
+      <string id="Explain_ClientAutoReconnect">Met dit beleid wordt het clientgedrag geconfigureerd in het geval van een netwerkstoring.
+
+Als instelling voor het opnieuw verbinden selecteert u:
+
+Automatisch opnieuw verbinden inschakelen: in het geval van een netwerkstoring probeert de client automatisch opnieuw verbinding te maken met een server
+
+Sessie openhouden inschakelen: In het geval van een netwerkstoring probeert de client opnieuw verbinding te maken met een SSL/TLS-server. 
+
+OPMERKING: als zowel 'Automatisch opnieuw verbinden inschakelen' als 'Sessie openhouden inschakelen' is ingeschakeld, selecteert de client bij een netwerkstoring standaard de optie Sessie openhouden inschakelen. 
+
+OPMERKING: als dit beleid is ingeschakeld en geen van de opties is geselecteerd, wordt het beleid niet afgedwongen.
+
+Transparantieniveau: het transparantieniveau dat op de XA/XD-sessie wordt toegepast tijdens het opnieuw verbinden van de sessie. 
+
+De instelling 0 geeft aan dat bij het opnieuw verbinden van de XenApp/XenDesktop-sessie een zwart venster wordt weergegeven.
+
+De instelling 100 geeft aan dat er geen transparantielaag wordt toegepast (bevroren scherm)
+
+Problemen oplossen:
+Sommige proxyservers verbreken automatisch verbindingen die gedurende een bepaalde tijd inactief zijn.  Hierdoor kunnen clientsessies worden verbroken wanneer ze niet in gebruik zijn.  De optie &quot;ICA Keep-Alive&quot; op de server is beschikbaar om extra datapakketten te verzenden tijdens perioden van inactiviteit om te verhinderen dat proxy's verbindingen sluiten. &quot;
+</string>
+      <string id="Part_ClientAutoReconnect_Reconnect">Automatisch opnieuw verbinden inschakelen</string>
+      <string id="Part_ClientAutoReconnect_CGP">Sessie openhouden inschakelen (heeft prioriteit als beide zijn ingeschakeld)</string>
+	  <string id="Part_ClientAutoReconnect_Dimming">Transparantieniveau</string>
+      <string id="Policy_SSLLockdown">TLS en nalevingsmodus configureren</string>
+      <string id="Policy_DeprecatedCiphers">Verouderde coderingssuites</string>
+      <string id="Explain_SSLLockdown">Met deze optie kan Citrix Workspace beveiligde verbindingen identificeren en de communicatie op de server zelf versleutelen. 
+
+De volgende typen TLS-beveiligde verbinding tussen Citrix Workspace en XenApp en XenDesktop worden door Citrix ondersteund:
+1. TLS 1.0
+2. TLS 1.1
+3. TLS 1.2 
+
+De waarden voor de beveiligingsnalevingsmodus zijn:
+- FIPS: Het inschakelen van de FIPS-modus dwingt het Windows-besturingssysteem en de bijbehorende subsystemen om alleen FIPS-gevalideerde cryptografische algoritmen te gebruiken.
+- Geen: Er wordt geen nalevingsmodus afgedwongen.
+- SP800-52: Naleving van NIST SP800-52r1 wordt afgedwongen.
+Wanneer u SP800-52 selecteert in de vervolgkeuzelijst Beveiligingsnalevingsmodus, is het volgende beleid voor controle van ingetrokken certificaten (CRCP) toegestaan:
+-Volledige toegangscontrole en CRL vereist. Dit is de standaardoptie.
+-Volledige toegangscontrole en alle CRL vereist 
+
+Met de optie Toegestane TLS-servers kunt u door middel van een door komma's gescheiden lijst Citrix Workspace beperken om alleen verbinding te maken met de opgegeven server(s). Er kunnen jokertekens en poortnummers worden opgegeven, bijvoorbeeld *.citrix.com:4433 staat verbinding toe met elke server met een algemene naam die eindigt met .citrix.com op poort 4433. De nauwkeurigheid van de informatie in een beveiligingsscertificaat wordt bevestigd door de uitgever van het certificaat.  Als Citrix Workspace de uitgever van een certificaat niet herkent en vertrouwt, wordt de verbinding geweigerd.
+
+De TLS-versie kan worden beperkt tot elke combinatie van:
+
+- TLS 1.0, TLS 1.1 of TLS 1.2
+- TLS 1.1 of TLS 1.2
+- Alleen TLS 1.2
+
+TLS-coderingsset is een groep coderingssuites die door de client is toegestaan. De TLS-coderingsset kan op een van de volgende manieren worden geconfigureerd: 
+Opmerking: de TLS_RSA_* coderingssuites kunnen worden uitgeschakeld met behulp van het beleid Verouderde coderingssuites.
+- Willekeurig: wanneer &quot;Willekeurig&quot; is ingesteld, zijn de volgende coderingssuites standaard toegestaan ​​in de nalevingsmodus GEEN:
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- Commercieel: wanneer &quot;Commercieel&quot; is ingesteld, zijn alleen de volgende coderingssuites toegestaan:
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- Overheid: wanneer &quot;Overheid&quot; is ingesteld, zijn alleen de volgende coderingssuites toegestaan:
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+
+De certificaatintrekkingscontrole (CRC) wordt gebruikt om de cryptografische verificatie van de Citrix-server te verbeteren en verbetert de algehele beveiliging van de TLS-verbindingen tussen een client en een server. 
+Opmerking: de certificaatintrekkingscontrole is alleen geldig wanneer de SP800-52-beveiligingsnalevingsmodus is ingesteld.
+Wanneer u deze instelling inschakelt, controleert de client of het certificaat van de server al dan niet is ingetrokken. Er zijn verschillende controleniveaus van de certificaatintrekkingslijst.  De client kan bijvoorbeeld worden geconfigureerd om alleen de lokale certificaatlijst te controleren of om de intrekkingslijsten van lokale en netwerkcertificaten te controleren. Certificaatcontrole kan bovendien zo geconfigureerd worden dat gebruikers zich alleen kunnen aanmelden als alle certificaatintrekkingslijsten zijn geverifieerd.
+Certificaatintrekkingscontrole (CRC) is een geavanceerde functie die door sommige certificaatuitgevers wordt ondersteund. Het staat een beheerder toe om beveiligingscertificaten in te trekken (ongeldig gemaakt voor de vervaldatum) in het geval dat de privésleutel van het certificaat wordt gecompromitteerd.
+De toepasselijke waarden voor deze instelling zijn:
+
+- Geen controle: er wordt geen certificaatintrekkingscontrole uitgevoerd.
+- Controleren zonder netwerktoegang: certificaatintrekkingscontrole wordt uitgevoerd. Alleen stores in de lokale certificaatintrekkingslijst worden gebruikt. Alle distributiepunten worden genegeerd. Het vinden van een certificaatintrekkingslijst is niet essentieel voor verificatie van het servercertificaat dat wordt aangeboden door de SSL Relay/Secure Gateway-doelserver.
+- Volledige toegangscontrole: certificaatintrekkingscontrole wordt uitgevoerd. Lokale stores in certificaatintrekkingslijsten en alle distributiepunten worden gebruikt. Als intrekkingsinformatie voor een certificaat wordt gevonden, wordt de verbinding geweigerd. Het vinden van een certificaatintrekkingslijst is niet essentieel voor verificatie van het servercertificaat dat wordt aangeboden door de doelserver. 
+- Volledige toegangscontrole en CRL vereist: controle van de certificaatintrekkingslijst wordt uitgevoerd, met uitzondering van de basiscertificeringsinstantie. Lokale stores in certificaatintrekkingslijsten en alle distributiepunten worden gebruikt. Als intrekkingsinformatie voor een certificaat wordt gevonden, wordt de verbinding geweigerd. Het vinden van alle vereiste certificaatintrekkingslijsten is essentieel voor verificatie.
+- Volledige toegangscontrole en alle CRL vereist: controle van de certificaatintrekkingslijst wordt uitgevoerd, inclusief de basiscertificeringsinstantie. Lokale stores in certificaatintrekkingslijsten en alle distributiepunten worden gebruikt. Als intrekkingsinformatie voor een certificaat wordt gevonden, wordt de verbinding geweigerd. Het vinden van alle vereiste certificaatintrekkingslijsten is essentieel voor verificatie.
+Organisaties die TLS voor een reeks producten configureren, kunnen kiezen om servers die bedoeld zijn voor Citrix Workspace te identificeren door een certificaatbeleidsextensie-OID op te geven als onderdeel van het beveiligingscertificaat.  Als hier een beleidsextensie-OID is geconfigureerd, accepteert Citrix Workspace alleen certificaten die een compatibel beleid declareren.
+
+Wanneer verbinding wordt gemaakt via TLS, kan de server zodanig geconfigureerd zijn dat Citrix Workspace een beveiligingscertificaat nodig heeft om zichzelf te identificeren.  Met de instelling &quot;Clientverificatie&quot; kunt u configureren of identificatie automatisch plaatsvindt of dat de gebruiker op de hoogte wordt gesteld. Opties zijn onder meer:
+
+- Uitgeschakeld: clientverificatie is uitgeschakeld
+- Certificaatselectie weergeven: de gebruiker altijd vragen om een ​​certificaat te selecteren.
+- Automatisch selecteren indien mogelijk: vraag de gebruiker alleen als er uit certificaten moet worden gekozen
+identificatie nooit opgeven
+-Niet geconfigureerd: clientverificatie is niet geconfigureerd. Standaardgedrag wordt toegepast.
+- Opgegeven certificaat gebruiken: gebruik het clientcertificaat dat in de onderstaande instelling is opgegeven
+
+Gebruik de instelling &quot;Clientcertificaat&quot; om de vingerafdruk van het identificerende certificaat op te geven, zodat de gebruiker niet onnodig hierom wordt gevraagd.
+</string>
+ 
+ 
+  
+ 
+      <string id="Part_SSL_EnabledLockdown">TLS vereisen voor alle verbindingen</string>
+      <string id="Part_SSL_SSLProxyHostLockdown">Toegestane TLS-servers</string>
+      <string id="Part_SSL_SSLPolicyOID">Beleidsextensie-OID</string>
+      <string id="Part_SSL_SSLProtocolLockdown">TLS-versie</string>
+      <string id="Part_SSL_CiphersetLockdown">TLS-coderingsset</string>
+      <string id="Part_SSL_RevocationLockdown">Beleid voor certificaatintrekkingscontrole</string>
+      <string id="Part_SSL_ClientAuthentication">Clientverificatie</string>
+      <string id="Part_SSL_ClientCertificate">Clientcertificaat</string>
+      <string id="Policy_ConfigureClientSelectiveTrust">Vertrouwde serverconfiguratie configureren</string>
+      <string id="Explain_ConfigureClientSelectiveTrust">Met dit beleid kunt u bepalen hoe de client de gepubliceerde toepassing of het gepubliceerde bureaublad identificeert waarmee het verbinding maakt.  De client bepaalt een vertrouwensniveau, een zogenaamde &quot;&quot;vertrouwensregio&quot;&quot; bij een verbinding.  De vertrouwensregio bepaalt vervolgens hoe de client is geconfigureerd voor de verbinding.  
+
+Wanneer dit beleid is ingeschakeld, kan de client met de optie &quot;Vertrouwde serverconfiguratie afdwingen&quot; gedwongen worden om regio-identificatie uit te voeren.  
+
+Regio-identificatie is standaard gebaseerd op het adres van de server waarmee de client verbinding maakt.  Om lid te zijn van de vertrouwde regio, moet de server lid zijn van de zone Vertrouwde sites in Windows.  U kunt dit configureren met behulp van de instelling &quot;Windows internetzone&quot;.  
+
+Voor compatibiliteit met niet-Windows-clients kan het serveradres expliciet worden vertrouwd met de instelling &quot;Adres&quot;.  Dit is een door komma's gescheiden lijst van servers die het gebruik van jokertekens ondersteunen, bijvoorbeeld cps*.citrix.com.  
+
+
+Problemen oplossen:
+Wanneer de vertrouwde serverconfiguratie niet toestaat dat de client verbinding maakt, wordt in de standaardconfiguratie het volgende foutbericht weergegeven:
+
+    &quot;&lt;Server&gt; FOUT:  kan geen verbinding maken met de Citrix XenApp-server.  De server (xxx) wordt niet vertrouwd voor ICA-verbindingen.  Verbindingen met de regio (Niet-vertrouwde regio) zijn niet toegestaan ​​door de vergrendelingsinstellingen.  Neem contact op met uw beheerder.&quot;
+
+De door &quot;xxx&quot; aangegeven server moet worden toegevoegd aan de zone Vertrouwde sites in Windows (als http:// of https:// voor SSL-verbindingen) om verbinding te kunnen maken.  
+
+Let op dat voor SSL-verbindingen de algemene naam van het certificaat moet worden vertrouwd.  Voor niet-SSL-verbindingen moeten alle servers waarmee contact wordt gemaakt, afzonderlijk worden vertrouwd.  Dit betekent dat bij het browsen met toepassingen, zowel de XML-service als de server waarnaar wordt omgeleid, moeten worden vertrouwd.
+</string>
+      <string id="Part_ConfigureClientSelectiveTrust_IEZone">Windows internetzone</string>
+      <string id="Part_ConfigureClientSelectiveTrust_EffectiveAddress">Adres</string>
+      <string id="Part_EnableClientSelectiveTrust">Vertrouwde serverconfiguratie afdwingen</string>
+      <string id="Policy_Smartcard">Smartcard-verificatie</string>
+      <string id="Explain_Smartcard">Met dit beleid kunt u bepalen hoe de client smartcards gebruikt die op het clientapparaat zijn aangesloten.  
+
+Wanneer dit beleid is ingeschakeld, heeft de externe server toegang tot smartcards die op het clientapparaat zijn aangesloten voor verificatie en andere doeleinden.  
+
+Wanneer dit beleid is uitgeschakeld, heeft de server geen toegang tot smartcards die op het clientapparaat zijn aangesloten.  
+
+ 
+Problemen oplossen:
+Bij gebruik van smartcards in een Citrix-omgeving moet het apparaatstuurprogramma van de smartcard op de server zijn geïnstalleerd.  Als op de clientmachine een ander besturingssysteem wordt gebruikt, kan het nodig zijn te controleren of de gebruikte apparaatstuurprogramma's van de smartcard goed samenwerken.</string>
+      <string id="Part_Smartcard_Enable">Smartcard-verificatie toestaan</string>
+      <string id="Part_SmartcardPin_Enable">Pass-through-verificatie voor PIN gebruiken</string>
+      <string id="Policy_WITicket">Webinterface-verificatieticket</string>
+      <string id="Explain_WITicket">Met dit beleid kunt u de ticketinfrastructuur bepalen die wordt gebruikt bij verificatie via de webinterface.  
+
+Wanneer dit beleid is ingeschakeld, kan legacy-webinterfaceticketing worden uitgeschakeld door het selectievakje 'Verouderde ticketafhandeling' uit te schakelen.  Legacy-webinterfaceticketing werd geïmplementeerd door in het ClearText-wachtwoordveld een verificatiecookie voor eenmalig gebruik door te geven aan de server.  
+
+Vanaf versie 4.5 van de webinterface verwerkt de client een verificatietoken in de vorm van een ondoorzichtig LogonTicket met een bijbehorende interpretatie gedefinieerd door het LogonTicketType.  Deze functionaliteit kan worden uitgeschakeld door het selectievakje &quot;Webinterface 4.5 en hoger&quot; uit te schakelen.</string>
+      <string id="Part_WITicket_Legacy_Enable">Verouderde ticketafhandeling</string>
+      <string id="Part_WITicket_LogonTicket_Enable">Webinterface 4.5 en hoger</string>
+      <string id="Policy_KerberosLockdown">Kerberos-verificatie</string>
+      <string id="Explain_KerberosLockdown">Met dit beleid kunt u bepalen hoe de client Kerberos gebruikt om de gebruiker te verifiëren voor de externe toepassing of het externe bureaublad.
+
+Wanneer dit beleid is ingeschakeld, kan de client gebruikers verifiëren met behulp van het Kerberos-protocol.  Kerberos is een door de domeincontroller geautoriseerde verificatietransactie die voorkomt dat de echte aanmeldingsgegevens van gebruikers naar de server moeten worden verzonden.  
+
+Wanneer dit beleid is uitgeschakeld, zal de client geen Kerberos-verificatie uitvoeren.  
+
+
+Problemen oplossen:
+De machine waarop de client wordt uitgevoerd en de server waarop de externe toepassing wordt uitgevoerd, moeten zich in domeinen bevinden die een vertrouwensrelatie hebben.  De domeincontroller moet weten dat de Citrix XenApp-server een volledige gebruikersaanmelding (interactieve aanmelding) met behulp van Kerberos uitvoert.  Dit wordt geconfigureerd via de instellingen &quot;Vertrouwen voor gedelegeerde verificatie&quot; op de domeincontroller.
+
+Wanneer verbinding gemaakt wordt via de webinterface moet de webinterfaceserver weten dat de client verbinding maakt via Kerberos-verificatie.  Dit is nodig omdat de webinterfaceserver standaard een IP-adres voor de doelserver gebruikt, terwijl Kerberos-verificatie een volledig gekwalificeerde domeinnaam vereist.
+
+Zowel client- als servermachines moeten correct geregistreerde DNS-vermeldingen hebben.  Dit is nodig omdat de eindpunten elkaar verifiëren bij het verbinding maken.</string>
+      <string id="Policy_SSONForNSG">Single Sign-on voor NetScaler Gateway</string>
+      <string id="Explain_SSONForNSG">Met dit beleid kunt u Workspace toestaan om dezelfde aanmeldingsgegevens (Pass-through-verificatie) op NetScaler Gateway te gebruiken.</string>
+      <string id="Policy_LocalCredentialsLockdown">Lokale gebruikersnaam en wachtwoord</string>
+      <string id="Explain_LocalCredentialsLockdown">Met dit beleid kunt u de client opdracht geven om dezelfde aanmeldingsgegevens (Pass-through-verificatie) voor de Citrix XenApp-server te gebruiken als voor de clientcomputer.  
+
+Wanneer dit beleid is ingeschakeld, kan worden voorkomen dat de client de aanmeldingsgegevens van de huidige gebruiker gebruikt om zich te verifiëren bij de externe server door het selectievakje &quot;Pass-through-verificatie inschakelen&quot; uit te schakelen.  
+
+De client legt bepaalde beperkingen op die aangeven wanneer Pass-through-verificatie kan plaatsvinden (zie Citrix eDocs op http://support.citrix.com/proddocs/ voor meer informatie).  Als deze beperkingen te strikt zijn voor uw omgeving, schakelt u het selectievakje &quot;Pass-through-verificatie voor alle ICA-verbindingen toestaan&quot; in om de Pass-through-verificatiebeperkingen te omzeilen. 
+
+Wanneer u in een Novell Directory Server-omgeving het selectievakje &quot;Novell Directory Server-referenties gebruiken&quot; inschakelt, wordt de client verzocht om de NDS-referenties van de gebruiker te gebruiken.  
+
+
+Problemen oplossen:
+Om Pass-through-verificatie in te schakelen, moet de client door een beheerder zijn geïnstalleerd en moet de optie 'Pass-through van lokale referenties toestaan' tijdens de installatie zijn geselecteerd.  
+
+Elke gebruiker kan desgewenst Pass-through-verificatie uitschakelen via de registerinstellingen van de client, het Program Neighborhood-venster, of door hun kopie van AppSrv.ini te bewerken.  Om Pass-through-verificatie in te schakelen, moet de gebruikerskopie van AppSrv.ini de instelling &quot;EnableSSonThruICAFile=true&quot; bevatten.</string>
+      <string id="Part_LocalCredentialsLockdown_Enable">Pass-through-verificatie inschakelen</string>
+      <string id="Part_LegacyLocalUserNameAndPassword_Enable">Pass-through-verificatie voor alle ICA-verbindingen toestaan</string>
+      <string id="Part_NovellCredentials">Novell Directory Server-referenties gebruiken</string>
+      <string id="Policy_EnableDriveMapping">Stationstoewijzing client</string>
+      <string id="Explain_EnableDriveMapping">Met dit beleid kunt u de toegang van de externe toepassing of het externe bureaublad tot de bestandssystemen van de client inschakelen en beperken.  
+
+Wanneer dit beleid is ingeschakeld, weigert de client de virtuele kanaaltoegang voor clientstationstoewijzing (CDM) tot het bestandssysteem van de client volledig als het selectievakje &quot;Clientstationstoewijzing inschakelen&quot; niet is aangevinkt.  Hierdoor wordt de DLL die het virtuele kanaal voor clientstationstoewijzing (vdcdmn.dll) implementeert, niet geladen bij het opstarten van de client.  Op dit punt kunt u de DLL uit het clientpakket verwijderen.  
+
+Als CDM is ingeschakeld, zijn er meer opties beschikbaar om het type toegang dat beschikbaar is voor de server te beperken.  Als het selectievakje &quot;Alleen-lezen clientstations&quot; is ingeschakeld, staat het virtuele kanaal voor CDM alleen leestoegang toe tot de clientstations.  
+
+De toegang tot Windows-stations kan worden uitgeschakeld door de betreffende stationsletter in het vak &quot;Stations niet toewijzen&quot; in te voeren.  Dit is een samenvoeging van alle stations die niet moeten worden toegewezen wanneer er verbinding wordt gemaakt met een gepubliceerde toepassing of een gepubliceerd bureaublad. Bijvoorbeeld, met &quot;ABFK&quot; worden de stations A, B, F en K uitgeschakeld.  
+
+
+Problemen oplossen:
+Dit beleid overschrijft de selecties die door gebruikers zijn gemaakt in de dialoogvensters Bestandsbeveiliging van de Desktop Viewer. In het Citrix Knowledge Center vindt u informatie over hoe u kunt voorkomen dat gebruikers instellingen in het Client Connection Center kunnen wijzigen.</string>
+      <string id="Part_EnableDriveMappingCheckbox">Clientstationstoewijzing inschakelen</string>
+      <string id="Part_EnableDriveMappingReadonly">Alleen-lezen clientstations</string>
+      <string id="Part_EnableDriveMappingDisableDrives">Stations niet toewijzen</string>
+      <string id="Policy_EnablePrinterMapping">Clientprinters</string>
+      <string id="Explain_EnablePrinterMapping">Met dit beleid kunt u de toegang van de externe toepassing of het externe bureaublad tot clientprinters inschakelen en beperken.  
+
+Wanneer dit beleid is uitgeschakeld, verhindert de client dat de server toegang krijgt tot of kan afdrukken naar printers die beschikbaar zijn voor het clientapparaat.</string>
+      <string id="Part_EnablePrinterMapping">Clientprinters toewijzen</string>
+      <string id="Policy_LocalPort">Toegang tot clienthardware</string>
+      <string id="Explain_LocalPort">Met dit beleid kunt u het maximum aantal seriële poorten opgeven dat door het clientplatform wordt ondersteund. 
+
+Met dit beleid kunt u tevens de toegang van de externe toepassing of het externe bureaublad tot de seriële, parallelle en USB-poorten van de client inschakelen en beperken. Hierdoor kan de server lokaal aangesloten hardware gebruiken. 
+
+
+Problemen oplossen:
+Synchronisatie met externe PDA gebruikt &quot;virtuele COM-poorten&quot;.  Dit zijn seriële poortverbindingen die via USB-verbindingen worden gerouteerd.  Daarom is het noodzakelijk om seriële poorttoegang in te schakelen om PDA-synchronisatie te gebruiken.</string>
+      <string id="Part_MaxPort">Maximum aantal seriële poorten</string>
+      <string id="Part_EnableSerialPortCheckbox">Seriële poorten toewijzen</string>
+      <string id="Part_EnableVirtualSerialPortCheckbox">PDA-synchronisatie toestaan</string>
+      <string id="Part_EnableParallelPortCheckbox">Parallelle poorten toewijzen</string>
+      <string id="Policy_ImageCapture">Beeldopname</string>
+      <string id="Explain_ImageCapture">Met dit beleid kunt u de toegang van de externe toepassing of het externe bureaublad tot scanners, webcams en andere beeldvormingsapparaten op het clientapparaat inschakelen en beperken.</string>
+      <string id="Policy_AudioInput">Clientmicrofoon</string>
+      <string id="Explain_AudioInput">Met dit beleid kunt u de toegang van de externe toepassing of het externe bureaublad tot lokale audio-opnameapparaten (microfoons) inschakelen en beperken.</string>
+      <string id="Part_BiDiAudio_Enable">Clientmicrofoon inschakelen</string>
+      <string id="Policy_Clipboard">Klembord</string>
+      <string id="Explain_Clipboard">Met dit beleid kunt u de toegang van de externe toepassing of het externe bureaublad tot de inhoud van het klembord van de client inschakelen en beperken.</string>
+      <string id="Part_Clipboard_Enabled">Klembord inschakelen</string>
+      <string id="Policy_USB_PNP_Devices">USB plug-en-play-apparaten</string>
+      <string id="Explain_USB_PNP_Devices">Met dit beleid kunt u de toegang van een gepubliceerde toepassing of gepubliceerd bureaublad tot de USB-plug-en-play-apparaten van de client in- of uitschakelen. Met de instelling Niet geconfigureerd kunt u apparaattoegang toestaan totdat u de toegang expliciet in- of uitschakelt.</string>
+      <string id="Part_USB_PNP_Enabled">PNP inschakelen</string>
+      <string id="Policy_PointOfSales">USB-verkooppuntapparaten</string>
+      <string id="Explain_PointOfSales">Met dit beleid kunt u de toegang van een gepubliceerde toepassing of gepubliceerd bureaublad tot de USB-verkooppuntapparaten (POS) van de client in- of uitschakelen. Dit beleid wordt toegepast als het beleid voor USB plug-en-play-apparaten is ingesteld op Ingeschakeld en Niet geconfigureerd.</string>
+      <string id="Part_PointOfSales_Enabled">POS inschakelen</string>
+	  <string id="Policy_Foreground_Progress_Bar">Voorgrondstatus van de voortgangsbalk configureren</string>
+	  <string id="Explain_Foreground_Progress_Bar"/>
+      <string id="Policy_Audio">Audio-instellingen client</string>
+      <string id="Explain_Audio">Met deze optie bepaalt u hoe het geluid van de externe toepassing of het externe bureaublad naar de clientmachine wordt geleid. 
+
+Selecteer 'Audio inschakelen' om audiotoewijzing voor de client uit te schakelen. Dit is niet van invloed op de audiogegevens van de client naar de server, die worden bestuurd via het beleid &quot;Externe communicatie met clientapparaten&quot;.  
+
+De audiokwaliteit tussen client en server kan worden ingesteld in de vervolgkeuzelijst Geluidskwaliteit. De beschikbare opties zijn Hoog, Laag en Gemiddeld.
+
+De laagste en hoogste poortnummerbereiken moeten tussen 16384 en 65535 liggen
+
+Problemen oplossen:
+De audio-opties van de server hebben voorrang op deze instellingen, zodat de selectie van hoge kwaliteit voor de client niet noodzakelijkerwijs betekent dat audio van hoge kwaliteit wordt gebruikt. De server kan de door de client geselecteerde audiokwaliteit niet verhogen.</string>
+      <string id="Part_Audio_Enabled">Audio inschakelen</string>
+      <string id="Part_Audio_Quality">Geluidskwaliteit</string>
+      <string id="Part_RealtimeTransport_Enabled">Realtime transport inschakelen</string>
+      <string id="Part_RtpAudioLowestPort">Laagste poortnummer</string>
+      <string id="Part_RtpAudioHighestPort">Hoogste poortnummer</string>
+      <string id="Part_RealtimeTransportThroughGateway_Enabled">Realtime transport via NetScaler Gateway toestaan</string>
+      <string id="Policy_Graphics">Grafische instellingen client</string>
+      <string id="Explain_Graphics">Met deze optie kunt u de kwaliteit van afbeeldingen die door de externe toepassing of het externe bureaublad worden weergegeven instellen. 
+
+Selecteer in de vervolgkeuzelijst het gewenste bereik voor de kleurdiepte. De beschikbare opties zijn 16-bits kleuren en 32-bits kleuren. OPMERKING: lage kleurdiepte is effectiever bij gebruik van lage bandbreedte. 
+
+Schakel 'Schijfgebaseerde caching' in zo​​dat de afbeeldingen tijdelijk in de lokale schijfcache worden opgeslagen. 
+
+Schakel Compressie met verlies in om de kwaliteit van afbeeldingen te verlagen voor maximale compressie en reactiesnelheid. 
+
+Schakel 'HDX 3D browserversnelling' in zodat afbeeldingen in Microsoft IE verwerkt worden door een HDX 3D virtueel versnellingskanaal. 
+
+Schakel 'HDX 3D-browserversnelling - compressie met verlies' in, zodat Microsoft IE de kwaliteit van grafische afbeeldingen mag verlagen voor maximale compressie en reactiesnelheid. 
+
+Schakel 'Externe video' in zodat de server ​​videogegevens naar de client kan streamen. </string>
+      <string id="Part_Graphics_ColorDepth">Kleurdiepte</string>
+      <string id="Part_Graphics_ImageAcceleration">Compressie met verlies</string>
+      <string id="Part_Graphics_SpeedScreenBrowser">HDX 3D-browserversnelling</string>
+      <string id="Part_Graphics_SpeedScreenBrowserCompression">HDX 3D-browserversnelling - compressie met verlies</string>
+      <string id="Part_Graphics_SpeedScreenMultimedia">Externe video</string>
+      <string id="Part_Graphics_ZeroLatencyKeyboard">SpeedScreen-wachttijdvermindering - lokale echo toetsenbord</string>
+      <string id="Part_Graphics_ZeroLatencyMouse">SpeedScreen-wachttijdvermindering - voorspelling van muisaanwijzer</string>
+      <string id="Part_Graphics_DiskCache">Schijfgebaseerde caching</string>
+      <string id="Policy_Display">Weergave-instellingen client</string>
+      <string id="Explain_Display">Met deze optie bepaalt u hoe de client externe toepassingen en het externe bureaublad aan de eindgebruiker weergeeft. 
+Selecteer True in de vervolgkeuzelijst Naadloos vensters, zodat de client naadloze vensters kan aanvragen. Selecteer False zodat de client de weergave in naadloze vensters kan uitschakelen. 
+
+OPMERKING: de server kan de clientaanvraag weigeren, zelfs wanneer de instelling op True is ingesteld. 
+Selecteer de gewenste waarden voor de vensterbreedte. De beschikbare opties zijn 1024 en 800. 
+
+OPMERKING: deze functie treedt niet in werking als de optie Naadloze vensters is ingeschakeld. 
+Selecteer de gewenste waarden voor de vensterhoogte. De beschikbare opties zijn 600 en 734.
+
+OPMERKING: deze functie treedt niet in werking als de optie Naadloze vensters is ingeschakeld. 
+Selecteer de gewenste waarden in de vervolgkeuzelijst Vensterpercentage. De beschikbare opties zijn 50%, 75% en Overige. Dit is een handmatige methode om de vensterhoogte en -breedte in te stellen. 
+
+OPMERKING: de geselecteerde waarde is van toepassing op het volledige scherm. 
+Selecteer het gewenste bereik bij Werkgebied verkleinen. De aanbevolen waarden liggen tussen 3 - 5. 
+
+Schakel Volledig scherm in om de client in volledige schermmodus weer te geven. </string>
+      <string id="Part_Display_Seamless">Naadloze vensters</string>
+      <string id="Part_Display_Width">Vensterbreedte</string>
+      <string id="Part_Display_Height">Vensterhoogte</string>
+      <string id="Part_Display_Percent">Vensterpercentage</string>
+      <string id="Part_Display_WorkArea">Werkgebied verkleinen</string>
+      <string id="Part_Display_FullScreen">Volledig scherm</string>
+      <string id="Policy_LocalAppAccess">Toegangsinstellingen lokale app</string>
+      <string id="Explain_LocalAppAccess">Met dit beleid kunt u bepalen hoe de client lokale toepassingen binnen een gehost bureaublad weergeeft.
+
+Toegang tot lokale apps maakt de integratie van lokaal geïnstalleerde toepassingen binnen een gehost bureaublad mogelijk. Wanneer gebruikers lokaal geïnstalleerde toepassingen starten met behulp van snelkoppelingen, lijkt het alsof toepassingen op hun gehoste bureaublad worden uitgevoerd, ook al worden ze op hun lokale apparaat uitgevoerd.
+
+Wanneer dit beleid is ingeschakeld, geeft de client lokaal geïnstalleerde toepassingen binnen het gehoste bureaublad als snelkoppelingen weer.
+Wanneer dit beleid is uitgeschakeld, geeft de client geen lokale apps binnen het gehoste bureaublad weer. URL-omleiding is ook uitgeschakeld. 
+
+ 
+URL-omleiding toestaan:
+
+Wanneer deze optie is aangevinkt, staat de client omleiding van URL's toe van de browser van het gehoste bureaublad naar de lokaal geïnstalleerde browser of omgekeerd. De zwarte lijst en goedgekeurde lijst met URL's op de host bepalen welke URL's worden omgeleid. De voor deze functie vereiste browserinvoegtoepassingen, -extensies en plug-ins moeten ook worden ingeschakeld.
+Wanneer deze optie is uitgeschakeld, worden URL's niet omgeleid van het gehoste bureaublad naar de client of omgekeerd. Browserinvoegtoepassingen, -extensies en plug-ins worden niet uitgeschakeld.</string>
+      <string id="Part_Allow_URLRedirection">URL-omleiding toestaan</string>
+      <string id="Policy_ExtraURLProtocols">Omleidingsinstellingen host naar client</string>
+      <string id="Explain_ExtraURLProtocols">Met dit beleid kunt u instellen of URL-omleiding van host naar client extra protocollen moet ondersteunen. Standaard worden alleen http en https ondersteund.</string>
+      <string id="Part_ExtraURLProtocols">Extra URL-protocollen</string>
+      <string id="Policy_Keyboard_Hotkeys">Toetsenbordsneltoetsen</string>
+      <string id="Policy_ToggleFullScreen">Sneltoetsen voor Desktop Viewer</string>
+	  <string id="Explain_Policy_ToggleFullScreen">Met deze functie kunt u schakelen tussen volledige schermmodus en venstermodus in een bureaubladsessie. Met sneltoetscombinaties van aangepaste toetsenbordsneltoetsen kunt u nu naar de gewenste modus overschakelen.
+
+Bij het aanpassen van sneltoetscombinaties voor het overschakelen naar volledig scherm kunt u de gewenste toetsencombinaties voor het omschakelen selecteren
+
+Opmerking: deze sneltoets werkt onafhankelijk van de registerwaarde 'AllowHotKeys'. </string>
+<string id="Explain_Keyboard_Hotkeys">Met deze optie kunt u toetsencombinaties voor Citrix Workspace configureren.
+
+Selecteer de gewenste optie in de vervolgkeuzelijst Windows-toets. De beschikbare opties zijn: Toegang tot lokaal bureaublad, Toegang tot externe sessie en Alleen toegang tot externe sessie in volledig scherm. 
+
+Wanneer Toegang tot lokaal bureaublad wordt geselecteerd, is de toetsencombinatie alleen van toepassing op het lokale bureaublad. 
+
+Wanneer Toegang tot externe sessie wordt geselecteerd, is de toetsencombinatie alleen van toepassing op de externe sessie. 
+
+Wanneer Alleen toegang tot externe sessie in volledig scherm is geselecteerd, is de toetsencombinatie van toepassing op niet-naadloze ICA-sessies in de modus Volledig scherm. Deze optie is standaard geselecteerd. </string>
+      <string id="Part_Keyboard_Windows_Key">Windows-toets:</string>
+      <string id="Part_Keyboard_Hotkey_Tasklist">Takenlijst:</string>
+      <string id="Part_Keyboard_Hotkey_Tasklist_Plus">             +</string>
+      <string id="Part_Keyboard_Hotkey_Close_Remote_Application">Toepassing sluiten:</string>
+      <string id="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">                          +</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Title_Bar">Volledig scherm in-/uitschakelen:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">                            +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Del:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">               +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">           +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">         +</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Tab_Plus">          +</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Shift-Tab:</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Backtab_Plus">                  +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">Taakbeheer:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">                      +</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">Wachttijdvermindering:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">                             +</string>
+	  <string id="Part_Keyboard_Hotkey_Toggle_LOCALIME">Algemene IME-modus:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</string>
+      <string id="Policy_PublishedApplications">Externe toepassingen</string>
+      <string id="Explain_PublishedApplications">Met dit beleid kunt u configureren hoe externe toepassingen door de client worden afgehandeld.  
+
+Wanneer dit beleid is ingeschakeld, wordt de lijst in het vak &quot;Toepassing&quot; gebruikt om te bepalen welke gepubliceerde toepassingen rechtstreeks door de klant kunnen worden gestart.  
+
+U kunt aanvragen dat externe toepassingen sessies delen (uitgevoerd in een enkele ICA-verbinding).  Dit zorgt voor een betere gebruikerservaring, maar is soms niet wenselijk.  De functie voor het delen van sessies kan worden uitgeschakeld door het selectievakje &quot;Sessie delen&quot; uit te schakelen.  
+
+
+Problemen oplossen:
+Gepubliceerde toepassingen worden aangegeven met een # voor de naam van de toepassing.  Wanneer het symbool # wordt weggelaten, wordt geprobeerd om een programma of bureaublad te starten.  Op een computer met Citrix XenApp wordt dit standaard niet toegestaan ​​en wordt de verbinding afgewezen, met als foutbericht: &quot;U hebt geen toegang tot deze sessie.&quot;
+
+Sessie delen wordt beheerd door de SessionSharingKey, die voorkomt dat toepassingen die vanaf verschillende webinterfaceservers zijn gestart, sessies delen.  Bovendien wordt niet toegestaan dat toepassingen met verschillende grafische of beveiligingsinstellingen sessies delen.</string>
+      <string id="Part_PublishedApplications_InitialProgram">Toepassing</string>
+      <string id="Part_PublishedApplications_SessionSharing">Sessie delen</string>
+      <string id="Policy_HostRenderedAudio">Audio via generieke USB-omleiding</string>
+      <string id="Explain_HostRenderedAudio">Met dit beleid kunt u audio-omleiding beheren via generieke USB-omleiding. Dit beleid is alleen van toepassing op de XenApp-host.</string>
+      <string id="Part_HostRenderedAudio">Audio inschakelen via generieke USB-omleiding</string>
+      <string id="Policy_ICAFileSettings">ICA-bestandsinstellingen</string>
+      <string id="Explain_ICAFileSettings">Met dit beleid kunt u het verwijderen van het ICA-bestand mogelijk maken wanneer de clientsessie eindigt. </string>
+      <string id="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</string>
+      <string id="Policy_AllowLegacySessionSharing">Verouderd sessie delen toestaan</string>
+      <string id="Explain_AllowLegacySessionSharing">Sessie delen toestaan voor Program Neighborhood-sessies</string>
+      <string id="Part_AllowLegacySessionSharing_SessionSharing">AllowLegacySessionSharing</string>
+      <string id="Policy_MSISettings">Multistream ICA</string>
+      <string id="Explain_MSISettings">Met dit beleid kunt u Multistream ICA-instellingen configureren. Deze functie is standaard ingeschakeld.</string>
+	  <string id="Policy_EnableFTU">EnableFTU</string>
+        <string id="Policy_EnableNPS">NPS inschakelen</string>
+      <string id="Policy_EnableFTA">FTA inschakelen</string>
+	  <string id="Policy_Vprefer">vPrefer</string>
+	  <string id="AllowAllApps">Alle apps toestaan</string>
+	  <string id="AllowNetworkApps">Netwerkapps toestaan</string>
+	  <string id="AllowInstalledApps">Geïnstalleerde apps toestaan</string>
+      <string id="Policy_EnableDefaultFTA">Standaard FTA inschakelen</string>
+	  <string id="Allowed_Apps">Toestaan</string>
+	  <string id="Policy_HideSettings">Instellingen verbergen</string>
+	  <string id="Policy_HideConfigChecker">Configuratiecontrole verbergen</string>
+	  <string id="Policy_HideSupportInfo">Ondersteuningsinformatie verbergen</string>
+	  <string id="Policy_HideDeletePassword">Verwijderde opgeslagen wachtwoorden verbergen</string>
+	  <string id="Policy_HideDataCollection">Gegevensverzameling verbergen</string>
+	  <string id="Policy_HideLocalKeyboardLayoutSetting">Instelling lokale toetsenbordindeling verbergen</string>
+	  <string id="Policy_HideConnectionCenter">Connection Center verbergen</string>
+	  <string id="Policy_HideDPIsettings">DPI-instellingen verbergen</string>
+	  <string id="Policy_HideAdvancedPreferences">Geavanceerde voorkeuren verbergen</string>
+	  <string id="Policy_HideCitrixFiles">Citrix Files verbergen</string>
+	  <string id="Policy_HideCitrixCasting">Citrix Casting verbergen</string>
+	  
+	  <string id="Policy_SmartcardRemovalAction_x86">Smartcard-verwijderingsbeleid voor x86-machine</string>
+	  <string id="Policy_SmartcardRemovalAction_AMD64">Smartcard-verwijderingsbeleid voor x64-machine</string>	  
+	  <string id="Pick_UI_display">Weergave gebruikersinterface kiezen</string>
+      <string id="Policy_SelfServiceMode_Enable">Selfservice-modus beheren</string>
+      <string id="Policy_AddAccounts">Account toevoegen/verwijderen door gebruikers toestaan</string>
+      <string id="Policy_EnablePreLaunch">Voorstart toepassing inschakelen</string>
+	  <string id="Explain_EnablePreLaunch">Met een voorstart kunnen toepassingen en bureaubladsessies sneller starten. Dit wordt bereikt door de bron bij de eerste toegang te starten, zodat deze bij latere toegangsacties sneller reageert.
+
+Wanneer u het beleid instelt op Ingeschakeld, is de voorstartfunctie van de sessie/toepassing ingeschakeld.
+
+Wanneer u het beleid instelt op Uitgeschakeld, is de voorstartfunctie van de sessie/toepassing uitgeschakeld.
+</string>
+      <string id="Policy_PublishSafeContent">Gebruikers toestaan/verhinderen om veilige inhoud te publiceren</string>
+      <string id="Policy_PublishUnsafeContent">Gebruikers toestaan/verhinderen om onveilige inhoud te publiceren</string>
+      <string id="Policy_ReconnectMode">Bepalen wanneer Citrix Workspace opnieuw verbinding probeert te maken met bestaande sessies</string>
+      <string id="Pick_ReconnectMode">Kies de juiste combinatie van voorwaarden voor het opnieuw verbinden.</string>
+      <string id="Explain_Policy_ReconnectMode">Als u deze beleidsinstelling inschakelt, bepaalt deze hoe de Citrix Workspace-app opnieuw verbinding maakt.
+
+Citrix Workspace kan via de store naar bestaande, verbroken sessies zoeken en deze opnieuw verbinden met de client. Dit kan automatisch op verschillende tijdstippen worden gedaan: 
+
+- Start: elke keer dat de Citrix Workspace-app wordt gestart of geopend
+- Vernieuwen: wanneer de opdracht App vernieuwen wordt gegeven in de gebruikersinterface of na aanmelding
+- Openen: wanneer de gebruikersinterface van Citrix Workspace wordt geopend
+- Windows-aanmelding: wanneer Citrix Workspace de eerste keer wordt gestart 
+
+De standaardinstelling is bij Start of Vernieuwen. Selecteer de juiste combinatie.
+</string>
+      <string id="Policy_EnableAppShortCut">App-snelkoppeling beheren</string>
+      <string id="Part_StartMenuDir_Text">Startmenu-directory</string>
+      <string id="Part_DesktopDir_Text">Bureaublad-directory</string>
+      <string id="Part_DesktopShortcut_Enable">Bureaubladsnelkoppeling inschakelen</string>
+      <string id="Part_StartMenuShortcut_Disable">Startmenu-snelkoppeling uitschakelen</string>
+      <string id="Part_UseCategoryAsStartMenuPath_Disable">Categoriepad voor Startmenu uitschakelen</string>
+	  <string id="Part_UseCategoryAsDesktopPath_Enable">Categoriepad voor het bureaublad inschakelen</string>
+	  <string id="Part_UseDifferentPathsforStartmenuAndDesktop_Enable">Optie inschakelen om ander categoriepad voor het bureaublad en Startmenu te hebben. Optie uitschakelen om hetzelfde categoriepad voor het bureaublad als voor het Startmenu te hebben</string>
+      <string id="Part_RemoveAppsOnLogoff_Enable">Apps verwijderen bij het afmelden</string>
+      <string id="Part_RemoveAppsOnExit_Enable">Apps verwijderen bij het afsluiten</string>
+      <string id="Part_ClearAppListOnLogoff_Enable">Bij afmelding de weergegeven toepassingen in het venster van de Citrix Workspace-app wissen</string>
+      <string id="Part_AllAppsAreMandatory_Enable">Selfservice-selectie van apps negeren en alle apps verplicht stellen. Als Citrix Workspace met een PNAgent-service werkt, is dit vereist om alle apps automatisch toe te voegen. Als Citrix Workspace met een StoreFront-store werkt, maakt u de wijziging op de StoreFront-server om de store verplicht te maken. (Deze instelling is momenteel niet van toepassing op StoreFront-stores).</string>
+      <string id="Part_SuppressRefreshOnStartup_Enable">De toepassingslijst niet vernieuwen wanneer Citrix Workspace wordt geopend.</string>
+	  <string id="Explain_EnableFTU">Met deze optie kunt u het FTU-dialoogvenster in-/uitschakelen</string>
+        <string id="Explain_EnableNPS">De Net Promotors Score (NPS) helpt u bij het beoordelen van en feedback geven op uw ervaring met Citrix Workspace voor Windows (Store). Deze feedbackservice is bedoeld om Citrix Workspace voor Windows (Store) te verbeteren. De beoordelingen en feedback helpen ons om de gebruikerservaring te verbeteren. Deze functie is standaard ingeschakeld.
+Opmerking: als u 4 of 5 als beoordeling geeft, wordt u omgeleid naar de Microsoft Store om de Citrix Workspace-app te beoordelen. Als u 3 of lager kiest, wordt u omgeleid naar een feedbackformulier waar u meer informatie over uw beoordeling kunt geven.
+Opties:
+1. Ingeschakeld: het NPS-dialoogvenster verschijnt bij elke zesde succesvolle verbinding.
+2. Uitgeschakeld: het NPS-dialoogvenster verschijnt niet.
+</string>
+	  <string id="Explain_Vprefer">U kunt nu bepalen of de externe Citrix Workspace-app de instantie van een toepassing start die op de eerste hopserver/het eerste bureaublad is geïnstalleerd (indien beschikbaar) in plaats van een externe toepassing te starten. 
+
+Selecteer een van de volgende opties:
+
+1. Alle apps toestaan: start de clientinstantie van alle apps.
+2. Geïnstalleerde apps toestaan: start alleen de clientinstantie van geïnstalleerde apps.
+3. Netwerkapps toestaan: start de instantie van een app die op een gedeeld netwerk is gepubliceerd.
+</string>
+      <string id="Explain_EnableFTA">Met deze optie kunt u de instellingen voor bestandstypekoppeling (FTA) wijzigen.
+Dit beleid is standaard ingesteld op Niet geconfigureerd.
+Selecteer Ingeschakeld om FTA in te schakelen.
+Selecteer Uitgeschakeld om FTA uit te schakelen.</string>
+      <string id="Explain_EnableDefaultFTA">Met deze optie kunt u de standaardinstellingen voor bestandstypekoppeling (FTA) wijzigen.
+Dit beleid is standaard ingesteld op Niet geconfigureerd.
+Selecteer Ingeschakeld om de FTA-standaardinstelling in te schakelen.
+Selecteer Uitgeschakeld om de FTA-standaardinstelling uit te schakelen.
+Wanneer 'FTA inschakelen' is uitgeschakeld, heeft het instellen van dit beleid geen effect. Het beleid wordt behandeld als uitgeschakeld.</string>
+	  <string id="Explain_HideConfigChecker">Met deze optie kunt u het dialoogvenster Configuratiecontrole verbergen/zichtbaar maken vanuit Geavanceerde voorkeuren</string>
+	  <string id="Explain_HideSupportInfo">Met deze optie kunt u het dialoogvenster Ondersteuningsinformatie verbergen/zichtbaar maken vanuit Geavanceerde voorkeuren</string>
+	  <string id="Explain_HideDeletePassword">Met deze optie kunt u het dialoogvenster Wachtwoord verwijderen verbergen/zichtbaar maken vanuit Geavanceerde voorkeuren</string>
+	  <string id="Explain_HideDataCollection">Met deze optie kunt u het dialoogvenster Gegevensverzameling verbergen/zichtbaar maken vanuit Geavanceerde voorkeuren</string>
+	  <string id="Explain_HideLocalKeyboardLayoutSetting">Met deze optie kunt u het dialoogvenster Lokale toetsenbordindeling verbergen/zichtbaar maken vanuit Geavanceerde voorkeuren</string>
+	  <string id="Explain_HideConnectionCenter">Met deze optie kunt u het dialoogvenster Connection Center verbergen/zichtbaar maken vanuit Geavanceerde voorkeuren</string>
+	  <string id="Explain_HideAdvancedPreferences">Met deze optie kunt u de optie Geavanceerde voorkeuren verbergen/zichtbaar maken via het pictogram Citrix Workspace-app in het systeemvak</string>
+	  <string id="Explain_HideDPIsettings">Met deze optie kunt u de DPI-instellingen verbergen/zichtbaar maken vanuit Geavanceerde voorkeuren</string>
+	  <string id="Explain_HideCitrixFiles">Met deze optie kunt u Citrix Files verbergen/zichtbaar maken vanuit Geavanceerde voorkeuren</string>
+	  <string id="Explain_HideCitrixCasting">Met deze optie kunt u het Citrix Casting-dialoogvenster verbergen/zichtbaar maken vanuit Geavanceerde voorkeuren</string>
+	  <string id="Explain_SmartCardRemovalAction_x86">Met dit beleid kunt u het gedrag van de verwijderingsactie voor smartcards bepalen wanneer de gebruiker zich bij een Citrix Webinterface 5.4 PNAgent-site verifieert met smartcard via de app Citrix Workspace voor Windows.
+Met deze optie kan de gebruiker het gedrag van de gebruikerssessie instellen bij het verwijderen van de smartcard van de client. 
+
+OPMERKING: deze optie is alleen beschikbaar op een 32-bits besturingssysteem. 
+
+Als u dit beleid wilt inschakelen, moet de verwijderingsoptie voor smartcards zijn ingesteld op WI XenApp Services. Raadpleeg de XenApp-documentatie voor de procedure voor het instellen van smartcard-verwijdering in XenApp. Wanneer het beleid is ingeschakeld, blijft de gebruiker aangemeld bij Citrix Workspace ondanks het verwijderen van de smartcard van de client. De gebruiker wordt echter afgemeld bij de XenApp-sessie.
+</string>	  
+<string id="Explain_SmartCardRemovalAction_AMD64">Met dit beleid kunt u het gedrag van de verwijderingsactie voor smartcards bepalen wanneer de gebruiker zich bij een Citrix Webinterface 5.4 PNAgent-site verifieert met smartcard via Citrix Workspace voor Windows. 
+
+Met deze optie kan de gebruiker het gedrag van de gebruikerssessie instellen bij het verwijderen van de smartcard van de client. 
+
+Dit beleid is alleen van toepassing op 64-bits besturingssystemen. Om het besturingssysteemtype van een Windows-machine te controleren, klikt u op de knop Start, klikt u met de rechtermuisknop op Computer en daarna op Eigenschappen. Controleer het systeemtype in het gedeelte Systeem als u wilt weten welk type besturingssysteem wordt uitgevoerd. Dit beleid is van toepassing als het 64-bits besturingssysteem bij Systeemtype wordt weergegeven. 
+
+Als u dit beleid wilt inschakelen, moet de verwijderingsoptie voor smartcards zijn ingesteld op WI XenApp Services. Raadpleeg de XenApp-documentatie voor de procedure voor het instellen van smartcard-verwijdering in XenApp. Wanneer het beleid is ingeschakeld, blijft de gebruiker aangemeld bij Citrix Workspace ondanks het verwijderen van de smartcard van de client. De gebruiker wordt echter afgemeld bij de XenApp-sessie.
+
+Wanneer het beleid is uitgeschakeld, wordt de XenApp-sessie van de gebruiker altijd verbroken als de smartcard van het clientapparaat wordt verwijderd en het verwijderen van smartcards op de WI XenApp-services geen effect heeft. 
+</string>  
+	  <string id="Explain_HideSettings">Met dit beleid kunt u snelkoppelingen naar toepassingen op het bureaublad en bij het opstarten beheren, samen met de Workspace-instellingen via de gebruikersinterface. Eindgebruiker moet kunnen bepalen hoe de apps zijn ingedeeld in het Startmenu. De gebruikersinterface heeft een optie om de snelkoppelingen in een door de gebruiker gekozen map van het Startmenu te plaatsen. Hetzelfde besturingselement is ook beschikbaar voor bureaubladsnelkoppelingen. Biedt tevens een gebruikersinterface voor het beheren van Workspace-besturingsinstellingen. Hierdoor wordt de gebruiksvriendelijkheid van de app Citrix Workspace voor Windows verbeterd.
+
+Als u deze beleidsinstelling inschakelt, hoeft u geen gebruik te maken van de drie beschikbare keuzemogelijkheden, d.w.z. de gehele gebruikersinterface uitschakelen, het tabblad Toepassingen uitschakelen of het tabblad Werkruimte uitschakelen. (Let op: nadat u deze beleidsinstelling hebt ingeschakeld, moet u bij het eindpunt de Citrix Workspace-app opnieuw instellen zodat de instellingen in werking treden)
+
+Het uitschakelen van deze beleidsinstelling komt overeen met Niet-geconfigureerd. 
+ 
+</string>
+      <string id="Explain_SelfServiceMode_Enable">Met dit beleid kunt u de SelfServiceMode-instellingen van Citrix Workspace in- of uitschakelen.
+
+Wanneer het beleid is ingeschakeld, kunt u de SelfService-gebruikersinterface weergeven.
+
+Wanneer het beleid is uitgeschakeld, wordt de SelfService-gebruikersinterface verborgen en worden gebruikers automatisch op alle apps geabonneerd.
+</string>
+
+<string id="Explain_PublishSafeContent">Met dit beleid kunt u toestaan ​​of verhinderen dat gebruikers veilige inhoud publiceren.
+</string>
+
+<string id="Explain_PublishUnsafeContent">Met dit beleid kunt u toestaan ​​of verhinderen dat gebruikers onveilige inhoud publiceren.
+</string>
+
+      <string id="Explain_DisableADSCheck">Met dit beleid kunt u ADS uitschakelen.</string>
+      <string id="Explain_EnableAppShortCut">Als u deze beleidsinstelling inschakelt:
+
+- Bij afmelding de weergegeven toepassingen in het Citrix Workspace-venster wissen. Wanneer deze optie is geselecteerd, worden gebruikersgegevens na het afmelden bij Citrix Workspace verwijderd. Als u deze optie uitschakelt, worden gebruikersgegevens mogelijk niet automatisch verwijderd na het afmelden bij Citrix Workspace.
+
+- De toepassingslijst niet vernieuwen wanneer Citrix Workspace wordt geopend. Wanneer deze optie is geselecteerd, vernieuwt Citrix Workspace de toepassingslijst na het opstarten niet. Wanneer deze optie is uitgeschakeld, vernieuwt Citrix Workspace de toepassingslijst bij het opstarten.
+
+- Selfservice-selectie van apps negeren en alle apps verplicht stellen. Als Citrix Workspace met een PNAgent-service werkt, is dit vereist om alle apps automatisch toe te voegen. Als Citrix Workspace met een StoreFront-store werkt, maakt u de wijziging op de StoreFront-server om de store verplicht te maken. (Deze instelling is momenteel niet van toepassing op StoreFront-stores). Wanneer deze optie is geselecteerd, worden gebruikers in SelfService op alle toepassingen geabonneerd voor PNAgent-sites. Wanneer deze optie is uitgeschakeld, moet de eindgebruiker zich handmatig abonneren op alle toepassingen of de vereiste toepassingen van de PNAgent-sites.
+</string>
+      <string id="Explain_AddAccount_Enable">Met dit beleid kunt u gebruikers de optie te geven om accounts toe te voegen of te verwijderen in NonSelfServiceMode</string>
+      <string id="Receiver">Citrix Workspace</string>
+      <string id="Storefront">StoreFront</string>
+      <string id="Storefronts">NetScaler Gateway-URL/StoreFront-accountslijst</string>
+      <string id="Storefronts_Part">Voer de NetScaler Gateway-URL/StoreFront-accountgegevens hier in:</string>
+      <string id="Storefronts_Help">Met deze beleidsinstelling kunt u een lijst met StoreFront-accounts of een NetScaler Gateway-URL beheren.
+
+Als u deze beleidsinstelling inschakelt, kunt u een lijst met StoreFront-accounts en een NetScaler Gateway-URL invoeren. U kunt slechts één NetScaler-URL en meerdere StoreFront-URL's opgeven.  Geef voor elk item dat u aan de lijst toevoegt de volgende informatie op, gescheiden door een puntkomma:
+
+Storenaam: de naam die de gebruiker voor deze store te zien krijgt.
+
+Store-URL: de URL voor de store.
+
+Status van store: Aan/Uit.
+
+Storebeschrijving: de beschrijving die gebruikers voor deze store zien.
+
+Voorbeeld voor StoreFront:
+
+SalesStore;https://sales.mijnbedrijf.com/Citrix/Store/discovery;On;Store voor verkoopmedewerkers
+
+Voorbeeld voor NetScaler Gateway-URL.
+HRStore;https://ag.mijnbedrijf.com#Storename;On;Store voor HR-medewerkers
+
+#Storename is de naam van de store achter de NetScaler Gateway die moet worden geconfigureerd.
+Opmerking: een NetScaler Gateway-URL die via deze methode is geconfigureerd, ondersteunt de site met PNA-services achter NetScaler Gateway niet.
+
+</string>
+      <string id="Fast_Connect_API_Support">API-ondersteuning voor Fast Connect</string>
+      <string id="Explain_FastConnect">Dit beleid beheert API-ondersteuning voor Fast Connect</string>
+      <string id="Policy_FastConnectAPI_Support">API-ondersteuning voor Fast Connect beheren</string>
+      <string id="Explain_FastConnectAPI_Support">Fast Connect API vereenvoudigt het overschakelen tussen gebruikers met behulp van een API waarmee de identiteit van een gebruiker in Citrix Workspace snel kan worden gewijzigd.  
+
+-Fast Connect API inschakelen: met deze optie kan snel van gebruiker worden gewisseld door middel van een API voor het overschakelen naar een ​​nieuwe gebruiker
+
+-Fast Connect Transition-API inschakelen: als deze optie is ingeschakeld, zijn de volgende opdrachten niet toegestaan: selfservice.exe-terminate en selfservice.exe-fastterminate.
+
+-Apps na het afmelden blijven uitvoeren: met deze optie blijft de toepassingssessie verbonden, zelfs wanneer de gebruiker de verbinding met Citrix Workspace heeft verbroken.
+
+-Selfservice-plug-in integreren met Fast Connect: met deze optie wordt bij het gebruik van de Fast Connect-bibliotheek/SDK een melding verzonden naar de SelfService-plug-in. </string>
+      <string id="Explain_EnableFastConnectTransitionAPI">Fast Connect Transition-API inschakelen</string>
+      <string id="Explain_LeaveAppsRuningOnLogoff">Apps na het afmelden blijven uitvoeren</string>
+      <string id="Explain_FastConnectUsingSSP">-Selfservice-plug-in integreren met Fast Connect</string>
+	  <string id="Policy_EngineErrMsg">Foutberichten over engine inschakelen</string>
+      <string id="Polciy_CEIP">CEIP inschakelen</string>
+	  <string id="Policy_Dpi">Hoge DPI</string>
+      <string id="Polciy_CEIP_Configuration">CEIP-configuratie</string>
+      <string id="Part_Enable_CEIP">CEIP inschakelen.</string>
+      <string id="Part_CEIP_ServerURL">URL van CEIP-server</string>
+      <string id="Part_CEIP_UploadClass">CEIP-uploadklasse</string>
+      <string id="Part_CEIP_UploadFrequencyInWeeks">CEIP-uploadfrequentie in weken initialiseren</string>
+      <string id="Part_AllowUnSecureURL">Onveilige URL toestaan ​​(http in plaats van https)</string>
+      <string id="Explain_CEIP_Configuration">1. De URL van de CEIP-server opgeven 
+2. De CEIP-uploadklasse opgeven 
+3. De uploadfrequentie instellen
+4. Onveilige URL toestaan </string>
+	  <string id="Explain_EnableEngineErrMsg">Met deze optie worden specifieke engine-foutberichten ingeschakeld. Het vervangt algemene protocolstuurprogrammafouten door specifieke foutberichten</string>
+      <string id="Explain_EnableCEIP">CEIP staat voor het Customer Experience Improvement Programme (kwaliteitsverbeteringsprogramma) van Citrix. Meer informatie over CEIP is te vinden op http://www.citrix.com/cms/ws/ceip</string>
+	  <string id="Explain_Policy_Dpi">Met dit beleid kunt u het schalen van een sessie beheren. 
+
+Als het beleid wordt ingeschakeld, maakt het de Citrix Workspace bewust van de DPI en biedt het de flexibiliteit om de sessie te wijzigen aan de hand van de DPI die in de multi-monitorsessie wordt toegepast.
+
+Het inschakelen van het beleid biedt twee opties 
+1. Ja - de sessie schalen
+2. Nee, de systeemeigen resolutie gebruiken
+	  
+Het beleid is standaard uitgeschakeld. Wanneer het beleid is uitgeschakeld, schaalt het besturingssysteem de resolutie. </string>
+	  <string id="Explain_EnableDPIAwareness">Zorgt dat Citrix Workspace rekening houdt met DPI-status. Deze instelling is standaard ingeschakeld. Met deze optie kan Citrix Workspace de sessie schalen aan de hand van de DPI die in multi-monitorsessies wordt toegepast. Meer informatie over DPI-status is te vinden op https://support.citrix.com/article/CTX230017</string>
+      <string id="CEIP">CEIP</string>
+	  <string id="DPI">DPI</string>
+      <string id="Explain_CEIP">CEIP staat voor het Customer Experience Improvement Programme (kwaliteitsverbeteringsprogramma) van Citrix. Meer informatie over CEIP is te vinden op http://www.citrix.com/cms/ws/ceip/</string>
+	  <string id="Explain_DPI">Schaal de sessie voor hoge resolutie.</string>
+      <string id="AlwaysOn">Diagnostische gegevens</string>
+      <string id="Explain_AlwaysOn">Met dit beleid kunt u voortdurend traceerlogboeken van gebruikers verzamelen.</string>
+      <string id="Policy_AlwaysOn">Altijd-aan tracering</string>
+      <string id="Explain_EnableAlwaysOn">Deze optie is standaard ingeschakeld om voortdurend traceerlogboeken van gebruikers te verzamelen.</string>
+      <string id="FedRAMP">Naleving</string>
+      <string id="Explain_FedRAMP">Met dit beleid kunt u het verzenden van gegevens naar services van derden, zoals Google Analytics, uitschakelen.
+Uitschakelen: wanneer deze optie is uitgeschakeld, kunnen anonieme gegevens naar services van derden worden verzonden.
+Inschakelen: wanneer deze optie is ingeschakeld, worden er geen gegevens naar services van derden verzonden.
+      </string>
+      <string id="Policy_FedRAMP">Het verzenden van gegevens naar derden uitschakelen</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator heeft een tekenreeks aangetroffen die niet voorkomt in de bron ADM-tekenreekstabel.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator heeft een beleid aangetroffen dat geen supportedOn-waarde heeft.</string>
+	  <string id="ADMXPolicy_SupportedOn">Alle door Citrix Workspace ondersteunde platforms</string>
+	  <string id="ADMXPolicy_SupportedOn_Explain_SmartCardRemovalAction">Ondersteund door Citrix Workspace-app 4.5 en hoger</string>
+	  <string id="HDXoverUDP_Off">Uit</string>
+	  <string id="HDXoverUDP_On">Aan</string>
+	  <string id="HDXoverUDP_Preferred">Voorkeur</string>
+	  <string id="Policy_TransportProtocal">Transportprotocol voor Citrix Workspace</string>
+	  <string id="Explain_TransportProtocal">Uit: alleen TCP gebruiken.
+Voorkeur: eerst UDP, fallback naar TCP.
+Aan: UDP afdwingen, geen fallback naar TCP.					
+	  </string>
+      <string id="Explain_BidirectionalContentRedirection">Met de functie Bidirectionele omleiding van inhoud kunnen URL's worden omgeleid van client naar server en omgekeerd op basis van de configuratie.
+
+-Gepubliceerde toepassingsnaam/bureaubladnaam: geeft de naam aan van de gepubliceerde toepassing of het gepubliceerde bureaublad die/dat wordt gebruikt om de omgeleide URL te starten. Dit wordt niet gebruikt wanneer Bidirectionele omleiding van inhoud is ingeschakeld in een van de actieve ICA-sessies. De keuze voor bureaublad of toepassing wordt bepaald op basis van het hieronder opgegeven type.
+
+-Bovenstaande naam staat voor het type publicatie: geeft aan of de bovenstaande naam een toepassing of bureaublad is.
+
+-Toegestane URL's die naar VDA worden omgeleid: dit is de lijst met URL's die op de VDA wordt geopend. Puntkomma ';' dient als scheidingsteken. &quot;*&quot; kan als joker worden gebruikt. Bijvoorbeeld *.xyz.com.
+
+-Toegestane URL's die naar client worden omgeleid: dit is de lijst met URL's die op de client wordt geopend. Puntkomma ';' dient als scheidingsteken. &quot;*&quot; kan als joker worden gebruikt. Bijvoorbeeld *.xyz.com.
+
+Opmerking: 
+1) Als een URL in beide lijsten (bureaublad/toepassingen) is geplaatst, wordt deze vanaf de oorspronkelijke locatie gestart.
+2) Als de URL in geen van beide lijsten voorkomt, wordt de URL ook vanaf de oorspronkelijke locatie gestart.
+      </string>
+      <string id="Policy_BidirectionalContentRedirection">Bidirectionele omleiding van inhoud</string>
+      <string id="Part_BidirectionalContentRedirectionPubAppOrDesktopName">Gepubliceerde toepassingsnaam/bureaubladnaam: </string>
+      <string id="Part_BidirectionalContentRedirectionPubNameType">Bovenstaande naam staat voor het type publicatie:</string>
+      <string id="Part_BidirectionalContentRedirectionApplication">Toepassing</string>
+      <string id="Part_BidirectionalContentRedirectionDesktop">Bureaublad</string>
+      <string id="Part_BidirectionalContentRedirectionVDAURLs">Toegestane URL's die omgeleid worden naar VDA:</string>
+      <string id="Part_BidirectionalContentRedirectionClientURLs">Toegestane URL's die omgeleid worden naar client:</string>
+      <string id="Policy_BidirectionalContentRedirectionOverrides">Onderdrukkingen voor bidirectionele inhoudsomleiding</string>
+      <string id="Explain_BidirectionalContentRedirectionOverrides">Onderdrukkingen voor bidirectionele inhoudsomleiding zijn URL-specifieke onderdrukkingen die van toepassing zijn op de functie Bidirectionele omleiding van inhoud.
+-URL-specifieke uitgegeven toepassings- of bureaubladoverschrijvingen: dit geeft de URL-specifieke overschrijvingen aan voor uitgegeven toepassing/bureaubladnaam.  De &quot;Waardenaam&quot; moet exact overeenkomen met een item in de lijst &quot;Toegestane URL's die omgeleid worden naar VDA&quot; en de &quot;Waarde&quot; specificeert een uitgegeven toepassing/bureaubladnaam die specifiek is voor die URL.
+</string>
+      <string id="Part_BidirectionalContentRedirectionVDAAppOverrides">URL-specifieke uitgegeven toepassings- of bureaubladoverschrijvingen:</string>
+	  <string id="Dir_AutoUpdate">Citrix Workspace-updates</string>
+	  <string id="MinusOne">-1</string>
+	  <string id="Zero">0</string>
+	  <string id="One">1</string>
+	  <string id="Two">2</string>
+	  <string id="Three">3</string>
+	  <string id="Four">4</string>
+	  <string id="Five">5</string>
+	  <string id="Six">6</string>
+	  <string id="Seven">7</string>
+	  <string id="Eight">8</string>
+	  <string id="Nine">9</string>
+	  <string id="Ten">10</string>
+	  <string id="Eleven">11</string>
+	  <string id="Twelve">12</string>
+	  <string id="Thirteen">13</string>
+	  <string id="Fourteen">14</string>
+	  <string id="Fifteen">15</string>
+	  <string id="Sixteen">16</string>
+	  <string id="Seventeen">17</string>
+	  <string id="Eighteen">18</string>
+	  <string id="Nineteen">19</string>
+	  <string id="Twenty">20</string>
+	  <string id="TwentyOne">21</string>
+	  <string id="TwentyTwo">22</string>
+	  <string id="TwentyThree">23</string>
+	  <string id="TwentyFour">24</string>
+	  <string id="TwentyFive">25</string>
+	  <string id="TwentySix">26</string>
+	  <string id="TwentySeven">27</string>
+	  <string id="TwentyEight">28</string>
+	  <string id="TwentyNine">29</string>
+	  <string id="Thirty">30</string>
+	  <string id="POL_CONFIGURE_LAN_PROXY_MANUALLY">NetScaler LAN-proxy handmatig configureren</string>
+      <string id="POL_CONFIGURE_LAN_PROXY_DLL">NetScaler LAN-proxy met behulp van DLL configureren</string>
+	  <string id="CitrixSecureBrowser">Citrix Secure Browser</string>
+	  <string id="Explain_CitrixSecureBrowser">Citrix Secure Browser wordt gebruikt om verbinding te maken met SaaS-toepassingen.</string>
+	  <string id="CitrixSecureBrowser_Cache">Cache</string>
+	  <string id="Explain_CitrixSecureBrowser_Cache">Met dit beleid kunt u browsercache in-/uitschakelen.
+Het opslaan in cache is standaard ingeschakeld.
+
+Wanneer de optie is ingeschakeld, worden browsercookies en bronnen op de lokale schijf opgeslagen.
+Wanneer de optie is uitgeschakeld, worden browsercookies en bronnen niet opgeslagen.
+	  </string>
+	  <string id="AppProtectionAdvanced">App-beveiliging - Geavanceerd</string>
+	  <string id="Explain_AppProtectionAdvanced">Dit beleid biedt extra beveiliging door de handtekening van alle Citrix Workspace app-modules te verifiëren. En beschermt deze modules tegen DLL-injectieaanvallen.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="Policy_EnableICAClient">
+        <checkBox defaultChecked="true" refId="Part_EnableICAClient_Enable">Client inschakelen</checkBox>
+        <decimalTextBox defaultValue="10000" refId="Part_EnableICAClient_Minimum">Minimale clientversie</decimalTextBox>
+      </presentation>
+      <presentation id="Storefronts">
+        <listBox refId="Storefronts_Part">Voer de NetScaler Gateway-URL/StoreFront-accountgegevens hier in:</listBox>
+      </presentation>
+      <presentation id="Policy_ProxyLockdown">
+        <comboBox refId="Part_Proxy_ProxyTypeLockdown">
+          <label>Proxytypen</label>
+          <suggestion>Auto</suggestion>
+          <suggestion>Geen</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Beveiligd</suggestion>
+          <suggestion>Script</suggestion>
+        </comboBox>
+        <textBox refId="Part_Proxy_ProxyHostLockdown">
+          <label>Proxyhostnamen</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyPortLockdown">
+          <label>Proxypoorten</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyAutoConfigUrlLockdown">
+          <label>Proxyscript-URL's</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyBypassListLockdown">
+          <label>Lijst te omzeilen servers</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_AltProxyLockdown">
+        <comboBox refId="Part_AltProxy_ProxyTypeLockdown">
+          <label>Proxytypen</label>
+          <suggestion>Auto</suggestion>
+          <suggestion>Geen</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Beveiligd</suggestion>
+          <suggestion>Script</suggestion>
+        </comboBox>
+        <textBox refId="Part_AltProxy_ProxyHostLockdown">
+          <label>Proxyhostnamen</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyPortLockdown">
+          <label>Proxypoorten</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyAutoConfigUrlLockdown">
+          <label>Proxyscript-URL's</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyBypassListLockdown">
+          <label>Lijst te omzeilen servers</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_AltProxy_ProxyFallbackLockdown">Failover naar rechtstreekse verbinding</checkBox>
+      </presentation>
+      <presentation id="Policy_ProxySocks">
+        <dropdownList defaultItem="1" refId="Part_ProxySocks_Version">SOCKS-protocolversie</dropdownList>
+        <textBox refId="Part_ProxySocks_ProxyHostLockdown">
+          <label>Proxyhostnamen</label>
+        </textBox>
+        <textBox refId="Part_ProxySOCKS_ProxyPortLockdown">
+          <label>Proxypoorten</label>
+        </textBox>
+      </presentation>
+	  <presentation id="Policy_EnableAutoUpdatePolicy">
+        <dropdownList defaultItem="0" refId="Part_EnableAutoUpdatePolicy">Citrix Workspace-updatebeleid inschakelen</dropdownList>
+        <checkBox defaultChecked="false" refId="Part_EnableAutoUpdatePolicy_version">ALLEEN LTSR</checkBox>
+		<dropdownList defaultItem="0" noSort="true" refId="Part_EnableAutoUpdatePolicy_RemindMeLater">Citrix-Workspace-Update-DeferUpdate-Count</dropdownList>
+      </presentation>
+	  <presentation id="Policy_CheckAutoUpdatePolicy">
+        <dropdownList defaultItem="0" refId="Part_CheckAutoUpdatePolicy">Groep vertragen</dropdownList>
+      </presentation>
+      <presentation id="Policy_ProxyAuthentication">
+        <checkBox defaultChecked="true" refId="Policy_ProxyExplicitAuthenticationEnabled">Gebruiker om referenties vragen</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyBasicAuthenticationEnabled">Verificatie van ongecodeerde tekst toestaan</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyNTLMAuthenticationEnabled">NTLM-hashverificatie toestaan</checkBox>
+        <textBox refId="Part_Proxy_Socks5User">
+          <label>Expliciete gebruikersnaam</label>
+        </textBox>
+        <textBox refId="Part_Proxy_Socks5Password">
+          <label>Expliciet wachtwoord</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_SSLLockdown">
+        <checkBox defaultChecked="true" refId="Part_SSL_EnabledLockdown">TLS vereisen voor alle verbindingen</checkBox>
+		<dropdownList defaultItem="0" refId="Part_SSL_SecurityComplianceMode">Beveiligingsnalevingsmodus</dropdownList>
+        <comboBox refId="Part_SSL_SSLProxyHostLockdown">
+          <label>Toegestane TLS-servers</label>
+          <suggestion>*:443</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_SSL_SSLProtocolLockdown">TLS-versie</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_SSL_CiphersetLockdown">TLS-coderingsset</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_SSL_RevocationLockdown">Beleid voor certificaatintrekkingscontrole</dropdownList>
+        <comboBox refId="Part_SSL_SSLPolicyOID">
+          <label>Beleidsextensie-OID</label>
+          <suggestion>2.5.29.32.0</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="2" refId="Part_SSL_ClientAuthentication">Clientverificatie</dropdownList>
+        <comboBox refId="Part_SSL_ClientCertificate">
+          <label>Clientcertificaat</label>
+          <suggestion/>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ConfigureClientSelectiveTrust">
+        <checkBox defaultChecked="true" refId="Part_EnableClientSelectiveTrust">Vertrouwde serverconfiguratie afdwingen</checkBox>
+        <comboBox refId="Part_ConfigureClientSelectiveTrust_IEZone">
+          <label>Windows internetzone</label>
+          <suggestion>Vertrouwd</suggestion>
+          <suggestion>Vertrouwd, intranet</suggestion>
+        </comboBox>
+        <comboBox refId="Part_ConfigureClientSelectiveTrust_EffectiveAddress">
+          <label>Adres</label>
+          <suggestion>*.finance.citrix.com,*.sales.citrix.com</suggestion>
+          <suggestion>cps*.citrix.com</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ClientAutoReconnect">
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_Reconnect">Automatisch opnieuw verbinden inschakelen</checkBox>
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_CGP">Sessie openhouden inschakelen (heeft prioriteit als beide zijn ingeschakeld)</checkBox>
+		<decimalTextBox defaultValue="80" refId="Part_ClientAutoReconnect_Dimming">Transparantieniveau</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_Smartcard">
+        <checkBox defaultChecked="true" refId="Part_Smartcard_Enable">Smartcard-verificatie toestaan</checkBox>
+        <checkBox refId="Part_SmartcardPin_Enable">Pass-through-verificatie voor PIN gebruiken</checkBox>
+      </presentation>
+      <presentation id="Policy_KerberosLockdown"/>
+      <presentation id="Policy_SSONForNSG"/>
+      <presentation id="Policy_LocalCredentialsLockdown">
+        <checkBox defaultChecked="true" refId="Part_LocalCredentialsLockdown_Enable">Pass-through-verificatie inschakelen</checkBox>
+        <checkBox refId="Part_LegacyLocalUserNameAndPassword_Enable">Pass-through-verificatie voor alle ICA-verbindingen toestaan</checkBox>
+        <checkBox refId="Part_NovellCredentials">Novell Directory Server-referenties gebruiken</checkBox>
+      </presentation>
+      <presentation id="Policy_WITicket">
+        <checkBox defaultChecked="true" refId="Part_WITicket_Legacy_Enable">Verouderde ticketafhandeling</checkBox>
+        <checkBox defaultChecked="true" refId="Part_WITicket_LogonTicket_Enable">Webinterface 4.5 en hoger</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableDriveMapping">
+        <checkBox defaultChecked="true" refId="Part_EnableDriveMappingCheckbox">Clientstationstoewijzing inschakelen</checkBox>
+        <checkBox refId="Part_EnableDriveMappingReadonly">Alleen-lezen clientstations</checkBox>
+        <comboBox refId="Part_EnableDriveMappingDisableDrives">
+          <label>Stations niet toewijzen</label>
+          <suggestion>C</suggestion>
+          <suggestion>ABCDEFGHIJKLMNOPQRSTUVWXYZ</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_EnablePrinterMapping"/>
+      <presentation id="Policy_LocalPort">
+        <textBox refId="Part_MaxPort">
+          <label>Maximum aantal seriële poorten</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_EnableSerialPortCheckbox">Seriële poorten toewijzen</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableVirtualSerialPortCheckbox">PDA-synchronisatie toestaan</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableParallelPortCheckbox">Parallelle poorten toewijzen</checkBox>
+      </presentation>
+      <presentation id="Policy_ImageCapture"/>
+      <presentation id="Policy_AudioInput">
+        <checkBox defaultChecked="true" refId="Part_BiDiAudio_Enable">Clientmicrofoon inschakelen</checkBox>
+      </presentation>
+      <presentation id="Policy_Clipboard"/>
+      <presentation id="Policy_USB_PNP_Devices"/>
+      <presentation id="Policy_PointOfSales"/>
+	  <presentation id="Policy_Foreground_Progress_Bar"/>
+	  <presentation id="Policy_HWacceleration"/>
+        <presentation id="Policy_EnableH265"/>
+      <presentation id="Policy_Audio">
+        <checkBox defaultChecked="true" refId="Part_Audio_Enabled">Audio inschakelen</checkBox>
+        <dropdownList defaultItem="0" refId="Part_Audio_Quality">Geluidskwaliteit</dropdownList>
+        <checkBox refId="Part_RealtimeTransport_Enabled">Realtime transport inschakelen</checkBox>
+        <decimalTextBox defaultValue="16500" refId="Part_RtpAudioLowestPort" spinStep="2">Laagste poortnummer</decimalTextBox>
+        <decimalTextBox defaultValue="16509" refId="Part_RtpAudioHighestPort" spinStep="2">Hoogste poortnummer</decimalTextBox>
+        <checkBox refId="Part_RealtimeTransportThroughGateway_Enabled">Realtime transport via NetScaler Gateway toestaan</checkBox>
+      </presentation>
+      <presentation id="Policy_Graphics">
+        <dropdownList defaultItem="1" refId="Part_Graphics_ColorDepth">Kleurdiepte</dropdownList>
+        <checkBox refId="Part_Graphics_DiskCache">Schijfgebaseerde caching</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ImageAcceleration">Compressie met verlies</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowser">HDX 3D-browserversnelling</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowserCompression">HDX 3D-browserversnelling - compressie met verlies</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenMultimedia">Externe video</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyKeyboard">SpeedScreen-wachttijdvermindering - lokale echo toetsenbord</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyMouse">SpeedScreen-wachttijdvermindering - voorspelling van muisaanwijzer</checkBox>
+      </presentation>
+      <presentation id="Policy_Display">
+        <comboBox refId="Part_Display_Seamless">
+         <label>Naadloze vensters</label>
+		  <default/>
+          <suggestion>True</suggestion>
+          <suggestion>False</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Width">
+         <label>Vensterbreedte</label>
+		  <default/>
+          <suggestion>1024-</suggestion>
+          <suggestion>800-</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Height">
+         <label>Vensterhoogte</label>
+		  <default/>
+          <suggestion>734-</suggestion>
+          <suggestion>600-</suggestion>
+        </comboBox>
+       <dropdownList defaultItem="0" refId="Part_Display_Percent">Vensterpercentage</dropdownList>
+        <comboBox refId="Part_Display_WorkArea">
+         <label>Werkgebied verkleinen</label>
+		  <default/>
+          <suggestion>5</suggestion>
+        </comboBox>
+       <checkBox refId="Part_Display_FullScreen">Volledig scherm</checkBox>
+     </presentation>
+      <presentation id="Policy_Dpi">
+       <dropdownList defaultItem="0" refId="scaling_option">De sessie schalen voor hoge resolutie?</dropdownList>
+      </presentation>
+      <presentation id="Policy_LocalAppAccess">
+        <checkBox refId="Part_Allow_URLRedirection">URL-omleiding toestaan</checkBox>
+      </presentation>
+      <presentation id="Policy_Keyboard_Hotkeys">
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Windows_Key">Windows-toets:</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Tasklist">Takenlijst:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Tasklist_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Close_Remote_Application">Toepassing sluiten:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar">Volledig scherm in-/uitschakelen:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Del:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">Taakbeheer:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</dropdownList>
+        <dropdownList defaultItem="11" refId="Part_Keyboard_Hotkey_Alt_Tab_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Shift-Tab:</dropdownList>
+        <dropdownList defaultItem="12" refId="Part_Keyboard_Hotkey_Alt_Backtab_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">Wachttijdvermindering:</dropdownList>
+        <dropdownList defaultItem="8" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">+</dropdownList>
+		<dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME">Algemene IME-modus:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishedApplications">
+        <comboBox refId="Part_PublishedApplications_InitialProgram">
+          <label>Toepassing</label>
+          <suggestion>#Kladblok</suggestion>
+          <suggestion>#*</suggestion>
+        </comboBox>
+        <checkBox defaultChecked="true" refId="Part_PublishedApplications_SessionSharing">Sessie delen</checkBox>
+      </presentation>
+      <presentation id="Policy_HostRenderedAudio"/>
+      <presentation id="Policy_ICAFileSettings">
+        <checkBox defaultChecked="true" refId="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</checkBox>
+      </presentation>
+      <presentation id="Policy_ExtraURLProtocols">
+        <textBox refId="Part_ExtraURLProtocols">
+          <label>Extra URL-protocollen</label>
+        </textBox>
+      </presentation>
+	  <presentation id="Policy_EngineErrMsg" />
+      <presentation id="Polciy_CEIP" />
+	  <presentation id="AppProtectionAdvanced" />
+      <presentation id="Polciy_CEIP_Configuration">
+        <textBox refId="Part_CEIP_ServerURL">
+          <label>URL van CEIP-server</label>
+		  <defaultValue>https://rttf.citrix.com</defaultValue>
+        </textBox>
+        <textBox refId="Part_CEIP_UploadClass">
+          <label>CEIP-uploadklasse</label>
+		  <defaultValue>callhome_analytics</defaultValue>
+        </textBox>
+        <decimalTextBox defaultValue="1" refId="Part_CEIP_UploadFrequencyInWeeks">CEIP-uploadfrequentie in weken initialiseren</decimalTextBox>
+        <checkBox refId="Part_AllowUnSecureURL">Onveilige URL toestaan ​​(http in plaats van https)</checkBox>
+      </presentation>
+      <presentation id="Policy_BidirectionalContentRedirection">
+        <textBox refId="Part_BidirectionalContentRedirectionPubAppOrDesktopName">
+            <label>Gepubliceerde toepassingsnaam/bureaubladnaam:</label>
+        </textBox>
+        <dropdownList defaultItem="0" refId="Part_BidirectionalContentRedirectionPubNameType">Bovenstaande naam staat voor het type publicatie:</dropdownList>
+        <textBox refId="Part_BidirectionalContentRedirectionVDAURLs">
+            <label>Toegestane URL's die omgeleid worden naar VDA:</label>
+        </textBox>
+        <textBox refId="Part_BidirectionalContentRedirectionClientURLs">
+            <label>Toegestane URL's die omgeleid worden naar client:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_BidirectionalContentRedirectionOverrides">
+        <listBox refId="Part_BidirectionalContentRedirectionVDAAppOverrides">URL-specifieke uitgegeven toepassings- of bureaubladoverschrijvingen:</listBox>
+      </presentation>
+      <presentation id="Policy_AlwaysOn"/>
+      <presentation id="Policy_FedRAMP"/>
+      <presentation id="Policy_PublishSafeContent">
+        <dropdownList defaultItem="0" refId="Pick_Publish_SafeContent">Gebruikers toestaan/verhinderen om veilige inhoud te publiceren.</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishUnsafeContent">
+        <dropdownList defaultItem="1" refId="Pick_Publish_UnsafeContent">Gebruikers toestaan/verhinderen om onveilige inhoud te publiceren.</dropdownList>
+      </presentation>
+	  <presentation id="Policy_EnableFTU"/>
+        <presentation id="Policy_EnableNPS"/>
+	  <presentation id="Policy_Vprefer">
+	    <dropdownList defaultItem="1" refId="Allowed_Apps">Toestaan</dropdownList>
+	  </presentation>
+      <presentation id="Policy_EnableFTA"/>
+      <presentation id="Policy_EnableDefaultFTA"/>
+	  <presentation id="Policy_HideAdvancePreferencesOptions"/>	  
+	  <presentation id="Policy_SmartcardRemovalAction"/>
+	  <presentation id="Policy_HideSettings">
+		<dropdownList defaultItem="2" refId="Pick_UI_display">De juiste weergave van gebruikersinterface-instellingen kiezen.</dropdownList>
+	  </presentation>
+      <presentation id="Policy_SelfServiceMode_Enable"/>
+      <presentation id="Policy_EnableAppShortCut">
+        <textBox refId="Part_StartMenuDir_Text">
+          <label>Startmenu-directory</label>
+		  <defaultValue>Citrix</defaultValue>
+        </textBox>
+        <textBox refId="Part_DesktopDir_Text">
+          <label>Bureaublad-directory</label>
+		  <defaultValue>Citrix</defaultValue>
+        </textBox>
+        <checkBox refId="Part_StartMenuShortcut_Disable">Startmenu-snelkoppeling uitschakelen</checkBox>
+        <checkBox refId="Part_DesktopShortcut_Enable">Bureaubladsnelkoppeling inschakelen</checkBox>
+        <checkBox refId="Part_UseCategoryAsStartMenuPath_Disable">Categoriepad voor Startmenu uitschakelen</checkBox>
+		<checkBox refId="Part_UseCategoryAsDesktopPath_Enable">Categoriepad voor het bureaublad inschakelen</checkBox>
+		<checkBox refId="Part_UseDifferentPathsforStartmenuAndDesktop_Enable">Optie inschakelen om ander categoriepad voor het bureaublad en Startmenu te hebben. Optie uitschakelen om hetzelfde categoriepad voor het bureaublad als voor het Startmenu te hebben</checkBox>
+        <checkBox refId="Part_RemoveAppsOnLogoff_Enable">Apps verwijderen bij het afmelden</checkBox>
+        <checkBox refId="Part_RemoveAppsOnExit_Enable">Apps verwijderen bij het afsluiten</checkBox>
+		<checkBox refId="Part_ClearAppListOnLogoff_Enable">Bij afmelding de weergegeven toepassingen in het Citrix Workspace-venster wissen</checkBox>
+        <checkBox refId="Part_SuppressRefreshOnStartup_Enable">De toepassingslijst niet vernieuwen wanneer Citrix Workspace wordt geopend.</checkBox>
+        <checkBox refId="Part_AllAppsAreMandatory_Enable">Selfservice-selectie van apps negeren en alle apps verplicht stellen. Als Citrix Workspace met een PNAgent-service werkt, is dit vereist om alle apps automatisch toe te voegen. Als Citrix Workspace met een StoreFront-store werkt, maakt u de wijziging op de StoreFront-server om de store verplicht te maken. (Deze instelling is momenteel niet van toepassing op StoreFront-stores).</checkBox>
+      </presentation>
+      <presentation id="Policy_AddAccounts"/>
+      <presentation id="Policy_EnablePreLaunch"/>
+      <presentation id="Policy_ReconnectMode">
+        <dropdownList defaultItem="4" refId="Pick_ReconnectMode">Kies de juiste combinatie van voorwaarden voor het opnieuw verbinden.</dropdownList>
+      </presentation>
+      <presentation id="Policy_FastConnectAPI_Support">
+        <checkBox defaultChecked="true" refId="Explain_FastConnectAPI_Functionality">Fast Connect API-functionaliteit inschakelen</checkBox>
+        <checkBox refId="Explain_EnableFastConnectTransitionAPI">Fast Connect Transition-API inschakelen</checkBox>
+        <checkBox refId="Explain_LeaveAppsRuningOnLogoff">Apps na het afmelden blijven uitvoeren</checkBox>
+        <checkBox refId="Explain_FastConnectUsingSSP">Selfservice-plug-in integreren met Fast Connect</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableICAClient_1">
+        <checkBox defaultChecked="true" refId="Part_EnableICAClient_Enable">Client inschakelen</checkBox>
+        <decimalTextBox defaultValue="10000" refId="Part_EnableICAClient_Minimum">Minimale clientversie</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_ProxyLockdown_1">
+        <comboBox refId="Part_Proxy_ProxyTypeLockdown">
+          <label>Proxytypen</label>
+          <suggestion>Auto</suggestion>
+          <suggestion>Geen</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Beveiligd</suggestion>
+          <suggestion>Script</suggestion>
+        </comboBox>
+        <textBox refId="Part_Proxy_ProxyHostLockdown">
+          <label>Proxyhostnamen</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyPortLockdown">
+          <label>Proxypoorten</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyAutoConfigUrlLockdown">
+          <label>Proxyscript-URL's</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyBypassListLockdown">
+          <label>Lijst te omzeilen servers</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_AltProxyLockdown_1">
+        <comboBox refId="Part_AltProxy_ProxyTypeLockdown">
+          <label>Proxytypen</label>
+          <suggestion>Auto</suggestion>
+          <suggestion>Geen</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>Beveiligd</suggestion>
+          <suggestion>Script</suggestion>
+        </comboBox>
+        <textBox refId="Part_AltProxy_ProxyHostLockdown">
+          <label>Proxyhostnamen</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyPortLockdown">
+          <label>Proxypoorten</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyAutoConfigUrlLockdown">
+          <label>Proxyscript-URL's</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyBypassListLockdown">
+          <label>Lijst te omzeilen servers</label>
+        </textBox>
+        <comboBox refId="Part_AltProxy_ProxyFallbackLockdown">
+          <label>Failover naar rechtstreekse verbinding</label>
+          <suggestion>false</suggestion>
+          <suggestion>true</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ProxySocks_1">
+        <dropdownList defaultItem="1" refId="Part_ProxySocks_Version">SOCKS-protocolversie</dropdownList>
+        <textBox refId="Part_ProxySocks_ProxyHostLockdown">
+          <label>Proxyhostnamen</label>
+        </textBox>
+        <textBox refId="Part_ProxySOCKS_ProxyPortLockdown">
+          <label>Proxypoorten</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_ProxyAuthentication_1">
+        <checkBox defaultChecked="true" refId="Policy_ProxyExplicitAuthenticationEnabled">Gebruiker om referenties vragen</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyBasicAuthenticationEnabled">Verificatie van ongecodeerde tekst toestaan</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyNTLMAuthenticationEnabled">NTLM-hashverificatie toestaan</checkBox>
+        <textBox refId="Part_Proxy_Socks5User">
+          <label>Expliciete gebruikersnaam</label>
+        </textBox>
+        <textBox refId="Part_Proxy_Socks5Password">
+          <label>Expliciet wachtwoord</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_SSLLockdown_1">
+        <checkBox defaultChecked="true" refId="Part_SSL_EnabledLockdown">TLS vereisen voor alle verbindingen</checkBox>
+		<dropdownList defaultItem="0" refId="Part_SSL_SecurityComplianceMode">Beveiligingsnalevingsmodus</dropdownList>
+        <comboBox refId="Part_SSL_SSLProxyHostLockdown">
+          <label>Toegestane TLS-servers</label>
+          <suggestion>*:443</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_SSL_SSLProtocolLockdown">TLS-versie</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_SSL_CiphersetLockdown">TLS-coderingsset</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_SSL_RevocationLockdown">Beleid voor certificaatintrekkingscontrole</dropdownList>
+        <comboBox refId="Part_SSL_SSLPolicyOID">
+          <label>Beleidsextensie-OID</label>
+          <suggestion>2.5.29.32.0</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="2" refId="Part_SSL_ClientAuthentication">Clientverificatie</dropdownList>
+        <comboBox refId="Part_SSL_ClientCertificate">
+          <label>Clientcertificaat</label>
+          <suggestion/>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ConfigureClientSelectiveTrust_1">
+        <checkBox defaultChecked="true" refId="Part_EnableClientSelectiveTrust">Vertrouwde serverconfiguratie afdwingen</checkBox>
+      </presentation>
+      <presentation id="Policy_ClientAutoReconnect_1">
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_Reconnect">Automatisch opnieuw verbinden inschakelen</checkBox>
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_CGP">Sessie openhouden inschakelen (heeft prioriteit als beide zijn ingeschakeld)</checkBox>
+		<decimalTextBox defaultValue="80" refId="Part_ClientAutoReconnect_Dimming">Transparantieniveau</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_Smartcard_1">
+        <checkBox defaultChecked="true" refId="Part_Smartcard_Enable">Smartcard-verificatie toestaan</checkBox>
+        <checkBox refId="Part_SmartcardPin_Enable">Pass-through-verificatie voor PIN gebruiken</checkBox>
+      </presentation>
+      <presentation id="Policy_KerberosLockdown_1"/>
+      <presentation id="Policy_LocalCredentialsLockdown_1">
+        <checkBox defaultChecked="true" refId="Part_LocalCredentialsLockdown_Enable">Pass-through-verificatie inschakelen</checkBox>
+        <checkBox refId="Part_LegacyLocalUserNameAndPassword_Enable">Pass-through-verificatie voor alle ICA-verbindingen toestaan</checkBox>
+        <checkBox refId="Part_NovellCredentials">Novell Directory Server-referenties gebruiken</checkBox>
+      </presentation>
+      <presentation id="Policy_WITicket_1">
+        <checkBox defaultChecked="true" refId="Part_WITicket_Legacy_Enable">Verouderde ticketafhandeling</checkBox>
+        <checkBox defaultChecked="true" refId="Part_WITicket_LogonTicket_Enable">Webinterface 4.5 en hoger</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableDriveMapping_1">
+        <checkBox defaultChecked="true" refId="Part_EnableDriveMappingCheckbox">Clientstationstoewijzing inschakelen</checkBox>
+        <checkBox refId="Part_EnableDriveMappingReadonly">Alleen-lezen clientstations</checkBox>
+        <comboBox refId="Part_EnableDriveMappingDisableDrives">
+          <label>Stations niet toewijzen</label>
+          <suggestion>C</suggestion>
+          <suggestion>ABCDEFGHIJKLMNOPQRSTUVWXYZ</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_EnablePrinterMapping_1"/>
+      <presentation id="Policy_LocalPort_1">
+        <textBox refId="Part_MaxPort">
+          <label>Maximum aantal seriële poorten</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_EnableSerialPortCheckbox">Seriële poorten toewijzen</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableVirtualSerialPortCheckbox">PDA-synchronisatie toestaan</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableParallelPortCheckbox">Parallelle poorten toewijzen</checkBox>
+      </presentation>
+      <presentation id="Policy_ImageCapture_1"/>
+      <presentation id="Policy_AudioInput_1">
+        <checkBox defaultChecked="true" refId="Part_BiDiAudio_Enable">Clientmicrofoon inschakelen</checkBox>
+      </presentation>
+      <presentation id="Policy_Clipboard_1"/>
+      <presentation id="Policy_USB_PNP_Devices_1"/>
+      <presentation id="Policy_PointOfSales_1"/>
+      <presentation id="Policy_Audio_1">
+        <checkBox defaultChecked="true" refId="Part_Audio_Enabled">Audio inschakelen</checkBox>
+        <dropdownList defaultItem="0" refId="Part_Audio_Quality">Geluidskwaliteit</dropdownList>
+        <checkBox refId="Part_RealtimeTransport_Enabled">Realtime transport inschakelen</checkBox>
+        <decimalTextBox defaultValue="16500" refId="Part_RtpAudioLowestPort" spinStep="2">Laagste poortnummer</decimalTextBox>
+        <decimalTextBox defaultValue="16509" refId="Part_RtpAudioHighestPort" spinStep="2">Hoogste poortnummer</decimalTextBox>
+        <checkBox refId="Part_RealtimeTransportThroughGateway_Enabled">Realtime transport via NetScaler Gateway toestaan</checkBox>
+      </presentation>
+      <presentation id="Policy_Graphics_1">
+        <dropdownList defaultItem="1" refId="Part_Graphics_ColorDepth">Kleurdiepte</dropdownList>
+        <checkBox refId="Part_Graphics_DiskCache">Schijfgebaseerde caching</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ImageAcceleration">Compressie met verlies</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowser">HDX 3D-browserversnelling</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowserCompression">HDX 3D-browserversnelling - compressie met verlies</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenMultimedia">Externe video</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyKeyboard">SpeedScreen-wachttijdvermindering - lokale echo toetsenbord</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyMouse">SpeedScreen-wachttijdvermindering - voorspelling van muisaanwijzer</checkBox>
+      </presentation>
+      <presentation id="Policy_Display_1">
+        <comboBox refId="Part_Display_Seamless">
+          <label>Naadloze vensters</label>
+		  <default/>
+          <suggestion>True</suggestion>
+          <suggestion>False</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Width">
+          <label>Vensterbreedte</label>
+		  <default/>
+          <suggestion>1024-</suggestion>
+          <suggestion>800-</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Height">
+          <label>Vensterhoogte</label>
+		  <default/>
+          <suggestion>734-</suggestion>
+          <suggestion>600-</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_Display_Percent">Vensterpercentage</dropdownList>
+        <comboBox refId="Part_Display_WorkArea">
+          <label>Werkgebied verkleinen</label>
+		  <default/>
+          <suggestion>5</suggestion>
+        </comboBox>
+        <checkBox refId="Part_Display_FullScreen">Volledig scherm</checkBox>
+      </presentation>
+      <presentation id="Policy_LocalAppAccess_1">
+        <checkBox refId="Part_Allow_URLRedirection">URL-omleiding toestaan</checkBox>
+      </presentation>
+      <presentation id="Policy_Keyboard_Hotkeys_1">
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Windows_Key">Windows-toets:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Tasklist">Takenlijst:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Tasklist_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Close_Remote_Application">Toepassing sluiten:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar">Volledig scherm in-/uitschakelen:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Del:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">Taakbeheer:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Tab_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Shift-Tab:</dropdownList>
+        <dropdownList defaultItem="4" refId="Part_Keyboard_Hotkey_Alt_Backtab_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">Wachttijdvermindering:</dropdownList>
+        <dropdownList defaultItem="9" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">+</dropdownList>
+		<dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME">Algemene IME-modus:</dropdownList>
+        <dropdownList defaultItem="8" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</dropdownList>
+      </presentation>
+	   <presentation id="Policy_ToggleFullScreen">
+        <dropdownList defaultItem="1" refId="Part_ToggleFullScreen_FirstKey">Aangepast volledig scherm in-/uitschakelen:</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_ToggleFullScreen_SecondKey">+</dropdownList>
+		<dropdownList defaultItem="0" refId="Part_ToggleFullScreen_ThirdKey">+</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishedApplications_1">
+        <comboBox refId="Part_PublishedApplications_InitialProgram">
+          <label>Toepassing</label>
+          <suggestion>#Kladblok</suggestion>
+          <suggestion>#*</suggestion>
+        </comboBox>
+        <checkBox defaultChecked="true" refId="Part_PublishedApplications_SessionSharing">Sessie delen</checkBox>
+      </presentation>
+      <presentation id="Policy_HostRenderedAudio_1"/>
+      <presentation id="Policy_ICAFileSettings_1">
+        <checkBox defaultChecked="true" refId="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</checkBox>
+      </presentation>
+      <presentation id="Policy_AllowLegacySessionSharing">
+        <checkBox defaultChecked="true" refId="Part_AllowLegacySessionSharing_SessionSharing">AllowLegacySessionSharing</checkBox>
+      </presentation>
+	  
+	  <presentation id="EnableICAFileSigning">
+        <listBox refId="TrustedCertificates">Vertrouwde certificaten:</listBox>
+        <dropdownList defaultItem="0" refId="Securitypolicy">Beveiligingsbeleid:</dropdownList>
+		<checkBox refId="TrustedLaunchers">Uitschakelen voor vertrouwde launchers</checkBox>
+      </presentation>
+	<presentation id="POL_CONFIGURE_LAN_PROXY_MANUALLY">
+        <textBox refId="TXT_PROXY_HOST">
+          <label>Proxyhost</label>
+        </textBox>
+		<decimalTextBox defaultValue="443" refId="TXT_PROXY_PORT">Proxypoort</decimalTextBox>
+      </presentation>
+      <presentation id="POL_CONFIGURE_LAN_PROXY_DLL">
+        <textBox refId="TXT_ProxyChooserDLL">
+          <label>DLL-pad proxykiezer</label>
+        </textBox>
+      </presentation>
+	  
+	<presentation id="EnableUSBForceRedirection">
+      </presentation>
+	  
+	 <presentation id="SplitDevices">
+      </presentation>
+	  <presentation id="DeviceRules">
+        <text>Door puntkomma's gescheiden lijst met USB-apparaatregels.</text>
+        <textBox refId="DeviceRules_Value">
+          <label>USB-apparaatregels</label>
+        </textBox>
+      </presentation>
+      <presentation id="RemoveOnLock">
+	<text>Door puntkomma's gescheiden lijst met USB-apparaten die bij vergrendeling moeten worden verwijderd.</text>
+	<textBox refId="RemoveOnLock_Value">
+	  <label>Verwijderen bij vergrendeling</label>
+	  <defaultValue>class=03 subclass=01 prot=01;class=03 subclass=01 prot=02;class=03 subclass=00 prot=01;class=03 subclass=00 prot=02</defaultValue>
+	</textBox>
+      </presentation>
+      <presentation id="ExistingDevices_Policy">
+        <dropdownList defaultItem="2" refId="ExistingDevices_Value">Wanneer het bureaublad wordt gestart</dropdownList>
+      </presentation>
+      <presentation id="NewDevices_Policy">
+        <dropdownList defaultItem="2" refId="NewDevices_Value">Wanneer een USB-apparaat wordt aangesloten</dropdownList>
+      </presentation>
+      <presentation id="HideSimpleDevices_Policy">
+        <checkBox defaultChecked="true" refId="HideSimpleDevices_Value">USB-apparaten die met behulp van andere HDX-technologieën kunnen worden verbonden, verbergen</checkBox>
+      </presentation>
+      <presentation id="ExistingDevices_Policy_1">
+        <dropdownList defaultItem="2" refId="ExistingDevices_Value">Wanneer het bureaublad wordt gestart</dropdownList>
+      </presentation>
+      <presentation id="NewDevices_Policy_1">
+        <dropdownList defaultItem="2" refId="NewDevices_Value">Wanneer een USB-apparaat wordt aangesloten</dropdownList>
+      </presentation>
+      <presentation id="HideSimpleDevices_Policy_1">
+        <checkBox defaultChecked="true" refId="HideSimpleDevices_Value">USB-apparaten die met behulp van andere HDX-technologieën kunnen worden verbonden, verbergen</checkBox>
+      </presentation>
+      <presentation id="RedirectUnknownDevices">       
+      </presentation>
+	  
+	  <presentation id="Policy_HDXoverUDP">
+		<dropdownList defaultItem="0" refId="refid_HDXoverUDP">Communicatieprotocol voor Citrix Workspace selecteren</dropdownList>
+	  </presentation>
+	  
+	  <presentation id="Presentation_CitrixSecureBrowser_Cache"/>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

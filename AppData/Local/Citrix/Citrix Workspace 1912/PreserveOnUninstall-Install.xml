@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<receiverImportExport>
+  <Values Action ="MergeValuesEx" Delim=",">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\ICA 3.0\VirtualDriverEx</Values>
+  <Values Action ="MergeValuesEx" Delim=",">HKEY_CURRENT_USER\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\ICA 3.0\VirtualDriverEx</Values>
+</receiverImportExport>

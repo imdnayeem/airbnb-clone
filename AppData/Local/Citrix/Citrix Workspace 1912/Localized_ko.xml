@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LocalizedDataSet>
+  <!-- Global package localizable strings -->
+  <String>
+    <!-- Product named used for uninstall string -->
+    <Key>ProductName</Key>
+    <Value>Citrix Workspace 1912</Value>
+  </String>
+  <String>
+    <Key>ApplicationTitle</Key>
+    <Value>Citrix Workspace</Value>
+  </String>
+
+  <!-- Individual packages -->
+  <Group>
+    <Key>XenAppSuite</Key>
+    <DisplayName>XenApp Plugin 제품군</DisplayName>
+    <Description>이 설치는 XenApp Plugin을 사용하는 모든 제품에서 공유됩니다.</Description>
+  </Group>
+  <Component>
+    <Key>ReceiverInside</Key>
+    <DisplayName>Citrix Workspace Inside</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component>
+  <Component>
+    <Key>ReceiverUpdater</Key>
+    <DisplayName>Citrix Workspace</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component>
+  <Component>
+    <Key>ICA_Client</Key>
+    <DisplayName>XenApp Web Plugin</DisplayName>
+    <Description>이 설치는 XenApp에만 해당됩니다.</Description>
+    </Component>
+  <Component>
+    <Key>USB</Key>
+    <DisplayName>USB</DisplayName>
+    <Description>이 설치는 XenApp에만 해당됩니다.</Description>
+  </Component>
+  <Component>
+    <Key>DesktopViewer</Key>
+    <DisplayName>Citrix Workspace (DV)</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component>
+
+  <Component>
+    <Key>Vd3d</Key>
+    <DisplayName>HDX Aero</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component>
+  <Component>
+    <Key>AM</Key>
+    <DisplayName>인증 관리자</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component>
+  <Component>
+    <Key>SSON</Key>
+    <DisplayName>Single Sign On</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component>
+  <Component>
+    <Key>SELFSERVICE</Key>
+    <DisplayName>Self Service Plug-in</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component>
+  <Component>
+    <Key>WebHelper</Key>
+    <DisplayName>WebHelper</DisplayName>
+    <Description>These installations are specific to XenApp or XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>BrowserEngine</Key>
+    <DisplayName>BrowserEngine</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component> 
+  <Component>
+    <Key>WorkspaceHub</Key>
+    <DisplayName>WorkspaceHub</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component> 
+  <Component>
+    <Key>AppProtection</Key>
+    <DisplayName>AppProtection</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component> 
+    <Component>
+    <Key>AppProtectionAdvanced</Key>
+    <DisplayName>AppProtectionAdvanced</DisplayName>
+    <Description>이 설치는 XenApp 또는 XenDesktop에만 해당됩니다.</Description>
+  </Component> 
+  
+  <!-- License Agreement Dialog -->
+  <Eula>
+    <Key>Main</Key>
+    <FileName>eula_pointer.rtf</FileName>
+    <ScrollRequired>계속하려면 사용권 계약의 끝으로 스크롤해야 합니다.</ScrollRequired>
+  </Eula>
+
+  <!-- Uninstall Strings -->
+  <String>
+    <Key>UninstallPrompt</Key>
+    <Value>이 소프트웨어를 제거하시겠습니까?</Value>
+  </String>
+  <String>
+    <Key>Publisher</Key>
+    <Value>Citrix Systems, Inc.</Value>
+  </String>
+  <String>
+    <Key>Contact</Key>
+    <Value>Citrix Systems, Inc.</Value>
+  </String>
+  <String>
+    <Key>Telephone</Key>
+    <Value>1-800-424-8749</Value>
+  </String>
+  <String>
+    <Key>UrlInfoAbout</Key>
+    <Value>www.citrix.com</Value>
+  </String>
+  <String>
+    <Key>NoModify</Key>
+    <Value>예</Value>
+  </String>
+  <String>
+    <Key>NoRepair</Key>
+    <Value>예</Value>
+  </String>
+
+
+
+  <!-- Additional strings -->
+  <String>
+    <Key>SSON-Pkg</Key>
+    <Value>Citrix PNA 설치</Value>
+  </String>
+  <String>
+    <Key>UsageText</Key>
+    <Value>
+      <![CDATA[지원 매개 변수:
+/help               - 이 사용법 정보를 표시합니다.
+/uninstall          - 기존 설치를 제거합니다.
+/silent             - 모든 그래픽 사용자 인터페이스를 표시하지 않습니다.
+/noreboot           - 모든 재부팅을 억제하고 재부팅 메시지를 표시하지 않습니다.
+/preview            - 컴퓨터를 변경하지 않고 변경 내용을 미리 봅니다.
+/extract &lt;folder&gt;   - 자동 압축 풀기 패키지를 기존 폴더에 풉니다.
+/includeSSON        - 도메인 통과 로그온을 위해 Single Sign-On 구성 요소를 설치합니다.
+/EnableCEIP			- Citrix CEIP(사용자 환경 개선 프로그램)를 사용(true) 또는 사용하지 않도록 설정(false)합니다.
+/AutoUpdateCheck    - 자동 업데이트 사용(auto), 수동 업데이트 사용(manual), 자동 업데이트 사용 안 함(disabled)을 설정합니다.
+/AutoUpdateStream   - 자동 업데이트 스트림을 장기 서비스 릴리스(LTSR) 또는 단기 서비스 릴리스(Current)로 지정합니다.
+/DeferUpdateCount   - 자동 업데이트를 지연시킬 수 있는 횟수를 지정합니다.
+
+MSI 속성 값이 지원되며 다음과 같이 공백으로 구분하여 사용해야 합니다.
+   PROPERTY="Value" PROPERTY2="Value2"
+
+모든 기본값을 사용하는 silent 명령줄의 예:
+   CitrixWorkspaceApp.exe /silent
+
+여러 옵션을 지정하는 명령줄의 예:
+   CitrixWorkspaceApp.exe /silent ADDLOCAL="ReceiverInside,ICA_Client,USB,DesktopViewer,Vd3d,WebHelper,BrowserEngine" INSTALLDIR="C:\myfolder" ENABLE_DYNAMIC_CLIENT_NAME="No" CLIENT_NAME="my_overrided_name" DEFAULT_NDSCONTEXT="Context1,Context2" 
+
+도메인 통과 기능을 사용하는 명령줄의 예:
+   CitrixWorkspaceApp.exe /silent  /includeSSON ADDLOCAL="ReceiverInside,ICA_Client,SSON,USB,DesktopViewer,Vd3d,WebHelper,BrowserEngine" INSTALLDIR="C:\myfolder" ENABLE_DYNAMIC_CLIENT_NAME="No" CLIENT_NAME="my_overrided_name" DEFAULT_NDSCONTEXT="Context1,Context2" 
+   
+Single Sign-On 서버를 설치하지만 로그온 자격 증명 캡처를 사용하지 않도록 설정하는 명령줄의 예:
+   CitrixWorkspaceApp.exe /includesson LOGON_CREDENTIAL_CAPTURE_ENABLE=No [기본값: Yes]
+   
+NonSelfServiceMode에서 Citrix Workspace를 설치하는 명령줄의 예
+   CitrixWorkspaceApp.exe SELFSERVICEMODE=false [기본값: true]
+
+지원되지 않는 버전에서 최신 버전으로의 업그레이드를 지원하기 위한 명령줄의 예
+	CitrixWorkspaceApp.exe /RCU
+
+CEIP를 사용하지 않도록 설정하는 명령줄의 예:
+   CitrixWorkspaceApp.exe /EnableCEIP=false	[기본값: true]
+수동 업데이트를 사용하도록 설정하는 명령줄의 예:
+    CitrixWorkspaceApp.exe /AutoUpdateCheck=manual [기본값: auto]
+자동 업데이트를 사용하지 않도록 설정하는 명령줄의 예:
+    CitrixWorkspaceApp.exe /AutoUpdateCheck=disabled
+장기 서비스 릴리스 스트림을 선택하는 명령줄의 예:
+    CitrixWorkspaceApp.exe /AutoUpdateStream=LTSR
+자동 업데이트 지연 가능 횟수를 2회로 선택하는 명령줄의 예:
+    CitrixWorkspaceApp.exe /DeferUpdateCount=2
+[이 창을 닫으려면 Enter 키를 누르십시오.]
+]]>
+    </Value>
+  </String>
+</LocalizedDataSet>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--                                                                             -->
+<!-- This file defines the "Citrix Components" folder in the Group Policy editor -->
+<!--                                                                             -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns=
+   "http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"
+   revision="1.0" schemaVersion="1.0">
+  <displayName>Citrix 구성 요소 폴더</displayName>
+  <description>이 파일은 &quot;Citrix 구성 요소&quot; 폴더를 정의합니다.</description>
+  <resources>
+    <stringTable>
+      <string id="CITRIX_COMPONENTS">Citrix 구성 요소</string>
+      <string id="CITRIX_COMPONENTS_HELP">이 폴더에 있는 그룹 정책은 Citrix 시스템 액세스 인프라를 관리하는 데 사용할 수 있습니다.</string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

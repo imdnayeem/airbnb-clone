@@ -1,0 +1,154 @@
+﻿a, a:visited, a:link, a:hover {
+    text-decoration: none;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.store-header {
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+    height: 70px;
+    background-color: #ffffff;
+    display: block;
+    -webkit-user-select: none;
+}
+
+.logo-container {
+    width: 170px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -18px; /* Center vertically using negative margin of half the height */
+}
+
+.menuText {
+    text-align: center;
+    font: 10px "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Lucida Grande", sans-serif;
+    -webkit-user-select: none;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 61px;
+    line-height: 76px;
+    margin: 0;
+    max-width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: #333333;
+    height: 100%;
+    text-decoration: none;
+}
+
+.menu {
+    width: 61px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-image: url("ico_dropdown_icon.svg");
+    background-repeat: no-repeat;
+    background-position: 20px 31px;
+}
+
+.settings-button-arrow {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+}
+
+.messageBox {
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -100px;
+}
+
+.messageBoxTitle {
+    -webkit-user-select: none;
+    color: #333333;
+    display: block;
+    font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.messageBoxText {
+    -webkit-user-select: none;
+    color: #333333;
+    display: block;
+    font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.messageBoxAction {
+    text-align: center;
+    width: 100%;
+}
+
+.messageBoxAction a {
+    -webkit-user-select: none;
+    background-color: rgb(32,113,197);
+    color: rgb(255, 255, 255);
+    cursor: auto;
+    display: inline-block;
+    font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    height: 37px;
+    line-height: 37px;
+    margin-top: 20px;
+    min-width: 95px;
+    text-align: center;
+    text-decoration: none;
+    word-wrap: break-word;
+    padding: 0 15px;
+}
+
+.messageBoxAction a:hover {
+    background-color: rgb(5, 91, 148);
+}
+    
+.errorImage {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}

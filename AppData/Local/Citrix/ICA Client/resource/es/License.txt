@@ -1,0 +1,5 @@
+CONTRATO DE LICENCIA DE CITRIX
+
+El uso de este componente está sujeto a la licencia o las condiciones de servicio de Citrix que cubren los productos y/o servicios Citrix con los que Ud. va a utilizarlo. La licencia de este componente solamente permite utilizarlo con dichos productos y/o servicios Citrix.
+
+CTX_code EP_T_A10352779

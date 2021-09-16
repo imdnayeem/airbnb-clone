@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<receiverImportExport>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\HDX RealTime Media Engine</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\SOCKSProxyPlugin</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\UDPGatewayPlugin</Keys>
+  <Values Action ="MergeValuesEx" Delim=",">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\ICA 3.0\VirtualDriverEx</Values>
+  <Values Action ="MergeValuesEx" Delim=",">HKEY_CURRENT_USER\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\ICA 3.0\VirtualDriverEx</Values>
+  <Values Action ="MergeValuesEx" Delim=",">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\ICA 3.0\VirtualDriver</Values>  
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\VDCISCO</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\PSPA</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\PSPC</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\PSPD</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\PSPM</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\PSPN</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\VDRAPI</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\CW1</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Engine\Lockdown Profiles\All Regions\Lockdown\Virtual Channels\Third Party\VDRAPI</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Client Selective Trust</Keys>
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\HDX RealTime Media Engine</Keys>
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\SOCKSProxyPlugin</Keys>
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\UDPGatewayPlugin</Keys>
+  
+  <!--Receiver Certificate Identity declaration setting -->
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\AuthManager\Protocols\certificate</Keys>
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\AuthManager\Protocols\certificate</Keys>
+  
+  <!--<Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\AuthManager\ProtocolOrder</Values>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\AuthManager\ProtocolOrder</Values>-->
+  
+<!--Receiver Auto-update CommandLine Settings-->
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Citrix\ICA Client\AutoUpdate\Commandline Policy</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\AutoUpdate\Commandline Policy</Keys>
+  
+<!--Pass through (SSON) authentication configuration-->
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PnSson\IsEnabled</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PnSson\Type</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PnSson\NetworkProvider\Class</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PnSson\NetworkProvider\Name</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PnSson\NetworkProvider\ProviderPath</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Install\SSON\CredentialInjectionEnabled</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Install\SSON\InstallFolder</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\SSPIEnabled</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Program Neighborhood Agent\SmartCardPassthru</Values>
+  <!--<Values Action="TakefromSource">HKEY_CLASSES_ROOT\AppID\{E63F16AA-7C16-4697-826C-98B7A5092299}\AccessPermission</Values>
+  <Values Action="TakefromSource">HKEY_CLASSES_ROOT\AppID\{E63F16AA-7C16-4697-826C-98B7A5092299}\LaunchPermission</Values>
+  <Values Action="TakefromSource">HKEY_CLASSES_ROOT\CLSID\{E63F16AA-7C16-4697-826C-98B7A5092299}\VersionIndependentProgID\Default</Values>-->
+  
+  <!--PNAgent/ Start menu configuration/ XenApp Services Site Settings-->
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\PutShortcutsInStartMenu</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\PutShortcutsOnDesktop</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\SelfServiceMode</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\StartMenuDir</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\UseCategoryAsStartMenuPath</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\UsingMS</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\DesktopDir</Values>
+  
+  <!--Device Access Behaviour of Receiver-->
+  <!--<Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\GenericUSB\DeviceRules</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\GenericUSB\EnableBloombergHID</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\GenericUSB\FilterBloombergHIDButtons</Values>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\GenericUSB\Devices</Keys>-->
+  <!--<Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\GenericUSB\Devices\AutoRedirectAudio</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\GenericUSB\Devices\AutoRedirectImage</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\GenericUSB\Devices\AutoRedirectPrinters</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\GenericUSB\Devices\AutoRedirectStorage</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\GenericUSB\Devices\VID1188 PID03E9\Name</Values>-->
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\GenericUSB</Keys>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\HDXRealTime\DefaultWidth and DefaultHeight</Values>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\HDXRealTime\FramesPerSecond</Values>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\HDXRealTime\TargetBitrate</Values>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\HDXRealTime\enableClientWebcamSelection etc.</Values>
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\HDXRealTime\Webcams </Keys>
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\HDXRealTime\Policies</Keys>
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\Software\Citrix\ICA Client\USB</Keys>
+  
+  <!--PreLaunch Settings-->
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\EnablePreLaunch</Values>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\Software\Citrix\ICA Client\Prelaunch</Keys>
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\Software\Citrix\ICA Client\Prelaunch</Keys>
+  
+  <!--FTU Settings-->
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\Software\Citrix\Dazzle\Sites</Keys>
+  <Keys Action="TakefromSource">HKEY_LOCAL_MACHINE\Software\Citrix\Dazzle\Sites</Keys>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\Software\Citrix\Receiver\EnableFTU</Values>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\Receiver\HideAddAccountOnRestart</Values>
+  
+  <!--Session Reconnect (WorkSpace Control)-->
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\ProcessWM_SETTINGCHANGE</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\BypassPassThruMode</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\CommBufferSize</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\Showlocallanguagebar</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\VdLoadUnLoadTimeOut</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\ForegroundProgressBar</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Citrix\ICA Client\ProcessWM_SETTINGCHANGE</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Citrix\ICA Client\VdLoadUnLoadTimeOut</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Citrix\ICA Client\ForegroundProgressBar</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Citrix\ICA Client\MonitorLayoutUpdateDelay</Values>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\Software\Citrix\ICA Client\Engine\SpecificSites</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\picadm\Parameters\DisableHighThroughput</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\picadm\Parameters\MaxNetCommands</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\PNAgent\ForceEnableWSC</Values>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\Software\Citrix\Receiver\AutoSecureConnection</Values>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\Dazzle\WSCReconnectModeUser</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\WSCReconnectMode</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\WSCSupported</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\WSCReconnectAll</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\WSCAllowSettingChanges</Values>
+  
+  <!--Fast Connect-->
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\FastConnectAPISupportEnabled</Values>
+  
+  <!--Allow Save Password-->
+  <!--<Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\AllowSavePwd</Values>-->
+  
+  <!--HTTP vs HTTPS for connections to local Services (Security Settings)-->
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\AllowAddStore</Values>
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Citrix\AuthManager\ConnectionSecurityMode</Values>
+  
+  <!--FTA Settings-->
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\Dazzle\LegacyFtaIcons</Values>
+  
+  <!--X1 Settings-->
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\Dazzle\CurrentAccount</Values>
+  <Values Action="TakefromSource">HKEY_CURRENT_USER\SOFTWARE\Citrix\Dazzle\OfflineWeb</Values>
+  
+  <!--Receiver Settings-->
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\Software\Citrix\Receiver\CtxAccount</Keys>
+  <Keys Action="TakefromSource">HKEY_CURRENT_USER\Software\Citrix\Receiver\SR</Keys>
+  
+  <!--ACR/SR Settings-->
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\ICA Client\TransportReconnectRetryMaxTimeSeconds</Values>
+  
+  <!-- Customer Requested Registry settings-->
+  <Values Action="TakefromSource">HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Citrix\ICA Client\Engine\Lockdown Profiles\All Regions\Lockdown\Virtual Channels\Keyboard\TransparentKeyPassthrough</Values>
+</receiverImportExport>

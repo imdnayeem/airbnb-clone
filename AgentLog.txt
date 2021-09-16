@@ -1,0 +1,25 @@
+ Application Started: - 08-06-2021 02:38:44 PM
+Unable to fetch autocomplete entries from selfservice.csv file:System.IO.FileNotFoundException: Could not find file 'C:\Program Files (x86)\IMGSolutions\Selfservice.csv'.
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.ValidatePath(String path)
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.InitializeFromPath(String path, Encoding defaultEncoding, Boolean detectEncoding)
+   at SelfServiceNewUI.Form1.Form1_Load(Object sender, EventArgs e) in E:\AppCenter\Agent3.3\SelfServiceNewUI\Form1.cs:line 474 - 08-06-2021 02:38:47 PM
+Unable to fetch solutions from SelfService.csvSystem.IO.FileNotFoundException: Could not find file 'C:\Program Files (x86)\IMGSolutions\Selfservice.csv'.
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.ValidatePath(String path)
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.InitializeFromPath(String path, Encoding defaultEncoding, Boolean detectEncoding)
+   at SelfServiceNewUI.Form2.Form2_Load(Object sender, EventArgs e) in E:\AppCenter\Agent3.3\SelfServiceNewUI\Form2.cs:line 436 - 08-06-2021 02:38:59 PM
+Unable to fetch autocomplete entries from selfservice.csv file:System.IO.FileNotFoundException: Could not find file 'C:\Program Files (x86)\IMGSolutions\Selfservice.csv'.
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.ValidatePath(String path)
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.InitializeFromPath(String path, Encoding defaultEncoding, Boolean detectEncoding)
+   at SelfServiceNewUI.Form1.Form1_Load(Object sender, EventArgs e) in E:\AppCenter\Agent3.3\SelfServiceNewUI\Form1.cs:line 474 - 08-06-2021 02:39:09 PM
+An error occured in Search feature:System.IO.FileNotFoundException: Could not find file 'C:\Program Files (x86)\IMGSolutions\Selfservice.csv'.
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.ValidatePath(String path)
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.InitializeFromPath(String path, Encoding defaultEncoding, Boolean detectEncoding)
+   at SelfServiceNewUI.Form1.button1_Click(Object sender, EventArgs e) in E:\AppCenter\Agent3.3\SelfServiceNewUI\Form1.cs:line 976 - 08-06-2021 02:39:16 PM
+An error occured in Search feature:System.IO.FileNotFoundException: Could not find file 'C:\Program Files (x86)\IMGSolutions\Selfservice.csv'.
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.ValidatePath(String path)
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.InitializeFromPath(String path, Encoding defaultEncoding, Boolean detectEncoding)
+   at SelfServiceNewUI.Form1.button1_Click(Object sender, EventArgs e) in E:\AppCenter\Agent3.3\SelfServiceNewUI\Form1.cs:line 976 - 08-06-2021 02:39:33 PM
+Unable to fetch solutions from SelfService.csvSystem.IO.FileNotFoundException: Could not find file 'C:\Program Files (x86)\IMGSolutions\Selfservice.csv'.
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.ValidatePath(String path)
+   at Microsoft.VisualBasic.FileIO.TextFieldParser.InitializeFromPath(String path, Encoding defaultEncoding, Boolean detectEncoding)
+   at SelfServiceNewUI.Form2.Form2_Load(Object sender, EventArgs e) in E:\AppCenter\Agent3.3\SelfServiceNewUI\Form2.cs:line 436 - 08-06-2021 02:39:41 PM

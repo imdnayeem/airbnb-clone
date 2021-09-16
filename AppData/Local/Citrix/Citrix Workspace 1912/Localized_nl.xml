@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LocalizedDataSet>
+  <!-- Global package localizable strings -->
+  <String>
+    <!-- Product named used for uninstall string -->
+    <Key>ProductName</Key>
+    <Value>Citrix Workspace 1912</Value>
+  </String>
+  <String>
+    <Key>ApplicationTitle</Key>
+    <Value>Citrix Workspace</Value>
+  </String>
+
+  <!-- Individual packages -->
+  <Group>
+    <Key>XenAppSuite</Key>
+    <DisplayName>XenApp Plug-in Suite</DisplayName>
+    <Description>Deze installaties worden gedeeld voor alle producten die gebruik maken van de XenApp plug-in.</Description>
+  </Group>
+  <Component>
+    <Key>ReceiverInside</Key>
+    <DisplayName>Citrix Workspace Inside</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>ReceiverUpdater</Key>
+    <DisplayName>Citrix Workspace</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>ICA_Client</Key>
+    <DisplayName>XenApp Web plug-in</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp.</Description>
+    </Component>
+  <Component>
+    <Key>USB</Key>
+    <DisplayName>USB</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp.</Description>
+  </Component>
+  <Component>
+    <Key>DesktopViewer</Key>
+    <DisplayName>Citrix Workspace (DV)</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>Vd3d</Key>
+    <DisplayName>HDX Aero</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>AM</Key>
+    <DisplayName>Authentication Manager</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>SSON</Key>
+    <DisplayName>Single Sign-on</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>SELFSERVICE</Key>
+    <DisplayName>Self-service plug-in</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>WebHelper</Key>
+    <DisplayName>WebHelper</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>BrowserEngine</Key>
+    <DisplayName>BrowserEngine</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component> 
+  <Component>
+    <Key>WorkspaceHub</Key>
+    <DisplayName>WorkspaceHub</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component> 
+  <Component>
+    <Key>AppProtection</Key>
+    <DisplayName>AppProtection</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>AppProtectionAdvanced</Key>
+    <DisplayName>AppProtectionAdvanced</DisplayName>
+    <Description>Deze installaties zijn specifiek voor XenApp of XenDesktop.</Description>
+  </Component> 
+
+  <!-- License Agreement Dialog -->
+  <Eula>
+    <Key>Main</Key>
+    <FileName>eula_pointer.rtf</FileName>
+    <ScrollRequired>U moet naar het einde van de licentieovereenkomst scrollen voordat u verder kunt gaan.</ScrollRequired>
+  </Eula>
+
+  <!-- Uninstall Strings -->
+  <String>
+    <Key>UninstallPrompt</Key>
+    <Value>Weet u zeker dat u deze software wilt verwijderen?</Value>
+  </String>
+  <String>
+    <Key>Publisher</Key>
+    <Value>Citrix Systems, Inc.</Value>
+  </String>
+  <String>
+    <Key>Contact</Key>
+    <Value>Citrix Systems, Inc.</Value>
+  </String>
+  <String>
+    <Key>Telephone</Key>
+    <Value>1-800-424-8749</Value>
+  </String>
+  <String>
+    <Key>UrlInfoAbout</Key>
+    <Value>www.citrix.com</Value>
+  </String>
+  <String>
+    <Key>NoModify</Key>
+    <Value>Ja</Value>
+  </String>
+  <String>
+    <Key>NoRepair</Key>
+    <Value>Ja</Value>
+  </String>
+
+
+
+  <!-- Additional strings -->
+  <String>
+    <Key>SSON-Pkg</Key>
+    <Value>Installatie van Citrix PNA</Value>
+  </String>
+  <String>
+    <Key>UsageText</Key>
+    <Value>
+      <![CDATA[Ondersteunde parameters:
+/help - Geeft deze gebruiksinformatie weer
+/uninstall - Verwijdert een bestaande installatie
+/silent - Onderdrukt alle dialoogvensters
+/noreboot - Onderdrukt alle opstartpogingen en dialoogvensters voor het opnieuw opstarten
+/preview - Geeft een voorbeeld van de wijzigingen zonder de machine te veranderen
+/extract &lt;folder&gt;   - Extractie van zelfuitpakkend pakket naar een bestaande map
+/includeSSON - Installeert het onderdeel Single Sign-on voor Pass-through van domeinaanmelding
+/EnableCEIP - Schakelt het Citrix Customer Improvement Program (CEIP) in (true) of uit (false)
+/AutoUpdateCheck - Schakelt automatische update in (auto), schakelt handmatige update in (manual), verbiedt AutoUpdate (disabled)
+/AutoUpdateStream - Specificeer AutoUpdate-stream in serviceleases op lange termijn (LTSR) of serviceleases op korte termijn (Current)
+/DeferUpdateCount - Geef op hoe vaak AutoUpdate kan worden uitgesteld
+
+MSI-eigenschapswaarden worden ondersteund en moeten worden gescheiden door spaties, bijvoorbeeld:
+   PROPERTY="Waarde" PROPERTY2="Waarde2"
+
+Voorbeeld van een stille opdrachtregel met alle standaardwaarden:
+   CitrixWorkspaceApp.exe /silent
+
+Voorbeeld van opdrachtregel met meerdere opties:
+   CitrixWorkspaceApp.exe /silent
+ADDLOCAL="ReceiverInside,ICA_Client, SSON,USB,DesktopViewer,PN_Agent,Vd3d,WebHelper,BrowserEngine" SERVER_LOCATION="my.server" ENABLE_SSON="No" INSTALLDIR="C:\myfolder" ENABLE_DYNAMIC_CLIENT_NAME="No" CLIENT_NAME="my_overrided_name" DEFAULT_NDSCONTEXT="Context1,Context2"
+
+Voorbeeld van opdrachtregel om domeinpass-through in te schakelen:
+   CitrixWorkspaceApp.exe /silent /includeSSON
+ADDLOCAL="ReceiverInside,ICA_Client,SSON,USB,DesktopViewer,PN_Agent,Vd3d,WebHelper,BrowserEngine" SERVER_LOCATION="my.server" ENABLE_SSON="No" INSTALLDIR="C:\myfolder" ENABLE_DYNAMIC_CLIENT_NAME="No" CLIENT_NAME="my_overrided_name" DEFAULT_NDSCONTEXT="Context1,Context2"
+   
+Voorbeeld van opdrachtregel om de Single Sign-on-server te installeren, maar om het vastleggen van aanmeldingsreferenties te blokkeren:
+   CitrixWorkspaceApp.exe /includesson LOGON_CREDENTIAL_CAPTURE_ENABLE=No [standaard ingesteld op Yes]
+   
+Voorbeeld van opdrachtregel om Citrix Workspace in NonSelfServiceMode te installeren
+   CitrixWorkspaceApp.exe SELFSERVICEMODE=false [standaard is true]
+
+Voorbeeld van opdrachtregel voor ondersteuning van upgrade van niet-ondersteunde versie naar de nieuwste versie
+	CitrixWorkspaceApp.exe /RCU
+
+Voorbeeld van opdrachtregel om CEIP uit te schakelen:
+   CitrixWorkspaceApp.exe /EnableCEIP=false     [standaard ingesteld op true]
+
+Voorbeeld van opdrachtregel om handmatige update in te schakelen:
+    CitrixWorkspaceApp.exe /AutoUpdateCheck=manual     [standaard ingesteld op auto]
+
+Voorbeeld van opdrachtregel om automatische update uit te schakelen:
+    CitrixWorkspaceApp.exe /AutoUpdateCheck=disabled
+
+Voorbeeld van opdrachtregel om een servicerelease-stream op lange termijn te kiezen:
+    CitrixWorkspaceApp.exe /AutoUpdateStream=LTSR
+
+Voorbeeld van opdrachtregel waarmee u AutoUpdate 2 keer kunt uitstellen:
+    CitrixWorkspaceApp.exe /DeferUpdateCount=2
+
+[Druk op Enter om dit venster te sluiten.]
+]]>
+    </Value>
+  </String>
+</LocalizedDataSet>

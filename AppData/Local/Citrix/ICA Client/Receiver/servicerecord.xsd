@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema
+    xmlns="http://www.citrix.com/ServiceRecord"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.citrix.com/ServiceRecord"
+    id="serviceRecord"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.citrix.com/ServiceRecord ServiceRecord.xsd">
+
+  <xs:element name="Services">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="100" name="Service" type="serviceListType" />
+      </xs:sequence>
+
+      <xs:attribute name="version" type="xs:token" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="serviceListType">
+    <xs:all>
+      <xs:element name="SRID" minOccurs="1" type="xs:string" />
+
+      <xs:element name="Name" type="xs:string" minOccurs="1" />
+
+      <xs:element name="LocalisedServiceDescriptions" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="50" name="Description" type="localisedStringType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+      <xs:element name="Address" minOccurs="1" type="addressType" />
+      <xs:element minOccurs="0" name="Gateways" type="GatewayListType" />
+      <xs:element name="Beacons" type="beaconListType" minOccurs="0" />
+      
+    </xs:all>
+
+    <xs:attribute name="type" use="required" type="xs:string" />
+
+  </xs:complexType>
+
+  <xs:complexType name="localisedStringType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute default="en" name="lang" type="xs:language" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="addressType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="StoreType" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="GatewayListType" >
+    <xs:sequence>
+      <xs:element name="Gateway" type="gatewayType" minOccurs="1" maxOccurs="50" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="gatewayType">
+    <xs:sequence>
+      <xs:element name="Location" type="xs:anyURI" minOccurs="1" />
+      </xs:sequence>
+        <xs:attribute name="Name" type="xs:string" use="required" />
+        <xs:attribute name="Default" type="xs:boolean" default="false" use="optional" />
+        <xs:attribute name="Edition" type="editionType" use="required" />
+        <xs:attribute name="Auth" type="authType" use="required" />
+        <xs:attribute name="RewriteMode" type="rewriteModeType" use="required" />
+  </xs:complexType>
+
+  <xs:simpleType name="rewriteModeType">
+    <xs:restriction base="xs:normalizedString">
+      <xs:enumeration value="NONE" />
+      <xs:enumeration value="SG_RW" />
+      <xs:enumeration value="FB_RW" />
+      <xs:enumeration value="ENTCVPN_RW" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="editionType">
+    <xs:restriction base="xs:normalizedString">
+      <xs:enumeration value="Standard" />
+      <xs:enumeration value="Advanced" />
+      <xs:enumeration value="Enterprise" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="authType">
+    <xs:restriction base="xs:normalizedString">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Domain" />
+      <xs:enumeration value="RSA" />
+      <xs:enumeration value="DomainAndRSA" />
+      <xs:enumeration value="SMS" />
+      <xs:enumeration value="GatewayKnows" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="beaconList">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="50" name="Beacon" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="beaconListType">
+    <xs:all>
+      <xs:element name="Internal" type="beaconList" minOccurs="0" />
+      <xs:element name="External" type="beaconList" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+
+</xs:schema>
+

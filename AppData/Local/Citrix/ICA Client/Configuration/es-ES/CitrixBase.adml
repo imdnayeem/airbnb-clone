@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--                                                                             -->
+<!-- This file defines the "Citrix Components" folder in the Group Policy editor -->
+<!--                                                                             -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns=
+   "http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"
+   revision="1.0" schemaVersion="1.0">
+  <displayName>Carpeta de Componentes de Citrix</displayName>
+  <description>Este archivo define la carpeta &quot;Componentes de Citrix&quot;</description>
+  <resources>
+    <stringTable>
+      <string id="CITRIX_COMPONENTS">Componentes de Citrix</string>
+      <string id="CITRIX_COMPONENTS_HELP">El grupo de directivas de esta carpeta se puede usar para administrar la infraestructura de acceso de Citrix.</string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

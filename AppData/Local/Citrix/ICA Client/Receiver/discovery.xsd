@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema
+    xmlns="http://www.citrix.com/ServiceRecord"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.citrix.com/ServiceRecord"
+    id="discovery"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="ServiceRecord.xsd"/>
+  
+  <xs:element name="Discovery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AuthEnd-point" type="xs:anyURI" minOccurs="1" />
+        <xs:element name="End-point" type="xs:anyURI" minOccurs="1" />
+        <xs:element name="Services" type="servicesType" minOccurs="1" />
+      </xs:sequence>
+
+      <xs:attribute name="version" type="xs:token" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="servicesType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="100" name="Service" type="serviceListType" />
+    </xs:sequence>
+
+    <xs:attribute name="version" type="xs:token" use="required" />
+  </xs:complexType>
+  
+</xs:schema>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<License xmlns="http://www.avistar.com/webapi/2008/namespace">
+  <MediaEngine/>
+  <Profile>Citrix\HDXRTMediaEngine</Profile>
+  <LicensedModes>LocalResticted</LicensedModes>
+  <Policies xmlns="http://www.avistar.com/applicationpolicies/2011/namespace">
+    <policy key="authorization.enable" value="true"/>
+    <policy key="transfer.enable" value="true"/>
+    <policy key="conferences.enable" value="true"/>
+    <policy key="conferences.create" value="true"/>
+    <policy key="conferences.invite" value="true"/>
+    <policy key="conferences.merge" value="true"/>
+  </Policies>
+  <Signature>CfArhLMNNIvX/ZsGKNxiGyVG5AaeTfUfaV1QkykehpF31glWmxo42eeHALCjfQRQ2Uw9wBTKE2P18Zze4ZJkpSu/DgRj5zc/Egu8myVAFib3kuEg6gNDtzYLJX381bDaf6G8mhDJTRXjUXjNokn2y1LNKFugaxwG1vZo0m9vlktGqeUh4ZASCP81Pf1FfQttaF5SaFYDUmwhHQy5nIyfYQxvingmvh7bR+dfl4sO8+bt9ZNhz7Uzwh4uHEe6MDoR</Signature>
+</License>

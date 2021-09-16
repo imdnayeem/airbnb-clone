@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LocalizedDataSet>
+  <!-- Global package localizable strings -->
+  <String>
+    <!-- Product named used for uninstall string -->
+    <Key>ProductName</Key>
+    <Value>Citrix Workspace 1912</Value>
+  </String>
+  <String>
+    <Key>ApplicationTitle</Key>
+    <Value>Citrix Workspace</Value>
+  </String>
+
+  <!-- Individual packages -->
+  <Group>
+    <Key>XenAppSuite</Key>
+    <DisplayName>Пакет подключаемых модулей XenApp</DisplayName>
+    <Description>Эти установки являются общими для всех продуктов, использующих подключаемый модуль XenApp.</Description>
+  </Group>
+  <Component>
+    <Key>ReceiverInside</Key>
+    <DisplayName>Citrix Workspace Inside</DisplayName>
+    <Description>Эти режимы установки относятся к XenApp и XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>ReceiverUpdater</Key>
+    <DisplayName>Citrix Workspace</DisplayName>
+    <Description>Эти режимы установки относятся к XenApp и XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>ICA_Client</Key>
+    <DisplayName>Подключаемый модуль XenApp для Интернета</DisplayName>
+    <Description>Эти установки относятся только к XenApp.</Description>
+    </Component>
+  <Component>
+    <Key>USB</Key>
+    <DisplayName>USB</DisplayName>
+    <Description>Эти установки относятся только к XenApp.</Description>
+  </Component>
+  <Component>
+    <Key>DesktopViewer</Key>
+    <DisplayName>Citrix Workspace (DV)</DisplayName>
+    <Description>Эти установки относятся только к XenApp или XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>Vd3d</Key>
+    <DisplayName>HDX Aero</DisplayName>
+    <Description>Эти режимы установки относятся к XenApp и XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>AM</Key>
+    <DisplayName>Диспетчер аутентификации</DisplayName>
+    <Description>Эти режимы установки относятся к XenApp и XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>SSON</Key>
+    <DisplayName>Single Sign On</DisplayName>
+    <Description>Эти режимы установки относятся к XenApp и XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>SELFSERVICE</Key>
+    <DisplayName>Подключаемый модуль самообслуживания</DisplayName>
+    <Description>Эти режимы установки относятся к XenApp и XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>WebHelper</Key>
+    <DisplayName>WebHelper</DisplayName>
+    <Description>These installations are specific to XenApp or XenDesktop.</Description>
+  </Component>
+  <Component>
+    <Key>BrowserEngine</Key>
+    <DisplayName>BrowserEngine</DisplayName>
+    <Description>Эти режимы установки относятся к XenApp и XenDesktop.</Description>
+  </Component> 
+  <Component>
+    <Key>WorkspaceHub</Key>
+    <DisplayName>WorkspaceHub</DisplayName>
+    <Description>Эти режимы установки относятся к XenApp и XenDesktop.</Description>
+  </Component> 
+  <Component>
+    <Key>AppProtection</Key>
+    <DisplayName>AppProtection</DisplayName>
+    <Description>Эти режимы установки относятся к XenApp и XenDesktop.</Description>
+  </Component> 
+  <Component>
+    <Key>AppProtectionAdvanced</Key>
+    <DisplayName>AppProtectionAdvanced</DisplayName>
+    <Description>Эти режимы установки относятся к XenApp и XenDesktop.</Description>
+  </Component> 
+  
+  <!-- License Agreement Dialog -->
+  <Eula>
+    <Key>Main</Key>
+    <FileName>eula_pointer.rtf</FileName>
+    <ScrollRequired>Необходимо прокрутить лицензионное соглашение до конца перед продолжением.</ScrollRequired>
+  </Eula>
+
+  <!-- Uninstall Strings -->
+  <String>
+    <Key>UninstallPrompt</Key>
+    <Value>Вы действительно хотите удалить это программное обеспечение?</Value>
+  </String>
+  <String>
+    <Key>Publisher</Key>
+    <Value>Citrix Systems, Inc.</Value>
+  </String>
+  <String>
+    <Key>Contact</Key>
+    <Value>Citrix Systems, Inc.</Value>
+  </String>
+  <String>
+    <Key>Telephone</Key>
+    <Value>1-800-424-8749</Value>
+  </String>
+  <String>
+    <Key>UrlInfoAbout</Key>
+    <Value>www.citrix.com</Value>
+  </String>
+  <String>
+    <Key>NoModify</Key>
+    <Value>Да</Value>
+  </String>
+  <String>
+    <Key>NoRepair</Key>
+    <Value>Да</Value>
+  </String>
+
+
+
+  <!-- Additional strings -->
+  <String>
+    <Key>SSON-Pkg</Key>
+    <Value>Установка Citrix PNA</Value>
+  </String>
+  <String>
+    <Key>UsageText</Key>
+    <Value>
+      <![CDATA[Поддерживаемые параметры:
+/help               - выводит эти данные об использовании
+/uninstall          - удаляет существующую установку
+/silent             - скрывает все окна графического пользовательского интерфейса
+/noreboot           - скрывает все операции и запросы перезагрузки
+/preview            - показывает предварительный просмотр изменений без смены компьютера
+/extract &lt;folder&gt;   - извлекает самораспаковывающийся архив в существующую папку
+/includeSSON        - устанавливает компонент Single Sign-on, который обеспечивает сквозной вход в домен
+/EnableCEIP			- позволяет включать (true) или отключать (false) программу улучшения качества программного обеспечения Citrix (CEIP)
+/AutoUpdateCheck    - включает автообновление (auto), включает обновление вручную (manual), запрещает автообновление  (disabled)
+/AutoUpdateStream   - указывает, будет ли применяться к потоку автообновления выпуски служб в долгосрочном (LTSR) или краткосрочном (Current) периоде
+/DeferUpdateCount   - указывает, сколько раз можно отложить автообновление
+
+Значения свойств MSI поддерживаются и должны разделяться пробелами, например:
+   PROPERTY="Значение" PROPERTY2="Значение2"
+
+Пример командной строки "silent" со всеми параметрами по умолчанию:
+   CitrixWorkspaceApp.exe /silent
+
+Пример командной строки с несколькими параметрами:
+   CitrixWorkspaceapp.exe /silent ADDLOCAL="ReceiverInside,ICA_Client,USB,DesktopViewer,Vd3d,WebHelper,BrowserEngine" INSTALLDIR="C:\мояпапка" ENABLE_DYNAMIC_CLIENT_NAME="No" CLIENT_NAME="мое_переопределенное_имя" DEFAULT_NDSCONTEXT="Контекст1,Контекст2" 
+
+Пример командной строки для включения сквозного входа в домен:
+   CitrixWorkspaceapp.exe /silent  /includeSSON ADDLOCAL="ReceiverInside,ICA_Client,SSON,USB,DesktopViewer,Vd3d,WebHelper,BrowserEngine" INSTALLDIR="C:\мояпапка" ENABLE_DYNAMIC_CLIENT_NAME="No" CLIENT_NAME="мое_переопределенное_имя" DEFAULT_NDSCONTEXT="Контекст1,Контекст2" 
+   
+Пример командной строки для установки сервера Single Sign-On с отключением захвата учетных данных для входа:
+   CitrixWorkspaceApp.exe /includesson LOGON_CREDENTIAL_CAPTURE_ENABLE=No [по умолчанию — Yes]
+   
+Пример командной строки для установки Citrix Workspace в режиме NonSelfServiceMode
+   CitrixWorkspaceApp.exe SELFSERVICEMODE=false [по умолчанию — true]
+
+Пример командной строки для обновления с неподдерживаемой до последней версии
+	CitrixWorkspaceApp.exe /RCU
+
+Пример командной строки для отключения CEIP:
+   CitrixWorkspaceApp.exe /EnableCEIP=false	[по умолчанию — true]
+Пример командной строки для включения обновления вручную:
+    CitrixWorkspaceApp.exe /AutoUpdateCheck=manual [по умолчанию — auto]
+Пример командной строки для отключения автообновления:
+    CitrixWorkspaceApp.exe /AutoUpdateCheck=disabled
+Пример командной строки для выбора потока Long Term Service Release:
+    CitrixWorkspaceApp.exe /AutoUpdateStream=LTSR
+Пример командной строки с откладыванием автообновления два раза:
+    CitrixWorkspaceApp.exe /DeferUpdateCount=2
+[Чтобы закрыть это окно, нажмите клавишу ВВОД.]
+]]>
+    </Value>
+  </String>
+</LocalizedDataSet>

@@ -1,0 +1,2074 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName/>
+  <description/>
+  <resources>
+    <stringTable>
+	
+	  <string id="Category_Citrix">Citrix 구성 요소</string>
+      <string id="Category_Citrix_Explanation">이 그룹 정책을 사용하여 Citrix 클라이언트를 관리할 수 있습니다.</string>
+	  <string id="ClientDevices">원격 클라이언트 장치</string>
+	  <string id="Explain_ClientDevices">이러한 정책은 서버가 클라이언트 컴퓨터 리소스에 액세스하는 방법을 제어합니다.  원격 응용 프로그램이 클라이언트 컴퓨터에서 실행 중인 것처럼 디스크 드라이브, 프린터 등을 사용할 수 있도록 Citrix Workspace 앱을 구성할 수 있습니다.</string>
+	
+	  <string id="unknown_0">ICA 파일 서명 사용</string>
+      <string id="unknown_16">서명된 시작만 허용(보안 높음)</string>
+      <string id="unknown_17">서명되지 않은 시작에 대해 사용자에게 묻기(보안 낮음)</string>
+      <string id="Explain_IcaFileSigning">ICA 파일 서명을 사용하도록 설정하고 구성하려면 이 정책을 사용합니다.</string>
+	
+	
+      <string id="GenericUSB">일반 USB 원격</string>
+      <string id="DeviceRules">USB 장치 규칙</string>
+      <string id="DeviceRules_Explain">허용 또는 거부되는 USB 장치를 지정하는 데 사용합니다.
+각 규칙은 대/소문자를 구분하지 않으며 {Allow: | Deny:} 뒤에 원하는 수의 &lt;tag&gt;=&lt;value&gt; 한정자가 추가된 형식을 사용합니다. 규칙이 여러 개인 경우 세미콜론으로 구분해야 합니다. 주석은 '#'에서 시작하여 세미콜론으로 끝납니다.
+예를 들면 'Allow: VID=1234 PID=5678 # Comment ; Deny: Class=03'과 같습니다.
+지원되는 태그는 VID, PID, REL, CLASS, SUBCLASS, PROT입니다.</string>
+	<string id="RemoveOnLock">잠금 시 제거</string>
+	<string id="RemoveOnLock_Explain">클라이언트 컴퓨터가 잠긴 경우 제거할 장치 또는 클래스를 지정합니다. 
+구문:
+각 장치는 대/소문자를 구분하지 않고 형식은 다음과 같습니다. 
+VID=XXX PID=XX;VID=YYY PID=YY
+각 클래스는 대/소문자를 구분하지 않고 형식은 다음과 같습니다. 
+class=XXX subclass=XX prot=X
+예:
+class=03 subclass=01 prot=01;VID=173E PID=0046
+기본 동작:
+클라이언트 잠금 및 잠금 해제 도중 HID 키보드 마우스(class=03 subclass=01 prot=01;class=03 subclass=01 prot=02;class=03 subclass=00 prot=01;class=03 subclass=00 prot=02)는 제거되었다가 자동으로 리디렉션됩니다.
+	</string>
+	  <string id="SplitDevices">SplitDevices</string>
+	  <string id="SplitDevices_Explain">복합 장치의 인터페이스를 개별 장치로 분할합니다.</string>
+      <string id="DeviceRules_Tip1">세미콜론으로 구분된 USB 장치 규칙의 목록입니다.</string>
+      <string id="DeviceRules_Value">USB 장치 규칙</string>
+      <string id="RemoveOnLock_Value">잠금 시 제거</string>
+	  <string id="SplitDevices_Value">SplitDevices</string>
+      <string id="ExistingDevices_Policy">기존 USB 장치</string>
+      <string id="EnableUSBForceRedirection">EnableUSBForceRedirection</string>
+      <string id="EnableUSBForceRedirection_Explain">클라이언트에서 사용 중인 장치의 자동 강제 리디렉션을 허용합니다. </string>
+      <string id="EnableUSBForceRedirection_Value">EnableUSBForceRedirection_Value</string>
+      <string id="ExistingDevices_Explain">세션이 시작될 때 사용 가능한 USB 장치에 대해 수행할 작업을 선택합니다. 이 설정은 사용자의 기본 설정을 재정의합니다.</string>
+      <string id="ExistingDevices_Value">데스크톱이 시작될 때</string>
+      <string id="ExistingDevices_Always">사용 가능한 모든 USB 장치 연결</string>
+      <string id="ExistingDevices_Ask">메시지를 표시하고 사용자가 선택</string>
+      <string id="ExistingDevices_Ignore">아무 작업도 하지 않음</string>
+      <string id="NewDevices_Policy">새 USB 장치</string>
+      <string id="NewDevices_Explain">세션 도중 USB 장치가 삽입되었을 때 수행할 작업을 선택합니다. 이 설정은 사용자의 기본 설정을 재정의합니다.</string>
+      <string id="NewDevices_Value">USB 장치가 삽입될 때</string>
+      <string id="NewDevices_Always">USB 장치 연결</string>
+      <string id="NewDevices_Ask">메시지를 표시하고 사용자가 선택</string>
+      <string id="NewDevices_Ignore">아무 작업도 하지 않음</string>
+      <string id="HideSimpleDevices_Policy">Desktop Viewer의 USB 장치 목록</string>
+      <string id="HideSimpleDevices_Explain">대체 HDX 기술을 사용하여 연결할 수 있는 USB 장치를 USB 장치 목록에 표시할지 여부를 선택합니다.
+다른 HDX 기술을 사용하여 연결할 수 있는 장치에는 간단한 USB 드라이브, 웹캠, 스캐너, 프린터 및 오디오 장치가 포함됩니다.
+이 설정은 사용자의 기본 설정을 재정의합니다.</string>
+      <string id="HideSimpleDevices_Value">다른 HDX 기술을 사용하여 연결할 수 있는 USB 장치 숨기기</string>
+      <string id="RedirectUnknownDevices">알 수 없는 USB 장치 리디렉션</string>
+      <string id="RedirectUnknownDevices_Explain">알 수 없는 USB 장치의 리디렉션을 허용/거부합니다.
+끝점에 장치 드라이버가 설치되지 않은 USB 장치는 Windows 장치 관리자에서 알 수 없는 USB 장치로 표시됩니다.
+      </string>
+      <string id="RedirectUnknownDevices_Value">알 수 없는 USB 장치 리디렉션</string>
+	  
+      <string id="unknown_2">사용 안 함</string>
+      <string id="unknown_4">버전 감지</string>
+      <string id="unknown_6">SOCKS v4</string>
+      <string id="unknown_8">SOCKS v5</string>
+      <string id="unknown_18">버전 감지</string>
+      <string id="unknown_20">TLS1.0 | TLS1.1 | TLS1.2</string>
+      <string id="unknown_24">버전 감지</string>
+      <string id="unknown_26">정부</string>
+      <string id="unknown_28">상용</string>
+      <string id="unknown_30">기본값</string>
+      <string id="unknown_32">사용 안 함</string>
+      <string id="unknown_34">로컬에 저장된 CRL만 확인</string>
+      <string id="unknown_36">네트워크에서 CRL 검색</string>
+      <string id="unknown_38">연결에 CRL 필요</string>
+      <string id="unknown_40">구성되지 않음</string>
+      <string id="unknown_42">인증서 선택기 표시</string>
+      <string id="unknown_44">사용 안 함</string>
+      <string id="unknown_46">지정한 인증서 사용</string>
+      <string id="unknown_48">가능한 경우 자동 선택</string>
+      <string id="unknown_112">높음</string>
+      <string id="unknown_114">중간</string>
+      <string id="unknown_116">낮음</string>
+      <string id="unknown_122">16비트 컬러</string>
+      <string id="unknown_124">32비트 컬러</string>
+      <string id="unknown_140"/>
+      <string id="unknown_142">50%</string>
+	  <string id="yes">예</string>
+	  <string id="no">아니요, 기본 해상도 사용</string>
+      <string id="unknown_144">75%</string>
+      <string id="unknown_146">기타</string>
+      <string id="unknown_158">로컬 데스크톱 액세스</string>
+      <string id="unknown_160">원격 세션 액세스</string>
+      <string id="unknown_162">전체 화면에서만 원격 세션 액세스</string>
+      <string id="unknown_164">&lt;사용 안 함&gt;</string>
+      <string id="unknown_166">Alt</string>
+      <string id="unknown_168">Ctrl</string>
+      <string id="unknown_170">Shift</string>
+      <string id="unknown_172">&lt;사용 안 함&gt;</string>
+      <string id="unknown_174">F1</string>
+      <string id="unknown_176">F10</string>
+      <string id="unknown_178">F11</string>
+      <string id="unknown_180">F12</string>
+      <string id="unknown_182">F2</string>
+      <string id="unknown_184">F3</string>
+      <string id="unknown_186">F4</string>
+      <string id="unknown_188">F5</string>
+      <string id="unknown_190">F6</string>
+      <string id="unknown_192">F7</string>
+      <string id="unknown_194">F8</string>
+      <string id="unknown_196">F9</string>
+      <string id="unknown_198">빼기</string>
+      <string id="unknown_200">더하기</string>
+      <string id="unknown_202">별</string>
+      <string id="unknown_204">Tab</string>
+      <string id="unknown_206">&lt;사용 안 함&gt;</string>
+      <string id="unknown_208">Alt</string>
+      <string id="unknown_210">Ctrl</string>
+      <string id="unknown_212">Shift</string>
+      <string id="unknown_214">&lt;사용 안 함&gt;</string>
+      <string id="unknown_216">F1</string>
+      <string id="unknown_218">F10</string>
+      <string id="unknown_220">F11</string>
+      <string id="unknown_222">F12</string>
+      <string id="unknown_224">F2</string>
+      <string id="unknown_226">F3</string>
+      <string id="unknown_228">F4</string>
+      <string id="unknown_230">F5</string>
+      <string id="unknown_232">F6</string>
+      <string id="unknown_234">F7</string>
+      <string id="unknown_236">F8</string>
+      <string id="unknown_238">F9</string>
+      <string id="unknown_240">빼기</string>
+      <string id="unknown_242">더하기</string>
+      <string id="unknown_244">별</string>
+      <string id="unknown_246">Tab</string>
+      <string id="unknown_248">&lt;사용 안 함&gt;</string>
+      <string id="unknown_250">Alt</string>
+      <string id="unknown_252">Ctrl</string>
+      <string id="unknown_254">Shift</string>
+      <string id="unknown_256">&lt;사용 안 함&gt;</string>
+      <string id="unknown_258">F1</string>
+      <string id="unknown_260">F10</string>
+      <string id="unknown_262">F11</string>
+      <string id="unknown_264">F12</string>
+      <string id="unknown_266">F2</string>
+      <string id="unknown_268">F3</string>
+      <string id="unknown_270">F4</string>
+      <string id="unknown_272">F5</string>
+      <string id="unknown_274">F6</string>
+      <string id="unknown_276">F7</string>
+      <string id="unknown_278">F8</string>
+      <string id="unknown_280">F9</string>
+      <string id="unknown_282">빼기</string>
+      <string id="unknown_284">더하기</string>
+      <string id="unknown_286">별</string>
+      <string id="unknown_288">Tab</string>
+      <string id="unknown_290">&lt;사용 안 함&gt;</string>
+      <string id="unknown_292">Alt</string>
+      <string id="unknown_294">Ctrl</string>
+      <string id="unknown_296">Shift</string>
+      <string id="unknown_298">&lt;사용 안 함&gt;</string>
+      <string id="unknown_300">F1</string>
+      <string id="unknown_302">F10</string>
+      <string id="unknown_304">F11</string>
+      <string id="unknown_306">F12</string>
+      <string id="unknown_308">F2</string>
+      <string id="unknown_310">F3</string>
+      <string id="unknown_312">F4</string>
+      <string id="unknown_314">F5</string>
+      <string id="unknown_316">F6</string>
+      <string id="unknown_318">F7</string>
+      <string id="unknown_320">F8</string>
+      <string id="unknown_322">F9</string>
+      <string id="unknown_324">빼기</string>
+      <string id="unknown_326">더하기</string>
+      <string id="unknown_328">별</string>
+      <string id="unknown_330">Tab</string>
+      <string id="unknown_332">&lt;사용 안 함&gt;</string>
+      <string id="unknown_334">Alt</string>
+      <string id="unknown_336">Ctrl</string>
+      <string id="unknown_338">Shift</string>
+      <string id="unknown_340">&lt;사용 안 함&gt;</string>
+      <string id="unknown_342">F1</string>
+      <string id="unknown_344">F10</string>
+      <string id="unknown_346">F11</string>
+      <string id="unknown_348">F12</string>
+      <string id="unknown_350">F2</string>
+      <string id="unknown_352">F3</string>
+      <string id="unknown_354">F4</string>
+      <string id="unknown_356">F5</string>
+      <string id="unknown_358">F6</string>
+      <string id="unknown_360">F7</string>
+      <string id="unknown_362">F8</string>
+      <string id="unknown_364">F9</string>
+      <string id="unknown_366">빼기</string>
+      <string id="unknown_368">더하기</string>
+      <string id="unknown_370">별</string>
+      <string id="unknown_372">Tab</string>
+      <string id="unknown_374">&lt;사용 안 함&gt;</string>
+      <string id="unknown_376">Alt</string>
+      <string id="unknown_378">Ctrl</string>
+      <string id="unknown_380">Shift</string>
+      <string id="unknown_382">&lt;사용 안 함&gt;</string>
+      <string id="unknown_384">F1</string>
+      <string id="unknown_386">F10</string>
+      <string id="unknown_388">F11</string>
+      <string id="unknown_390">F12</string>
+      <string id="unknown_392">F2</string>
+      <string id="unknown_394">F3</string>
+      <string id="unknown_396">F4</string>
+      <string id="unknown_398">F5</string>
+      <string id="unknown_400">F6</string>
+      <string id="unknown_402">F7</string>
+      <string id="unknown_404">F8</string>
+      <string id="unknown_406">F9</string>
+      <string id="unknown_408">빼기</string>
+      <string id="unknown_410">더하기</string>
+      <string id="unknown_412">별</string>
+      <string id="unknown_414">Tab</string>
+      <string id="unknown_416">&lt;사용 안 함&gt;</string>
+      <string id="unknown_418">Alt</string>
+      <string id="unknown_420">Ctrl</string>
+      <string id="unknown_422">Shift</string>
+      <string id="unknown_424">&lt;사용 안 함&gt;</string>
+      <string id="unknown_426">F1</string>
+      <string id="unknown_428">F10</string>
+      <string id="unknown_430">F11</string>
+      <string id="unknown_432">F12</string>
+      <string id="unknown_434">F2</string>
+      <string id="unknown_436">F3</string>
+      <string id="unknown_438">F4</string>
+      <string id="unknown_440">F5</string>
+      <string id="unknown_442">F6</string>
+      <string id="unknown_444">F7</string>
+      <string id="unknown_446">F8</string>
+      <string id="unknown_448">F9</string>
+      <string id="unknown_450">빼기</string>
+      <string id="unknown_452">더하기</string>
+      <string id="unknown_454">별</string>
+      <string id="unknown_456">Tab</string>
+      <string id="unknown_458">&lt;사용 안 함&gt;</string>
+      <string id="unknown_460">Alt</string>
+      <string id="unknown_462">Ctrl</string>
+      <string id="unknown_464">Shift</string>
+      <string id="unknown_466">&lt;사용 안 함&gt;</string>
+      <string id="unknown_468">F1</string>
+      <string id="unknown_470">F10</string>
+      <string id="unknown_472">F11</string>
+      <string id="unknown_474">F12</string>
+      <string id="unknown_476">F2</string>
+      <string id="unknown_478">F3</string>
+      <string id="unknown_480">F4</string>
+      <string id="unknown_482">F5</string>
+      <string id="unknown_484">F6</string>
+      <string id="unknown_486">F7</string>
+      <string id="unknown_488">F8</string>
+      <string id="unknown_490">F9</string>
+      <string id="unknown_492">빼기</string>
+      <string id="unknown_494">더하기</string>
+      <string id="unknown_496">별</string>
+      <string id="unknown_498">Tab</string>
+      <string id="unknown_500">&lt;사용 안 함&gt;</string>
+      <string id="unknown_502">Alt</string>
+      <string id="unknown_504">Ctrl</string>
+      <string id="unknown_506">Shift</string>
+      <string id="unknown_508">&lt;사용 안 함&gt;</string>
+      <string id="unknown_510">F1</string>
+      <string id="unknown_512">F10</string>
+      <string id="unknown_514">F11</string>
+      <string id="unknown_516">F12</string>
+      <string id="unknown_518">F2</string>
+      <string id="unknown_520">F3</string>
+      <string id="unknown_522">F4</string>
+      <string id="unknown_524">F5</string>
+      <string id="unknown_526">F6</string>
+      <string id="unknown_528">F7</string>
+      <string id="unknown_530">F8</string>
+      <string id="unknown_532">F9</string>
+      <string id="unknown_534">빼기</string>
+      <string id="unknown_536">더하기</string>
+      <string id="unknown_538">별</string>
+      <string id="unknown_540">Tab</string>
+      <string id="unknown_542">&lt;사용 안 함&gt;</string>
+      <string id="unknown_544">Alt</string>
+      <string id="unknown_546">Ctrl</string>
+      <string id="unknown_548">Shift</string>
+      <string id="unknown_550">&lt;사용 안 함&gt;</string>
+      <string id="unknown_552">F1</string>
+      <string id="unknown_554">F10</string>
+      <string id="unknown_556">F11</string>
+      <string id="unknown_558">F12</string>
+      <string id="unknown_560">F2</string>
+      <string id="unknown_562">F3</string>
+      <string id="unknown_564">F4</string>
+      <string id="unknown_566">F5</string>
+      <string id="unknown_568">F6</string>
+      <string id="unknown_570">F7</string>
+      <string id="unknown_572">F8</string>
+      <string id="unknown_574">F9</string>
+      <string id="unknown_576">빼기</string>
+      <string id="unknown_578">더하기</string>
+      <string id="unknown_580">별</string>
+      <string id="unknown_582">Tab</string>
+      <string id="unknown_608">사용 안 함</string>
+      <string id="unknown_610">버전 감지</string>
+      <string id="unknown_612">SOCKS v4</string>
+      <string id="unknown_614">SOCKS v5</string>
+      <string id="unknown_624">버전 감지</string>
+      <string id="unknown_626">TLS1.0 | TLS1.1 | TLS1.2</string>
+      <string id="unknown_630">버전 감지</string>
+      <string id="unknown_632">정부</string>
+      <string id="unknown_634">상용</string>
+      <string id="unknown_636">기본값</string>
+      <string id="unknown_638">NoCheck</string>
+      <string id="unknown_640">네트워크 액세스 없이 검사</string>
+      <string id="unknown_642">전체 액세스 검사</string>
+      <string id="unknown_644">전체 액세스 검사 및 CRL 필요</string>
+      <string id="unknown_646">구성되지 않음</string>
+      <string id="unknown_648">인증서 선택기 표시</string>
+      <string id="unknown_650">사용 안 함</string>
+      <string id="unknown_652">지정한 인증서 사용</string>
+      <string id="unknown_654">가능한 경우 자동 선택</string>
+	  <string id="unknown_656">사용 안 함</string>
+      <string id="unknown_658">시작</string>
+      <string id="unknown_660">새로 고침</string>
+      <string id="unknown_662">시작, 새로 고침</string>
+      <string id="unknown_664">열기</string>
+      <string id="unknown_666">시작, 열기</string>
+      <string id="unknown_668">새로 고침, 열기</string>
+      <string id="unknown_670">새로 고침, 열기, 시작</string>
+      <string id="unknown_672">WinLogon</string>
+      <string id="unknown_674">WinLogon, 시작</string>
+      <string id="unknown_676">WinLogon, 새로 고침</string>
+      <string id="unknown_678">WinLogon, 새로 고침, 시작</string>
+      <string id="unknown_680">WinLogon, 열기</string>
+      <string id="unknown_682">WinLogon, 열기, 시작</string>
+      <string id="unknown_684">WinLogon, 열기, 새로 고침</string>
+      <string id="unknown_686">모든 옵션</string>
+	  <string id="unknown_688">&lt;사용 안 함&gt;</string>
+      <string id="unknown_690">Alt</string>
+      <string id="unknown_692">Ctrl</string>
+      <string id="unknown_694">Shift</string>
+      <string id="unknown_696">&lt;사용 안 함&gt;</string>
+      <string id="unknown_698">F1</string>
+      <string id="unknown_700">F10</string>
+      <string id="unknown_702">F11</string>
+      <string id="unknown_704">F12</string>
+      <string id="unknown_706">F2</string>
+      <string id="unknown_708">F3</string>
+      <string id="unknown_710">F4</string>
+      <string id="unknown_712">F5</string>
+      <string id="unknown_714">F6</string>
+      <string id="unknown_716">F7</string>
+      <string id="unknown_718">F8</string>
+      <string id="unknown_720">F9</string>
+      <string id="unknown_722">빼기</string>
+      <string id="unknown_724">더하기</string>
+      <string id="unknown_726">별</string>
+      <string id="unknown_728">Tab</string>
+      <string id="unknown_715">높음</string>
+      <string id="unknown_717">중간</string>
+      <string id="unknown_719">낮음</string>
+      <string id="unknown_725">16비트 컬러</string>
+      <string id="unknown_727">32비트 컬러</string>
+      <string id="unknown_743"/>
+      <string id="unknown_745">50%</string>
+      <string id="unknown_747">75%</string>
+      <string id="unknown_749">기타</string>
+      <string id="unknown_761">로컬 데스크톱 액세스</string>
+      <string id="unknown_763">원격 세션 액세스</string>
+      <string id="unknown_765">전체 화면에서만 원격 세션 액세스</string>
+      <string id="unknown_767">&lt;사용 안 함&gt;</string>
+      <string id="unknown_769">Shift</string>
+      <string id="unknown_771">Ctrl</string>
+      <string id="unknown_773">Alt</string>
+      <string id="unknown_775">&lt;사용 안 함&gt;</string>
+      <string id="unknown_777">Tab</string>
+      <string id="unknown_779">별</string>
+      <string id="unknown_781">더하기</string>
+      <string id="unknown_783">빼기</string>
+      <string id="unknown_785">F1</string>
+      <string id="unknown_787">F2</string>
+      <string id="unknown_789">F3</string>
+      <string id="unknown_791">F4</string>
+      <string id="unknown_793">F5</string>
+      <string id="unknown_795">F6</string>
+      <string id="unknown_797">F7</string>
+      <string id="unknown_799">F8</string>
+      <string id="unknown_801">F9</string>
+      <string id="unknown_803">F10</string>
+      <string id="unknown_805">F11</string>
+      <string id="unknown_807">F12</string>
+      <string id="unknown_809">&lt;사용 안 함&gt;</string>
+      <string id="unknown_811">Shift</string>
+      <string id="unknown_813">Ctrl</string>
+      <string id="unknown_815">Alt</string>
+      <string id="unknown_817">&lt;사용 안 함&gt;</string>
+      <string id="unknown_819">Tab</string>
+      <string id="unknown_821">별</string>
+      <string id="unknown_823">더하기</string>
+      <string id="unknown_825">빼기</string>
+      <string id="unknown_827">F1</string>
+      <string id="unknown_829">F2</string>
+      <string id="unknown_831">F3</string>
+      <string id="unknown_833">F4</string>
+      <string id="unknown_835">F5</string>
+      <string id="unknown_837">F6</string>
+      <string id="unknown_839">F7</string>
+      <string id="unknown_841">F8</string>
+      <string id="unknown_843">F9</string>
+      <string id="unknown_845">F10</string>
+      <string id="unknown_847">F11</string>
+      <string id="unknown_849">F12</string>
+      <string id="unknown_851">&lt;사용 안 함&gt;</string>
+      <string id="unknown_853">Shift</string>
+      <string id="unknown_855">Ctrl</string>
+      <string id="unknown_857">Alt</string>
+      <string id="unknown_859">&lt;사용 안 함&gt;</string>
+      <string id="unknown_861">Tab</string>
+      <string id="unknown_863">별</string>
+      <string id="unknown_865">더하기</string>
+      <string id="unknown_867">빼기</string>
+      <string id="unknown_869">F1</string>
+      <string id="unknown_871">F2</string>
+      <string id="unknown_873">F3</string>
+      <string id="unknown_875">F4</string>
+      <string id="unknown_877">F5</string>
+      <string id="unknown_879">F6</string>
+      <string id="unknown_881">F7</string>
+      <string id="unknown_883">F8</string>
+      <string id="unknown_885">F9</string>
+      <string id="unknown_887">F10</string>
+      <string id="unknown_889">F11</string>
+      <string id="unknown_891">F12</string>
+      <string id="unknown_893">&lt;사용 안 함&gt;</string>
+      <string id="unknown_895">Shift</string>
+      <string id="unknown_897">Ctrl</string>
+      <string id="unknown_899">Alt</string>
+      <string id="unknown_901">&lt;사용 안 함&gt;</string>
+      <string id="unknown_903">Tab</string>
+      <string id="unknown_905">별</string>
+      <string id="unknown_907">더하기</string>
+      <string id="unknown_909">빼기</string>
+      <string id="unknown_911">F1</string>
+      <string id="unknown_913">F2</string>
+      <string id="unknown_915">F3</string>
+      <string id="unknown_917">F4</string>
+      <string id="unknown_919">F5</string>
+      <string id="unknown_921">F6</string>
+      <string id="unknown_923">F7</string>
+      <string id="unknown_925">F8</string>
+      <string id="unknown_927">F9</string>
+      <string id="unknown_929">F10</string>
+      <string id="unknown_931">F11</string>
+      <string id="unknown_933">F12</string>
+      <string id="unknown_935">&lt;사용 안 함&gt;</string>
+      <string id="unknown_937">Shift</string>
+      <string id="unknown_939">Ctrl</string>
+      <string id="unknown_941">Alt</string>
+      <string id="unknown_943">&lt;사용 안 함&gt;</string>
+      <string id="unknown_945">Tab</string>
+      <string id="unknown_947">별</string>
+      <string id="unknown_949">더하기</string>
+      <string id="unknown_951">빼기</string>
+      <string id="unknown_953">F1</string>
+      <string id="unknown_955">F2</string>
+      <string id="unknown_957">F3</string>
+      <string id="unknown_959">F4</string>
+      <string id="unknown_961">F5</string>
+      <string id="unknown_963">F6</string>
+      <string id="unknown_965">F7</string>
+      <string id="unknown_967">F8</string>
+      <string id="unknown_969">F9</string>
+      <string id="unknown_971">F10</string>
+      <string id="unknown_973">F11</string>
+      <string id="unknown_975">F12</string>
+      <string id="unknown_977">&lt;사용 안 함&gt;</string>
+      <string id="unknown_979">Shift</string>
+      <string id="unknown_981">Ctrl</string>
+      <string id="unknown_983">Alt</string>
+      <string id="unknown_985">&lt;사용 안 함&gt;</string>
+      <string id="unknown_987">Tab</string>
+      <string id="unknown_989">별</string>
+      <string id="unknown_991">더하기</string>
+      <string id="unknown_993">빼기</string>
+      <string id="unknown_995">F1</string>
+      <string id="unknown_997">F2</string>
+      <string id="unknown_999">F3</string>
+      <string id="unknown_1001">F4</string>
+      <string id="unknown_1003">F5</string>
+      <string id="unknown_1005">F6</string>
+      <string id="unknown_1007">F7</string>
+      <string id="unknown_1009">F8</string>
+      <string id="unknown_1011">F9</string>
+      <string id="unknown_1013">F10</string>
+      <string id="unknown_1015">F11</string>
+      <string id="unknown_1017">F12</string>
+      <string id="unknown_1019">&lt;사용 안 함&gt;</string>
+      <string id="unknown_1021">Shift</string>
+      <string id="unknown_1023">Ctrl</string>
+      <string id="unknown_1025">Alt</string>
+      <string id="unknown_1027">&lt;사용 안 함&gt;</string>
+      <string id="unknown_1029">Tab</string>
+      <string id="unknown_1031">별</string>
+      <string id="unknown_1033">더하기</string>
+      <string id="unknown_1035">빼기</string>
+      <string id="unknown_1037">F1</string>
+      <string id="unknown_1039">F2</string>
+      <string id="unknown_1041">F3</string>
+      <string id="unknown_1043">F4</string>
+      <string id="unknown_1045">F5</string>
+      <string id="unknown_1047">F6</string>
+      <string id="unknown_1049">F7</string>
+      <string id="unknown_1051">F8</string>
+      <string id="unknown_1053">F9</string>
+      <string id="unknown_1055">F10</string>
+      <string id="unknown_1057">F11</string>
+      <string id="unknown_1059">F12</string>
+      <string id="unknown_1061">&lt;사용 안 함&gt;</string>
+      <string id="unknown_1063">Shift</string>
+      <string id="unknown_1065">Ctrl</string>
+      <string id="unknown_1067">Alt</string>
+      <string id="unknown_1069">&lt;사용 안 함&gt;</string>
+      <string id="unknown_1071">Tab</string>
+      <string id="unknown_1073">별</string>
+      <string id="unknown_1075">더하기</string>
+      <string id="unknown_1077">빼기</string>
+      <string id="unknown_1079">F1</string>
+      <string id="unknown_1081">F2</string>
+      <string id="unknown_1083">F3</string>
+      <string id="unknown_1085">F4</string>
+      <string id="unknown_1087">F5</string>
+      <string id="unknown_1089">F6</string>
+      <string id="unknown_1091">F7</string>
+      <string id="unknown_1093">F8</string>
+      <string id="unknown_1095">F9</string>
+      <string id="unknown_1097">F10</string>
+      <string id="unknown_1099">F11</string>
+      <string id="unknown_1101">F12</string>
+      <string id="unknown_1103">&lt;사용 안 함&gt;</string>
+      <string id="unknown_1105">Shift</string>
+      <string id="unknown_1107">Ctrl</string>
+      <string id="unknown_1109">Alt</string>
+      <string id="unknown_1111">&lt;사용 안 함&gt;</string>
+      <string id="unknown_1113">Tab</string>
+      <string id="unknown_1115">별</string>
+      <string id="unknown_1117">더하기</string>
+      <string id="unknown_1119">빼기</string>
+      <string id="unknown_1121">F1</string>
+      <string id="unknown_1123">F2</string>
+      <string id="unknown_1125">F3</string>
+      <string id="unknown_1127">F4</string>
+      <string id="unknown_1129">F5</string>
+      <string id="unknown_1131">F6</string>
+      <string id="unknown_1133">F7</string>
+      <string id="unknown_1135">F8</string>
+      <string id="unknown_1137">F9</string>
+      <string id="unknown_1139">F10</string>
+      <string id="unknown_1141">F11</string>
+      <string id="unknown_1143">F12</string>
+      <string id="unknown_1145">&lt;사용 안 함&gt;</string>
+      <string id="unknown_1147">Shift</string>
+      <string id="unknown_1149">Ctrl</string>
+      <string id="unknown_1151">Alt</string>
+      <string id="unknown_1153">&lt;사용 안 함&gt;</string>
+      <string id="unknown_1155">Tab</string>
+      <string id="unknown_1157">별</string>
+      <string id="unknown_1159">더하기</string>
+      <string id="unknown_1161">빼기</string>
+      <string id="unknown_1163">F1</string>
+      <string id="unknown_1165">F2</string>
+      <string id="unknown_1167">F3</string>
+      <string id="unknown_1169">F4</string>
+      <string id="unknown_1171">F5</string>
+      <string id="unknown_1173">F6</string>
+      <string id="unknown_1175">F7</string>
+      <string id="unknown_1177">F8</string>
+      <string id="unknown_1179">F9</string>
+      <string id="unknown_1181">F10</string>
+      <string id="unknown_1183">F11</string>
+      <string id="unknown_1185">F12</string>
+	  <string id="unknown_1187">없음</string>
+	  <string id="unknown_1189">FIPS</string>
+      <string id="unknown_1191">SP800-52</string>
+	  <string id="unknown_1195">모두</string>
+	  <string id="unknown_1197">TLS</string>
+	  <string id="unknown_1199">통제됨(보안)</string>
+	  <string id="unknown_1201">모두</string>
+	  <string id="unknown_1203">TLS1.2</string>
+	  <string id="unknown_1205">TLS1.1 | TLS1.2</string>
+	  <string id="unknown_1207">TLS1.0 | TLS1.1 | TLS1.2</string>
+	  <string id="unknown_1209">전체 액세스 검사 및 CRL 전체 필요</string>	 
+	  <string id="unknown_1210">응용 프로그램 표시 탭 사용 안 함</string>
+	  <string id="unknown_1211">다시 연결 옵션 탭 사용 안 함</string>
+	  <string id="unknown_1212">전체 UI 사용 안 함</string>
+	  <string id="unknown_1213">A: 항상</string>
+	  <string id="unknown_1214">S: 보안</string>
+	  <string id="unknown_1215">N: 사용 안 함</string>
+	  <string id="unknown_1217">&lt;사용 안 함&gt;</string>
+      <string id="unknown_1219">Shift</string>
+      <string id="unknown_1221">Ctrl</string>
+      <string id="unknown_1223">Alt</string>
+      <string id="unknown_1225">&lt;사용 안 함&gt;</string>
+      <string id="unknown_1227">Tab</string>
+      <string id="unknown_1229">별</string>
+      <string id="unknown_1231">더하기</string>
+      <string id="unknown_1233">빼기</string>
+      <string id="unknown_1235">F1</string>
+      <string id="unknown_1237">F2</string>
+      <string id="unknown_1239">F3</string>
+      <string id="unknown_1241">F4</string>
+      <string id="unknown_1243">F5</string>
+      <string id="unknown_1245">F6</string>
+      <string id="unknown_1247">F7</string>
+      <string id="unknown_1249">F8</string>
+      <string id="unknown_1251">F9</string>
+      <string id="unknown_1253">F10</string>
+      <string id="unknown_1255">F11</string>
+      <string id="unknown_1257">F12</string>
+      <string id="Policy_EnableAutoUpdatePolicy">Citrix Workspace 업데이트</string>
+      <string id="Explain_EnableAutoUpdatePolicy">구성되지 않음 – Citrix Workspace 업데이트가 사용되도록 설정됩니다.
+사용 – 이 대화 상자에 나열된 다른 옵션과 함께 Citrix Workspace 업데이트가 사용되도록 설정됩니다.
+사용 안 함 – Citrix Workspace 업데이트 옵션이 [고급 기본 설정] 시트에 표시되지 않고 사용자가 업데이트 알림을 수신하지 않습니다.
+Citrix Workspace 업데이트 정책 사용:
+	자동 = Citrix Workspace에서 업데이트를 자동으로 확인합니다. 
+	수동 = 사용자가 업데이트를 수동으로 확인합니다. 
+	  
+LTSR 전용: 
+	True = LTSR 업데이트만 사용할 수 있습니다.
+Citrix-Workspace-Update-DeferUpdate-Count:
+	-1: 사용자가 횟수에 제한 없이 지연시킬 수 있습니다.
+	0: [나중에 알림] 옵션을 사용자에게 표시하지 않습니다.
+	숫자: 지정된 횟수만큼 [나중에 다시 알림] 옵션을 표시합니다.
+	  </string> 
+	  <string id="AutoUpdate">자동</string> 
+	  <string id="Manual">수동</string> 
+      <string id="Policy_CheckAutoUpdatePolicy">업데이트 확인 지연 설정</string>
+      <string id="Explain_CheckAutoUpdatePolicy">이 정책은 Citrix Workspace 업데이트가 사용자에게 배포되는 경우 기본 설정을 구성하는 데 사용됩니다.
+- (빠름)- 사용 가능한 업데이트가 제공 기간 초기에 사용자에게 배포됩니다.
+- (중간)- 사용 가능한 업데이트가 제공 기간 중기에 사용자에게 배포됩니다.
+- (느림)- 사용 가능한 업데이트가 제공 기간 말기에 사용자에게 배포됩니다.
+</string> 
+	  <string id="Fast">빠르게</string>
+      <string id="Medium">중간</string> 
+	  <string id="Slow">느리게</string>
+      <string id="AllowPublishContent">허용</string>
+      <string id="PreventPublishContent">방지</string>
+      <string id="ICAClient">Citrix Workspace</string>
+      <string id="Explain_ICAClient">Citrix Workspace 앱은 서버 팜의 데스크톱 및 원격 응용 프로그램에 연결하는 데 사용됩니다.</string>
+      <string id="Network">네트워크 라우팅</string>
+      <string id="Explain_Network">이러한 정책은 Citrix Workspace 앱이 연결을 서버 팜으로 라우팅하는 방법을 제어하는 데 사용할 수 있습니다.</string>
+      <string id="Authentication">사용자 인증</string>
+      <string id="Explain_Authentication">이러한 정책은 Citrix Workspace가 사용자를 원격 응용 프로그램 또는 데스크톱에 인증하는 방법을 제어합니다.</string>
+      <string id="UserExperience">사용자 환경</string>
+      <string id="Explain_UserExperience">Citrix Workspace가 클라이언트 컴퓨터 응용 프로그램과 여러 방식으로 상호 작용하도록 구성할 수 있습니다.  이러한 설정을 사용하여 클라이언트 컴퓨터가 사용자에게 원격 응용 프로그램 및 데스크톱을 표시하는 방법을 제어할 수 있습니다.</string>
+	  <string id="Policy_HWacceleration">그래픽을 위한 하드웨어 가속</string>
+	  <string id="Explain_HWacceleration">원격 그래픽에 대한 하드웨어 가속(GPU)을 사용하거나 사용하지 않도록 설정하려면 이 정책을 사용합니다. 구성되지 않은 경우 하드웨어 가속은 포함되지 않은 GPU에 사용하도록 설정됩니다. 이 정책을 사용하도록 설정하면 Citrix Workspace는 클라이언트 GPU를 사용하여 원격 그래픽을 가속화하려고 시도합니다. 이 기능을 지원하지 않는 클라이언트에서는 이 정책이 자동으로 사용하지 않도록 설정됩니다.</string>
+      <string id="Policy_EnableH265">그래픽에 대한 H265 디코딩</string>
+      <string id="Explain_EnableH265">원격 그래픽에 대한 H265 디코딩을 사용하거나 사용하지 않도록 설정하려면 이 정책을 사용합니다. 구성되지 않은 경우 H265 디코딩의 사용이 시도되지 않습니다. 사용하도록 설정된 경우 Citrix Workspace는 서버가 H265 인코딩을 지원하는 경우에 한해 클라이언트 GPU를 사용하여 H265 디코더를 기반으로 디코딩하려고 시도합니다. 이 기능을 지원하지 않는 클라이언트에서는 이 기능이 자동으로 사용하지 않도록 설정되고 H264로 되돌려집니다.</string>
+      <string id="Proxy">프록시</string>
+      <string id="Explain_Proxy">Citrix Workspace가 원격 응용 프로그램 및 데스크톱에 특정 프록시 라우팅을 사용하도록 구성할 수 있습니다.  이러한 설정을 통해 클라이언트 프록시를 클라이언트 컴퓨터의 다른 프로그램과 독립적으로 구성할 수 있습니다.</string>
+	  <string id="AdvancePreferencesOptions">고급 기본 설정 옵션</string>
+      <string id="Explain_AdvancePreferencesOptions">[고급 기본 설정] 의 옵션 사용/사용 안 함</string>
+      <string id="ClientEngine">클라이언트 엔진</string>
+      <string id="Explain_ClientEngine">Citrix Workspace가 ICA 파일 설정과 같은 클라이언트 엔진 구성 속성과 상호 작용하도록 구성할 수 있습니다.</string>
+      <string id="MultiStreamICA">멀티스트림 ICA</string>
+      <string id="Explain_MultiStreamICA">이 정책을 사용하면 클라이언트와 서버 사이에 ICA 트래픽을 전달하는 연결을 여러 개 구성할 수 있습니다.</string>
+      <string id="SelfService">SelfService</string>
+      <string id="Explain_SelfService">이러한 정책은 셀프 서비스 플러그인 설정을 제어합니다.</string>
+      <string id="RealTimeTransport">실시간 전송</string>
+      <string id="Explain_RealTimeTransport">실시간 전송</string>
+      <string id="RealTimeTransportThroughGateway">NetScaler Gateway를 통한 실시간 전송</string>
+      <string id="Explain_RealTimeTransportThroughGateway">NetScaler Gateway를 통한 실시간 전송</string>
+      <string id="Policy_EnableICAClient">클라이언트 연결 허용</string>
+      <string id="Explain_EnableICAClient">Citrix Workspace 앱에서 연결을 사용하도록 설정하거나 완전히 사용하지 않도록 설정하려면 이 정책을 사용합니다.  
+      
+이 정책이 구성되지 않은 경우 클라이언트의 서버 연결이 허용됩니다.  
+      
+이 정책을 사용하도록 설정하면, 클라이언트는 &quot;클라이언트 사용&quot; 옵션이 선택되고 해당 버전 번호가 &quot;최소 클라이언트 버전&quot;보다 크거나 같은 경우에만 서버에 연결됩니다.
+
+정책을 사용하지 않도록 설정하면 클라이언트의 모든 서버 연결이 허용되지 않습니다.
+
+
+문제 해결:
+클라이언트가 사용하지 않도록 설정되어 있어서 연결이 거부된 경우에는 &quot;&lt;서버&gt; 오류: Citrix XenApp 서버에 연결할 수 없습니다. 서버(...)가 ICA 연결에 대해 신뢰되지 않습니다. (모든 영역) 영역에 대한 연결이 잠금 설정에 의해 허용되지 않습니다. 관리자에게 문의하십시오.&quot;오류 메시지가 나타납니다. 
+
+클라이언트의 버전 번호가 너무 낮아서 연결이 허용되지 않는 경우에는 &quot;오류 번호 2321: ICA Client Configuration Manager: ICA 클라이언트 버전이 너무 낮아서 설치된 구성 데이터를 사용하여 실행할 수 없습니다.&quot; 오류 메시지가 나타납니다.</string>
+      <string id="Part_EnableICAClient_Enable">클라이언트 사용</string>
+      <string id="Part_EnableICAClient_Minimum">최소 클라이언트 버전</string>
+      <string id="Policy_ProxyLockdown">클라이언트 프록시 설정 구성</string>
+      <string id="Explain_ProxyLockdown">원격 응용 프로그램 또는 데스크톱에 연결하는 데 사용할 수 있는 기본 네트워크 프록시를 구성하려면 이 정책을 사용합니다.
+프록시 유형 드롭다운 메뉴에서 다음을 선택합니다.
+- 자동: 클라이언트가 로컬 컴퓨터 설정을 사용하여 프록시 서버를 결정합니다.
+- 없음: 클라이언트가 프록시 서버를 사용하지 않고 서버에 직접 연결합니다. 
+- 스크립트: 클라이언트가 프록시 스크립트 URL에 지정된 URL에서 Java 기반 .pac 파일을 검색합니다. .pac 파일이 실행되어 연결에 사용해야 할 프록시 서버를 식별합니다. 
+- 보안: &quot;보안&quot;이 선택된 경우 클라이언트는 &quot;프록시 호스트 이름&quot; 및 &quot;프록시 포트&quot; 설정으로 식별된 프록시에 연결합니다. 협상 프로토콜은 원하는 대상 주소를 지정하는 &quot;HTTP CONNECT&quot; 헤더 요청을 사용합니다. 이 프록시 프로토콜은 일반적으로 HTTP 기반 트래픽에 사용되며 GSSAPI 프록시 인증을 지원합니다.
+- SOCKS/SOCKS V4/SOCKS V5: &quot;SOCKS&quot; 프록시가 선택된 경우 클라이언트는 &quot;프록시 호스트 이름&quot; 및 &quot;프록시 포트&quot; 설정으로 식별된 프록시에 대해 SOCKS V4 또는 SOCKS V5 핸드셰이크를 수행합니다. &quot;SOCKS&quot; 옵션은 올바른 버전의 SOCKS를 감지하여 사용합니다.
+
+프록시 서버 우회를 사용하려면 우회 서버 목록을 선택합니다.
+
+문제 해결:
+일부 클라이언트 플랫폼은 운영 체제 제한 때문에 &quot;자동&quot; 프록시 유형을 지원하지 않습니다. 자세한 내용은 해당 관리자 가이드를 참조하십시오. 이러한 플랫폼의 경우 프록시 설정을 클라이언트 장치에서 수동으로 설정해야 합니다.  
+
+Web Interface 서버를 구성할 때는 특정 클라이언트 위치에 대해 적절한 프록시 서버를 지정할 수 있습니다. 그룹 정책을 통해 프록시를 구성할 때 이러한 설정을 재정의해서는 안 됩니다. 여러 프록시를 선택할 수 있는 경우 쉼표로 구분된 옵션 목록을 사용합니다(첫 번째가 기본값). 
+
+대부분의 인트라넷 클라이언트 배포에서는 프록시 유형으로 &quot;없음&quot; 옵션을 사용해야 하며, 그렇지 않을 경우 클라이언트가 인터넷을 통해 연결을 시도할 수 있습니다. 고급 배포의 경우 &quot;우회 서버 목록&quot; 옵션을 사용할 수 있으며, 네트워크 토폴로지에 맞게 &quot;.pac&quot; 스크립트 또는 신뢰할 수 있는 서버 구성을 사용할 수도 있습니다. 
+
+일부 프록시 서버는 특정 시간 동안 유휴 상태인 연결을 자동으로 끊습니다. 이에 따라 클라이언트 세션이 사용 중이지 않을 때 연결이 끊길 수 있습니다. 서버 쪽 옵션 &quot;ICA 연결 유지&quot;를 사용하면 비활성 기간 중 추가 데이터 패킷을 전송하여 프록시의 연결 닫기를 방지할 수 있습니다.</string>
+      <string id="Part_Proxy_ProxyTypeLockdown">프록시 유형</string>
+      <string id="Part_Proxy_ProxyHostLockdown">프록시 호스트 이름</string>
+      <string id="Part_Proxy_ProxyPortLockdown">프록시 포트</string>
+      <string id="Part_Proxy_ProxyAutoConfigUrlLockdown">프록시 스크립트 URL</string>
+      <string id="Part_Proxy_ProxyBypassListLockdown">우회 서버 목록</string>
+      <string id="Policy_AltProxyLockdown">클라이언트 장애 조치 프록시 설정 구성</string>
+      <string id="Explain_AltProxyLockdown">기본 네트워크 프록시가 원격 응용 프로그램 또는 데스크톱에 연결하지 못하는 경우 클라이언트가 사용할 수 있는 대체 네트워크 프록시를 구성하려면 이 정책을 사용합니다.
+
+이 정책이 구성되지 않은 경우 클라이언트는 자체 설정을 사용하여 프록시 서버를 통해 연결할지 여부를 결정합니다.
+
+이 정책을 사용하도록 설정하면 클라이언트는 기본 프록시 연결이 실패할 경우 대체 프록시를 사용하여 연결을 시도합니다. 장애 조치 프록시 설정은 기본 프록시 설정에 동일한 방식으로 작동합니다.
+
+&quot;직접 연결로 장애 조치&quot; 확인란을 선택하면 클라이언트는 기본 프록시와 대체 프록시 모두가 연결 서비스에 실패하는 경우 프록시 없이 최종 직접 연결을 시도합니다.
+
+
+문제 해결:
+일부 프록시 실패 시 클라이언트가 연결 중 중지된 것으로 보일 수 있습니다. 이는 일반적으로 프록시 서버가 연결 자체를 다시 시도 중이거나 시간 초과 기간이 길기 때문입니다. 네트워크 토폴로지에 따라 Web Interface 서버가 현재 작동 중인 프록시를 식별하도록 구성하거나 프록시 서버 시간 초과 설정을 변경하는 것이 좋을 수 있습니다.</string>
+      <string id="Part_AltProxy_ProxyTypeLockdown">프록시 유형</string>
+      <string id="Part_AltProxy_ProxyHostLockdown">프록시 호스트 이름</string>
+      <string id="Part_AltProxy_ProxyPortLockdown">프록시 포트</string>
+      <string id="Part_AltProxy_ProxyAutoConfigUrlLockdown">프록시 스크립트 URL</string>
+      <string id="Part_AltProxy_ProxyBypassListLockdown">우회 서버 목록</string>
+      <string id="Part_AltProxy_ProxyFallbackLockdown">직접 연결로 장애 조치</string>
+      <string id="Policy_ProxySocks">SOCKS 프록시 설정 구성</string>
+      <string id="Explain_ProxySocks">일부 고급 네트워크 토폴로지에 필요한 추가적인 SOCKS 프록시의 사용을 구성하려면 이 정책을 사용합니다.
+
+사용하도록 설정하면 클라이언트는 &quot;SOCKS 프로토콜 버전&quot; 설정을 확인합니다. SOCKS를 통한 연결이 사용하도록 설정된 경우 클라이언트는 &quot;프록시 호스트 이름&quot; 및 &quot;프록시 포트&quot; 설정으로 지정된 SOCKS 프록시를 사용하여 연결을 시도합니다.
+ 
+클라이언트는 SOCKS v4 또는 SOCKS v5 프록시 서버를 사용한 연결을 지원합니다. 또는 프록시 서버가 사용하는 버전의 자동 감지를 시도할 수 있습니다.
+
+
+문제 해결:
+SOCKS 프록시 설정은 기본 또는 대체 프록시 서버 이외에 프록시를 통과하도록 설계되었습니다. 단일 프록시만 통과할 경우에는 이러한 SOCKS 프록시 설정을 사용하지 않도록 설정해야 합니다.</string>
+      <string id="Part_ProxySocks_Version">SOCKS 프로토콜 버전</string>
+      <string id="Part_ProxySocks_ProxyHostLockdown">프록시 호스트 이름</string>
+      <string id="Part_ProxySOCKS_ProxyPortLockdown">프록시 포트</string>
+      <string id="Policy_ProxyAuthentication">프록시 인증 구성</string>
+      <string id="Explain_ProxyAuthentication">클라이언트가 프록시 서버에 연결할 때 사용하는 인증 메커니즘을 제어하려면 이 정책을 사용합니다.  프록시 서버 인증은 대규모 네트워크 배포에서 데이터 트래픽을 모니터링하는 데 사용할 수 있습니다.  
+
+일반적으로 인증은 운영 체제에 의해 처리되지만 일부 시나리오에서는 사용자가 특정 사용자 이름 및 암호를 제공할 수 있습니다. 사용자에게 이러한 자격 증명을 묻는 메시지가 표시되지 않도록 하려면 &quot;사용자에게 자격 증명 묻기&quot; 확인란을 선택 취소합니다. 이렇게 하면 클라이언트는 익명 연결을 시도합니다. 또는 Web Interface 서버에 의해 전달된 자격 증명을 사용하여 연결하도록 클라이언트를 구성하거나, &quot;명시적 사용자 이름&quot; 및 &quot;명시적 암호&quot; 옵션을 사용하여 그룹 정책을 통해 자격 증명을 명시적으로 지정할 수 있습니다.  
+
+
+문제 해결:
+일반적으로 NTLM 프록시 인증은 도메인 컨트롤러의 제어에 따라 수행되며 클라이언트가 제어할 수 없습니다. 클라이언트와 프록시 모두 적절한 도메인 수준 신뢰 관계로 구성되어야 합니다.  
+
+프록시 인증은 클라이언트의 통과 인증 기능에 링크할 수 없습니다. 일반적으로 프록시 암호는 사용자의 암호와 무관합니다.</string>
+      <string id="Policy_ProxyExplicitAuthenticationEnabled">사용자에게 자격 증명 묻기</string>
+      <string id="Policy_ProxyBasicAuthenticationEnabled">일반 텍스트 인증 허용</string>
+      <string id="Policy_ProxyNTLMAuthenticationEnabled">NTLM 해시 인증 허용</string>
+      <string id="Part_Proxy_Socks5User">명시적 사용자 이름</string>
+      <string id="Part_Proxy_Socks5Password">명시적 암호</string>
+      <string id="Policy_ClientAutoReconnect">세션 안정성 및 자동 다시 연결</string>
+      <string id="Explain_ClientAutoReconnect">&quot;이 정책은 네트워크 장애 시 클라이언트 동작을 구성합니다.
+
+다시 연결을 설정하려면 다음을 선택합니다.
+
+자동 다시 연결 사용: 네트워크 장애가 발생하면 클라이언트가 자동으로 서버 다시 연결을 시도합니다.
+
+세션 안정성 사용: 네트워크 장애가 발생하면 클라이언트가 SSL/TS 서버 다시 연결을 시도합니다. 
+
+참고: [자동 다시 연결 사용]과 [세션 안정성 사용]을 모두 선택한 경우 기본적으로 클라이언트는 네트워크 장애 발생 시 [세션 안정성 사용] 옵션을 선택합니다. 
+
+참고: 이 정책을 사용하면서 아무 옵션도 선택하지 않으면 정책이 적용되지 않습니다.
+
+투명도 수준: 세션 다시 연결 중 XA/XD 세션에 적용되는 투명도 수준입니다. 
+
+설정 0은 세션 다시 연결 시 XA 및 XD가 검정색 창으로 바뀐다는 것을 의미합니다.
+
+설정 100은 투명 계층이 적용되지 않는다는 것을 의미합니다(화면 고정).
+
+문제 해결:
+일부 프록시 서버는 특정 시간 동안 유휴 상태인 연결을 자동으로 끊습니다.  이에 따라 클라이언트 세션이 사용 중이지 않을 때 연결이 끊길 수 있습니다.  서버 쪽 옵션 &quot;&quot;ICA 연결 유지&quot;&quot;를 사용하면 비활성 기간 중 추가 데이터 패킷을 전송하여 프록시의 연결 닫기를 방지할 수 있습니다. &quot;
+</string>
+      <string id="Part_ClientAutoReconnect_Reconnect">자동 다시 연결 사용</string>
+      <string id="Part_ClientAutoReconnect_CGP">세션 안정성 사용(둘 다 선택한 경우 더 높은 우선 순위를 가짐)</string>
+	  <string id="Part_ClientAutoReconnect_Dimming">투명도 수준</string>
+      <string id="Policy_SSLLockdown">TLS 및 준수 모드 구성</string>
+      <string id="Policy_DeprecatedCiphers">더 이상 사용되지 않는 암호화 집합</string>
+      <string id="Explain_SSLLockdown">이 옵션을 사용하면 Citrix Workspace가 보안 연결을 식별하고, 서버 내의 통신을 암호화할 수 있습니다. 
+
+다음은 Citrix Workspace와 Citrix가 지원하는 XenApp/XenDesktop 간 TLS 보안 연결의 유형입니다.
+1. TLS 1.0 2.
+TLS 1.1 3.
+TLS 1.2 Citrix Receiver가 모든 유형의 연결에 TLS를 사용하도록 하려면 모든 연결에 TLS 필요를 선택하십시오. 
+
+- 없음: 규정 준수 모드가 적용되지 않습니다.
+- FIPS: FIPS 모드를 사용하도록 설정하면 Windows 운영 체제 및 해당 하위 시스템이 FIPS로 검증된 암호화 알고리즘만 사용해야 합니다.
+- 없음: 규정 준수 모드가 적용되지 않습니다.
+- SP800-52: NIST SP800-52r1 규정 준수가 적용됩니다.
+보안 규정 준수 모드 드롭다운에서 SP800-52를 선택하면 다음 CRCP(인증서 해지 검사 정책)가 허용됩니다.
+-전체 액세스 검사 및 CRL 전체 필요 &quot;허용되는 TLS 서버&quot; 옵션의 쉼표로 구분된 목록을 통해 Citrix Receiver가 지정된 서버에만 연결되도록 제한할 수 있습니다.
+여기에 와일드카드와 포트 번호를 지정할 수 있습니다. 
+
+허용되는 TLS 서버 옵션의 쉼표로 구분된 목록을 통해 Citrix Workspace가 지정된 서버에만 연결되도록 제한할 수 있습니다. 여기에서 와일드카드와 포트 번호를 지정할 수 있습니다. 예를 들어, *.citrix.com:4433을 지정하면 포트 4433에서 일반 이름이 .citrix.com으로 끝나는 모든 서버에 연결할 수 있습니다. 보안 인증서에 있는 정보의 정확성은 인증서 발급자가 보장합니다.  Citrix Workspace에서 인증서 발급자를 인식할 수 없거나 신뢰하지 않는 경우 연결이 거부됩니다.
+
+TLS 버전은 다음 조합으로 제한될 수 있습니다.
+
+- TLS 1.0, TLS 1.1 또는 TLS 1.2
+- TLS 1.1 또는 TLS 1.2
+- TLS 1.2만
+
+TLS 암호화 집합은 클라이언트에서 허용하는 암호화 집합의 그룹입니다. TLS 암호화 집합은 다음 중 하나로 구성할 수 있습니다. 
+참고: TLS_RSA_* 암호화 집합은 더 이상 사용되지 않는 암호화 집합 정책을 사용하여 사용하지 않도록 설정할 수 있습니다.
+- 모두:  &quot;모두&quot;를 설정하면 기본적으로 없음 규정 준수 모드에서 다음의 암호화 집합이 허용됩니다.
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- 상용: &quot;상용&quot;을 설정하면 다음 암호화 집합만 허용됩니다.
+*	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+- 정부: &quot;정부&quot;를 설정하면 다음 암호화 집합만 허용됩니다.
+*	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+*	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+*	TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+
+
+인증서 해지 검사를 사용하면 Citrix 서버의 암호화 인증을 개선하고 클라이언트와 서버 간 TLS 연결의 전반적인 보안을 강화할 수 있습니다. 
+참고: 인증서 해지 검사는 SP800-52 보안 준수 모드가 설정된 경우에만 유효합니다.
+이 설정을 사용하도록 설정하면 클라이언트는 서버의 인증서가 해지되었는지 여부를 확인합니다. 인증서 해지 목록 검사에는 몇 가지 수준이 있습니다.  예를 들어 로컬 인증서 목록만 검사하거나 로컬 및 네트워크 인증서 목록을 검사하도록 클라이언트를 구성할 수 있습니다. 또한 모든 인증서 해지 목록이 확인된 경우에만 사용자가 로그온할 수 있도록 인증서 검사를 구성할 수도 있습니다.
+인증서 해지 검사는 일부 인증서 발급자가 지원하는 고급 기능입니다. 이를 통해 관리자는 인증서 개인 키가 침해된 경우 보안 인증서를 해지(만료 날짜 전에 무효화)할 수 있습니다.
+이 설정에 적용 가능한 값은 다음과 같습니다.
+
+- NoCheck: 인증서 해지 검사를 수행하지 않습니다.
+- 네트워크 액세스 없이 검사: 인증서 해지 검사를 수행합니다. 로컬 인증서 해지 목록의 저장소만 사용됩니다. 모든 배포 지점이 무시됩니다. 대상 SSL 릴레이/Secure Gateway 서버가 제공하는 서버 인증서 확인 시 인증서 해지 목록 검색은 중요하지 않습니다.
+- 전체 액세스 검사: 인증서 해지 검사를 수행합니다. 로컬 인증서 해지 목록 저장소 및 모든 배포 지점이 사용됩니다. 인증서에 대한 해지 정보가 발견되면 연결이 거부됩니다. 대상 서버가 제공하는 서버 인증서 확인 시 인증서 해지 목록 검색은 중요하지 않습니다. 
+- 전체 액세스 검사 및 CRL 필요: 루트 CA를 제외하고 인증서 해지 목록 검사를 수행합니다. 로컬 인증서 해지 목록 저장소 및 모든 배포 지점이 사용됩니다. 인증서에 대한 해지 정보가 발견되면 연결이 거부됩니다. 확인 작업 시 모든 필수 인증서 해지 목록 검색이 중요합니다.
+- 전체 액세스 검사 및 CRL 전체 필요: 루트 CA를 포함하여 인증서 해지 목록 검사를 수행합니다. 로컬 인증서 해지 목록 저장소 및 모든 배포 지점이 사용됩니다. 인증서에 대한 해지 정보가 발견되면 연결이 거부됩니다. 확인 작업 시 모든 필수 인증서 해지 목록 검색이 중요합니다.
+다양한 제품에 대해 TLS를 구성하는 조직은 보안 인증서의 일부로 인증서 정책 확장 OID를 지정하여 Citrix Workspace용 서버를 식별하도록 선택할 수 있습니다.  여기서 정책 확장 OID를 구성하는 경우 Citrix Workspace는 호환되는 정책을 선언하는 인증서만 허용합니다.
+
+TLS를 사용하여 연결하는 경우 Citrix Workspace를 식별하는 보안 인증서는 Citrix Workspace가 직접 제공하도록 서버를 구성할 수 있습니다.  &quot;클라이언트 인증&quot; 설정을 사용하여 ID를 자동으로 제공할지 아니면 사용자에게 알림을 제공할지 구성합니다. 옵션은 다음과 같습니다.
+
+- 사용 안 함: 클라이언트 인증을 사용하지 않도록 설정합니다.
+- 인증서 선택기 표시: 항상 사용자에게 인증서를 선택하도록 메시지를 표시합니다.
+- 가능한 경우 자동 선택: 제공할 인증서 선택 옵션이 있는 경우에만 사용자에게 메시지를 표시합니다.
+ID 제공 안 함
+- 구성되지 않음: 클라이언트 인증이 구성되지 않습니다. 기본 동작이 적용됩니다.
+- 지정된 인증서 사용: 아래 설정에서 지정된 클라이언트 인증서를 사용합니다.
+
+사용자에게 불필요하게 메시지를 표시하지 않기 위해 &quot;클라이언트 인증서&quot; 설정을 사용하여 식별 중인 인증서의 지문을 지정합니다.
+</string>
+ 
+ 
+  
+ 
+      <string id="Part_SSL_EnabledLockdown">모든 연결에 TLS 필요</string>
+      <string id="Part_SSL_SSLProxyHostLockdown">허용되는 TLS 서버</string>
+      <string id="Part_SSL_SSLPolicyOID">정책 확장 OID</string>
+      <string id="Part_SSL_SSLProtocolLockdown">TLS 버전</string>
+      <string id="Part_SSL_CiphersetLockdown">TLS 암호화 집합</string>
+      <string id="Part_SSL_RevocationLockdown">인증서 해지 검사 정책</string>
+      <string id="Part_SSL_ClientAuthentication">클라이언트 인증</string>
+      <string id="Part_SSL_ClientCertificate">클라이언트 인증서</string>
+      <string id="Policy_ConfigureClientSelectiveTrust">신뢰할 수 있는 서버 구성</string>
+      <string id="Explain_ConfigureClientSelectiveTrust">클라이언트가 연결하려는 게시된 응용 프로그램 또는 데스크톱을 식별하는 방법을 제어하려면 이 정책을 사용합니다. 클라이언트는 연결의 신뢰 수준(&quot;신뢰 영역&quot;이라고 함)을 확인합니다. 그런 다음 이 신뢰 영역에 따라 클라이언트가 연결에 대해 구성되는 방법이 결정됩니다.  
+
+이 정책을 사용하도록 설정하면 &quot;신뢰할 수 있는 서버 구성 적용&quot; 옵션을 사용하여 클라이언트가 영역 식별을 수행하도록 할 수 있습니다.  
+
+기본적으로 영역 식별은 클라이언트가 연결 중인 서버의 주소를 기반으로 합니다. 신뢰할 수 있는 영역의 구성원이 되려면 서버는 Windows 신뢰할 수 있는 사이트 영역의 구성원이어야 합니다. &quot;Windows 인터넷 영역&quot; 설정을 사용하여 이를 구성할 수 있습니다.  
+
+또한 비-Windows 클라이언트와의 호환성을 위해 &quot;주소&quot; 설정을 사용하여 서버 주소를 명시적으로 신뢰할 수 있습니다. 이는 와일드카드의 사용을 지원하는(예: cps*.citrix.com) 쉼표로 구분된 서버 목록입니다.  
+
+
+문제 해결:
+기본 구성에서 신뢰할 수 있는 서버 구성으로 인해 클라이언트가 연결되지 않는 경우에는 다음의 오류 메시지가 표시됩니다.
+
+    &quot;&lt;서버&gt; 오류:  Citrix XenApp 서버에 연결할 수 없습니다. 서버(xxx)가 ICA 연결에 대해 신뢰되지 않습니다. (신뢰할 수 없는 영역) 영역에 대한 연결이 잠금 설정에 의해 허용되지 않습니다. 관리자에게 문의하십시오.&quot;
+
+&quot;xxx&quot;에서 식별된 서버를 Windows 신뢰할 수 있는 사이트 영역에 추가해야(SSL 연결에 대한 http:// 또는 https://로) 연결이 성공합니다.  
+
+SSL 연결의 경우 인증서 일반 이름이 신뢰되어야 합니다. 비-SSL 연결의 경우에는 연결되는 모든 서버가 개별적으로 신뢰되어야 합니다. 이는 응용 프로그램 탐색을 사용할 때 XML 서비스 및 이것이 리디렉션하는 서버가 모두 신뢰되어야 한다는 것을 의미합니다.
+</string>
+      <string id="Part_ConfigureClientSelectiveTrust_IEZone">Windows 인터넷 영역</string>
+      <string id="Part_ConfigureClientSelectiveTrust_EffectiveAddress">주소</string>
+      <string id="Part_EnableClientSelectiveTrust">신뢰할 수 있는 서버 구성 적용</string>
+      <string id="Policy_Smartcard">스마트 카드 인증</string>
+      <string id="Explain_Smartcard">클라이언트가 클라이언트 장치에 연결된 스마트 카드를 사용하는 방법을 제어하려면 이 정책을 사용합니다.
+
+사용하도록 설정하면 이 정책은 원격 서버가 인증 및 기타 용도를 위해 클라이언트 장치에 연결된 스마트 카드에 액세스할 수 있도록 허용합니다.
+
+사용하지 않도록 설정하면 서버는 클라이언트 장치에 연결된 스마트 카드에 액세스할 수 없습니다.
+
+
+문제 해결:
+Citrix 환경에서 스마트 카드를 사용할 때는 스마트 카드 장치 드라이버를 서버에 설치해야 합니다. 클라이언트 컴퓨터에서 다른 운영 체제를 사용하는 경우에는 사용 중인 스마트 카드 장치 드라이버가 올바르게 상호 운영되는지 확인해야 할 수 있습니다.</string>
+      <string id="Part_Smartcard_Enable">스마트 카드 인증 허용</string>
+      <string id="Part_SmartcardPin_Enable">PIN에 통과 인증 사용</string>
+      <string id="Policy_WITicket">Web Interface 인증 티켓</string>
+      <string id="Explain_WITicket">Web Interface를 통해 인증할 때 사용되는 티켓팅 인프라를 제어하려면 이 정책을 사용합니다.
+
+이 정책을 사용하도록 설정하면 &quot;레거시 티켓 처리&quot; 확인란을 선택 취소하여 레거시 Web Interface 티켓팅을 사용하지 않도록 설정할 수 있습니다. 레거시 Web Interface 티켓팅은 일반 텍스트 암호 필드에서 일회용 인증 쿠키를 서버에 전달하여 구현됩니다.
+ 
+Web Interface 버전 4.5부터 클라이언트는 LogonTicketType에서 정의한 관련 해석이 포함된 불투명 LogonTicket의 형식으로 인증 토큰을 처리합니다. &quot;Web Interface 4.5 이상&quot; 확인란을 선택 취소하여 이 기능을 사용하지 않도록 설정할 수 있습니다.</string>
+      <string id="Part_WITicket_Legacy_Enable">레거시 티켓 처리</string>
+      <string id="Part_WITicket_LogonTicket_Enable">Web Interface 4.5 이상</string>
+      <string id="Policy_KerberosLockdown">Kerberos 인증</string>
+      <string id="Explain_KerberosLockdown">원격 응용 프로그램 또는 데스크톱에 사용자를 인증하기 위해 클라이언트가 Kerberos를 사용하는 방법을 제어하려면 이 정책을 사용합니다.
+
+사용하도록 설정하면 이 정책은 클라이언트가 Kerberos 프로토콜을 사용하여 사용자를 인증할 수 있도록 허용합니다. Kerberos는 실제 사용자 자격 증명 데이터를 서버에 전송할 필요를 없애주는 도메인 컨트롤러 권한 부여된 인증 트랜잭션입니다.
+
+사용하지 않도록 설정하면 클라이언트는 Kerberos 인증을 시도하지 않습니다.
+
+
+문제 해결:
+클라이언트를 실행 중인 컴퓨터와 원격 응용 프로그램을 실행 중인 서버가 트러스트 관계에 있는 도메인에 있어야 합니다. 도메인 컨트롤러는 Citrix XenApp 서버가 Kerberos를 사용하여 전체 사용자 로그온(대화형 로그온) 을 수행한다는 것을 인식해야 합니다. 이것은 도메인 컨트롤러의 &quot;위임된 인증에 대한 신뢰&quot; 설정을 사용하여 구성됩니다.
+
+Web Interface를 사용하여 연결할 때 Web Interface 서버는 클라이언트가 Kerberos 인증을 사용하여 연결할 것임을 알아야 합니다. 기본적으로 Web Interface 서버는 대상 서버에 대해 IP 주소를 사용하는 반면 Kerberos 인증에는 정규화된 도메인 이름이 필요하기 때문에 이것이 필요합니다.
+
+클라이언트 및 서버 컴퓨터 모두의 DNS 항목이 올바르게 등록되어 있어야 합니다. 연결 도중 끝점이 서로를 인증하기 때문입니다.</string>
+      <string id="Policy_SSONForNSG">NetScaler Gateway용 Single Sign-on</string>
+      <string id="Explain_SSONForNSG">Workspace가 NetScaler Gateway의 동일한 로그온 자격 증명(통과 인증)을 사용하도록 허용하려면 이 정책을 사용합니다.</string>
+      <string id="Policy_LocalCredentialsLockdown">로컬 사용자 이름 및 암호</string>
+      <string id="Explain_LocalCredentialsLockdown">클라이언트가 Citrix XenApp 서버에 클라이언트 컴퓨터와 동일한 로그온 자격 증명(통과 인증)을 사용하도록 지시하려면 이 정책을 사용합니다.
+
+이 정책을 사용하도록 설정하면 &quot;통과 인증 사용&quot; 확인란을 선택 취소하여, 클라이언트가 원격 서버에 인증할 때 현재 사용자의 로그온 자격 증명을 사용하지 않도록 할 수 있습니다.
+
+클라이언트는 통과 인증을 수행할 수 있는 시점을 지정하여 특정한 제한을 적용할 수 있습니다(자세한 내용은 http://support.citrix.com/proddocs/에서 Citrix eDocs 참조). 이러한 제한이 환경에 너무 엄격한 경우에는 &quot;모든 ICA 연결에 대해 통과 인증 허용&quot; 확인란을 선택하여 통과 인증 제한을 우회하십시오. 
+
+Novell Directory Server 환경에서 실행할 때 &quot;Novell Directory Server 자격 증명 사용&quot; 확인란을 선택하면 클라이언트는 사용자의 NDS 자격 증명을 사용해야 합니다. 
+
+
+문제 해결:
+통과 인증을 사용하도록 설정하려면 관리자가 클라이언트를 설치해야 하며 이 때 &quot;로컬 자격 증명 통과 허용&quot; 옵션을 선택해야 합니다.  
+
+각 사용자는 클라이언트 레지스트리 설정인 Program Neighbourhood 창을 통해 또는 AppSrv.ini의 해당 사본을 편집하여 통과 인증을 사용하지 않도록 설정할 수 있습니다. 통과 인증을 사용하도록 설정하려면 사용자의 AppSrv.ini 사본에 &quot;EnableSSonThruICAFile=true&quot; 설정이 포함되어야 합니다.</string>
+      <string id="Part_LocalCredentialsLockdown_Enable">통과 인증 사용</string>
+      <string id="Part_LegacyLocalUserNameAndPassword_Enable">모든 ICA 연결에 대해 통과 인증 허용</string>
+      <string id="Part_NovellCredentials">Novell Directory Server 자격 증명 사용</string>
+      <string id="Policy_EnableDriveMapping">클라이언트 드라이브 매핑</string>
+      <string id="Explain_EnableDriveMapping">원격 응용 프로그램이나 데스크톱의 클라이언트 파일 시스템에 대한 액세스를 사용하도록 설정하고 제한하려면 이 정책을 사용합니다.
+
+사용하도록 설정하면 &quot;클라이언트 드라이브 매핑 사용&quot; 확인란이 선택되지 않은 경우 클라이언트는 클라이언트의 파일 시스템에 대한 CDM(클라이언트 드라이브 매핑) 가상 채널 액세스를 완전히 거부합니다.  이렇게 하면 클라이언트가 시작될 때 DLL이 클라이언트 드라이브 매핑 가상 채널(vdcdmn.dll)을 로드하는 것이 중지됩니다.  이때 클라이언트 패키지에서 DLL을 삭제할 수 있습니다.  
+
+CDM을 사용하도록 설정하면 서버에 사용 가능한 액세스의 유형을 제한하기 위한 추가 옵션을 사용할 수 있습니다. &quot;읽기 전용 클라이언트 드라이브&quot; 확인란을 선택하면 CDM 가상 채널은 클라이언트 드라이브에 대한 읽기 액세스만 허용합니다.
+
+&quot;드라이브 매핑 안 함&quot; 상자에 관련 드라이브 문자를 입력하여 Windows 드라이브에 대한 액세스를 사용하지 않도록 설정할 수 있습니다. 이는 게시된 응용 프로그램 또는 데스크톱에 연결할 때 매핑하지 않아야 하는 모든 드라이브를 연결한 것입니다. 예를 들어 &quot;ABFK&quot;는 드라이브 A, B, F 및 K를 사용하지 않도록 설정합니다.
+
+
+문제 해결:
+이러한 정책은 Desktop Viewer의 파일 보안 대화 상자에서 사용자가 선택한 선택 항목을 재정의합니다. 클라이언트 연결 센터에서 사용자가 선택 항목을 변경하지 못하게 방지하는 방법에 대한 자세한 내용은 Citrix Knowledge Center에서 확인하십시오.</string>
+      <string id="Part_EnableDriveMappingCheckbox">클라이언트 드라이브 매핑 사용</string>
+      <string id="Part_EnableDriveMappingReadonly">읽기 전용 클라이언트 드라이브</string>
+      <string id="Part_EnableDriveMappingDisableDrives">드라이브 매핑 안 함</string>
+      <string id="Policy_EnablePrinterMapping">클라이언트 프린터</string>
+      <string id="Explain_EnablePrinterMapping">원격 응용 프로그램이나 데스크톱의 클라이언트 프린터에 대한 액세스를 사용하도록 설정하고 제한하려면 이 정책을 사용합니다. 
+ 
+이 정책을 사용하지 않도록 설정하면 클라이언트는 클라이언트 장치에 사용 가능한 프린터에 서버가 액세스 또는 인쇄하지 못하도록 합니다.</string>
+      <string id="Part_EnablePrinterMapping">클라이언트 프린터 매핑</string>
+      <string id="Policy_LocalPort">클라이언트 하드웨어 액세스</string>
+      <string id="Explain_LocalPort">클라이언트 플랫폼이 지원하는 최대 직렬 포트 수를 지정하려면 이 정책을 사용합니다.
+
+또한 클라이언트의 직렬, USB 및 병렬 포트에 대한 원격 응용 프로그램 또는 데스크톱의 액세스를 사용하도록 설정하고 제한하려면 이 정책을 사용합니다. 이를 통해 서버가 로컬 연결된 하드웨어를 사용할 수 있습니다.
+
+
+문제 해결:
+원격 PDA 동기화는 &quot;가상 COM 포트&quot;를 사용합니다. 이는 USB 연결을 통해 라우팅되는 직렬 포트 연결입니다. 이 때문에 PDA 동기화를 사용하려면 직렬 포트 액세스를 사용하도록 설정해야 합니다.</string>
+      <string id="Part_MaxPort">최대 직렬 포트</string>
+      <string id="Part_EnableSerialPortCheckbox">직렬 포트 매핑</string>
+      <string id="Part_EnableVirtualSerialPortCheckbox">PDA 동기화 허용</string>
+      <string id="Part_EnableParallelPortCheckbox">병렬 포트 매핑</string>
+      <string id="Policy_ImageCapture">이미지 캡처</string>
+      <string id="Explain_ImageCapture">클라이언트 장치의 스캐너, 웹캠 및 기타 이미징 장치에 대한 원격 응용 프로그램 또는 데스크톱의 액세스를 사용하도록 설정하고 제한하려면 이 정책을 사용합니다.</string>
+      <string id="Policy_AudioInput">클라이언트 마이크</string>
+      <string id="Explain_AudioInput">로컬 오디오 캡처 장치(마이크)에 대한 원격 응용 프로그램 또는 데스크톱의 액세스를 사용하도록 설정하고 제한하려면 이 정책을 사용합니다.</string>
+      <string id="Part_BiDiAudio_Enable">클라이언트 마이크 사용</string>
+      <string id="Policy_Clipboard">클립보드</string>
+      <string id="Explain_Clipboard">클라이언트 클립보드 콘텐츠에 대한 원격 응용 프로그램 또는 데스크톱의 액세스를 사용하도록 설정하고 제한하려면 이 정책을 사용합니다.</string>
+      <string id="Part_Clipboard_Enabled">클립보드 사용</string>
+      <string id="Policy_USB_PNP_Devices">USB Plug-n-Play 장치</string>
+      <string id="Explain_USB_PNP_Devices">게시된 응용 프로그램 또는 데스크톱의 클라이언트 USB Plug-n-Play 장치에 대한 액세스를 사용하거나 사용하지 않도록 설정하려면 이 정책을 사용합니다. 구성되지 않음 설정을 사용하면 액세스를 명시적으로 사용하거나 사용하지 않도록 설정할 때까지 장치 액세스가 허용됩니다.</string>
+      <string id="Part_USB_PNP_Enabled">PNP 사용</string>
+      <string id="Policy_PointOfSales">USB POS(Point of Sale) 장치</string>
+      <string id="Explain_PointOfSales">게시된 응용 프로그램 또는 데스크톱의 클라이언트 USB POS(Point of Sale) 장치에 대한 액세스를 사용하거나 사용하지 않도록 설정하려면 이 정책을 사용합니다. 이 정책은 USB Plug-n-Play 장치 정책이 사용 및 구성되지 않음으로 설정된 경우에 적용됩니다.</string>
+      <string id="Part_PointOfSales_Enabled">POS 사용</string>
+	  <string id="Policy_Foreground_Progress_Bar">진행률 표시줄의 포그라운드 상태 구성</string>
+	  <string id="Explain_Foreground_Progress_Bar"/>
+      <string id="Policy_Audio">클라이언트 오디오 설정</string>
+      <string id="Explain_Audio">이 옵션은 원격 응용 프로그램 또는 데스크톱에 의해 생성된 사운드를 클라이언트 컴퓨터로 리디렉션하는 방법을 제어합니다. 
+
+클라이언트 오디오 매핑을 사용하지 않도록 설정하려면 '오디오 사용'을 선택합니다. 이는 &quot;원격 클라이언트 장치&quot; 정책을 통해 제어되는 클라이언트에서 서버로의 오디오 데이터에는 영향을 미치지 않습니다.  
+
+클라이언트와 서버 간 오디오 품질은 음질 드롭다운 메뉴에서 설정할 수 있습니다. 사용 가능한 옵션은 높음, 낮음, 중간입니다.
+최저 포트 번호와 최고 포트 번호 범위는 16384에서 65535 사이여야 합니다.
+
+문제 해결:
+서버 오디오 옵션이 이 설정보다 우선 순위가 높으므로 클라이언트에서 높은 품질을 선택하더라도 고품질 오디오가 사용되지 않을 수 있습니다. 서버는 클라이언트가 선택한 오디오의 품질을 높일 수 없습니다.</string>
+      <string id="Part_Audio_Enabled">오디오 사용</string>
+      <string id="Part_Audio_Quality">음질</string>
+      <string id="Part_RealtimeTransport_Enabled">실시간 전송 사용</string>
+      <string id="Part_RtpAudioLowestPort">가장 낮은 포트 번호</string>
+      <string id="Part_RtpAudioHighestPort">가장 높은 포트 번호</string>
+      <string id="Part_RealtimeTransportThroughGateway_Enabled">NetScaler Gateway를 통해 실시간 전송 허용</string>
+      <string id="Policy_Graphics">클라이언트 그래픽 설정</string>
+      <string id="Explain_Graphics">이 옵션을 사용하면 원격 응용 프로그램 또는 데스크톱이 표시하는 그래픽의 품질을 제어할 수 있습니다. 
+색 농도 드롭다운 메뉴에서 원하는 범위를 선택합니다. 선택 가능한 옵션은 16비트 컬러와 32비트 컬러입니다. 참고: 색 농도가 낮으면 낮은 대역폭에서 효율이 향상됩니다. 
+'디스크 기반 캐싱'을 사용하도록 설정하면 그래픽을 로컬 디스크 캐시에 임시로 저장할 수 있습니다. 
+손실 허용 압축을 사용하도록 설정하면 최대의 압축과 응답성을 위해 그래픽 품질이 저하됩니다. 
+HDX 3D 브라우저 가속을 사용하도록 설정하면 Microsoft IE를 HDX 3D 가상 가속 채널로 처리할 수 있습니다. 
+HDX 3D 브라우저 가속 손실 허용 압축을 사용하도록 설정하면 Microsoft IE가 최대의 압축과 응답성을 위해 그래픽의 품질을 저하시킬 수 있습니다. 
+원격 비디오를 사용하도록 설정하면 서버가 클라이언트로 비디오를 스트리밍할 수 있습니다. </string>
+      <string id="Part_Graphics_ColorDepth">색 농도</string>
+      <string id="Part_Graphics_ImageAcceleration">손실 허용 압축</string>
+      <string id="Part_Graphics_SpeedScreenBrowser">HDX 3D 브라우저 가속</string>
+      <string id="Part_Graphics_SpeedScreenBrowserCompression">HDX 3D 브라우저 가속 - 손실 허용 압축</string>
+      <string id="Part_Graphics_SpeedScreenMultimedia">원격 비디오</string>
+      <string id="Part_Graphics_ZeroLatencyKeyboard">SpeedScreen 대기 시간 단축 - 키보드 로컬 에코</string>
+      <string id="Part_Graphics_ZeroLatencyMouse">SpeedScreen 대기 시간 단축 - 마우스 포인터 예측</string>
+      <string id="Part_Graphics_DiskCache">디스크 기반 캐싱</string>
+      <string id="Policy_Display">클라이언트 디스플레이 설정</string>
+      <string id="Explain_Display">이 옵션은 클라이언트가 원격 응용 프로그램 및 데스크톱을 최종 사용자에게 표시하는 방법을 제어합니다. 
+심리스 창 드롭다운 메뉴에서 True를 선택하면 클라이언트가 심리스 창을 요청합니다. False를 선택하면 클라이언트가 심리스 창을 표시하지 않도록 할 수 있습니다. 
+
+참고: 서버는 True로 설정되어 있다고 해도 클라이언트 요청을 거부할 수 있습니다. 
+창 너비에서 원하는 값을 선택합니다. 선택할 수 있는 옵션은 1024 및 800입니다. 
+
+참고: 심리스 창 옵션을 사용하도록 설정한 경우 이 기능은 아무 효과가 없습니다. 
+창 높이에서 원하는 값을 선택합니다. 선택할 수 있는 옵션은 600 및 734입니다.
+
+참고: 심리스 창 옵션을 사용하도록 설정한 경우 이 기능은 아무 효과가 없습니다. 
+창 백분율 드롭다운 메뉴에서 원하는 값을 선택합니다. 선택할 수 있는 옵션은 50%, 75% 및 기타입니다. 이는 창 높이 및 너비를 수동으로 설정하는 방법입니다. 
+
+참고: 선택한 값은 전체 화면에 적용됩니다. 
+작업 영역 축소에서 원하는 범위를 선택합니다. 권장값은 3에서 5 사이입니다. 
+
+클라이언트를 전체 화면 모드로 표시하려면 전체 화면을 사용하도록 설정합니다. </string>
+      <string id="Part_Display_Seamless">심리스 창</string>
+      <string id="Part_Display_Width">창 너비</string>
+      <string id="Part_Display_Height">창 높이</string>
+      <string id="Part_Display_Percent">창 백분율</string>
+      <string id="Part_Display_WorkArea">작업 영역 축소</string>
+      <string id="Part_Display_FullScreen">전체 화면</string>
+      <string id="Policy_LocalAppAccess">로컬 앱 액세스 설정</string>
+      <string id="Explain_LocalAppAccess">클라이언트가 호스트된 데스크톱 내에서 로컬 응용 프로그램을 표시하는 방법을 제어하려면 이 정책을 사용합니다.
+
+로컬 앱 액세스를 사용하면 로컬에 설치된 응용 프로그램을 호스트된 데스크톱 내에 통합할 수 있습니다. 사용자가 바로 가기를 사용해 로컬 설치된 응용 프로그램을 시작하면, 응용 프로그램은 사용자의 로컬 장치에서 실행되고 있더라도 호스트된 데스크톱에서 실행되는 것처럼 나타납니다.
+
+이 정책을 사용하도록 설정하면 클라이언트는 로컬 설치된 응용 프로그램을 호스트된 데스크톱 내에서 바로 가기로 표시합니다.
+사용하지 않도록 설정하면 클라이언트는 로컬 앱을 호스트된 데스크톱 내에서 표시하지 않습니다. URL 리디렉션도 사용하지 않도록 설정됩니다.
+
+
+URL 리디렉션 허용:
+
+이 옵션을 선택하면 클라이언트는 URL을 호스트된 데스크톱 브라우저에서 로컬 설치된 브라우저로 또는 그 반대로 리디렉션되도록 허용합니다. 호스트의 URL 차단 목록 및 허용 목록에 따라 리디렉션된 URL이 결정됩니다. 이 기능에 필요한 브라우저 추가 기능, 확장 및 플러그인도 사용하도록 설정해야 합니다.
+선택하지 않으면 URL은 호스트된 데스크톱에서 클라이언트로 또는 그 반대로 리디렉션되지 않습니다. 브라우저 추가 기능, 확장 및 플러그인은 사용하지 않도록 설정되지 않습니다.</string>
+      <string id="Part_Allow_URLRedirection">URL 리디렉션 허용</string>
+      <string id="Policy_ExtraURLProtocols">호스트-클라이언트 리디렉션 설정</string>
+      <string id="Explain_ExtraURLProtocols">호스트-클라이언트 URL 리디렉션이 추가 프로토콜을 지원해야 하는지를 설정하려면 이 정책을 사용합니다. 기본적으로 HTTP 및 HTTPS만 지원됩니다.</string>
+      <string id="Part_ExtraURLProtocols">ExtraURL 프로토콜</string>
+      <string id="Policy_Keyboard_Hotkeys">바로 가기 키</string>
+      <string id="Policy_ToggleFullScreen">Desktop Viewer 바로 가기 키</string>
+	  <string id="Explain_Policy_ToggleFullScreen">이 기능을 사용하면 데스크톱 세션에서 전체 화면 모드와 창 모드 간에 전환할 수 있습니다. 이제 바로 가기 키를 사용자 지정하고 해당 바로 가기 키를 사용하여 기본 모드로 전환할 수 있습니다.
+전체 화면 전환 바로 가기 키를 사용자 지정하면 전환 시 사용할 키 조합을 선택할 수 있습니다.
+참고: 이 바로 가기 키는 &quot;AllowHotKeys&quot; 레지스트리 값과 무관하게 작동합니다. </string>
+<string id="Explain_Keyboard_Hotkeys">이 옵션을 사용하면 Citrix Workspace가 사용할 수 있는 키 조합을 구성할 수 있습니다.
+Windows 키 드롭다운 메뉴에서 원하는 옵션을 선택합니다. 선택할 수 있는 옵션은 로컬 데스크톱 액세스, 원격 세션 액세스, 전체 화면에서만 원격 세션 액세스입니다. 
+로컬 데스크톱 액세스를 선택하면 키 조합이 로컬 데스크톱에만 적용됩니다. 
+원격 세션 액세스를 선택하면 키 조합이 원격 세션에만 적용됩니다. 
+전체 화면에서만 원격 세션 액세스를 선택하면 키 조합이 전체 화면 모드의 비-심리스 ICA 세션에 적용됩니다. 기본적으로 이 옵션이 선택됩니다. </string>
+      <string id="Part_Keyboard_Windows_Key">Windows 키:</string>
+      <string id="Part_Keyboard_Hotkey_Tasklist">작업 목록:</string>
+      <string id="Part_Keyboard_Hotkey_Tasklist_Plus">             +</string>
+      <string id="Part_Keyboard_Hotkey_Close_Remote_Application">응용 프로그램 닫기:</string>
+      <string id="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">                          +</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Title_Bar">전체 화면 전환:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">                            +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Del:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">               +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">           +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">         +</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Tab_Plus">          +</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Shift-Tab:</string>
+      <string id="Part_Keyboard_Hotkey_Alt_Backtab_Plus">                  +</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">작업 관리자:</string>
+      <string id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">                      +</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">대기 시간 단축:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">                             +</string>
+	  <string id="Part_Keyboard_Hotkey_Toggle_LOCALIME">일반 IME 모드:</string>
+      <string id="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</string>
+      <string id="Policy_PublishedApplications">원격 응용 프로그램</string>
+      <string id="Explain_PublishedApplications">클라이언트의 원격 응용 프로그램 처리를 구성하려면 이 정책을 사용합니다.
+
+사용하도록 설정할 경우 이 정책은 &quot;응용 프로그램&quot; 상자의 목록을 사용하여 클라이언트가 직접 시작할 수 있는 게시된 응용 프로그램을 결정합니다.
+
+원격 응용 프로그램이 세션을 공유하도록(단일 ICA 연결에서 실행) 요청할 수 있습니다. 이렇게 하면 사용자 환경이 향상되지만 경우에 따라서는 바람직하지 않을 수 있습니다. 세션 공유 기능은 &quot;세션 공유&quot; 확인란을 선택 취소하여 사용하지 않을 수 있습니다.
+
+
+문제 해결:
+게시된 응용 프로그램은 응용 프로그램 이름 앞의 #로 표시됩니다.  # 기호를 생략하면 특정 프로그램 또는 데스크톱의 시작을 시도합니다.  Citrix XenApp을 실행하는 컴퓨터는 기본적으로 이를 허용하지 않으며 &quot;이 세션에 대한 액세스 권한이 없습니다.&quot;
+
+메시지를 표시하고 연결을 거부합니다.  세션 공유는 다른 Web Interface 서버에서 시작된 응용 프로그램이 세션을 공유하는 것을 방지하는 SessionSharingKey에 의해 제어됩니다.</string>
+      <string id="Part_PublishedApplications_InitialProgram">응용 프로그램</string>
+      <string id="Part_PublishedApplications_SessionSharing">세션 공유</string>
+      <string id="Policy_HostRenderedAudio">일반 USB 리디렉션을 통한 오디오</string>
+      <string id="Explain_HostRenderedAudio">일반 USB 리디렉션을 통해 오디오 리디렉션을 제어하려면 이 정책을 사용합니다. 이 정책은 XenApp 호스트에만 적용됩니다.</string>
+      <string id="Part_HostRenderedAudio">일반 USB 리디렉션을 통해 오디오 사용</string>
+      <string id="Policy_ICAFileSettings">ICA 파일 설정</string>
+      <string id="Explain_ICAFileSettings">클라이언트 세션 종료 시 ICA 파일이 삭제되도록 하려면 이 정책을 사용합니다. </string>
+      <string id="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</string>
+      <string id="Policy_AllowLegacySessionSharing">레거시 세션 공유 허용</string>
+      <string id="Explain_AllowLegacySessionSharing">Program Neighborhood 세션에 대한 세션 공유 허용</string>
+      <string id="Part_AllowLegacySessionSharing_SessionSharing">AllowLegacySessionSharing</string>
+      <string id="Policy_MSISettings">멀티스트림 ICA</string>
+      <string id="Explain_MSISettings">이 정책을 사용하여 멀티스트림 ICA 설정을 구성합니다. 이 기능은 기본적으로 사용하도록 설정됩니다.</string>
+	  <string id="Policy_EnableFTU">EnableFTU</string>
+        <string id="Policy_EnableNPS">NPS 사용</string>
+      <string id="Policy_EnableFTA">FTA 사용</string>
+	  <string id="Policy_Vprefer">vPrefer</string>
+	  <string id="AllowAllApps">모든 앱 허용</string>
+	  <string id="AllowNetworkApps">네트워크 앱 허용</string>
+	  <string id="AllowInstalledApps">설치된 앱 허용</string>
+      <string id="Policy_EnableDefaultFTA">기본 FTA 사용</string>
+	  <string id="Allowed_Apps">허용</string>
+	  <string id="Policy_HideSettings">설정 숨기기</string>
+	  <string id="Policy_HideConfigChecker">구성 검사기 숨기기</string>
+	  <string id="Policy_HideSupportInfo">지원 정보 숨기기</string>
+	  <string id="Policy_HideDeletePassword">저장된 암호 삭제 숨기기</string>
+	  <string id="Policy_HideDataCollection">데이터 수집 숨기기</string>
+	  <string id="Policy_HideLocalKeyboardLayoutSetting">로컬 키보드 레이아웃 설정 숨기기</string>
+	  <string id="Policy_HideConnectionCenter">연결 센터 숨기기</string>
+	  <string id="Policy_HideDPIsettings">DPI 설정 숨기기</string>
+	  <string id="Policy_HideAdvancedPreferences">고급 기본 설정 숨기기</string>
+	  <string id="Policy_HideCitrixFiles">Citrix Files 숨기기</string>
+	  <string id="Policy_HideCitrixCasting">Citrix Casting 숨기기</string>
+	  <string id="Policy_SmartcardRemovalAction_x86">x86 시스템의 스마트 카드 제거 정책</string>
+	  <string id="Policy_SmartcardRemovalAction_AMD64">x64 시스템의 스마트 카드 제거 정책</string>	  
+	  <string id="Pick_UI_display">UI 표시 선택</string>
+      <string id="Policy_SelfServiceMode_Enable">SelfServiceMode 관리</string>
+      <string id="Policy_AddAccounts">사용자의 계정 추가/제거 허용</string>
+      <string id="Policy_EnablePreLaunch">응용 프로그램 PreLaunch 사용</string>
+	  <string id="Explain_EnablePreLaunch">사전 시작은 응용 프로그램 및 데스크톱 세션을 더 빠르게 시작할 수 있는 기능입니다. 이 기능은 처음 액세스할 때 리소스를 시작하여 이후 액세스에서 응답성을 높이는 방식으로 작동합니다.
+
+
+이 정책을 사용하도록 설정하면 세션/응용 프로그램 사전 시작 기능이 사용되도록 설정됩니다.
+
+이 정책을 사용하지 않도록 설정하면 세션/응용 프로그램 사전 시작 기능도 사용되지 않도록 설정됩니다.
+</string>
+      <string id="Policy_PublishSafeContent">사용자가 안전한 콘텐츠를 게시하도록 허용/방지</string>
+      <string id="Policy_PublishUnsafeContent">사용자가 안전하지 않은 콘텐츠를 게시하도록 허용/방지</string>
+      <string id="Policy_ReconnectMode">Citrix Workspace가 기존 세션에 다시 연결을 시도하는 시점을 제어합니다.</string>
+      <string id="Pick_ReconnectMode">다시 연결 조건의 적절한 조합을 선택합니다.</string>
+      <string id="Explain_Policy_ReconnectMode">이 정책 설정을 사용하도록 설정하면 이 정책 설정에 따라 Citrix Workspace 다시 연결 동작이 제어됩니다.
+
+Citrix Workspace는 저장소를 통해 기존의 연결이 끊긴 세션을 찾아서 클라이언트에 다시 연결합니다. 이 작업을 다음과 같은 여러 시점에 자동으로 수행할 수 있습니다. 
+
+- 시작: Citrix Workspace를 시작하거나 열 때마다
+- 새로 고침: UI에서 앱 새로 고침 명령을 실행할 때 또는 로그온 후
+- 열기: Citrix Workspace UI를 열 때
+- Windows 로그온: 처음 시작할 때
+
+기본값은 시작 또는 새로 고침입니다. 적절한 조합을 선택하십시오.
+</string>
+      <string id="Policy_EnableAppShortCut">앱 바로 가기 관리</string>
+      <string id="Part_StartMenuDir_Text">시작 메뉴 디렉터리</string>
+      <string id="Part_DesktopDir_Text">데스크톱 디렉터리</string>
+      <string id="Part_DesktopShortcut_Enable">데스크톱 바로 가기 사용</string>
+      <string id="Part_StartMenuShortcut_Disable">시작 메뉴 바로 가기 사용 안 함</string>
+      <string id="Part_UseCategoryAsStartMenuPath_Disable">시작 메뉴에 대한 범주 경로 사용 안 함</string>
+	  <string id="Part_UseCategoryAsDesktopPath_Enable">데스크톱에 대한 범주 경로 사용</string>
+	  <string id="Part_UseDifferentPathsforStartmenuAndDesktop_Enable">데스크톱 및 시작 메뉴에 여러 개의 범주 경로가 존재하는 것을 허용합니다. 데스크톱의 범주 경로와 시작 메뉴의 범주 경로를 정렬하지 않도록 설정합니다.</string>
+      <string id="Part_RemoveAppsOnLogoff_Enable">로그오프 시 앱 제거</string>
+      <string id="Part_RemoveAppsOnExit_Enable">종료 시 앱 제거</string>
+      <string id="Part_ClearAppListOnLogoff_Enable">로그오프 시 Citrix Workspace 앱 창에 표시된 응용 프로그램 집합 지우기</string>
+      <string id="Part_AllAppsAreMandatory_Enable">앱의 셀프 서비스 선택을 무시하고 모두 필수로 지정합니다. Citrix Workspace가 PNAgent 서비스와 함께 작동 중인 경우 이렇게 해야 모든 앱이 자동으로 추가됩니다. Citrix Workspace가 StoreFront Store와 함께 작동하는 경우 StoreFront 서버에서 변경을 수행하여 Store를 필수로 지정하십시오. 현재 이 설정은 StoreFront 스토어에 적용되지 않습니다.</string>
+      <string id="Part_SuppressRefreshOnStartup_Enable">Citrix Workspace가 열렸을 때 응용 프로그램 목록의 새로 고침을 수행하지 않도록 지정합니다.</string>
+	  <string id="Explain_EnableFTU">FTU 대화 상자를 사용하거나 사용하지 않도록 설정합니다.</string>
+        <string id="Explain_EnableNPS">NPS(Net Promoters Score)를 사용하면 Citrix Workspace for Windows(스토어) 사용 환경을 평가하고 피드백을 제공할 수 있습니다. 이 피드백 서비스는 Citrix Workspace for Windows(스토어)를 개선하는 데 사용됩니다. 평가와 피드백은 더 나은 사용자 환경을 제공할 수 있게 도와주며, 이 기능은 기본적으로 사용하도록 설정됩니다. 참고: 평가 점수로 4 또는 5를 선택하면 Microsoft Store에서 Citrix Receiver 앱을 평가할 수 있는 페이지로 리디렉션됩니다.
+참고: 평가 점수를 4 또는 5로 선택할 경우, 평가에 대한 자세한 설명을 입력할 수 있는 Microsoft Store의 Citrix Workspace 앱으로 리디렉션됩니다. 옵션:
+1.
+사용 – 6번 연결될 때마다 NPS 대화 상자가 나타납니다. 2. 사용 안 함 – NPS 대화 상자가 나타나지 않습니다.
+2. 사용 안 함: NPS 대화 상자가 나타나지 않습니다.
+</string>
+	  <string id="Explain_Vprefer">이제는 원격 Citrix Workspace가 원격 응용 프로그램보다 첫 번째 홉 서버/데스크톱에 설치되어 있는 응용 프로그램의 인스턴스를 우선적으로 시작하는지 여부를 제어할 수 있습니다. 
+
+다음 옵션 중에서 선택할 수 있습니다.
+
+1. 모든 앱 허용: 모든 앱의 클라이언트 인스턴스를 시작합니다. 2. 설치된 앱 허용: 설치된 앱의 클라이언트 인스턴스만 시작합니다.
+3. 네트워크 앱 허용: 공유 네트워크에 게시된 앱의 인스턴스를 시작합니다.
+3. 네트워크 앱 허용: 공유 네트워크에 게시된 앱의 인스턴스를 시작합니다.
+</string>
+      <string id="Explain_EnableFTA">이 옵션을 사용하면 FTA(파일 형식 연결) 설정을 변경할 수 있습니다.
+기본적으로 이 설정은 [구성되지 않음]으로 설정됩니다.
+FTA를 사용하려면 [사용]을 선택합니다.
+FTA를 사용하지 않으려면 [사용 안 함]을 선택합니다.</string>
+      <string id="Explain_EnableDefaultFTA">이 옵션을 사용하면 FTA(파일 형식 연결) 설정을 변경할 수 있습니다.
+기본적으로 이 설정은 [구성되지 않음]으로 설정됩니다.
+FTA를 사용하려면 [사용]을 선택합니다.
+FTA를 사용하지 않으려면 [사용 안 함]을 선택합니다.
+'FTA 사용'을 사용하지 않도록 설정하면 이 정책을 설정해도 아무 영향을 주지 않고 정책이 비활성화된 것처럼 처리됩니다. 정책이 비활성화된 것처럼 처리됩니다.</string>
+	  <string id="Explain_HideConfigChecker">[고급 기본 설정]에서 구성 검사기 대화 상자를 숨기거나 숨김 취소하려는 경우에 사용합니다.</string>
+	  <string id="Explain_HideSupportInfo">[고급 기본 설정]에서 지원 정보 대화 상자를 숨기거나 숨김 취소하려는 경우에 사용합니다.</string>
+	  <string id="Explain_HideDeletePassword">[고급 기본 설정]에서 암호 삭제 대화 상자를 숨기거나 숨김 취소하려는 경우에 사용합니다.</string>
+	  <string id="Explain_HideDataCollection">[고급 기본 설정]에서 데이터 수집 대화 상자를 숨기거나 숨김 취소하려는 경우에 사용합니다.</string>
+	  <string id="Explain_HideLocalKeyboardLayoutSetting">[고급 기본 설정]에서 로컬 키보드 레이아웃 설정 대화 상자를 숨기거나 숨김 취소하려는 경우에 사용합니다.</string>
+	  <string id="Explain_HideConnectionCenter">[고급 기본 설정]에서 연결 센터 대화 상자를 숨기거나 숨김 취소하려는 경우에 사용합니다.</string>
+	  <string id="Explain_HideAdvancedPreferences">알림 영역의 Citrix Workspace 앱 아이콘에서 [고급 기본 설정] 옵션을 숨기거나 숨김 취소하려는 경우에 이 옵션을 사용합니다.</string>
+	  <string id="Explain_HideDPIsettings">[고급 기본 설정]에서 DPI 설정을 숨기거나 숨김 취소하려는 경우에 사용합니다.</string>
+	  <string id="Explain_HideCitrixFiles">[고급 기본 설정]에서 Citrix Files를 숨기거나 숨김 취소하려는 경우에 사용합니다.</string>
+	  <string id="Explain_HideCitrixCasting">[고급 기본 설정]에서 Citrix Casting 대화 상자를 숨기거나 표시하려는 경우에 사용합니다.</string>
+	  <string id="Explain_SmartCardRemovalAction_x86">이 정책은 사용자가 Windows Citrix Workspace 앱을 통해 스마트 카드로 Citrix Web Interface 5.4 PNAgent 사이트에 사용자 인증한 경우 스마트 카드 제거 작업의 동작을 제어하는 데 사용됩니다.
+	  
+이 옵션을 사용하면 사용자가 클라이언트에서 스마트 카드를 제거할 때 사용자 세션 동작을 설정할 수 있습니다. 
+
+참고: 이 옵션은 32비트 운영 체제에서만 사용할 수 있습니다. 
+
+이 정책을 사용하도록 설정할 수 있으려면 WI XenApp 서비스에 스마트 카드 제거 옵션이 설정되었는지 확인해야 합니다. XenApp에서 스마트 카드 제거 옵션을 설정하는 절차는 XenApp 설명서를 참조하십시오. 정책을 ‘사용’으로 설정하면 스마트 카드를 클라이언트에서 제거하더라도 사용자가 Citrix Workspace에 로그인된 상태로 유지됩니다. 그러나 XenApp 세션에서는 사용자가 로그오프됩니다.
+</string>	  
+<string id="Explain_SmartCardRemovalAction_AMD64">이 정책은 사용자가 Windows Citrix Workspace를 통해 스마트 카드로 Citrix Web Interface 5.4 PNAgent 사이트에 사용자 인증한 경우 스마트 카드 제거 작업의 동작을 제어하는 데 사용됩니다. 
+
+이 옵션을 사용하면 사용자가 클라이언트에서 스마트 카드를 제거할 때 사용자 세션 동작을 설정할 수 있습니다. 
+
+이 정책은 64비트 운영 체제에서만 사용할 수 있습니다. 사용 중인 Windows 시스템의 OS 비트 형식을 확인하려면 ‘시작’ 버튼을 클릭하고 ‘컴퓨터’를 마우스 오른쪽 버튼으로 클릭한 후 ‘속성’을 클릭하십시오. ‘시스템’ 섹션 아래에서 ‘시스템 종류’를 확인하여 현재 실행 중인 OS 종류를 알 수 있습니다. 이 정책은 ‘시스템 종류’로 ‘64비트 운영 체제’가 표시되는 경우에만 적용할 수 있습니다. 
+
+이 정책을 사용하도록 설정할 수 있으려면 WI XenApp 서비스에 스마트 카드 제거 옵션이 설정되었는지 확인해야 합니다. XenApp에서 스마트 카드 제거 옵션을 설정하는 절차는 XenApp 설명서를 참조하십시오. 정책을 ‘사용’으로 설정하면 스마트 카드를 클라이언트에서 제거하더라도 사용자가 Citrix Workspace에 로그인된 상태로 유지됩니다. 그러나 XenApp 세션에서는 사용자가 로그오프됩니다.
+
+정책을 사용하지 않도록 설정한 경우에는 클라이언트 장치에서 스마트 카드를 제거할 경우XenApp 세션이 항상 연결이 끊어지고, WI XenApp 서비스에서 스마트 카드 제거는 아무런 영향을 주지 않습니다.
+
+
+	  
+
+
+</string>  
+	  <string id="Explain_HideSettings">이 정책을 사용하면 UI를 통해 작업 영역 설정과 함께 시작 및 데스크톱의 응용 프로그램 바로 가기를 관리할 수 있습니다. 최종 사용자는 앱이 시작 메뉴에 배치되는 방법을 제어해야 합니다. UI는 사용자가 선택한 시작 메뉴 폴더에 바로 가기를 배치하는 옵션을 제공합니다. 데스크톱 바로 가기도 동일하게 제어할 수 있습니다. 또한 작업 영역 제어 설정을 관리하기 위한 UI도 제공합니다. 이를 통해 Windows Citrix Workspace 앱의 유용성이 높아집니다.
+
+이 정책 설정을 사용하도록 설정하면 제공된 세 가지 선택 항목을 취소할 수 있습니다(예: 전체 UI 사용 안 함, 응용 프로그램 탭 사용 안 함 또는 작업 영역 탭 사용 안 함). 이러한 정책 설정을 사용하도록 설정한 후에는 끝점에서 Citrix Workspace 앱을 재설정해야 설정이 적용됩니다.
+
+이 정책 설정을 사용하지 않도록 설정하는 것은 구성되지 않은 상태와 동일합니다. 
+ 
+</string>
+      <string id="Explain_SelfServiceMode_Enable">Citrix Workspace의 SelfServiceMode 설정을 사용하거나 사용하지 않도록 설정하려면 이 정책을 사용합니다.
+
+사용하도록 설정하면 SelfServiceUI가 표시됩니다.
+
+사용하지 않도록 설정하면 SelfServiceUI가 숨겨지고 모든 앱이 자동으로 구독됩니다.
+</string>
+
+<string id="Explain_PublishSafeContent">이 정책은 사용자가 안전한 콘텐츠를 게시하도록 허용하거나 방지하는 데 사용할 수 있습니다.
+</string>
+
+<string id="Explain_PublishUnsafeContent">이 정책은 사용자가 안전하지 않은 콘텐츠를 게시하도록 허용하거나 방지하는 데 사용할 수 있습니다.
+</string>
+      <string id="Explain_DisableADSCheck">ADS를 사용하지 않게 설정하려면 이 정책을 사용합니다.</string>
+      <string id="Explain_EnableAppShortCut">이 설정을 사용하도록 설정하는 경우:
+
+- 로그오프 시 Citrix Workspace 창에 표시된 응용 프로그램 집합 지우기 이 옵션을 선택하면 Citrix Workspace 로그오프 시 사용자 세부 정보를 지웁니다. 이 옵션을 선택 취소하면 Citrix Workspace는 Citrix Workspace 로그오프 시 사용자 세부 정보를 지우지 않을 수 있습니다.
+
+- Citrix Workspace가 열렸을 때 응용 프로그램 목록의 새로 고침을 수행하지 않도록 지정합니다. 이 옵션을 선택하면 시작 후 Citrix Workspace가 응용 프로그램 목록의 새로 고침을 수행하지 않습니다. 이 옵션을 선택 취소하면 Citrix Workspace는 Citrix Workspace를 시작할 때 응용 프로그램 목록을 새로 고칩니다.
+
+- 앱의 셀프 서비스 선택을 무시하고 모두 필수로 지정합니다. Citrix Workspace가 PNAgent 서비스와 함께 작동 중인 경우 이렇게 해야 모든 앱이 자동으로 추가됩니다. Citrix Workspace가 StoreFront Store와 함께 작동하는 경우 StoreFront 서버에서 변경을 수행하여 Store를 필수로 지정하십시오. 현재 이 설정은 StoreFront 스토어에 적용되지 않습니다. 이 옵션을 선택 취소하면 최종 사용자는 PNAgent 사이트에서 모든 응용 프로그램 또는 필요한 응용 프로그램을 수동으로 구독해야 합니다. 이 옵션을 선택 취소하면 최종 사용자는 PNAgent 사이트에서 모든 응용 프로그램 또는 필요한 응용 프로그램을 수동으로 구독해야 합니다.
+</string>
+      <string id="Explain_AddAccount_Enable">사용자에게 NonSelfServiceMode에서 계정을 추가 또는 제거하는 옵션을 제공하려면 이 정책을 사용합니다.</string>
+      <string id="Receiver">Citrix Workspace</string>
+      <string id="Storefront">StoreFront</string>
+      <string id="Storefronts">NetScaler Gateway URL/StoreFront 계정 목록</string>
+      <string id="Storefronts_Part">NetScaler Gateway URL/StoreFront 계정 세부 정보 입력:</string>
+      <string id="Storefronts_Help">이 정책 설정을 사용하면 StoreFront 계정 또는 NetScaler Gateway URL의 목록을 관리할 수 있습니다.
+
+이 정책 설정을 사용하도록 설정하면 StoreFront 계정 및 NetScaler Gateway URL의 목록을 입력할 수 있습니다. 하나의 NetScaler URL과 여러 StoreFront URL만 제공할 수 있습니다. 목록에 추가하는 각 항목에 대해 다음 정보를 세미콜론으로 구분하여 입력합니다.
+
+Store 이름 - 이 Store에 대해 사용자에게 표시될 이름입니다.
+
+Store URL - Store에 대한 URL입니다.
+
+Store 사용 상태 - 켬/끔.
+
+Store 설명 - 이 Store에 대해 사용자에게 표시될 설명입니다.
+
+StoreFront의 예:
+
+SalesStore;https://sales.mycompany.com/Citrix/Store/discovery;On;Store for Sales staff
+
+NetScaler Gateway URL의 예. 
+HRStore;https://ag.mycompany.com#Storename;On;Store for HR staff
+
+#Storename은 구성해야 하는 NetScaler Gateway 뒤의 저장소 이름입니다.
+참고: 이 방법을 사용하여 구성한 NetScaler Gateway URL은 NetScaler Gateway 뒤의 PNA 서비스 사이트를 지원하지 않습니다.
+
+</string>
+      <string id="Fast_Connect_API_Support">Fast Connect API 지원</string>
+      <string id="Explain_FastConnect">이러한 정책은 Fast Connect API 지원을 제어합니다.</string>
+      <string id="Policy_FastConnectAPI_Support">FastConnect API 지원 관리</string>
+      <string id="Explain_FastConnectAPI_Support">Fast Connect API는 Citrix Workspace에서 사용자의 ID를 빠르게 변경하기 위한 API를 제공하여 사용자 간 전환을 용이하게 해줍니다.  
+-Fast Connect API 사용:  이 옵션을 선택하면 새 사용자 변경을 위한 API를 제공하여 빠른 사용자 전환을 가능하게 해줍니다.
+-Fast Connect Transition API 사용: 이 옵션을 선택하면 selfservice.exe-terminate 및 selfservice.exe-fastterminate 명령이 허용되지 않습니다.
+-로그오프 시 앱 실행 유지: 이 옵션을 선택하면 사용자가 Citrix Workspace에서 연결 해제된 경우에도 응용 프로그램 세션을 연결된 상태로 유지할 수 있습니다.
+-셀프 서비스 플러그인을 Fast Connect와 통합: 이 옵션을 선택하면 Fast Connect 라이브러리/SDK 사용이 셀프 서비스 플러그인에 통지됩니다. </string>
+      <string id="Explain_EnableFastConnectTransitionAPI">EnableFastConnectTransitionAPI</string>
+      <string id="Explain_LeaveAppsRuningOnLogoff">로그오프 시 앱 실행 유지</string>
+      <string id="Explain_FastConnectUsingSSP">셀프 서비스 플러그인을 FastConnect와 통합</string>
+	  <string id="Policy_EngineErrMsg">엔진 오류 메시지 사용</string>
+      <string id="Polciy_CEIP">CEIP 사용</string>
+	  <string id="Policy_Dpi">높은 DPI</string>
+      <string id="Polciy_CEIP_Configuration">CEIP 구성</string>
+      <string id="Part_Enable_CEIP">CEIP 사용.</string>
+      <string id="Part_CEIP_ServerURL">CEIP 서버 URL</string>
+      <string id="Part_CEIP_UploadClass">CEIP 업로드 클래스</string>
+      <string id="Part_CEIP_UploadFrequencyInWeeks">CEIP 업로드 빈도(주 단위) 초기화</string>
+      <string id="Part_AllowUnSecureURL">비보안 URL 허용(HTTPS 대신 HTTP)</string>
+      <string id="Explain_CEIP_Configuration">1. CEIP 서버 URL을 제공합니다.
+2. CEIP 업로드 클래스를 제공합니다. 3. 업로드 빈도를 설정합니다. 
+4. 비보안 URL을 허용합니다. 업로드 빈도 설정
+4. 비보안 URL 허용 </string>
+	  <string id="Explain_EnableEngineErrMsg">이렇게 하면 특정 엔진 오류 메시지가 사용됩니다. 이 설정은 일반 프로토콜 드라이버 오류를 특정 오류 메시지로 바꿉니다.</string>
+      <string id="Explain_EnableCEIP">CEIP는 Citrix 사용자 환경 개선 프로그램입니다. CEIP에 대한 자세한 내용은 http://www.citrix.com/cms/ws/ceip에서 확인할 수 있습니다.</string>
+	  <string id="Explain_Policy_Dpi">세션 조정을 관리하려면 이 정책을 사용하십시오. 
+	  
+정책을 사용하도록 설정하면 Citrix Workspace가 DPI를 인식하고 다중 모니터 세션에 적용된 DPI에 따라 세션이 변경됩니다.
+
+정책을 사용하도록 설정할 경우 두 가지 옵션 중에서 선택할 수 있습니다.
+1. 예 - 세션 조정 2.
+아니요 - 기본 해상도 사용 이 정책은 기본적으로 사용하지 않도록 설정됩니다.
+	  
+이 정책을 사용하지 않도록 설정하면 운영 체제에 의해 해상도가 조정됩니다. 이 정책을 사용하지 않도록 설정하면 운영 체제에 의해 해상도가 조정됩니다. </string>
+	  <string id="Explain_EnableDPIAwareness">Citrix Workspace가 DPI를 인식하도록 합니다. 이 설정은 기본적으로 사용하도록 설정됩니다. 이 설정을 사용하면 Citrix Workspace는 다중 모니터 세션에 적용된 DPI에 따라 세션을 조정합니다. DPI 인식 기능에 대한 자세한 내용을 보려면 https://support.citrix.com/article/CTX230017을 참조하십시오.</string>
+      <string id="CEIP">CEIP</string>
+	  <string id="DPI">DPI</string>
+      <string id="Explain_CEIP">CEIP는 Citrix 사용자 환경 개선 프로그램입니다. CEIP에 대한 자세한 내용은 http://www.citrix.com/cms/ws/ceip/에서 확인할 수 있습니다.</string>
+	  <string id="Explain_DPI">고해상도를 사용하도록 세션을 조정합니다.</string>
+      <string id="AlwaysOn">진단</string>
+      <string id="Explain_AlwaysOn">사용자로부터 추적 로그를 연속적으로 수집하려면 이 정책을 사용합니다.</string>
+      <string id="Policy_AlwaysOn">항상 추적</string>
+      <string id="Explain_EnableAlwaysOn">이 옵션은 사용자로부터 추적 로그를 지속적으로 수집하기 위해 기본적으로 사용되도록 설정됩니다.</string>
+      <string id="FedRAMP">규정 준수</string>
+      <string id="Explain_FedRAMP">Google Analytics와 같은 타사 서비스로의 데이터 전송을 사용하지 않도록 설정하려면 이 정책을 사용합니다.
+사용 안 함: 이 기능을 사용하지 않도록 설정하면 익명 데이터가 타사 서비스로 전송될 수 있습니다.
+사용: 이 옵션을 사용하면 타사 서비스로 데이터가 전송되지 않습니다.
+      </string>
+      <string id="Policy_FedRAMP">타사에 데이터 보내기 사용 안 함</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator에서 소스 ADM 문자열 테이블에 없는 문자열을 발견했습니다.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator에서 supportedOn 값이 없는 정책을 발견했습니다.</string>
+	  <string id="ADMXPolicy_SupportedOn">지원되는 모든 Citrix Workspace 플랫폼</string>
+	  <string id="ADMXPolicy_SupportedOn_Explain_SmartCardRemovalAction">Citrix Workspace 앱 4.5 이상에서 지원됨</string>
+	  <string id="HDXoverUDP_Off">Off</string>
+	  <string id="HDXoverUDP_On">On</string>
+	  <string id="HDXoverUDP_Preferred">기본 설정</string>
+	  <string id="Policy_TransportProtocal">Citrix Workspace용 전송 프로토콜</string>
+	  <string id="Explain_TransportProtocal">사용 안 함: TCP만 사용합니다.
+기본 설정: UDP를 먼저 시도하고 TCP로 대체합니다.
+사용: UDP를 강제로 사용하고 TCP로 대체하지 않습니다.					
+	  </string>
+      <string id="Explain_BidirectionalContentRedirection">양방향 콘텐츠 리디렉션은 구성에 따라 클라이언트에서 서버로 또는 클라이언트에서 서버로 URL을 리디렉션 할 수있는 기능입니다.
+-게시된 응용 프로그램/데스크톱 이름: 리디렉션된 URL을 시작하는 데 사용되는 게시된 응용 프로그램/데스크톱의 이름을 나타냅니다. 활성 ICA 세션 중 하나라도 [양방향 콘텐츠 리디렉션]이 사용하도록 설정된 경우에는 사용되지 않습니다. 데스크톱인지 응용 프로그램인지 여부는 아래에 지정된 유형에 기반하여 결정됩니다.
+-위의 이름은 게시된 유형의 이름임: 위의 이름이 응용 프로그램인지 또는 데스크톱인지 나타냅니다.
+-VDA로 리디렉션할 수 있는 URL: VDA에서 열 URL의 목록을 나타냅니다. 세미콜론(;)은 구분자로 사용됩니다. &quot;*&quot;는 와일드카드로 사용할 수 있습니다. 예를 들면 *.xyz.com과 같습니다.
+
+
+-클라이언트로 리디렉션할 수 있는 URL: 클라이언트에서 열 URL의 목록을 나타냅니다. 세미콜론(;)은 구분자로 사용됩니다. &quot;*&quot;는 와일드카드로 사용할 수 있습니다. 예를 들면 *.xyz.com과 같습니다.
+참고: 
+1) 양쪽 모두에 URL을 지정하면 원본 위치에서 URL이 시작됩니다.
+2) 양쪽 모두에 URL을 지정하지 않을 경우에도 마찬가지로 원본 위치에서 URL이 시작됩니다.
+      </string>
+      <string id="Policy_BidirectionalContentRedirection">양방향 콘텐츠 리디렉션</string>
+      <string id="Part_BidirectionalContentRedirectionPubAppOrDesktopName">게시된 응용 프로그램/데스크톱 이름: </string>
+      <string id="Part_BidirectionalContentRedirectionPubNameType">위의 이름은 게시된 유형의 이름임:</string>
+      <string id="Part_BidirectionalContentRedirectionApplication">응용 프로그램</string>
+      <string id="Part_BidirectionalContentRedirectionDesktop">데스크톱</string>
+      <string id="Part_BidirectionalContentRedirectionVDAURLs">VDA로 리디렉션할 수 있는 URL:</string>
+      <string id="Part_BidirectionalContentRedirectionClientURLs">클라이언트로 리디렉션할 수 있는 URL:</string>
+      <string id="Policy_BidirectionalContentRedirectionOverrides">양방향 콘텐츠 리디렉션 재정의</string>
+      <string id="Explain_BidirectionalContentRedirectionOverrides">양방향 콘텐츠 리디렉션 재정의는 양방향 콘텐츠 리디렉션 기능에 적용되는 URL 관련 재정의입니다.
+-URL 관련 게시된 응용 프로그램 또는 데스크톱 재정의: 게시된 응용 프로그램/데스크톱 이름에 사용할 URL 관련 재정의를 나타냅니다.  “값 이름”은 “VDA로 리디렉션할 수 있는 URL” 목록의 항목과 정확히 일치해야 하며 “값”은 해당 URL과 관련된 게시된 응용 프로그램/데스크톱 이름을 지정합니다.
+</string>
+      <string id="Part_BidirectionalContentRedirectionVDAAppOverrides">URL 관련 게시된 응용 프로그램 또는 데스크톱 재정의:</string>
+	  <string id="Dir_AutoUpdate">Citrix Workspace 업데이트</string>
+	  <string id="MinusOne">-1</string>
+	  <string id="Zero">0</string>
+	  <string id="One">1</string>
+	  <string id="Two">2</string>
+	  <string id="Three">3</string>
+	  <string id="Four">4</string>
+	  <string id="Five">5</string>
+	  <string id="Six">6</string>
+	  <string id="Seven">7</string>
+	  <string id="Eight">8</string>
+	  <string id="Nine">9</string>
+	  <string id="Ten">10</string>
+	  <string id="Eleven">11</string>
+	  <string id="Twelve">12</string>
+	  <string id="Thirteen">13</string>
+	  <string id="Fourteen">14</string>
+	  <string id="Fifteen">15</string>
+	  <string id="Sixteen">16</string>
+	  <string id="Seventeen">17</string>
+	  <string id="Eighteen">18</string>
+	  <string id="Nineteen">19</string>
+	  <string id="Twenty">20</string>
+	  <string id="TwentyOne">21</string>
+	  <string id="TwentyTwo">22</string>
+	  <string id="TwentyThree">23</string>
+	  <string id="TwentyFour">24</string>
+	  <string id="TwentyFive">25</string>
+	  <string id="TwentySix">26</string>
+	  <string id="TwentySeven">27</string>
+	  <string id="TwentyEight">28</string>
+	  <string id="TwentyNine">29</string>
+	  <string id="Thirty">30</string>
+	  <string id="POL_CONFIGURE_LAN_PROXY_MANUALLY">수동으로 NetScaler LAN 프록시 구성</string>
+      <string id="POL_CONFIGURE_LAN_PROXY_DLL">DLL을 사용하여 NetScaler LAN 프록시 구성</string>
+	  <string id="CitrixSecureBrowser">Citrix Secure Browser</string>
+	  <string id="Explain_CitrixSecureBrowser">Citrix Secure Browser는 SaaS 응용 프로그램에 연결하는 데 사용됩니다.</string>
+	  <string id="CitrixSecureBrowser_Cache">캐시</string>
+	  <string id="Explain_CitrixSecureBrowser_Cache">브라우저 캐시를 사용 또는 사용하지 않게 설정하려면 이 정책을 사용합니다.
+캐싱은 기본적으로 사용됩니다.
+
+사용하도록 설정하는 경우 브라우저 쿠키 및 리소스가 로컬 디스크에 캐시됩니다.
+사용하지 않도록 설정하는 경우 브라우저 쿠키 및 리소스가 저장되지 않습니다.
+
+	  </string>
+	  <string id="AppProtectionAdvanced">앱 보호 - 고급</string>
+	  <string id="Explain_AppProtectionAdvanced">이 정책은 모든 Citrix Workspace 앱 모듈에 대한 서명을 확인하여 추가 보안을 허용합니다. 또한 DLL 주입 공격으로부터 이러한 모듈을 보호합니다.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="Policy_EnableICAClient">
+        <checkBox defaultChecked="true" refId="Part_EnableICAClient_Enable">클라이언트 사용</checkBox>
+        <decimalTextBox defaultValue="10000" refId="Part_EnableICAClient_Minimum">최소 클라이언트 버전</decimalTextBox>
+      </presentation>
+      <presentation id="Storefronts">
+        <listBox refId="Storefronts_Part">NetScaler Gateway/StoreFront 계정 세부 정보 입력:</listBox>
+      </presentation>
+      <presentation id="Policy_ProxyLockdown">
+        <comboBox refId="Part_Proxy_ProxyTypeLockdown">
+          <label>프록시 유형</label>
+          <suggestion>자동</suggestion>
+          <suggestion>없음</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>보안</suggestion>
+          <suggestion>스크립트</suggestion>
+        </comboBox>
+        <textBox refId="Part_Proxy_ProxyHostLockdown">
+          <label>프록시 호스트 이름</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyPortLockdown">
+          <label>프록시 포트</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyAutoConfigUrlLockdown">
+          <label>프록시 스크립트 URL</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyBypassListLockdown">
+          <label>우회 서버 목록</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_AltProxyLockdown">
+        <comboBox refId="Part_AltProxy_ProxyTypeLockdown">
+          <label>프록시 유형</label>
+          <suggestion>자동</suggestion>
+          <suggestion>없음</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>보안</suggestion>
+          <suggestion>스크립트</suggestion>
+        </comboBox>
+        <textBox refId="Part_AltProxy_ProxyHostLockdown">
+          <label>프록시 호스트 이름</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyPortLockdown">
+          <label>프록시 포트</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyAutoConfigUrlLockdown">
+          <label>프록시 스크립트 URL</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyBypassListLockdown">
+          <label>우회 서버 목록</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_AltProxy_ProxyFallbackLockdown">직접 연결로 장애 조치</checkBox>
+      </presentation>
+      <presentation id="Policy_ProxySocks">
+        <dropdownList defaultItem="1" refId="Part_ProxySocks_Version">SOCKS 프로토콜 버전</dropdownList>
+        <textBox refId="Part_ProxySocks_ProxyHostLockdown">
+          <label>프록시 호스트 이름</label>
+        </textBox>
+        <textBox refId="Part_ProxySOCKS_ProxyPortLockdown">
+          <label>프록시 포트</label>
+        </textBox>
+      </presentation>
+	  <presentation id="Policy_EnableAutoUpdatePolicy">
+        <dropdownList defaultItem="0" refId="Part_EnableAutoUpdatePolicy">Citrix Workspace 업데이트 정책 사용</dropdownList>
+        <checkBox defaultChecked="false" refId="Part_EnableAutoUpdatePolicy_version">LTSR 전용</checkBox>
+		<dropdownList defaultItem="0" noSort="true" refId="Part_EnableAutoUpdatePolicy_RemindMeLater">Citrix-Workspace-Update-DeferUpdate-Count</dropdownList>
+      </presentation>
+	  <presentation id="Policy_CheckAutoUpdatePolicy">
+        <dropdownList defaultItem="0" refId="Part_CheckAutoUpdatePolicy">지연 그룹</dropdownList>
+      </presentation>
+      <presentation id="Policy_ProxyAuthentication">
+        <checkBox defaultChecked="true" refId="Policy_ProxyExplicitAuthenticationEnabled">사용자에게 자격 증명 묻기</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyBasicAuthenticationEnabled">일반 텍스트 인증 허용</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyNTLMAuthenticationEnabled">NTLM 해시 인증 허용</checkBox>
+        <textBox refId="Part_Proxy_Socks5User">
+          <label>명시적 사용자 이름</label>
+        </textBox>
+        <textBox refId="Part_Proxy_Socks5Password">
+          <label>명시적 암호</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_SSLLockdown">
+        <checkBox defaultChecked="true" refId="Part_SSL_EnabledLockdown">모든 연결에 TLS 필요</checkBox>
+		<dropdownList defaultItem="0" refId="Part_SSL_SecurityComplianceMode">보안 준수 모드</dropdownList>
+        <comboBox refId="Part_SSL_SSLProxyHostLockdown">
+          <label>허용되는 TLS 서버</label>
+          <suggestion>*:443</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_SSL_SSLProtocolLockdown">TLS 버전</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_SSL_CiphersetLockdown">TLS 암호화 집합</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_SSL_RevocationLockdown">인증서 해지 검사 정책</dropdownList>
+        <comboBox refId="Part_SSL_SSLPolicyOID">
+          <label>정책 확장 OID</label>
+          <suggestion>2.5.29.32.0</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="2" refId="Part_SSL_ClientAuthentication">클라이언트 인증</dropdownList>
+        <comboBox refId="Part_SSL_ClientCertificate">
+          <label>클라이언트 인증서</label>
+          <suggestion/>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ConfigureClientSelectiveTrust">
+        <checkBox defaultChecked="true" refId="Part_EnableClientSelectiveTrust">신뢰할 수 있는 서버 구성 적용</checkBox>
+        <comboBox refId="Part_ConfigureClientSelectiveTrust_IEZone">
+          <label>Windows 인터넷 영역</label>
+          <suggestion>신뢰할 수 있음</suggestion>
+          <suggestion>신뢰할 수 있음, 인트라넷</suggestion>
+        </comboBox>
+        <comboBox refId="Part_ConfigureClientSelectiveTrust_EffectiveAddress">
+          <label>주소</label>
+          <suggestion>*.finance.citrix.com,*.sales.citrix.com</suggestion>
+          <suggestion>cps*.citrix.com</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ClientAutoReconnect">
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_Reconnect">자동 다시 연결 사용</checkBox>
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_CGP">세션 안정성 사용(둘 다 선택한 경우 더 높은 우선 순위를 가짐)</checkBox>
+		<decimalTextBox defaultValue="80" refId="Part_ClientAutoReconnect_Dimming">투명도 수준</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_Smartcard">
+        <checkBox defaultChecked="true" refId="Part_Smartcard_Enable">스마트 카드 인증 허용</checkBox>
+        <checkBox refId="Part_SmartcardPin_Enable">PIN에 통과 인증 사용</checkBox>
+      </presentation>
+      <presentation id="Policy_KerberosLockdown"/>
+      <presentation id="Policy_SSONForNSG"/>
+      <presentation id="Policy_LocalCredentialsLockdown">
+        <checkBox defaultChecked="true" refId="Part_LocalCredentialsLockdown_Enable">통과 인증 사용</checkBox>
+        <checkBox refId="Part_LegacyLocalUserNameAndPassword_Enable">모든 ICA 연결에 대해 통과 인증 허용</checkBox>
+        <checkBox refId="Part_NovellCredentials">Novell Directory Server 자격 증명 사용</checkBox>
+      </presentation>
+      <presentation id="Policy_WITicket">
+        <checkBox defaultChecked="true" refId="Part_WITicket_Legacy_Enable">레거시 티켓 처리</checkBox>
+        <checkBox defaultChecked="true" refId="Part_WITicket_LogonTicket_Enable">Web Interface 4.5 이상</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableDriveMapping">
+        <checkBox defaultChecked="true" refId="Part_EnableDriveMappingCheckbox">클라이언트 드라이브 매핑 사용</checkBox>
+        <checkBox refId="Part_EnableDriveMappingReadonly">읽기 전용 클라이언트 드라이브</checkBox>
+        <comboBox refId="Part_EnableDriveMappingDisableDrives">
+          <label>드라이브 매핑 안 함</label>
+          <suggestion>C</suggestion>
+          <suggestion>ABCDEFGHIJKLMNOPQRSTUVWXYZ</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_EnablePrinterMapping"/>
+      <presentation id="Policy_LocalPort">
+        <textBox refId="Part_MaxPort">
+          <label>최대 직렬 포트</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_EnableSerialPortCheckbox">직렬 포트 매핑</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableVirtualSerialPortCheckbox">PDA 동기화 허용</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableParallelPortCheckbox">병렬 포트 매핑</checkBox>
+      </presentation>
+      <presentation id="Policy_ImageCapture"/>
+      <presentation id="Policy_AudioInput">
+        <checkBox defaultChecked="true" refId="Part_BiDiAudio_Enable">클라이언트 마이크 사용</checkBox>
+      </presentation>
+      <presentation id="Policy_Clipboard"/>
+      <presentation id="Policy_USB_PNP_Devices"/>
+      <presentation id="Policy_PointOfSales"/>
+	  <presentation id="Policy_Foreground_Progress_Bar"/>
+	  <presentation id="Policy_HWacceleration"/>
+        <presentation id="Policy_EnableH265"/>
+      <presentation id="Policy_Audio">
+        <checkBox defaultChecked="true" refId="Part_Audio_Enabled">오디오 사용</checkBox>
+        <dropdownList defaultItem="0" refId="Part_Audio_Quality">음질</dropdownList>
+        <checkBox refId="Part_RealtimeTransport_Enabled">실시간 전송 사용</checkBox>
+        <decimalTextBox defaultValue="16500" refId="Part_RtpAudioLowestPort" spinStep="2">가장 낮은 포트 번호</decimalTextBox>
+        <decimalTextBox defaultValue="16509" refId="Part_RtpAudioHighestPort" spinStep="2">가장 높은 포트 번호</decimalTextBox>
+        <checkBox refId="Part_RealtimeTransportThroughGateway_Enabled">NetScaler Gateway를 통해 실시간 전송 허용</checkBox>
+      </presentation>
+      <presentation id="Policy_Graphics">
+        <dropdownList defaultItem="1" refId="Part_Graphics_ColorDepth">색 농도</dropdownList>
+        <checkBox refId="Part_Graphics_DiskCache">디스크 기반 캐싱</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ImageAcceleration">손실 허용 압축</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowser">HDX 3D 브라우저 가속</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowserCompression">HDX 3D 브라우저 가속 - 손실 허용 압축</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenMultimedia">원격 비디오</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyKeyboard">SpeedScreen 대기 시간 단축 - 키보드 로컬 에코</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyMouse">SpeedScreen 대기 시간 단축 - 마우스 포인터 예측</checkBox>
+      </presentation>
+      <presentation id="Policy_Display">
+        <comboBox refId="Part_Display_Seamless">
+          <label>심리스 창</label>
+		  <default/>
+          <suggestion>True</suggestion>
+          <suggestion>False</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Width">
+          <label>창 너비</label>
+		  <default/>
+          <suggestion>1024-</suggestion>
+          <suggestion>800-</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Height">
+          <label>창 높이</label>
+		  <default/>
+          <suggestion>734-</suggestion>
+          <suggestion>600-</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_Display_Percent">창 백분율</dropdownList>
+        <comboBox refId="Part_Display_WorkArea">
+          <label>작업 영역 축소</label>
+		  <default/>
+          <suggestion>5</suggestion>
+        </comboBox>
+        <checkBox refId="Part_Display_FullScreen">전체 화면</checkBox>
+     </presentation>
+      <presentation id="Policy_Dpi">
+       <dropdownList defaultItem="0" refId="scaling_option">고해상도를 사용하도록 세션을 조정하시겠습니까?</dropdownList>
+      </presentation>
+      <presentation id="Policy_LocalAppAccess">
+        <checkBox refId="Part_Allow_URLRedirection">URL 리디렉션 허용</checkBox>
+      </presentation>
+      <presentation id="Policy_Keyboard_Hotkeys">
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Windows_Key">Windows 키:</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Tasklist">작업 목록:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Tasklist_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Close_Remote_Application">응용 프로그램 닫기:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar">전체 화면 전환:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Del:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">작업 관리자:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</dropdownList>
+        <dropdownList defaultItem="11" refId="Part_Keyboard_Hotkey_Alt_Tab_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Shift-Tab:</dropdownList>
+        <dropdownList defaultItem="12" refId="Part_Keyboard_Hotkey_Alt_Backtab_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">대기 시간 단축:</dropdownList>
+        <dropdownList defaultItem="8" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">+</dropdownList>
+		<dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME">일반 IME 모드:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishedApplications">
+        <comboBox refId="Part_PublishedApplications_InitialProgram">
+          <label>응용 프로그램</label>
+          <suggestion>#메모장</suggestion>
+          <suggestion>#*</suggestion>
+        </comboBox>
+        <checkBox defaultChecked="true" refId="Part_PublishedApplications_SessionSharing">세션 공유</checkBox>
+      </presentation>
+      <presentation id="Policy_HostRenderedAudio"/>
+      <presentation id="Policy_ICAFileSettings">
+        <checkBox defaultChecked="true" refId="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</checkBox>
+      </presentation>
+      <presentation id="Policy_ExtraURLProtocols">
+        <textBox refId="Part_ExtraURLProtocols">
+          <label>ExtraURL 프로토콜</label>
+        </textBox>
+      </presentation>
+	  <presentation id="Policy_EngineErrMsg" />
+      <presentation id="Polciy_CEIP" />
+	  <presentation id="AppProtectionAdvanced" />
+      <presentation id="Polciy_CEIP_Configuration">
+        <textBox refId="Part_CEIP_ServerURL">
+          <label>CEIP 서버 URL</label>
+		  <defaultValue>https://rttf.citrix.com</defaultValue>
+        </textBox>
+        <textBox refId="Part_CEIP_UploadClass">
+          <label>CEIP 업로드 클래스</label>
+		  <defaultValue>callhome_analytics</defaultValue>
+        </textBox>
+        <decimalTextBox defaultValue="1" refId="Part_CEIP_UploadFrequencyInWeeks">CEIP 업로드 빈도(주 단위) 초기화</decimalTextBox>
+        <checkBox refId="Part_AllowUnSecureURL">비보안 URL 허용(HTTPS 대신 HTTP)</checkBox>
+      </presentation>
+      <presentation id="Policy_BidirectionalContentRedirection">
+        <textBox refId="Part_BidirectionalContentRedirectionPubAppOrDesktopName">
+            <label>게시된 응용 프로그램/데스크톱 이름:</label>
+        </textBox>
+        <dropdownList defaultItem="0" refId="Part_BidirectionalContentRedirectionPubNameType">위의 이름은 게시된 유형의 이름임:</dropdownList>
+        <textBox refId="Part_BidirectionalContentRedirectionVDAURLs">
+            <label>VDA로 리디렉션할 수 있는 URL:</label>
+        </textBox>
+        <textBox refId="Part_BidirectionalContentRedirectionClientURLs">
+            <label>클라이언트로 리디렉션할 수 있는 URL:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_BidirectionalContentRedirectionOverrides">
+        <listBox refId="Part_BidirectionalContentRedirectionVDAAppOverrides">URL 관련 게시된 응용 프로그램 또는 데스크톱 재정의:</listBox>
+      </presentation>
+      <presentation id="Policy_AlwaysOn"/>
+      <presentation id="Policy_FedRAMP"/>
+      <presentation id="Policy_PublishSafeContent">
+        <dropdownList defaultItem="0" refId="Pick_Publish_SafeContent">사용자가 안전한 콘텐츠를 게시할 수 있게 허용/방지할지 선택하십시오.</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishUnsafeContent">
+        <dropdownList defaultItem="1" refId="Pick_Publish_UnsafeContent">사용자가 안전하지 않은 콘텐츠를 게시할 수 있게 허용/방지할지 선택하십시오.</dropdownList>
+      </presentation>
+	  <presentation id="Policy_EnableFTU"/>
+        <presentation id="Policy_EnableNPS"/>
+	  <presentation id="Policy_Vprefer">
+	    <dropdownList defaultItem="1" refId="Allowed_Apps">허용</dropdownList>
+	  </presentation>
+      <presentation id="Policy_EnableFTA"/>
+      <presentation id="Policy_EnableDefaultFTA"/>
+	  <presentation id="Policy_HideAdvancePreferencesOptions"/>	  
+	  <presentation id="Policy_SmartcardRemovalAction"/>
+	  <presentation id="Policy_HideSettings">
+		<dropdownList defaultItem="2" refId="Pick_UI_display">설정 UI의 적절한 표시를 선택하십시오.</dropdownList>
+	  </presentation>
+      <presentation id="Policy_SelfServiceMode_Enable"/>
+      <presentation id="Policy_EnableAppShortCut">
+        <textBox refId="Part_StartMenuDir_Text">
+          <label>시작 메뉴 디렉터리</label>
+		  <defaultValue>Citrix</defaultValue>
+        </textBox>
+        <textBox refId="Part_DesktopDir_Text">
+          <label>데스크톱 디렉터리</label>
+		  <defaultValue>Citrix</defaultValue>
+        </textBox>
+        <checkBox refId="Part_StartMenuShortcut_Disable">시작 메뉴 바로 가기 사용 안 함</checkBox>
+        <checkBox refId="Part_DesktopShortcut_Enable">데스크톱 바로 가기 사용</checkBox>
+        <checkBox refId="Part_UseCategoryAsStartMenuPath_Disable">시작 메뉴에 대한 범주 경로 사용 안 함</checkBox>
+		<checkBox refId="Part_UseCategoryAsDesktopPath_Enable">데스크톱에 대한 범주 경로 사용</checkBox>
+		<checkBox refId="Part_UseDifferentPathsforStartmenuAndDesktop_Enable">데스크톱 및 시작 메뉴에 여러 개의 범주 경로가 존재하는 것을 허용합니다. 데스크톱의 범주 경로와 시작 메뉴의 범주 경로를 정렬하지 않도록 설정합니다.</checkBox>
+        <checkBox refId="Part_RemoveAppsOnLogoff_Enable">로그오프 시 앱 제거</checkBox>
+        <checkBox refId="Part_RemoveAppsOnExit_Enable">종료 시 앱 제거</checkBox>
+		<checkBox refId="Part_ClearAppListOnLogoff_Enable">로그오프 시 Citrix Workspace 창에 표시된 응용 프로그램 집합 지우기</checkBox>
+        <checkBox refId="Part_SuppressRefreshOnStartup_Enable">Citrix Workspace가 열렸을 때 응용 프로그램 목록의 새로 고침을 수행하지 않도록 지정합니다.</checkBox>
+        <checkBox refId="Part_AllAppsAreMandatory_Enable">앱의 셀프 서비스 선택을 무시하고 모두 필수로 지정합니다. Citrix Workspace가 PNAgent 서비스와 함께 작동 중인 경우 이렇게 해야 모든 앱이 자동으로 추가됩니다. Citrix Workspace가 StoreFront Store와 함께 작동하는 경우 StoreFront 서버에서 변경을 수행하여 Store를 필수로 지정하십시오. 현재 이 설정은 StoreFront 스토어에 적용되지 않습니다.</checkBox>
+      </presentation>
+      <presentation id="Policy_AddAccounts"/>
+      <presentation id="Policy_EnablePreLaunch"/>
+      <presentation id="Policy_ReconnectMode">
+        <dropdownList defaultItem="4" refId="Pick_ReconnectMode">다시 연결 조건의 적절한 조합을 선택합니다.</dropdownList>
+      </presentation>
+      <presentation id="Policy_FastConnectAPI_Support">
+        <checkBox defaultChecked="true" refId="Explain_FastConnectAPI_Functionality">FastConnect API 기능 사용</checkBox>
+        <checkBox refId="Explain_EnableFastConnectTransitionAPI">EnableFastConnectTransitionAPI</checkBox>
+        <checkBox refId="Explain_LeaveAppsRuningOnLogoff">로그오프 시 앱 실행 유지</checkBox>
+        <checkBox refId="Explain_FastConnectUsingSSP">셀프 서비스 플러그인을 FastConnect와 통합</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableICAClient_1">
+        <checkBox defaultChecked="true" refId="Part_EnableICAClient_Enable">클라이언트 사용</checkBox>
+        <decimalTextBox defaultValue="10000" refId="Part_EnableICAClient_Minimum">최소 클라이언트 버전</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_ProxyLockdown_1">
+        <comboBox refId="Part_Proxy_ProxyTypeLockdown">
+          <label>프록시 유형</label>
+          <suggestion>자동</suggestion>
+          <suggestion>없음</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>보안</suggestion>
+          <suggestion>스크립트</suggestion>
+        </comboBox>
+        <textBox refId="Part_Proxy_ProxyHostLockdown">
+          <label>프록시 호스트 이름</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyPortLockdown">
+          <label>프록시 포트</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyAutoConfigUrlLockdown">
+          <label>프록시 스크립트 URL</label>
+        </textBox>
+        <textBox refId="Part_Proxy_ProxyBypassListLockdown">
+          <label>우회 서버 목록</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_AltProxyLockdown_1">
+        <comboBox refId="Part_AltProxy_ProxyTypeLockdown">
+          <label>프록시 유형</label>
+          <suggestion>자동</suggestion>
+          <suggestion>없음</suggestion>
+          <suggestion>SOCKS</suggestion>
+          <suggestion>SOCKSv4</suggestion>
+          <suggestion>SOCKSv5</suggestion>
+          <suggestion>보안</suggestion>
+          <suggestion>스크립트</suggestion>
+        </comboBox>
+        <textBox refId="Part_AltProxy_ProxyHostLockdown">
+          <label>프록시 호스트 이름</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyPortLockdown">
+          <label>프록시 포트</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyAutoConfigUrlLockdown">
+          <label>프록시 스크립트 URL</label>
+        </textBox>
+        <textBox refId="Part_AltProxy_ProxyBypassListLockdown">
+          <label>우회 서버 목록</label>
+        </textBox>
+        <comboBox refId="Part_AltProxy_ProxyFallbackLockdown">
+          <label>직접 연결로 장애 조치</label>
+          <suggestion>false</suggestion>
+          <suggestion>true</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ProxySocks_1">
+        <dropdownList defaultItem="1" refId="Part_ProxySocks_Version">SOCKS 프로토콜 버전</dropdownList>
+        <textBox refId="Part_ProxySocks_ProxyHostLockdown">
+          <label>프록시 호스트 이름</label>
+        </textBox>
+        <textBox refId="Part_ProxySOCKS_ProxyPortLockdown">
+          <label>프록시 포트</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_ProxyAuthentication_1">
+        <checkBox defaultChecked="true" refId="Policy_ProxyExplicitAuthenticationEnabled">사용자에게 자격 증명 묻기</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyBasicAuthenticationEnabled">일반 텍스트 인증 허용</checkBox>
+        <checkBox defaultChecked="true" refId="Policy_ProxyNTLMAuthenticationEnabled">NTLM 해시 인증 허용</checkBox>
+        <textBox refId="Part_Proxy_Socks5User">
+          <label>명시적 사용자 이름</label>
+        </textBox>
+        <textBox refId="Part_Proxy_Socks5Password">
+          <label>명시적 암호</label>
+        </textBox>
+      </presentation>
+      <presentation id="Policy_SSLLockdown_1">
+        <checkBox defaultChecked="true" refId="Part_SSL_EnabledLockdown">모든 연결에 TLS 필요</checkBox>
+		<dropdownList defaultItem="0" refId="Part_SSL_SecurityComplianceMode">보안 준수 모드</dropdownList>
+        <comboBox refId="Part_SSL_SSLProxyHostLockdown">
+          <label>허용되는 TLS 서버</label>
+          <suggestion>*:443</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_SSL_SSLProtocolLockdown">TLS 버전</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_SSL_CiphersetLockdown">TLS 암호화 집합</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_SSL_RevocationLockdown">인증서 해지 검사 정책</dropdownList>
+        <comboBox refId="Part_SSL_SSLPolicyOID">
+          <label>정책 확장 OID</label>
+          <suggestion>2.5.29.32.0</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="2" refId="Part_SSL_ClientAuthentication">클라이언트 인증</dropdownList>
+        <comboBox refId="Part_SSL_ClientCertificate">
+          <label>클라이언트 인증서</label>
+          <suggestion/>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_ConfigureClientSelectiveTrust_1">
+        <checkBox defaultChecked="true" refId="Part_EnableClientSelectiveTrust">신뢰할 수 있는 서버 구성 적용</checkBox>
+      </presentation>
+      <presentation id="Policy_ClientAutoReconnect_1">
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_Reconnect">자동 다시 연결 사용</checkBox>
+        <checkBox defaultChecked="true" refId="Part_ClientAutoReconnect_CGP">세션 안정성 사용(둘 다 선택한 경우 더 높은 우선 순위를 가짐)</checkBox>
+		<decimalTextBox defaultValue="80" refId="Part_ClientAutoReconnect_Dimming">투명도 수준</decimalTextBox>
+      </presentation>
+      <presentation id="Policy_Smartcard_1">
+        <checkBox defaultChecked="true" refId="Part_Smartcard_Enable">스마트 카드 인증 허용</checkBox>
+        <checkBox refId="Part_SmartcardPin_Enable">PIN에 통과 인증 사용</checkBox>
+      </presentation>
+      <presentation id="Policy_KerberosLockdown_1"/>
+      <presentation id="Policy_LocalCredentialsLockdown_1">
+        <checkBox defaultChecked="true" refId="Part_LocalCredentialsLockdown_Enable">통과 인증 사용</checkBox>
+        <checkBox refId="Part_LegacyLocalUserNameAndPassword_Enable">모든 ICA 연결에 대해 통과 인증 허용</checkBox>
+        <checkBox refId="Part_NovellCredentials">Novell Directory Server 자격 증명 사용</checkBox>
+      </presentation>
+      <presentation id="Policy_WITicket_1">
+        <checkBox defaultChecked="true" refId="Part_WITicket_Legacy_Enable">레거시 티켓 처리</checkBox>
+        <checkBox defaultChecked="true" refId="Part_WITicket_LogonTicket_Enable">Web Interface 4.5 이상</checkBox>
+      </presentation>
+      <presentation id="Policy_EnableDriveMapping_1">
+        <checkBox defaultChecked="true" refId="Part_EnableDriveMappingCheckbox">클라이언트 드라이브 매핑 사용</checkBox>
+        <checkBox refId="Part_EnableDriveMappingReadonly">읽기 전용 클라이언트 드라이브</checkBox>
+        <comboBox refId="Part_EnableDriveMappingDisableDrives">
+          <label>드라이브 매핑 안 함</label>
+          <suggestion>C</suggestion>
+          <suggestion>ABCDEFGHIJKLMNOPQRSTUVWXYZ</suggestion>
+        </comboBox>
+      </presentation>
+      <presentation id="Policy_EnablePrinterMapping_1"/>
+      <presentation id="Policy_LocalPort_1">
+        <textBox refId="Part_MaxPort">
+          <label>최대 직렬 포트</label>
+        </textBox>
+        <checkBox defaultChecked="true" refId="Part_EnableSerialPortCheckbox">직렬 포트 매핑</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableVirtualSerialPortCheckbox">PDA 동기화 허용</checkBox>
+        <checkBox defaultChecked="true" refId="Part_EnableParallelPortCheckbox">병렬 포트 매핑</checkBox>
+      </presentation>
+      <presentation id="Policy_ImageCapture_1"/>
+      <presentation id="Policy_AudioInput_1">
+        <checkBox defaultChecked="true" refId="Part_BiDiAudio_Enable">클라이언트 마이크 사용</checkBox>
+      </presentation>
+      <presentation id="Policy_Clipboard_1"/>
+      <presentation id="Policy_USB_PNP_Devices_1"/>
+      <presentation id="Policy_PointOfSales_1"/>
+      <presentation id="Policy_Audio_1">
+        <checkBox defaultChecked="true" refId="Part_Audio_Enabled">오디오 사용</checkBox>
+        <dropdownList defaultItem="0" refId="Part_Audio_Quality">음질</dropdownList>
+        <checkBox refId="Part_RealtimeTransport_Enabled">실시간 전송 사용</checkBox>
+        <decimalTextBox defaultValue="16500" refId="Part_RtpAudioLowestPort" spinStep="2">가장 낮은 포트 번호</decimalTextBox>
+        <decimalTextBox defaultValue="16509" refId="Part_RtpAudioHighestPort" spinStep="2">가장 높은 포트 번호</decimalTextBox>
+        <checkBox refId="Part_RealtimeTransportThroughGateway_Enabled">NetScaler Gateway를 통해 실시간 전송 허용</checkBox>
+      </presentation>
+      <presentation id="Policy_Graphics_1">
+        <dropdownList defaultItem="1" refId="Part_Graphics_ColorDepth">색 농도</dropdownList>
+        <checkBox refId="Part_Graphics_DiskCache">디스크 기반 캐싱</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ImageAcceleration">손실 허용 압축</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowser">HDX 3D 브라우저 가속</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenBrowserCompression">HDX 3D 브라우저 가속 - 손실 허용 압축</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_SpeedScreenMultimedia">원격 비디오</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyKeyboard">SpeedScreen 대기 시간 단축 - 키보드 로컬 에코</checkBox>
+        <checkBox defaultChecked="true" refId="Part_Graphics_ZeroLatencyMouse">SpeedScreen 대기 시간 단축 - 마우스 포인터 예측</checkBox>
+      </presentation>
+      <presentation id="Policy_Display_1">
+        <comboBox refId="Part_Display_Seamless">
+          <label>심리스 창</label>
+		  <default/>
+          <suggestion>True</suggestion>
+          <suggestion>False</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Width">
+          <label>창 너비</label>
+		  <default/>
+          <suggestion>1024-</suggestion>
+          <suggestion>800-</suggestion>
+        </comboBox>
+        <comboBox refId="Part_Display_Height">
+          <label>창 높이</label>
+		  <default/>
+          <suggestion>734-</suggestion>
+          <suggestion>600-</suggestion>
+        </comboBox>
+        <dropdownList defaultItem="0" refId="Part_Display_Percent">창 백분율</dropdownList>
+        <comboBox refId="Part_Display_WorkArea">
+          <label>작업 영역 축소</label>
+		  <default/>
+          <suggestion>5</suggestion>
+        </comboBox>
+        <checkBox refId="Part_Display_FullScreen">전체 화면</checkBox>
+      </presentation>
+      <presentation id="Policy_LocalAppAccess_1">
+        <checkBox refId="Part_Allow_URLRedirection">URL 리디렉션 허용</checkBox>
+      </presentation>
+      <presentation id="Policy_Keyboard_Hotkeys_1">
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Windows_Key">Windows 키:</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Tasklist">작업 목록:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Tasklist_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Close_Remote_Application">응용 프로그램 닫기:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Close_Remote_Application_Plus">+</dropdownList>
+        <dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar">전체 화면 전환:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del">Crtl-Alt-Del:</dropdownList>
+        <dropdownList defaultItem="5" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc">작업 관리자:</dropdownList>
+        <dropdownList defaultItem="7" refId="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Tab">Alt-Tab:</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Tab_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Alt_Backtab">Alt-Shift-Tab:</dropdownList>
+        <dropdownList defaultItem="4" refId="Part_Keyboard_Hotkey_Alt_Backtab_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Ctrl_Esc">Ctrl-Esc:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Esc_Plus">+</dropdownList>
+        <dropdownList defaultItem="3" refId="Part_Keyboard_Hotkey_Ctrl_Alt">Crtl-Alt:</dropdownList>
+        <dropdownList defaultItem="6" refId="Part_Keyboard_Hotkey_Ctrl_Alt_Plus">+</dropdownList>
+        <dropdownList defaultItem="2" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction">대기 시간 단축:</dropdownList>
+        <dropdownList defaultItem="9" refId="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus">+</dropdownList>
+		<dropdownList defaultItem="1" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME">일반 IME 모드:</dropdownList>
+        <dropdownList defaultItem="8" refId="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus">                             +</dropdownList>
+      </presentation>
+	   <presentation id="Policy_ToggleFullScreen">
+        <dropdownList defaultItem="1" refId="Part_ToggleFullScreen_FirstKey">전체 화면 전환 사용자 지정:</dropdownList>
+        <dropdownList defaultItem="0" refId="Part_ToggleFullScreen_SecondKey">+</dropdownList>
+		<dropdownList defaultItem="0" refId="Part_ToggleFullScreen_ThirdKey">+</dropdownList>
+      </presentation>
+      <presentation id="Policy_PublishedApplications_1">
+        <comboBox refId="Part_PublishedApplications_InitialProgram">
+          <label>응용 프로그램</label>
+          <suggestion>#메모장</suggestion>
+          <suggestion>#*</suggestion>
+        </comboBox>
+        <checkBox defaultChecked="true" refId="Part_PublishedApplications_SessionSharing">세션 공유</checkBox>
+      </presentation>
+      <presentation id="Policy_HostRenderedAudio_1"/>
+      <presentation id="Policy_ICAFileSettings_1">
+        <checkBox defaultChecked="true" refId="Part_ICAFileSettings_RemoveICAFile">RemoveICAFile</checkBox>
+      </presentation>
+      <presentation id="Policy_AllowLegacySessionSharing">
+        <checkBox defaultChecked="true" refId="Part_AllowLegacySessionSharing_SessionSharing">AllowLegacySessionSharing</checkBox>
+      </presentation>
+	  
+	  <presentation id="EnableICAFileSigning">
+        <listBox refId="TrustedCertificates">신뢰할 수 있는 인증서:</listBox>
+        <dropdownList defaultItem="0" refId="Securitypolicy">보안 정책:</dropdownList>
+		<checkBox refId="TrustedLaunchers">신뢰할 수 있는 Launcher에 대해 사용 안 함</checkBox>
+      </presentation>
+	<presentation id="POL_CONFIGURE_LAN_PROXY_MANUALLY">
+        <textBox refId="TXT_PROXY_HOST">
+          <label>프록시 호스트</label>
+        </textBox>
+		<decimalTextBox defaultValue="443" refId="TXT_PROXY_PORT">프록시 포트</decimalTextBox>
+      </presentation>
+      <presentation id="POL_CONFIGURE_LAN_PROXY_DLL">
+        <textBox refId="TXT_ProxyChooserDLL">
+          <label>프록시 선택 DLL 경로</label>
+        </textBox>
+      </presentation>
+	  
+	<presentation id="EnableUSBForceRedirection">
+      </presentation>
+	  
+	 <presentation id="SplitDevices">
+      </presentation>
+	  <presentation id="DeviceRules">
+        <text>세미콜론으로 구분된 USB 장치 규칙의 목록입니다.</text>
+        <textBox refId="DeviceRules_Value">
+          <label>USB 장치 규칙</label>
+        </textBox>
+      </presentation>
+      <presentation id="RemoveOnLock">
+	<text>잠금 시 제거할 세미콜론으로 구분된 USB 장치의 목록입니다.</text>
+	<textBox refId="RemoveOnLock_Value">
+	  <label>잠금 시 제거</label>
+	  <defaultValue>class=03 subclass=01 prot=01;class=03 subclass=01 prot=02;class=03 subclass=00 prot=01;class=03 subclass=00 prot=02</defaultValue>
+	</textBox>
+      </presentation>
+      <presentation id="ExistingDevices_Policy">
+        <dropdownList defaultItem="2" refId="ExistingDevices_Value">데스크톱이 시작될 때</dropdownList>
+      </presentation>
+      <presentation id="NewDevices_Policy">
+        <dropdownList defaultItem="2" refId="NewDevices_Value">USB 장치가 삽입될 때</dropdownList>
+      </presentation>
+      <presentation id="HideSimpleDevices_Policy">
+        <checkBox defaultChecked="true" refId="HideSimpleDevices_Value">다른 HDX 기술을 사용하여 연결할 수 있는 USB 장치 숨기기</checkBox>
+      </presentation>
+      <presentation id="ExistingDevices_Policy_1">
+        <dropdownList defaultItem="2" refId="ExistingDevices_Value">데스크톱이 시작될 때</dropdownList>
+      </presentation>
+      <presentation id="NewDevices_Policy_1">
+        <dropdownList defaultItem="2" refId="NewDevices_Value">USB 장치가 삽입될 때</dropdownList>
+      </presentation>
+      <presentation id="HideSimpleDevices_Policy_1">
+        <checkBox defaultChecked="true" refId="HideSimpleDevices_Value">다른 HDX 기술을 사용하여 연결할 수 있는 USB 장치 숨기기</checkBox>
+      </presentation>
+      <presentation id="RedirectUnknownDevices">       
+      </presentation>
+	  
+	  <presentation id="Policy_HDXoverUDP">
+		<dropdownList defaultItem="0" refId="refid_HDXoverUDP">Citrix Workspace용 통신 프로토콜 선택</dropdownList>
+	  </presentation>
+	  
+	  <presentation id="Presentation_CitrixSecureBrowser_Cache"/>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

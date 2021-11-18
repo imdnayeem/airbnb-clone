@@ -1,0 +1,48 @@
+{
+  "name": "react-app",
+  "version": "0.1.0",
+  "description": "Songs Playlist Manager",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --open",
+    "build": "webpack --config webpack.config.js",
+    "postinstall": "npm run build"
+  },
+  "author": "Mohammed Nayeem",
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.12",
+    "@reduxjs/toolkit": "^1.6.1",
+    "axios": "^0.21.1",
+    "babel-plugin-styled-components": "^1.10.1",
+    "bootstrap": "^4.5.0",
+    "chart.js": "^3.5.1",
+    "formik": "^2.2.9",
+    "ng2-charts": "^2.4.3",
+    "randomcolor": "^0.6.2",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.2.1",
+    "react-chartjs-2": "^3.0.4",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.2.4",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-trend": "^1.2.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/compat-data": "7.9.0",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react": "^6.24.1",
+    "file-loader": "^5.0.2",
+    "prettier": "^1.18.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
